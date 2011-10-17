@@ -1,0 +1,269 @@
+Ces notes utilisent le format utilisé par le W3C pour la prise de notes. Il sera clarifié dans les jours prochains.
+
+Meeting: Travaillons avec le Web
+Date: 15 octobre 2011
+
+Scribe: François Daoust
+ScribeNick: daoust
+Chair: karl 
+Present: karl (karl dubost), lapin (Stéphane Deschamps), 
+Absent:
+Excuse:  
+
+Topic: Introduction et choix du scribe (preneur de note)
+
+Karl: Commencer tous les meetings à l'heure
+
+Karl: Francois est un pro du Web. C'est une tres bonne chose d'avoir un scribe pour prendre des notes. Les notes n'ont pas besoin d'etre parfaites, il faut juste qu'elles capturent le sens du propos (si possible)
+
+Topic: asynchronicité
+
+Karl: l'asynchronicite est tres importante, ca permet de revenir a la discussion apres. Meme dans une petite structure, des qu'on revient sur une discussion apres 6 mois, il faut pouvoir repondre a la question: qu'a-t-on dit a cette reunion
+
+Lapin: pas d'accent, c'est mal.
+
+Topic: participants et pseudo, premier action item (tâche)
+
+Karl: c'est vrai. Notez que les pseudos, c'est pas grave a condition de faire le mapping.
+
+ACTION: Lapin doit faire la conversion des pseudos en noms reels dans les minutes de l'atelier de Karl a Paris Web (2011-10-17)
+
+Karl: Francois a pris un format specifique pour l'action item, avec le pseudo, une action, et quelque chose qui est independant du contexte. La date permet de verifier lors de la reunion suivante de verifier les actions qui auraient du etre faites.
+
+Topic: Travail de la prise de note
+
+Anthony: bien pour les gens qui sont en vacances, c'est sur. Un peu dur pour les gens qui ne sont pas habitues au clavier, a prendre des notes de prendre des notes.
+
+Karl: la velocite est tres differente d'un scribe a l'autre. Si la perennit du message est longue, ca devient difficile. Le chair doit faire attention au scribe et verifier s'il est a jour. Le scribe peut interrompre le meeting a tout moment pour temporiser le meeting.
+
+Karl: autre chose, un fichier texte n'est pas ideal. On aurait pu utiliser un canal IRC qui aurait permis de partager en temps reel les minutes. Les sourds pourraient suivre le meeting par exemple. Surtout, les gens qui sont dans le meeting peuvent corriger ce qui est ecrit dans les meetings. Au W3C, tout le monde peut par exemple faire:
+  s/Karl: prout/Karl: caca/
+
+Tortue: est-ce que le scribe ne s'use pas? Est-ce que ce n'est pas inverse avec la valeur de la reunion qui sera a la fin, lorsque les cerveaux sont chauds.
+
+Karl: il faut changer de scribe de temps en temps. Merci Olivier d'etre venu ;)
+
+Francois: le scribe peut aussi synthetiser les propos bien plus que ca, pas force de faire un dialogue.
+
+Karl: J'aurais du faire un ordre du jour pour aujourd'hui.
+
+Lapin: pour eviter la fatigue, on fait des choses bien plus synthetiques, mais plus pedagogisees. Le compte-rendu permet de verifier les actions, de voir ce qu'il y a faire.
+
+Karl: pour les actions, eviter d'actionner quelqu'un qui n'est pas la.
+
+Topic: Format des minutes (compte-rendus)
+
+Thierry: il y a une sorte de balisage dans le format utilise, par exemple le format de date pour faire emerger les actions, etc.
+
+Karl: la, le format n'est pas officiel, on l'utilise au W3C et on a des outils pour le parser. L'action item est reconnu automatiquement par exemple. Dates au format ISO. Avoir un format constant partage entre les scribes et les gens qui participent au meeting, c'est important, ca permet d'ajouter de la valeur ajoutee au meeting.
+
+Thierry: Utile de faire un document, sorte de vade mecum, qui explique
+
+ACTION: Karl doit mettre en ligne les minutes de ce meeting (2011-10-18)
+ACTION: Karl doit mettre en ligne le format de la prise de minutes des meetings (2011-10-17)
+
+Olivier: deja documente, non?
+Karl: oui, sur le site du W3C. Le but, c'est d'aboutir a un document qu'on puisse continuer a hhhhhacker sur github.
+
+Ornythorinque: note que Lapin a une action lundi, du coup, la publication, vaut mieux que ce soit mardi.
+
+Karl: bien vu.
+
+Olivier: Pour l'ordre du jour, une technique tres puissante. Quand vous creez l'ordre du jour, imaginez le compte-rendu: untel doit dire ca, les actions qui doivent etre prises, les decisions auxquelles il faudrait aboutir. L'imaginer a l'avance permet d'etablir un ordre du jour tres precis.
+
+Topic: Résumé de la prise de note
+
+Karl: Un meeting n'est pas bien du tout pour lire un document, c'est tres bien pour synthetiser une discussion qui a deja commence par emails par exemple. Un agenda item du type "vous avez lu le document?" ne sert a rien.
+
+Karl: Les action items, les avoir verifies avant le meeting permet de prendre contact avec les personnes supposees les avoir faites et de les passer au cours de la reunion. Ca permet de fluidifier le meeting.
+
+Topic: Gestion du droit de parole
+
+Clochix: comment gerer la liste des participants?
+
+Karl: je me base sur l'exemple du W3C, autres exemples bienvenus. Dans une salle, on leve la main, ce qui permet au chair de gerer la file d'attente de questions. Sur IRC, une syntaxe comme "q+" permet de faire la meme chose. Le chair doit conserver un oeil sur le channel. La question peut etre ecrite sur IRC directement, ce qui peut etre utile pour l'associer au bon agenda item du meeting.
+
+Topic: gestion du compte-rendu officiel
+
+Tortue: Mon voisin prend des notes dans son coin. Est-ce qu'on a un probleme?
+
+Karl: les minutes sont faites pour etre partagees. Le travail ensemble doit etre partage ensemble (tous ensemble!). Avoir une mailing-liste qui regroupe les gens qui travaillent ensemble facilite le partage. Apres le meeting, le scribe va envoyer les minutes du meeting a la mailing-liste. Il devrait utiliser les 10-15 minutes d'apres le meeting pour envoyer un brouillon des minutes a la liste. Pourquoi?
+... 1. si la liste est bien faite, il y a des archives. La valeur d'information du Web fait ca permet de suivre la discussion.
+... 2. pas oblige que ce soit une archive de liste. Un wiki peut faire l'affaire.
+... Pour revenir a la question, le fait qu'on partage l'information, ca permet aux autres de corriger pour les erreurs faites par le scribe, de faire des commentaires sur les differences de comprehension, etc.
+... Si c'est des notes personnelles, pas de souci, si ce sont des notes pour y revenir plus tard et affirmer "je n'avais pas compris ca", il faut que ce soit partage.
+
+Topic: Archive des compte-rendus
+
+Anthony: une note sur les archives. Elles peuvent bien sur etre sur un Intranet.
+
+Karl: oui. Au W3C, certaines listes sont publiques, d'autres restreintes d'acces au membres, et d'autres encore restreintes a l'equipe. L'important, c'est que les messages aient tous une adresse unique.
+
+Topic: Liste de discussions et identifiant unique de l'archivage
+
+Olivier: la facon dont on l'a fait: les gens recevaient via la mailing-liste le mail et d'un autre cote il y avait l'archive, mais pas de lien entre les 2. Dans les headers du mail, il y a un identifiant plus ou moins unique qui est le Message-Id. On a donc fait un redirecteur entre ce Message-Id et l'adresse Web de l'archive du message. Accessible en ligne.
+
+Azertuiop: La notion des revisions. Le fait qu'on pouvait retravailler les prises de note. Sur un Wiki, je vois comment c'est possible. Par email, c'est moins facile.
+
+Karl: Ca peut etre un enjeu. Mon optique, c'est qu'un systeme flexible, c'est beaucoup mieux qu'un systeme parfait. Une technique simple, c'est d'envoyer un premier mail, marque "brouillon" comme je l'evoquais. Au bout de 48h, s'il n'y a pas eu de commentaires, il peut envoyer les minutes finales 
+
+Topic: Resume du meeting
+
+Karl: les minutes sont fatiguantes a lire. Si je dois relire l'ensemble de la reunion, c'est fastidieux. Si le scribe peut synthetiser la reunion en debut de minutes, c'est tres pratique. Ca permet aux gens qui veulent simplement jeter un oeil ou qui sont peripheriques de l'activite d'un groupe de suivre les grandes lignes de ce qui s'est dit. "Social agreement": entre nous, on va se mettre d'accord pour travailler ensemble. Parfois elles sont non ecrites.
+... L'avantage de les mettre par ecrit, c'est pour les nouveaux.
+
+Topic: Autre outils que IRC pour écrire les minutes
+
+Clochix: Etherpad pour prendre les minutes?
+
+Olivier: ca marche pas bien.
+
+Clochix: je ne suis pas d'accord. Ca permet de prendre les minutes verbatim, et de corriger en live les coquilles.
+
+Topic: prise de parole du chair
+
+Bisounours: comment ca se passe si le chair a une question? Pour quitter le mode "je dirige".
+
+Karl: en role de chair, je devrais juste etre l'animateur de la discussion. M'assurer des tours de parole, etc. C'est tres strict en theorie. Une technique pour participer, c'est d'etre explicite sur le fait que la contribution n'est plus en role de chair: "ce que je dis la, ce n'est pas dans mon role de chair, j'enleve mon pantalon de chair".
+... Le role de chair est tres difficile. Trouver un bon chair, c'est dur.
+
+Topic: prise de parole du scribe
+
+Bisounours: et pour le scribe? Il est tres occupe.
+
+Karl: le scribe se tait :)
+... C'est bien d'avoir un backup, que quelqu'un prenne le relais.
+... Au W3C, avec un nickname, on peut specifier le scribe. "ScribeNick: francois", puis, lorsque Francois parle "ScribeNick: olivier".
+
+Francois: la prise de minutes est une composante essentielle du meeting. Il faut prendre le temps, meme si ca ralentit un poil la discussion, on peut donc temporiser le temps que le scribe rattrape en ecrivant ce qu'il vient de dire.
+
+Anthony: pour revenir sur Etherpad, c'est une bonne maniere de commencer les minutes. La, on est plus dans un environnement d'experts. On l'utilise chez Mozilla pour les petites reunions. On met l'agenda du meeting et devant chaque agenda, on met les actions.
+
+Lapin: la permutabilite des gens. On prend les minutes dans un document Word. Il y a plein de raisons d'arreter pour assouvir des besoins naturels par exemple. Au telephone, on demande a quelqu'un d'autre de prendre le bout de ce qu'on manque, puis on se synchronise. On peut partager les ecrans. C'est plus complique que IRC en theorie, mais plus facile pour des gens non techniques.
+
+Karl: IRC par Web?
+
+Lapin: Trop complique. La solution la plus simple qu'on ait trouve, c'est de faire du partage d'ecran. On a un outil qui ressemble a Adobe conference.
+
+ISSUE: Partage du scribing du meeting en temps reel.
+
+Karl: Je cree une "issue" pour qu'on puisse y revenir. On ne va pas resoudre ca tout de suite.
+
+Thierry: est-ce qu'on pourrait avoir les informations sur les conventions implicites d'utilisation des outils, quelle gamme d'outil, etc. Par rapport a Etherpad, deuxieme approche: on est plus sur la redaction de documents y compris asynchrone. Il y a de l'IRC inclus, mais c'est le document en premier.
+
+Karl: c'est vrai qu'on a fait un focus sur les meetings, il y a d'autres aspects. Une fois que le document sera partage sur github, je vous encourage a soulever d'autres enjeux.
+
+Topic: Animation de la réunion, rôle du chair
+
+John: role de chair. Un des interets de reunir des gens, c'est d'attirer de nouvelles idees. Comment "animer" le groupe de maniere a ce que les gens passifs contribuent?
+
+Karl: dans un groupe social, les comportements sont differents. Certains sont tres a l'aise pour parler en public. D'autres paniquent. Ce n'est pas un probleme. Le role du chair et de la communaute, c'est d'exploiter les capacites au maximum.
+... Si le chair se rend compte qu'une personne serait la mieux placee pour repondre a un probleme, mais ne peut pas le faire en direct, un action item pour la prochaine reunion permet de resoudre le probleme. Autre avantage, dans un environnement international, l'oral est plus difficile, l'ecrit plus facile.
+
+John: Il y a des choses qui peuvent sortir lorsque tout le monde est ensemble. 1+1+1+1>4. Une petite idee non exprimee pourrait conduire le groupe vers d'autres horizons.
+
+Karl: dans un processus ou le meeting est regulier, les issues (enjeux) laissent la possibilite aux gens de declarer un enjeu, de faire emerger un consensus sur un idee plus tard. Le but, c'est de resoudre des vrais problemes. Le role du chair est aussi d'interrompre les discussions hors-sujets
+
+Topic: Gestion des blagues
+
+Ornythorinque: si tu as un Lapin, tu as des calembours comme plus haut avec le "pantalon". Comment gerer ca?
+
+Karl: J'ai deja eu quelques phrases malheureuses qui sont devenues legendaires, mais je n'ai jamais vu quelqu'un se faire virer d'un groupe pour ca. C'est le role du chair.
+
+Francois: c'est plus problematique dans les minutes. Les blagues internes peuvent etre difficiles a comprendre hors contexte, et mal interpretees.
+
+Ornythorinque: pour Paris Web, on marquait les lignes a virer dans les minutes.
+
+Karl: idem au W3C ou on utilise "/me" pour les commentaires qui ne sont pas supposees apparaitre dans les minutes.
+
+Topic: Valeur temporelle du document et temps de réunion
+
+Tortue: duree classique d'une reunion? Duree du document?
+
+Karl: le document, c'est eternel. Il a tout le temps de la valeur. Il a une valeur historique.
+
+Tortue: jusqu'ou il a de la valeur?
+
+Ornythorinque: je me souviens que Karl a deja fait remonter des archives de 1999 pour HTML5 sur les images.
+
+Tortue: quand est-ce que le document devient froid, c'est ca la question.
+
+Anthony: les documents sont dates. Les decisions qui ont ete modifiees, on a une page qui presente la derniere decision en date.
+
+Karl: au W3C, le tracker, un autre robot sur IRC avec une interface Web, releve les enjeux et les action items.
+
+[Karl presente tracker pour suivre les actions ouvertes]
+
+[Francois prend quelques exemples de recherche dans les archives]
+
+Olivier: penser en terme de construction d'une memoire pour le point precedent.
+... J'aimerais bien qu'on traite les outils asynchrones si possible.
+
+Topic: Comment archiver les éléments visuels (dessins au tableau par exemple)
+
+Alexis: comment prendre en compte les croquis, ce qu'on prototype sur le tableau?
+
+ISSUE: Prendre en compte les sketches et autres prototypes visuels.
+
+Karl: La technique la plus simple, c'est de prendre une photo et de la partager. Chaque piece d'information, si elle est sur le Web, devient quelque chose qui vit dans le temps.
+... Ca veut aussi dire qu'il faut penser a dater les URIs pour gere l'accumulation.
+
+Topic: Gestion des nouveaux arrivants
+
+Thierry: il y a des conventions sociales. Je n'utilise pas Github. J'arrive dans le groupe. Ou trouver la documentation? Autre chose, comment gerer mon espace personnel pour faire mes actions avant de les partager avec le reste du groupe?
+
+Karl: tout ce qui est groupware, par experience, pose un probleme a un moment donne. Pas de solution parfaite. Beaucoup plus facile d'avoir un ensemble d'outils simples et faciles a utiliser.
+... Les informations au W3C sont bien separes les unes des autres, c'est plus facile pour en faire quelque chose.
+
+Topic: Moteur de recherche et retrouver l'information
+
+Jeremy: Se plonger dans les minutes anciennes et les mailing-list, quels outils avez-vous?
+
+Karl: on a Olivier.
+
+Olivier: un moteur de recherche. Les meilleurs outils sont les gens qui sont la depuis tres longtemps.
+
+Karl: la culture d'entreprise, c'est tres important. Une personne qui est la depuis longtemps doit etre "documentee".
+... Dans une experience precedente, une fille etait la depuis tres longtemps et connaissait la culture de la boite sur le bout des ongles.
+
+Jeremy: j'ai passe beaucoup de temps sur la mailing-liste du groupe CSS a lire les emails. L'interaction au depart n'est pas facile, du genre "cherche dans les archives".
+
+Karl: differentes reactions. Ce serait mieux de pointer vers l'archive de l'email ou la question a deja ete discutee.
+
+
+Topic: Contexte multiculturel
+
+vlentz: Prochaines etapes pour la discussion d'aujourd'hui? Travail international dans un contexte multiculturel?
+
+ISSUE: Contexte international et multiculturel
+
+Karl: Mon compte github: http://github.com/karlcow/
+... La langue internationale reste l'anglais, c'est difficile d'avoir de la traduction, Paris Web est vraiment une exception ici.
+... La culture joue beaucoup: les francais cherchent la confrontation, les japonais ne discutent pas. La encore, pas de solution miracle. Il faut discuter, parfois autour d'une biere pour comprendre les positions de chacun.
+... Le fait d'avoir du "live scribing" permet une accessibilite plus importante a l'international. Si vous etes plusieurs dans une salle alors que d'autres participants sont au telephone, ne parlez pas entre vous. C'est tres frustrant pour les gens au telephone.
+Olivier: D'un autre cote, il faut accepter la distance. Il va y avoir des discussions de couloir, il faut vivre avec, ne pas se mettre la tete dans le sable.
+
+Anthony: les salles de reunion sont equippees d'ecran, mais souvent les gens lancent le systeme sur leur propre ordinateur, pour reduire cette distance.
+
+Topic: Outils asynchrones
+
+Olivier: A partir du moment ou les equipes sont distribuees, les fuseaux horaires rentrent en compte.
+... La fin de la journee, c'est le debut de la journee ailleurs.
+... La question qui se pose, c'est aussi de gerer ce que les gens pourraient avoir avance en votre absence.
+
+Anthony: on voit la valeur historique des archives tres rapidement.
+
+Lapin: on se rend effectivement tres vite compte que le retour aux discussions d'il y a 6 mois permet vraiment de remettre des noms sur des decisions.
+
+Topic: Gestion de la pérennité
+
+David: comment gerer la perennite des URIs en dehors de w3.org?
+
+Karl: ce devrait etre une politique de l'entreprise, dans chaque entreprise.
+... Comment gerer la perennite, ce qui se passe lorsqu'on change de systeme, etc.
+
+Olivier: a partir du moment ou l'equipe est distribuee, la memoire ecrite prend de plus en plus d'importance. La discussion orale reste importante pour la culture, etc., mais la discussion ecrite devient essentielle.
+
+Anthony: les systemes de review permettent de revenir sur les decisions.
+
+Karl: C'etait la derniere remarque. J'espere qu'on va pouvoir continuer.
