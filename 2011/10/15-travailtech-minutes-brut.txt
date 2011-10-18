@@ -6,7 +6,21 @@ Date: 15 octobre 2011
 Scribe: François Daoust
 ScribeNick: daoust
 Chair: karl 
-Present: karl (karl dubost), lapin (Stéphane Deschamps), 
+Present: karl (karl dubost),
+  lapin (Stéphane Deschamps),
+	Anthony (Anthony Ricaud),
+	Tortue (Pablo Pernot),
+	Thierry (Thierry Stoehr),
+	Ornythorinque (Olivier Gendrin),
+	Olivier (Olivier Théreaux),
+	Clochix (** pseudonyme à conserver),
+	azertyuiop (Camille Lafitte),
+	Bisounours (Sébastien Desbenoit),
+	Jean/John (John Hicks),
+	Alexis (Alexis Vannier),
+	Jeremy (Jérémy Patonnier),
+	vlentz (Valéry-Xavier Lentz)
+
 Absent:
 Excuse:  
 
