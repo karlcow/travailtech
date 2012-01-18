@@ -1,0 +1,42 @@
+This is scribe.perl Revision: 1.122  of Date: 2005/03/31 04:43:41  
+Check for newer version at http://dev.w3.org/cvsweb/~checkout~/2002/scribe/
+
+Jabber_Saved_Format                      0.20
+RRSAgent_Visible_HTML_Text_Paste_Format  0.31
+RRSAgent_HTML_Format                     0.00
+Mirc_Text_Format                         0.00
+Yahoo_IM_Format                          0.49
+RRSAgent_Text_Format                     0.00
+Mirc_Timestamped_Log_Format              0.00
+Irssi_ISO8601_Log_Text_Format            0.00
+Plain_Text_Format                        0.95
+XChat_Timestamped_Log_Format             0.31
+Normalized_Format                        0.00
+Guessing input format: Plain_Text_Format (score 0.95)
+
+Found Scribe: Jeff
+Inferring ScribeNick: scribe
+Found Scribe: Yin Leng
+Inferring ScribeNick: scribe
+Found Scribe: Harris
+Inferring ScribeNick: scribe
+Found Scribe: Steve Winkler
+Inferring ScribeNick: scribe
+Found Scribe: Tom Rutt
+Inferring ScribeNick: scribe
+Scribes: Jeff, Yin Leng, Harris, Steve Winkler, Tom Rutt
+
+WARNING: No "Present: ... " found!
+Possibly Present: Anich Anish Bob DAvid Dave DaveO Dims Don Gudge Harris Hugo ISSUE JonM Jonathan Jonathon Marc MarcH Mark MarkN Michael Note Owner PaulD Proposal Reb Rebecca Rob ScribeNote Steve SteveW TomR Yinling davidO glen greg jeff jmarsh melder mnot paco paul tom
+You can indicate people for the Present list like this:
+	<dbooth> Present: dbooth jonathan mary
+	<dbooth> Present+ amy
+
+Agenda: http://lists.w3.org/Archives/Public/public-ws-addressing/2004Dec/0022.html
+Found Date: 7 Dec 2004
+People with action items: anish apply contact davido editorial editors enhance gudge h harris help hugo jonathan jonathanm license marc markh markn paco philippe proposal pub rebecca s should team will with
+
+WARNING: IRC log location not specified!  (You can ignore this 
+warning if you do not want the generated minutes to contain 
+a link to the original IRC log.)
+

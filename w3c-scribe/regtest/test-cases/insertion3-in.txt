@@ -1,0 +1,11 @@
+13:02:23 <RRSAgent> RRSAgent has joined &arch
+13:02:23 <RRSAgent> logging to http://www.w3.org/2005/03/22-arch-irc
+13:02:35 <plh> Meeting: Architecture Domain call
+13:03:39 <Zakim> On the phone I see Keio, Plh, Martin, Liam
+13:03:42 <plh> Regrets: Yves, Carine
+13:10:59 <plh> PENDING] ACTION: Hugo to talk about the XML Schema 1.0 User Experience workshop at the WS CG [recorded in http://www.w3.org/2005/03/08-arch-minutes.html#action14]
+13:11:22 <plh> s/PENDING]/[PENDING]/
+13:11:37 <plh> i/[PENDING]/Topic: Action items/
+13:11:37 <plh> i/PENDING/Topic: INSERTED WITHOUT BRACKETS/
+13:11:37 <plh> i/FAILING/Topic: FAILING INSERTION
+13:11:37 <plh> i/XML Schema/Topic: INSERTED TOPIC NO TRAILING SLASH

@@ -1,0 +1,3131 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang='en'>
+<head>
+  <title>Web Services Addressing Working Group Face-to-Face -- 7 Dec 2004</title>
+  <link type="text/css" rel="STYLESHEET" href="http://www.w3.org/StyleSheets/base.css">
+  <link type="text/css" rel="STYLESHEET" href="http://www.w3.org/StyleSheets/public.css">
+  <link type="text/css" rel="STYLESHEET" href="http://www.w3.org/2004/02/minutes-style.css">
+  <meta content="Web Services Addressing Working Group Face-to-Face" name="Title">  
+  <meta content="text/html; charset=iso-8859-1" http-equiv="Content-Type">
+</head>
+
+<body>
+<p><a href="http://www.w3.org/"><img src="http://www.w3.org/Icons/w3c_home" alt="W3C" border="0"
+height="48" width="72"></a> 
+
+</p>
+
+<h1> - DRAFT - </h1>
+<h1>Web Services Addressing Working Group Face-to-Face</h1>
+<h2>7 Dec 2004</h2>
+
+<p><a href='http://lists.w3.org/Archives/Public/public-ws-addressing/2004Dec/0022.html'>Agenda</a></p>
+
+
+
+
+<h2><a name="attendees">Attendees</a></h2>
+
+<div class="intro">
+<dl>
+<dt>Present</dt>
+<dd></dd>
+<dt>Regrets</dt>
+<dd></dd>
+<dt>Chair</dt>
+<dd>Mark Nottingham </dd>
+<dt>Scribe</dt>
+<dd>Jeff, Yin Leng, Harris, Steve Winkler, Tom Rutt</dd>
+</dl>
+</div>
+
+<h2>Contents</h2>
+<ul>
+  <li><a href="#agenda">Topics</a>
+	<ol>
+	<li><a href="#item01">Assignment of scribes</a></li>
+<li><a href="#item02">Agenda Review</a></li>
+<li><a href="#item03">Action Item Review</a></li>
+<li><a href="#item04">Approval of minutes</a></li>
+<li><a href="#item05">Schedule Issues</a></li>
+<li><a href="#item06">WD Publication</a></li>
+<li><a href="#item07">i039 - Spec name versioning</a></li>
+<li><a href="#item08">i010 - EPR Robustness</a></li>
+<li><a href="#item09">i036 - WS-Addressing MIME Media Type</a></li>
+<li><a href="#item10">i011 - EPRs in To</a></li>
+<li><a href="#item11">i037 - Replace QNames with anyURI</a></li>
+<li><a href="#item12">i021 - WSDL Extension for Addressing</a></li>
+<li><a href="#item13">i022 - Relationship to the SOAP binding framework</a></li>
+<li><a href="#item14">i033 - Reference to WSDL definition in an EPR</a></li>
+<li><a href="#item15">i027 - Pointing to WSDL location in EPRs</a></li>
+<li><a href="#item16">i029 - Disallowing Faults</a></li>
+<li><a href="#item17">Issue 21</a></li>
+<li><a href="#item18">Issue 22</a></li>
+<li><a href="#item19">Issue 33</a></li>
+<li><a href="#item20">Issue 29</a></li>
+<li><a href="#item21">Issue 38</a></li>
+<li><a href="#item22">i038 discussion</a></li>
+<li><a href="#item23">i028 discussion</a></li>
+<li><a href="#item24">i034 discussion (also discussion about making it mandatory)</a></li>
+<li><a href="#item25">Back to i034 (defaulting of action)</a></li>
+<li><a href="#item26">ISSUE i001 - EPRs vs Identifiers</a></li>
+<li><a href="#item27">Dave's approach to the issue i001.</a></li>
+<li><a href="#item28">Issue 33 proposal from Jonathan:</a></li>
+<li><a href="#item29">Issue 34: Action defaults</a></li>
+<li><a href="#item30">Issue 27: pointing at wsdl location in EPRs.</a></li>
+<li><a href="#item31">Issue 10: EPR robustness</a></li>
+<li><a href="#item32">Issue 17: purpose of action property</a></li>
+<li><a href="#item33">Issue 35: fixed action uri for faults</a></li>
+<li><a href="#item34">Issue 9: cardinality of message information headers.</a></li>
+
+	</ol>
+  </li>
+  <li><a href="#ActionSummary">Summary of Action Items</a></li>
+</ul>
+<hr>
+<div class="meeting">
+
+<p class='phone'>
+Date: 7 December 2004
+</p>
+
+<h3 id="item01">Assignment of scribes</h3>
+<p class='phone'>
+Tues AM - Jeff
+</p>
+
+<p class='phone'>
+Tues PM - Yin Leng
+</p>
+
+<p class='phone'>
+Wed AM - Harris
+</p>
+
+<p class='phone'>
+Wed PM - Steve W
+</p>
+
+<p class='phone'>
+Thurs AM - Tom
+</p>
+
+<p class='irc'>
+&lt;<cite>scribe</cite>&gt; Scribe: Jeff
+</p>
+
+<h3 id="item02">Agenda Review</h3>
+<p class='phone'>
+Go through issues in order of agenda
+</p>
+
+<p class='phone'>
+Spend tomorrow on last few issues -- issue 1, serialization
+</p>
+
+<h3 id="item03">Action Item Review</h3>
+<p class='irc'>
+&lt;<cite>scribe</cite>&gt; done by chair
+</p>
+
+<h3 id="item04">Approval of minutes</h3>
+<p class='phone'>
+Unanimous consent to approve minutes from 2004-11-29 teleconf
+</p>
+
+<h3 id="item05">Schedule Issues</h3>
+<p class='phone'>
+Mark puts up slide of schedule as specified in charter.
+</p>
+
+<p class='phone'>
+Next f2f in AU - Jan, in BOS at Tech Plenary - early March
+</p>
+
+<p class='phone'>
+The Chair notes that the schedule calls for going to LC at the end of January, and that several members who have done this before don't believe this is possible. Mark has had discussions with Team and emphasizes that if we get to end of Jan f2f and it does not look like we are close, he would have to question the "health of the group".
+</p>
+
+<p class='phone'>
+<cite>DaveO:</cite> question on schedule -- lets say finish jan f2f, say we've made progress and closed say 15 out of 39 issues, and opened a few more - so that there are around 30 open issues, so it feels like there is still a considerable amount of work. Is there a possibility that the WG would be terminated?
+</p>
+
+<p class='phone'>
+<cite>Mark:</cite> yes. I would have to go to the director and seek a charter modification. Don't want the WG to turn into a 2 year group. If it doesn't look like convergence is happening quickly and with reasonable confidence it can be predicted how long it will take, then i would probably recommend to terminate. Last Call by March is the absolute last passible slippage without dire consequences.
+</p>
+
+<p class='phone'>
+<cite>Hugo:</cite> Team would evaluate the situation. There are other options too. Start a 2.0 WG.
+</p>
+
+<p class='phone'>
+<cite>Michael:</cite> many of issues are inter-related and it is hard to deal with them individually.
+</p>
+
+<p class='phone'>
+<cite>Mark:</cite> tried to sort the issues into buckets
+</p>
+
+<p class='phone'>
+<cite>Steve:</cite> some of the problem is terminology and people talking a bit at cross purposes
+</p>
+
+<p class='phone'>
+<cite>Marc:</cite> more optimistic, why the gloom and doom so soon?, even though its raining :-)
+</p>
+
+<p class='phone'>
+<cite>Mark:</cite> need to focus more on the actual docs, not issues
+</p>
+
+<p class='phone'>
+<cite>Marc:</cite> no point in having a fully polished draft if there are lots of outstanding issues it would help if we had an dependency graph of issues
+</p>
+
+<p class='phone'>
+<cite>Mark:</cite> As we discuss the issues, keep the schedule in mind, have a full discussion, but then come to make a decision <br>
+... Discussion of telecom schedule: Note on an exceptional basis a company can appoint an expert to represent them for a particular meeting. Decision is to cancel telecom on Dec 27. currently 30 open issues with 2 f2fs and 6 telecons to close
+</p>
+
+<h3 id="item06">WD Publication</h3>
+<p class='phone'>
+<cite>Hugo:</cite> hasn't heard anything back from pub team.
+</p>
+
+<a name="action01"></a>
+<p class='irc'>
+&lt;<cite>scribe</cite>&gt; <strong>ACTION:</strong> Contact pub team/philippe to get the WD published.
+</p>
+
+<p class='phone'>
+Editors have a copy (actually 2 since both gudge and marc have done it independently :-) that has incorporated the resolution of issue 3 (wsdl meps). Mark asks it would useful to get hard copies of the latest WSDL draft.
+</p>
+
+<p class='phone'>
+The current copies reflect the issues already closed -- issue 2, 3, 5, 12, maybe 30
+</p>
+
+<h3 id="item07">i039 - Spec name versioning</h3>
+<p class='phone'>
+<cite>Owner:</cite> Hugo Haas
+</p>
+
+<p class='phone'>
+<cite>Proposal:</cite> Change the titles to: Web Services Addressing 1.0 - (Core|(SOAP|WSDL) Binding)
+</p>
+
+<p class='phone'>
+<cite>Marc:</cite> asks if all the cross-ref links in the docs should be updated with new title.
+</p>
+
+<p class='phone'>
+<cite>Mark:</cite> give editors freedom to update refs as appropriate
+</p>
+
+<p class='phone'>
+<cite>Marc:</cite> don't need to version all the docs in lock step
+</p>
+
+<p class='phone'>
+<cite>Mark:</cite> do we need to change the namespace uri's?
+</p>
+
+<p class='phone'>
+<a name="resolution01">
+<strong class='resolution'>RESOLUTION: Close issue 39: &nbsp;no objections to the proposal and editors and team have appropriate latitude to do the right thing with the short name and cross-</strong>
+</p>
+
+<h3 id="item08">i010 - EPR Robustness</h3>
+<p class='phone'>
+<cite>Owner:</cite> Anish Karmarkar
+</p>
+
+<p class='phone'>
+<cite>Mark:</cite> A number of other issues relating to this topic, can we close this one and just use those other ones.
+</p>
+
+<p class='phone'>
+<cite>Anish:</cite> This is a different issue -- this should be about service qname and not just using a uri. Others seemed to want to make it a generic metadata issue.
+</p>
+
+<a name="action02"></a>
+<p class='irc'>
+&lt;<cite>scribe</cite>&gt; <strong>ACTION:</strong> Anish to refine this issue (i010) to specifics.
+</p>
+
+<p class='phone'>
+If others want to generalize about metadata then they should raise this issue. JMarsh notes that issue 23 really addresses the specifics Anish is talking about and that 10 would be a duplicate if it were refined.
+</p>
+
+<h3 id="item09">i036 - WS-Addressing MIME Media Type</h3>
+<p class='phone'>
+<cite>Owner:</cite> Greg Truty
+</p>
+
+<p class='phone'>
+2004-11-29: Greg to talk to James Snell about registering a media-type for WS-A (issue 036). Due 2004-12-06.
+</p>
+
+<p class='phone'>
+Greg reports that James is ok with dropping this given how much work this will entail. James had wanted to define a specific mime-type for ws-addressing.
+</p>
+
+<p class='phone'>
+Mark N: Proposal CLOSE 36 by declining to define a media type. no objections
+</p>
+
+<p class='phone'>
+<a name="resolution02">
+<strong class='resolution'>RESOLUTION: i036 closed with no action</strong>
+</p>
+
+<h3 id="item10">i011 - EPRs in To</h3>
+<p class='phone'>
+<cite>Owner:</cite> Harris Reynolds
+</p>
+
+<p class='phone'>
+Why isn't the value of the To property an EPR?
+</p>
+
+<p class='phone'>
+<cite>Tom:</cite> Glen has other proposals for issues (8/16) that would cover this.
+</p>
+
+<p class='phone'>
+<cite>Anish:</cite> Other dimension in addition to refp's there is additional info that is avail in EPR, which is lost in the message (e.g. epr can contain the qname of the service element). This is a dup of 13.
+</p>
+
+<p class='phone'>
+<cite>DAvidO:</cite> If issue raiser thinks this is a potential solution to another issue, can we close it with no harm.
+</p>
+
+<p class='phone'>
+<cite>Marc:</cite> CLOSE, no action as dup of 8, 13, 16. no objections
+</p>
+
+<p class='phone'>
+<a name="resolution03">
+<strong class='resolution'>RESOLUTION: i011 closed as dup</strong>
+</p>
+
+<h3 id="item11">i037 - Replace QNames with anyURI</h3>
+<p class='phone'>
+<cite>Owner:</cite> Harris Reynolds
+</p>
+
+<p class='phone'>
+2004-11-29: Harris and Hugo to make a proposal for issue 037 (Qnames vs URIs). Due 2004-12-07
+</p>
+
+<p class='phone'>
+Harris to keep qnames that refer to port type, etc., but keep uri for relationship.
+</p>
+
+<p class='phone'>
+<cite>Mark:</cite> Should we continue to use Qname to refer to WSDL elements? lots of nods Should we use a uri for the relationship type?
+</p>
+
+<p class='phone'>
+<cite>DAvid:</cite> Why have relationship type if there is only one value? Ans: extensibility
+</p>
+
+<p class='phone'>
+<cite>DAvidO:</cite> doesn't like it, gudge: unnecessary
+</p>
+
+<p class='phone'>
+<cite>JMarsh:</cite> are there other specs that are defining groups of relationship types
+</p>
+
+<p class='phone'>
+<cite>Tom:</cite> if it doesn't matter that much, why change it?
+</p>
+
+<p class='phone'>
+<cite>Steve:</cite> messages are transient, so can't/shouldn't use qname to get back
+</p>
+
+<p class='phone'>
+<cite>DavidO:</cite> seems like there is little need to make the relationship into a "resource". Reason for using uri's is to exchange a/o make available on the web. So why bother?
+</p>
+
+<p class='phone'>
+<cite>Marc:</cite> trivial change, why wouldn't we do it? straightforward, simple -- improves things
+</p>
+
+<p class='phone'>
+<cite>Hugo:</cite> agrees with Marc. Reason for uri is to differentiate between relatinships. More natural to use uri.
+</p>
+
+<p class='phone'>
+<cite>DavidO:</cite> TAG hasn't outlawed qnames. XQuery is going use qnames for F&amp;O description
+</p>
+
+<p class='phone'>
+<cite>JMarsh:</cite> advantage of that scheme is you can then see the related ones? Do we think if when people extend this will they want to go to one namespace and find the related one.
+</p>
+
+<p class='phone'>
+Straw poll: Status quo - 3 Chg to uri - 11
+</p>
+
+<p class='phone'>
+<cite>Proposal:</cite> For relationship type attribute, use URI - value we define will use a slash not a hash
+</p>
+
+<p class='phone'>
+<a name="resolution04">
+<strong class='resolution'>RESOLUTION: Close i037, accept proposal - no objections</strong>
+</p>
+
+<h3 id="item12">i021 - WSDL Extension for Addressing</h3>
+<p class='phone'>
+<cite>Owner:</cite> Hugo Haas
+</p>
+
+<p class='phone'>
+2004-11-29: Hugo to expand on his proposal for issue 021. Due 2004-12-07.
+</p>
+
+<p class='phone'>
+Hugo has a proposal. Nov 6 email Re: Issue 021 detailed proposal (was Re: Issue 021: WSDL Extension for Addressing)
+</p>
+
+<p class='phone'>
+Hugo presents.
+</p>
+
+<p class='phone'>
+<cite>JMarsh:</cite> will there be interop problem if some use this as a "feature" and some as an "extension"?
+</p>
+
+<p class='phone'>
+<cite>DavidO:</cite> the issue is if there were no minority objection, the "normal" way to do this would be to use F&amp;P? Does this mean there are 2 ways to do this because of the F&amp;P disagreement?
+</p>
+
+<p class='phone'>
+<cite>JMarsh:</cite> which do i have to support to be conformant? e.g. 2 wsdl docs: one does a required extension, and one in a required feature -- wouldn't it be better for there to be one canonical way.
+</p>
+
+<p class='phone'>
+<cite>DavidO:</cite> if we bless one here as mandatory, what does that mean?
+</p>
+
+<p class='phone'>
+<cite>JMarsh:</cite> likes element extension because of wsdl 1.1 compatibility
+</p>
+
+<p class='phone'>
+<cite>Paul:</cite> if we publish uri as a feature, and if i have a wsdl processor that doesn't support f&amp;p, how can i support the wsa (i.e. it winds up being an implicit requirement on wsdl processors)
+</p>
+
+<p class='phone'>
+<cite>Hugo:</cite> trying to finesse the wsdl 2.0 f&amp;p controversy and look at the functionality, but i've failed :-)
+</p>
+
+<p class='phone'>
+<cite>JMarsh:</cite> put something in the conformance section which tells people what to do
+</p>
+
+<p class='phone'>
+<cite>Marc:</cite> not clear whether this references what's in the SOAP spec and not the WSDL spec
+</p>
+
+<p class='phone'>
+<cite>JMarsh:</cite> concerned that proposal looks like a definition of a URI which i can put in my WSDL -- what is then required?
+</p>
+
+<p class='phone'>
+<cite>Marc:</cite> what about calling it a "soap feature"
+</p>
+
+<p class='phone'>
+<cite>Anish:</cite> why do we need to add anything in the core? this is about wsdl.
+</p>
+
+<p class='phone'>
+<cite>Marc:</cite> mutters - that was my point
+</p>
+
+<p class='phone'>
+<cite>Hugo:</cite> knows he had a good reason
+</p>
+
+<p class='phone'>
+<cite>Jeff:</cite> If we take JMarsh's statement that we should assume f&amp;p will stay, are u saying that we still shouldn't use them?
+</p>
+
+<p class='phone'>
+<cite>JMarsh:</cite> essentially yes -- because element will be defined in wsa spec, everyone will have to recognize it-
+</p>
+
+<p class='phone'>
+<cite>DavidO:</cite> Wondering if way to make it so that effectively one uri, either a qname syntax or a uri property
+</p>
+
+<p class='phone'>
+<cite>JMarsh:</cite> What do I have to look for in my WSDL document? Maybe i have to do both?
+</p>
+
+<p class='phone'>
+<cite>Anish:</cite> this is an interop problem created by wsdl. They've provided 2 ways to do the same thing, so maybe we should deal with that and support both. As far as WSDL 1.1, you can backport the WSDL 2.0 F&amp;P functionality as a wsdl 1.1 extensibility point - see WS-Reliability OASIS standard.
+</p>
+
+<p class='phone'>
+<cite>Rebecca:</cite> makes point that have to do extension for wsdl 1.1
+</p>
+
+<p class='phone'>
+<cite>Paul:</cite> doesn't like that this seems to implicitly have required = true
+</p>
+
+<p class='phone'>
+<cite>DavidO:</cite> Option a: extension element in both wsdl 1.1 and wsdl 2.0 <br>
+... option b: mandatory extension element in 1.1, optional extension in 2.0 or f&amp;P in 2.0 <br>
+... option c: mandatory extension element in 1.1, mandatory feature in 2.0 <br>
+... option d: mandatory extension element in 1.1, mandatory feature and
+</p>
+
+<p class='phone'>
+extension in 2.0
+</p>
+
+<p class='phone'>
+<cite>scribe:</cite> option e: backport f&amp;P to 1.1 and then use that
+</p>
+
+<p class='phone'>
+<cite>Anish:</cite> motivation for using f&amp;p in wsdl 2.0 is if i already have uri's
+</p>
+
+<p class='phone'>
+for soap 1.2 then i can just plug them in and use them
+</p>
+
+<p class='phone'>
+<cite>MarkN:</cite> straw poll: <br>
+... one way only across wsdl versions - 9 <br>
+... more than one way - 4 <br>
+... not sure - 4 <br>
+... If we were to go down the oneway route: it would have to be either: <br>
+... extensibility element for both wsdl 1.1 and wsdl 2.0 <br>
+... f&amp;p with backport of f&amp;p to wsdl 1.1
+</p>
+
+<p class='phone'>
+<cite>JMarsh:</cite> would like to see it defined so that i could use f&amp;p if i so choose
+</p>
+
+<p class='phone'>
+<cite>Hugo:</cite> has preference for one way because it is simpler. Worried a great deal about having a wg that defines the language and another wg saying don't use that feature. Hugo states he was really after a soap feature.
+</p>
+
+<p class='phone'>
+<cite>MarkN:</cite> all we have to do is choose a way forward, publish it, and then talk to/receive comments -- we can adjust approach in LC
+</p>
+
+<p class='phone'>
+<cite>Hugo:</cite> flag this is a SOAP feature, open content model, ed note: we have this open issue with WSDL 2.0
+</p>
+
+<p class='phone'>
+<cite>MarkN:</cite> doesn't understand how this can be a SOAP feature, when wsa isn't supposed to have a dependency on soap
+</p>
+
+<p class='phone'>
+<cite>Hugo:</cite> xmlp has defined a formal way to describe extensions, etc.
+</p>
+
+<p class='phone'>
+Marc/Anish: why should this even be in the wsa core? Why couldn't this be in the soap binding?
+</p>
+
+<p class='phone'>
+<cite>Hugo:</cite> wants to know what the diff between wsa core and what would essentially be a soap feature module.
+</p>
+
+<p class='phone'>
+<cite>Anish:</cite> before we go down the path of selecting one way, we should consider what is going to be in the wsa soap binding spec. Might help in making this choice. Thinking more: not sure this is actually an interop problem. If we say exactly how it is specified in WSDL, not sure there is an interop issue, even if there are 2 ways because for each way we would define what shows up in the wire.
+</p>
+
+<p class='phone'>
+JMarsh/DAvidO: but its a complexity problem
+</p>
+
+<p class='phone'>
+<cite>Marc:</cite> uncomfortable making the decision for another wg, essentially profiling the wsdl 2.0 spec
+</p>
+
+<p class='phone'>
+<cite>Rebecca:</cite> not everyone is going to be using soap, and if this is bound to soap .....
+</p>
+
+<p class='phone'>
+Paul/Hugo: but its the soap abstract model
+</p>
+
+<p class='phone'>
+<cite>Paul:</cite> WSDL 2.0 defines 2 ways. But do they really plan to impose that everyone will have to implement both. We should just pick one way.
+</p>
+
+<p class='phone'>
+<cite>Marc:</cite> putting 2 things in wsdl, its not hard, We should define both, and not make this decision
+</p>
+
+<p class='phone'>
+<cite>DavidO:</cite> the notion that the WSA WG does not own its ability to define its own extensibility floors me. We should not be required do use both mechanisms. I wish there was only one way, but the wsdl couldn't do that, so we have to solve the problem.
+</p>
+
+<p class='phone'>
+<cite>Marc:</cite> i'm not sure yet which is the better way, and it is trivial to support both.
+</p>
+
+<p class='phone'>
+<cite>JMArsh:</cite> are u ok with me rejecting some wsdl which has f&amp;p required=true
+</p>
+
+<p class='phone'>
+<cite>Jeff:</cite> getting tired of repeating the same arguments :-)
+</p>
+
+<p class='phone'>
+<cite>MarkN:</cite> agrees. Doesn't think anyone's mind has changed. Proposes to define one way - the extensible element.
+</p>
+
+<p class='phone'>
+<cite>DavidO:</cite> and add a "natural" mapping to a uri
+</p>
+
+<p class='phone'>
+<cite>MarkN:</cite> in wsdl 1.1 would this be an extension? lots of nods
+</p>
+
+<p class='phone'>
+<cite>Anish:</cite> what about using a small well-defined subset?
+</p>
+
+<p class='phone'>
+<cite>DavidO:</cite> asks Anish to make a proposal for what that would look like?
+</p>
+
+<p class='phone'>
+<cite>JMarsh:</cite> define an extension for use in 1.1 and 2.0 -- the question is what else goes into the conformance section - we recommend for interop that you use extension. Doesn't care if we also define feature, as long as he doesn't have to implement it.
+</p>
+
+<p class='phone'>
+<cite>Hugo:</cite> lets assume we have lots of extensions, and we have some sort of processing model. It would be very handy to have a uri to describe the feature (lower case f)
+</p>
+
+<p class='phone'>
+<cite>JMarsh:</cite> there is utility in defining the property
+</p>
+
+<p class='phone'>
+<cite>Hugo:</cite> gets back to the proposal. <br>
+... Wonders if scopes will have to be defined for these "properties" -- answer is yes. (Hugo sighs) <br>
+... There is problem of conformance also.
+</p>
+
+<p class='phone'>
+<cite>Mark:</cite> Wonders if definition of these properties in the core should really be a separate issue?
+</p>
+
+<p class='phone'>
+<cite>JMarsh:</cite> wsdl sets some of the props, the mep sets more, there might be more at runtime
+</p>
+
+<p class='phone'>
+<cite>Marc:</cite> Issue is how to put these props into the wsdl.
+</p>
+
+<p class='phone'>
+<cite>Mark:</cite> discussion has focused on how to express -- whether to use extensibility syntax, etc. We had a straw poll which gives us an indication of how folks would like to proceed. <br>
+... This obscures how these props are actually used, when to use them, what their scope is, etc. <br>
+... We need to a way to name them. Could be SOAP 1.2 Properties.
+</p>
+
+<p class='phone'>
+<cite>Marc:</cite> the minimum we need to do is to define uri's for these props for use in wsdl.
+</p>
+
+<p class='phone'>
+Summary of Issues:
+</p>
+
+<p class='phone'>
+Props/features vs. extensions discussion
+</p>
+
+<p class='phone'>
+Semantics/syntax of what does it mean to use these props/extensions
+</p>
+
+<p class='phone'>
+What are the actual requirements, i.e. which props should be defined
+</p>
+
+<h3 id="item13">i022 - Relationship to the SOAP binding framework</h3>
+<p class='phone'>
+<cite>Owner:</cite> Marc Hadley
+</p>
+
+<h3 id="item14">i033 - Reference to WSDL definition in an EPR</h3>
+<p class='phone'>
+<cite>Owner:</cite> Rebecca Bergersen
+</p>
+
+<p class='phone'>
+<cite>Proposal:</cite> </p>
+
+<p class='phone'>
+&lt;<a href="http://www.w3.org/mid/7ED3E4E1953E8C43BE701691ABB717DA40B1C2@amereast-ems2.boston.amer.iona.com">http://www.w3.org/mid/7ED3E4E1953E8C43BE701691ABB717DA40B1C2@amereast-ems2.boston.amer.iona.com</a>&gt;
+</p>
+
+<h3 id="item15">i027 - Pointing to WSDL location in EPRs</h3>
+<p class='phone'>
+<cite>Owner:</cite> Anish Karmarkar
+</p>
+
+<h3 id="item16">i029 - Disallowing Faults</h3>
+<p class='phone'>
+<cite>Owner:</cite> Harris Reynolds
+</p>
+
+<p class='phone'>
+2004-11-29: Harris to make a proposal for clarifying the text around wsa:FaultTo (WRT issue 029). Due 2004-12-07.
+</p>
+
+<p class='irc'>
+&lt;<cite>scribe</cite>&gt; Scribe: Yin Leng
+</p>
+
+<h3 id="item17">Issue 21</h3>
+<p class='phone'>
+Have discussion till 1:30 &nbsp;to get requirements for WSDL extension for addressing.
+</p>
+
+<p class='phone'>
+Say addressing is in use, no more.
+</p>
+
+<p class='phone'>
+Other extreme is detail language that describes in dynamic way how to use WSDL, and MEPs will also be used.
+</p>
+
+<p class='phone'>
+Need then to give WSDL annotation. &nbsp;Not actual capability to be described.
+</p>
+
+<p class='phone'>
+<cite>Hugo:</cite> Proposal: Runtime vs. WSDL.
+</p>
+
+<p class='phone'>
+<cite>Anish:</cite> At what level in WSDL, how do they compose, it may make sense to make reference to properties, for example.
+</p>
+
+<p class='phone'>
+<cite>Hugo:</cite> in his email outlining proposal, destination, action, refpr and refpa are the suggested ones.
+</p>
+
+<p class='phone'>
+<cite>Marc:</cite> REfpr and refpa are additional data about address.
+</p>
+
+<p class='phone'>
+<cite>JonM:</cite> Talking abt Use case where SOAP hdr are injected. <br>
+... If using SOAP, add extra hdr, addressing-like hdr. Seems like 2 types of wrappers being proposed, including that of ADF. <br>
+... Prefer injecting addressing hdrs, not have ADF also have wrappers.
+</p>
+
+<p class='phone'>
+<cite>Anish:</cite> Refpr refpa fix the values that go into the msg, not just the schema.
+</p>
+
+<p class='phone'>
+<cite>MarcH:</cite> If use hdrs, how do you know which are refpr and which refpa?
+</p>
+
+<p class='phone'>
+<cite>Gudge:</cite> Refpr are static for a long time, they don't change, whereas refpa change (e.g. tran ID), some dynamic things won't go into the WSDL. Anish: Both refpr and refpa are dynamic. <br>
+... what scope do we specify at? port level? port seems closest to EPR.
+</p>
+
+<p class='phone'>
+If at operation level, then could see parameters being put in
+</p>
+
+<p class='phone'>
+<cite>MarkN:</cite> 1. What props should WSDL contain? &nbsp;Which hdrs do we need props on? <br>
+... - destination <br>
+... - action <br>
+... - refprop <br>
+... - refparm <br>
+... 2. What should you be able to do with these? <br>
+... - What prop values should WSDL control? <br>
+... - controlling presence? <br>
+... 3. What scopes do they apply to? <br>
+... - which WSDL contructs do they apply to? <br>
+... - What is the scope of prop wrt MEP <br>
+... - porttype/interface <br>
+... - operations &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(binding/interface) <br>
+... - message (ref) &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(binding/interface) <br>
+... - port <br>
+... - service
+</p>
+
+<p class='phone'>
+<cite>Gudge:</cite> Some optional ones
+</p>
+
+<p class='phone'>
+<cite>Anish:</cite> Also need to specify how they are composed
+</p>
+
+<p class='phone'>
+<cite>Gudge:</cite> If specified at both port and operational level, then need to say which wins, i.e. the granularity of scope.
+</p>
+
+<p class='phone'>
+Discussion on 1:
+</p>
+
+<p class='phone'>
+<cite>Anish:</cite> why is relationship not included?
+</p>
+
+<p class='phone'>
+<cite>Hugo:</cite> Relationship seems at a higher level.
+</p>
+
+<p class='phone'>
+<cite>Tom:</cite> What is the criteria for why things are in EPR vs WSDL? MarkN: Find someone to lead this discussion
+</p>
+
+<a name="action03"></a>
+<p class='irc'>
+&lt;<cite>scribe</cite>&gt; <strong>ACTION:</strong> Anish (with Hugo's help) to lead discussion on Issue 21 (requirements).
+</p>
+
+<p class='phone'>
+<cite>Hugo:</cite> We need to define SOAP extension too,
+</p>
+
+<p class='phone'>
+<cite>MarkN:</cite> Agreed, though there may be some pushback on making it a SOAP module.
+</p>
+
+<a name="action04"></a>
+<p class='irc'>
+&lt;<cite>scribe</cite>&gt; <strong>ACTION:</strong> MarkN to notify CG about status of this issue.
+</p>
+
+<h3 id="item18">Issue 22</h3>
+<p class='phone'>
+<cite>MarkN:</cite> related somewhat to issue 21. Want bounded discussion in relation to MEPs.
+</p>
+
+<p class='phone'>
+<cite>Anish:</cite> would be nice if sending request as SOAP over HTTP, have response do the same SOAP over HTTP.
+</p>
+
+<p class='phone'>
+<cite>MarkN:</cite> how much do we want to align with SOAP MEP?
+</p>
+
+<p class='phone'>
+<cite>Anish:</cite> does the SOAP 1.2 binding require you to use response in the same http session?
+</p>
+
+<p class='phone'>
+<cite>MarkN:</cite> need to address SOAP 1.1 as well as 1.2
+</p>
+
+<p class='phone'>
+<cite>Glen:</cite> also problem with SOAP 1.2 does not support using the same http session.
+</p>
+
+<p class='phone'>
+<cite>MarkN:</cite> Which use cases do we address in our deliverables?
+</p>
+
+<p class='phone'>
+<cite>DavidO:</cite> Are some issues on SOAP 1.2, but not 1.1, so only need to solve with SOAP 1.2.
+</p>
+
+<p class='phone'>
+Maybe it is possible that in the case of SOAP 1.2, we use WSDL 2.0; in SOAP 1.1 there is no working group on that.
+</p>
+
+<p class='phone'>
+SOAP 1.2 is smaller in terms of granualarity of binding.
+</p>
+
+<p class='phone'>
+<cite>Anish:</cite> 2 kinds of problems. <br>
+... 1. The ability to receive a msg on a diff http mesg. <br>
+... 2. How do we say that incoming msg is on http, but the response binding is dynamically decided by the sender of the msg. &nbsp;Glen says could define a binding for that. <br>
+... Need to think of problem at 2 levels. In summary: <br>
+... 1. Use same transport for in and out. <br>
+... 2. Use diff transport for in and out, and then need to specify new binding.
+</p>
+
+<p class='phone'>
+<cite>DavidO:</cite> In WSDL, notion of the SOAP binding. Also, there are a number of diff SOAP bindings, related to the multiple SOAP http (in, out on same,diff transports) bindings. <br>
+... If WS-Addr needs to introduce new SOAP bindings, should let WSDL SOAP binding add the bindings.
+</p>
+
+<p class='phone'>
+<cite>Glen:</cite> could also use extensibility to do the work.
+</p>
+
+<p class='phone'>
+<cite>MarkN:</cite> Can someone take this work? &nbsp;Can SOAP 1.2 be supported?
+</p>
+
+<p class='phone'>
+<cite>Gudge:</cite> Can we (gave example) effectively use SOAP as just a format, not as a protocol?
+</p>
+
+<p class='phone'>
+<cite>Anish:</cite> Do we want to encourage people to overwrite the way SOAP 1.2 binding works by specifying something in WS-Addr? It will violate what SOAP http binding defines. &nbsp;It is specifying changing the binding at message level, not operations level.
+</p>
+
+<p class='phone'>
+<cite>JonM:</cite> We are doing standards extension to binding instead of doing binding re-work.
+</p>
+
+<p class='phone'>
+<cite>Anish:</cite> Need WSDL to specify things at msg level as opposed to operations level, so there is no need to specify multiple bindings for diff combinations of transport protocols for in and out, and can re-use.
+</p>
+
+<p class='phone'>
+<cite>DavidO:</cite> If you know at design time what transport bindings you want, seems complex to add WSA extensions to do that.
+</p>
+
+<p class='phone'>
+<cite>Glen:</cite> If you know at design time what you want, can use WSA extn (use one WSDL in-out MEP which is mapped to diff SOAP in-out MEPs) to specify the rules for what transports to use.
+</p>
+
+<p class='phone'>
+<cite>MarkN:</cite> Need to decide on following options, also who does it?: <br>
+... 1. Extend/override binding &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- <br>
+... 2. create new binding &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- <br>
+... 3. silent &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- <br>
+... 4. don't know &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- <br>
+... Changed to straw poll on: <br>
+... 1. get it nailed down, relation to SOAP binding needs to be specified - 16 <br>
+... 2. leave it loose and sloppy, doesn't need to be specified - 0 <br>
+... 3. don't know - 2
+</p>
+
+<p class='phone'>
+<cite>DavidO:</cite> need to have a number of common scenarios for this work, also the concern is wrt interoperability.
+</p>
+
+<p class='phone'>
+<cite>Anish:</cite> need to address interop wrt reply-to.
+</p>
+
+<p class='phone'>
+<cite>Glen:</cite> need to be taken care of before we go finals to make work of this WG really worthwhile.
+</p>
+
+<p class='phone'>
+<cite>Paul:</cite> need to think of CR, therefore need the use cases, some lightweight use case document.
+</p>
+
+<a name="action05"></a>
+<p class='irc'>
+&lt;<cite>scribe</cite>&gt; <strong>ACTION:</strong> Harris will take on work on Test case document (with Hugo's help).
+</p>
+
+<p class='phone'>
+<cite>ISSUE:</cite> The chair will open another issue about use cases for test cases.
+</p>
+
+<p class='phone'>
+<cite>MarkN:</cite> Straw poll <br>
+... 1. 12 that this is on critical path. <br>
+... 2. 2 that this is not on critical path.
+</p>
+
+<p class='phone'>
+<cite>Greg:</cite> RefPr and refpa have value in themselves. &nbsp;Thee are also security considerations that have not been considered yet. &nbsp;So suggesting maybe even a separate work on these areas.
+</p>
+
+<p class='phone'>
+<cite>DavidO:</cite> async in relation to reply-to are important issues (as far as his company is concern) to be resolved.
+</p>
+
+<a name="action06"></a>
+<p class='irc'>
+&lt;<cite>scribe</cite>&gt; <strong>ACTION:</strong> DavidO to look at issue 22 and come up with a proposal.
+</p>
+
+<h3 id="item19">Issue 33</h3>
+<p class='phone'>
+<cite>Anish:</cite> Is PaulD's issue mainly that of cardinality of the WSDL 1.1 wrt to service Qname.
+</p>
+
+<p class='phone'>
+<cite>SteveW:</cite> Can you within a single EPR, have 2 descriptions, i.e. 2WSDL?
+</p>
+
+<p class='phone'>
+<cite>Anish:</cite> If you describ using multiple ways, you better have same description.
+</p>
+
+<p class='phone'>
+<cite>JonM:</cite> If you start with the message exchange, can describe in diff ways, WSDL 1.1, then later add compactible description using WSDL 2.0, using the same service QName.
+</p>
+
+<p class='phone'>
+<cite>PaulD:</cite> Put a service up, push it to customer. &nbsp;Then add more endpoints to the same service, with hdiff description in diff WSDL. &nbsp;If msg interaction is the same, should not be diff QName.
+</p>
+
+<p class='phone'>
+<cite>TomR:</cite> Old customers see old EPR, new customers may see both new and old.
+</p>
+
+<p class='phone'>
+<cite>DavidO:</cite> Reality is not possible to have perfect description language. &nbsp;So end up with iterations of description languages. &nbsp;All diff descriptions, so identifier for description should not change just because of diff description format.
+</p>
+
+<p class='phone'>
+<cite>Anish:</cite> Should schema be changed?
+</p>
+
+<p class='phone'>
+<cite>DavidO:</cite> Changing QName is major change.
+</p>
+
+<p class='phone'>
+<cite>TomR:</cite> Don't want 2 incompactible service IDs being referred to by 2 WSDLs.
+</p>
+
+<p class='phone'>
+<cite>Anish:</cite> Clarification Q. &nbsp;Can the URI or reference point to service doc which contains n number of services? &nbsp;Is that a co-constraint?
+</p>
+
+<p class='phone'>
+<cite>MarkN:</cite> No constraint.
+</p>
+
+<p class='phone'>
+<cite>DavidO:</cite> Issue 27 is about adding WSDL location. &nbsp;33?
+</p>
+
+<p class='phone'>
+<cite>Rebecca:</cite> 33 is about being able to find WSDL for a particular service element, also get context , the whole document. &nbsp;Have a late binding, received a msg in intermediary, then need to change transport to pass msg on. &nbsp;So need context to pull this thing together.
+</p>
+
+<p class='phone'>
+Now there are diff issues (issue 27). &nbsp;Now I think 33 and 27 are the same issue.
+</p>
+
+<p class='phone'>
+<cite>PaulD:</cite> The word "link" which is loose and free, which causes a problem for understanding.
+</p>
+
+<p class='phone'>
+<cite>DavidO:</cite> Should there be a friendly amendment to use "WSDL location"?
+</p>
+
+<p class='phone'>
+<cite>Reb:</cite> Didn't want to use reference (too overloaded). &nbsp;Pointer is too vague.
+</p>
+
+<p class='phone'>
+<cite>JonM:</cite> WSDL locations are links.
+</p>
+
+<p class='phone'>
+<cite>MarkN:</cite> Do we have a number of places where hints/links are required? <br>
+... Do we need to identify the links? <br>
+... Do we provide a dialect to hint at what is at the other end of the link?
+</p>
+
+<p class='phone'>
+<cite>JonM:</cite> Maybe we need only to say whether it is WSDL 1.1. or WSDL 2.0, not full dialect? <br>
+... &lt;EPR&gt; <br>
+... &lt;wsdl:servicedefinition&gt; URI &lt;/wsdl:servicedefinition&gt; <br>
+... &lt;extensible&gt; <br>
+... &lt;EPR&gt;
+</p>
+
+<p class='phone'>
+Question is cardinality of &lt;wsdl:servicedefinition&gt;? Is it 0, 1, or ...?
+</p>
+
+<p class='phone'>
+<cite>Hugo:</cite> Is this specified in Core spec or WSDL binding spec?
+</p>
+
+<p class='phone'>
+<cite>Reb:</cite> Core.
+</p>
+
+<p class='phone'>
+<cite>Hugo:</cite> seems strange, it is not WSDL-version independent.
+</p>
+
+<p class='phone'>
+Propose service definition document can be pointed to, but document can be anything.
+</p>
+
+<p class='phone'>
+<cite>SteveW:</cite> Define type of document to give hint of what the document contains.
+</p>
+
+<p class='phone'>
+<cite>Anish:</cite> Why can't we say something specific to WSDL without being specific to WSDL version?
+</p>
+
+<p class='phone'>
+<cite>Hugo:</cite> Thought we wanted to do something for WSDL 1.1, something for WSDL2.0, so thought wanted something specific to WSDL version.
+</p>
+
+<p class='phone'>
+<cite>JonM:</cite> propose that WSD WG do: <br>
+... &lt;EPR&gt; <br>
+... &lt;wsdl:servicedefinition&gt; URI &lt;/wsdl:servicedefinition&gt; <br>
+... &lt;wsa:service wsdli:wsdllocation="xx xx"&gt; (these xx xx refer to pair of data) <br>
+... &lt;extensible&gt; <br>
+... &lt;EPR&gt;
+</p>
+
+<p class='phone'>
+<cite>Anish:</cite> propose that WSD WG do: <br>
+... &lt;EPR&gt; <br>
+... &lt;wsdl:servicedefinition&gt; URI &lt;/wsdl:servicedefinition&gt; <br>
+... &lt;wsa:portType wsdli:wsdllocation="xx xx"&gt; <br>
+... &lt;wsa:service wsdli:wsdllocation="xx xx"&gt; <br>
+... &lt;extensible&gt; <br>
+... &lt;EPR&gt;
+</p>
+
+<a name="action07"></a>
+<p class='irc'>
+&lt;<cite>scribe</cite>&gt; <strong>ACTION:</strong> JonathanM (with Rebecca) to write this up, and write proposal for issue 33.
+</p>
+
+<h3 id="item20">Issue 29</h3>
+<p class='phone'>
+<cite>Gudge:</cite> What is this issue trying to solve? &nbsp;Don't give me those faults? &nbsp;If I can't receive faults, and someone sends me faults, I can't receive it, so what? If you don't want to receive faults, just don't provide the EPRs.
+</p>
+
+<p class='phone'>
+<cite>Anish:</cite> So you say out of scope.
+</p>
+
+<p class='phone'>
+<cite>Gudge:</cite> Yes
+</p>
+
+<p class='phone'>
+<cite>SteveW:</cite> Is the spec text saying a processing model.
+</p>
+
+<p class='phone'>
+<cite>Gudge:</cite> I don't think the spec is trying to define a processing model.
+</p>
+
+<p class='phone'>
+<cite>Anish:</cite> propose remove text about fault sending other than that related to explicit [fault endpoint] being present. Silent on what you want to do if [fault endpoint] absent.
+</p>
+
+<p class='phone'>
+<cite>Gudge:</cite> Wants to run things past Paco before change.
+</p>
+
+<p class='phone'>
+<cite>MarkN:</cite> The approach is to <br>
+... 1. Remove text &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;12 <br>
+... 2. Clarify text &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;5 <br>
+... 3. Don't care &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2
+</p>
+
+<p class='phone'>
+<a name="resolution05">
+<strong class='resolution'>RESOLUTION: Close issue i029.</strong>
+</p>
+
+<a name="action08"></a>
+<p class='irc'>
+&lt;<cite>scribe</cite>&gt; <strong>ACTION:</strong> Editors to change text: "When present" to be added to second sentence of [fault endpoint] of Section 3 of Core - When formulating a fault message as defined in Section 3.2 and 4, the sender MUST use the contens of the [fault endpoint] when present, of the message being replied to formulate the fault message.
+</p>
+
+<a name="action09"></a>
+<p class='irc'>
+&lt;<cite>scribe</cite>&gt; <strong>ACTION:</strong> Editors to remove third and fourth and fifth sentences of [fault endpoint] of Section 3 of Core - If the [fault endpoint] is absent, the sender MAY use the contents of the [reply endpoint] to formulate the fault message. &nbsp;If both the [fault endpoint] and [reply endpoi t] are absent, the sender MAY use the contents of the [source endpoint] to formulate the fault message. &nbsp;This property may be absent if the sender cannot receive fault messages (e.g. is a one-way application mesage).
+</p>
+
+<a name="action10"></a>
+<p class='irc'>
+&lt;<cite>scribe</cite>&gt; <strong>ACTION:</strong> Editors to edit [reply endpoint] to reflect similar changes.
+</p>
+
+<a name="action11"></a>
+<p class='irc'>
+&lt;<cite>scribe</cite>&gt; <strong>ACTION:</strong> MarkH to raise a new issue to consider the processing model for our SOAP faults. &nbsp;(See relevant sentences of Section 3 of SOAP Binding.)
+</p>
+
+<p class='phone'>
+Question: &nbsp;Is this a SOAP fault?
+</p>
+
+<p class='phone'>
+<cite>TomR:</cite> We need to define what we mean by fault. &nbsp;Specifying SOAP fault is one way. &nbsp;Or WSDL fault.
+</p>
+
+<p class='phone'>
+<cite>MarkN:</cite> Do we need to define some sort of defnull semantics? 0 <br>
+... Who is against going down this path? majority
+</p>
+
+<h3 id="item21">Issue 38</h3>
+<p class='phone'>
+Gudge has sent an email with a proposal today. &nbsp;Gudge will print it out now.
+</p>
+
+<p class='phone'>
+Date: 8 December 2004
+</p>
+
+<p class='irc'>
+&lt;<cite>scribe</cite>&gt; Scribe: Harris
+</p>
+
+<p class='phone'>
+<cite>mnot:</cite> Recap of previous day, plan for covering issues today
+</p>
+
+<h3 id="item22">i038 discussion</h3>
+<p class='phone'>
+<cite>paco:</cite> asks for clarification on Gudges perspective;
+</p>
+
+<p class='phone'>
+<cite>tom:</cite> everyone has different interpretations; &nbsp;Q. How do you know when to use this ReplyTo in the future wo/ a contract?? Tom thinks it'd be a good idea to have a contract specifying when to use a Reply.
+</p>
+
+<p class='phone'>
+<cite>Marc:</cite> doesn't think Gudge's proposal goes far enough; it doesn't give rules about when I get a replyto what does that exactly mean.
+</p>
+
+<p class='phone'>
+<cite>mnot:</cite> Do we want to nail down this issue or wait to solve issue 021
+</p>
+
+<p class='phone'>
+<cite>tom:</cite> The tricky part is the replyto is a completely different service; do we need some wsdl ornamentation to clarify this
+</p>
+
+<p class='phone'>
+<cite>paco:</cite> WSDL is not the only part of the contract. &nbsp;What about BPEL? &nbsp;This is also a contract with partnerlinks, etc.
+</p>
+
+<p class='phone'>
+<cite>davidO:</cite> it at least supports the WSDL meps, but could be broader as well.
+</p>
+
+<p class='phone'>
+<cite>melder:</cite> Do we need to resolve this?
+</p>
+
+<p class='phone'>
+<cite>mnot:</cite> agree... what does this mean for our spec?
+</p>
+
+<p class='phone'>
+<cite>marc:</cite> how does this relate to i021? &nbsp;How far are we going to go specifying the detail of replyto.
+</p>
+
+<p class='phone'>
+<cite>paco:</cite> we can specify this explicitly for WSDL meps, but admit other possibilities
+</p>
+
+<p class='phone'>
+<cite>mnot:</cite> for i021 hugo and anish will look at properties/wsdl extensions... the next steps is to go beyond i021... there is some orthoganality between these two issues
+</p>
+
+<p class='phone'>
+<cite>tom:</cite> I assumed the replyto was for an asynch callback.
+</p>
+
+<p class='phone'>
+<cite>marc:</cite> Q. If I send you a message with a ReplyTo, what would you do?
+</p>
+
+<p class='phone'>
+<cite>gudge:</cite> the reply should be a correlated message with an id
+</p>
+
+<p class='phone'>
+<cite>mnot:</cite> the replyto is a soap header... is there a processing model for the node receiving it?
+</p>
+
+<p class='phone'>
+<cite>gudge:</cite> if you are doing a wsdl20 mep... it tells you where to send the message.
+</p>
+
+<p class='phone'>
+<cite>mnot:</cite> is there a processing semantic?
+</p>
+
+<p class='phone'>
+<cite>anish:</cite> depends on the context
+</p>
+
+<p class='phone'>
+<cite>gudge:</cite> if you are doing an in/out mep the replyto tells you where to send the response
+</p>
+
+<p class='phone'>
+<cite>anish:</cite> in the context of an MEP you would know what to do with replyto.
+</p>
+
+<p class='phone'>
+<cite>marc:</cite> I dont' want to disallow anything, I just want this to be clear.
+</p>
+
+<p class='phone'>
+<cite>anish:</cite> we can specify exactly how this works for the MEPs we are responsible for
+</p>
+
+<p class='phone'>
+<cite>marc:</cite> it is loosey-goosey now what happens in the default case; what about a better default.
+</p>
+
+<p class='phone'>
+<cite>tom:</cite> the PO I send would have a reply to that would receive the invoice. &nbsp;Should the infrstructure remember replyto for months?
+</p>
+
+<p class='phone'>
+<cite>gudge:</cite> wsa is pipes, elbows... stuff to build plumbing;
+</p>
+
+<p class='phone'>
+<cite>melder:</cite> 1) don't say anyting about reply to, 2) specify one or more ways to use reply 3) there is just ONE way to use replyto
+</p>
+
+<p class='phone'>
+<cite>gudge:</cite> a variation on 2 is to make it context dependent on MEP <br>
+... in general in SOAP you can ingore stuff you dont' understand
+</p>
+
+<p class='phone'>
+<cite>mnot:</cite> moving forward... do we need to add clarification in spec? &nbsp;do we describe this in WSDL? in SOAP MEPs? &nbsp;I'm concerned <br>
+... we need to reconcile what is in CVS regarding the variance in drafts between editors;
+</p>
+
+<p class='phone'>
+<cite>marc:</cite> editors need to go through WSDL document to clarify this <br>
+... the core needs to be clarified as well
+</p>
+
+<p class='phone'>
+<cite>paco:</cite> the core needs to contain statment about using replyto based on context
+</p>
+
+<a name="action12"></a>
+<p class='irc'>
+&lt;<cite>scribe</cite>&gt; <strong>ACTION:</strong> Paco to clarify the nature of the properties in the core
+</p>
+
+<p class='phone'>
+<cite>mnot:</cite> regarding wsdl binding; &nbsp;should editors work on resolving this?
+</p>
+
+<a name="action13"></a>
+<p class='irc'>
+&lt;<cite>scribe</cite>&gt; <strong>ACTION:</strong> editors to create proposal and incorporate into drafts (in two weeks)
+</p>
+
+<p class='phone'>
+<cite>jmarsh:</cite> what exactly are we adding to wsdl binding?
+</p>
+
+<p class='phone'>
+<cite>marc:</cite> clarification of using replyto for MEPs
+</p>
+
+<h3 id="item23">i028 discussion</h3>
+<p class='phone'>
+<cite>mnot:</cite> similar issue, if we can conclude i038 that should take care of this
+</p>
+
+<p class='phone'>
+<cite>jmarsh:</cite> then can we close this issue
+</p>
+
+<p class='phone'>
+<cite>mnot:</cite> objection to closing this issue?
+</p>
+
+<p class='phone'>
+no objection - ISSUE CLOSED
+</p>
+
+<p class='phone'>
+<a name="resolution06">
+<strong class='resolution'>RESOLUTION: i028 closed</strong>
+</p>
+
+<h3 id="item24">i034 discussion (also discussion about making it mandatory)</h3>
+<p class='phone'>
+<cite>mnot:</cite> this is talking about how you calculate the default action from WSDL, esp when they conflict
+</p>
+
+<p class='phone'>
+<cite>hugo:</cite> proposal not to have defaults... make it explicit in WSDL; &nbsp;should discuss whether action is manditory.
+</p>
+
+<p class='phone'>
+<cite>tom:</cite> I like conditional instead of optional; &nbsp;if it is in WSDL is must be on the wire
+</p>
+
+<p class='phone'>
+<cite>mnot:</cite> three places for action... in WSDL, on the wire, and if it isn't on the wire the default could appear as a property
+</p>
+
+<p class='phone'>
+<cite>tom:</cite> action shouldn't be mandatory if wsdl is designed not to need it
+</p>
+
+<p class='phone'>
+<cite>mnot:</cite> Core says action is mandatory (i031); WSDL spec... some MEPs will say action mandatory for default (i034); in SOAP layer...
+</p>
+
+<p class='phone'>
+<cite>tom:</cite> clients want to use messages the same way they do today (with "action" as first child of soap body)
+</p>
+
+<p class='phone'>
+<cite>gudge:</cite> do you really need to use ws addressing in this case?
+</p>
+
+<p class='phone'>
+<cite>tom:</cite> my EPR only has a url... I want minimal behavior;
+</p>
+
+<p class='phone'>
+<cite>gudge:</cite> how is EPR transmitted? &nbsp;EPRs in application layer
+</p>
+
+<p class='phone'>
+<cite>tom:</cite> why do you need extra action? &nbsp;EPRs communicated via configuration, bath room walls
+</p>
+
+<p class='phone'>
+<cite>anish:</cite> flip question around; &nbsp;why does it need to be manatory?
+</p>
+
+<p class='phone'>
+<cite>marc:</cite> implementations work this way today
+</p>
+
+<p class='phone'>
+<cite>jmarsh:</cite> how do you distinguish between the two arguments here
+</p>
+
+<p class='phone'>
+<cite>tom:</cite> we need the replyto
+</p>
+
+<p class='phone'>
+<cite>hugo:</cite> action is important because it allows reusing the exact same message to different operations
+</p>
+
+<p class='phone'>
+<cite>marc:</cite> action discussion is religious, not technical; &nbsp;soap-action redux. &nbsp;service can require it or not.
+</p>
+
+<p class='phone'>
+<cite>paco:</cite> migration from legacy web services to new services; &nbsp;should we drive the discussion based on the past? &nbsp;that may be short-sighted. &nbsp;by putting action in spec we simplify the situation. &nbsp;now is the time to fix this.
+</p>
+
+<p class='phone'>
+<cite>marc:</cite> the client just does what it is told
+</p>
+
+<p class='phone'>
+<cite>paco:</cite> this doesnt seem like the right way to go... action is clean and nice, removing need to crack open the message
+</p>
+
+<p class='phone'>
+<cite>gudge:</cite> I don't disagree with marc... you can build services without action. our concerns are that there are cases when you can't see the body (intermediary, body encrypted), and action allows dispatch. &nbsp;Higher levels protocols can make action manatory... my concern is bifurcating the stack implementations
+</p>
+
+<p class='phone'>
+<cite>marc:</cite> the service decides
+</p>
+
+<p class='phone'>
+<cite>gudge:</cite> we think there are more things that may need it besides service
+</p>
+
+<p class='phone'>
+<cite>davidO:</cite> related to soap-action... my problem is that an http header was created irrespective of SOAP; so a soap stack couldn't always expect it was there; &nbsp;therefore it was stuffed into the body... this lead us to the rpc styly we have today. &nbsp;We have the opportunity to define the mandatory header block so soap stacks have a centralized place to have this information
+</p>
+
+<p class='phone'>
+<cite>anish:</cite> service designer can put action it
+</p>
+
+<p class='phone'>
+<cite>davidO:</cite> by requiring action, we can build cleaner applications (intermediaries, dispatchers, etc.). &nbsp;The soap-action is not exactly the same; &nbsp;one argument is that people will put garbage in action... that is okay. &nbsp;Like putting garbage into zip code on html form.. if it is required you can dispatch info to sales... even if some data is invalid
+</p>
+
+<p class='phone'>
+<cite>marc:</cite> I think this analogy is invalid
+</p>
+
+<p class='phone'>
+<cite>davidO:</cite> since it is mandatory it allows dispatching; &nbsp;if optional 25% of people give zip; if valid 95% of info is valid which is better;
+</p>
+
+<p class='phone'>
+<cite>anish:</cite> what about i023... making service qname required? &nbsp;same argument... "our stacks don't need it"; this discussion is bizarre;
+</p>
+
+<p class='phone'>
+<cite>greg:</cite> this is partly a business decision; lots of companies are making $$ with this stuff... with action mandatory this is more simple.
+</p>
+
+<p class='phone'>
+<cite>marc:</cite> this assumes companies are dispatching on action; &nbsp;spec says action is used for dispatch;
+</p>
+
+<p class='phone'>
+<cite>tom:</cite> this is religion. &nbsp;this is great for those that want it... it should be conditional.
+</p>
+
+<p class='phone'>
+<cite>steve:</cite> we have these same factions in SAP; this is hard, but making it mandatory leads us in the right path, but adding garbage to it is a bad idea; &nbsp;we use a mechanism like anonymous that you can ignore.
+</p>
+
+<p class='phone'>
+<cite>Rob:</cite> the don't ask, don't tell policy
+</p>
+
+<p class='phone'>
+<cite>davidO:</cite> the web was successful b/c of constraints: 1) set of verbs, notably GET 2) always uri 3) self-describing data. &nbsp;It could have said all this stuff was optional etc. Fielding mentions visibilitiy... action provides this.
+</p>
+
+<p class='phone'>
+<cite>rebecca:</cite> to steve... you are putting in special values... isn't that about the same as not having a value?
+</p>
+
+<p class='phone'>
+<cite>steve:</cite> yes, but w/ it mandatory it simplifies the stack
+</p>
+
+<p class='phone'>
+<cite>glen:</cite> if you put a value in a required data item... expectations need to be set for interoperability
+</p>
+
+<p class='phone'>
+<cite>steve:</cite> I don't disagree... what about a middle ground with action that won't be used
+</p>
+
+<p class='phone'>
+<cite>davidO:</cite> like a null action
+</p>
+
+<p class='phone'>
+<cite>marc:</cite> re use of action with soap faults: is action fundamental to soap or layered on top?
+</p>
+
+<p class='phone'>
+<cite>glen:</cite> I think action is layered on top
+</p>
+
+<p class='phone'>
+<cite>marc:</cite> it isn't very optional to some
+</p>
+
+<p class='phone'>
+<cite>mnot:</cite> has anyone's mind changed? <br>
+... straw poll: should action be mandatory? <br>
+... status quo: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;13 <br>
+... relax req.: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;6 <br>
+... not sure: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0 <br>
+... straw poll from last telecon was much different <br>
+... we are making progress (assuming people are keeping an open mind); discuss w3c procedure regarding votes/process;
+</p>
+
+<p class='phone'>
+<cite>hugo:</cite> would people object?
+</p>
+
+<p class='phone'>
+<cite>mnot:</cite> call to order; &nbsp;in a week the positions flipped; &nbsp;should we move forward to resolve this?
+</p>
+
+<p class='phone'>
+<cite>paul:</cite> I changed my mind; &nbsp;it makes sense architecturally to make it mandatory, but others can put garbage in
+</p>
+
+<p class='phone'>
+<cite>anish:</cite> mark little has strong feelings
+</p>
+
+<p class='phone'>
+<cite>tom:</cite> not sure if I'll be filing an objection
+</p>
+
+<p class='phone'>
+<cite>anish:</cite> we should give notice on votes
+</p>
+
+<p class='phone'>
+<cite>mnot:</cite> this f2f was advertised for weeks
+</p>
+
+<p class='phone'>
+<cite>davidO:</cite> quotes mLittle reqarding his position
+</p>
+
+<p class='phone'>
+<cite>mnot:</cite> I am touched by our "togetherness" <br>
+... Does anyone object to maintaining status quo (formally)? <br>
+... formal vote - 9 Y, 5 N, 1 abstain <br>
+... of the 5 voting no, will anyone file a formal objection? [it doesn't seem so] <br>
+... resolves this issue (031) with status quo
+</p>
+
+<h3 id="item25">Back to i034 (defaulting of action)</h3>
+<p class='phone'>
+<cite>mnot:</cite> anish is the owner
+</p>
+
+<p class='phone'>
+<cite>rebecca:</cite> you need a value if it is mandatory that we all agree on for interop;
+</p>
+
+<p class='phone'>
+<cite>hugo:</cite> this issue came about from abstracting spec out of WSDL; ideally we'd have the same action for the default regardless of description; we need to state this explicity; bottom line: will we have to add this to WSDL everytime? This is a tool kit problem; this should be explicit in the WSDL.
+</p>
+
+<p class='phone'>
+<cite>anish:</cite> I pointed out the same problem of determining which WSDL version is being used. &nbsp;A default could be based on WSDL version.
+</p>
+
+<p class='phone'>
+<cite>paco:</cite> if I publish a service via wsdl11 and use a wsdl20 desc; &nbsp;default doesn't cause a problem;
+</p>
+
+<p class='phone'>
+<cite>anish:</cite> artifacts in both wsdl could be the same.
+</p>
+
+<p class='phone'>
+<cite>tom:</cite> are you allowed to use wsa addressig with existing wsdl? &nbsp;if so we need a default?
+</p>
+
+<p class='phone'>
+<cite>marc:</cite> why not just us the anonymous action?
+</p>
+
+<p class='phone'>
+<cite>jmarsh:</cite> today with wsa action embedded in wsdl it means you support it but don't require it
+</p>
+
+<p class='phone'>
+<cite>tom:</cite> client doesn't have to change, but infrastructure will handle it;
+</p>
+
+<p class='phone'>
+<cite>glen:</cite> the server is what will need this and it would have to change to start using wsa.
+</p>
+
+<p class='phone'>
+<cite>marc:</cite> it seems neater if there isn't a default; &nbsp;but I still like a default.
+</p>
+
+<p class='phone'>
+<cite>hugo:</cite> the default is good enough; &nbsp;if you &nbsp;want an action it should be explicit. (there are many ways to default); &nbsp;static algorithm vs dynamic algorithm based on wsdl for determining wsa action;
+</p>
+
+<p class='phone'>
+straw poll
+</p>
+
+<p class='phone'>
+<cite>scribe:</cite> do we need dynamic algorithm? <br>
+... In general the answer seemed to be yes.
+</p>
+
+<p class='phone'>
+<cite>jmarsh:</cite> do we want to specifiy this action in the WSDL (hopefully unique per operation).
+</p>
+
+<p class='phone'>
+<cite>glen:</cite> it is possible to have multiple wsdls pointing to same place.
+</p>
+
+<p class='phone'>
+<cite>paul:</cite> http soap-action is optional today.
+</p>
+
+<p class='phone'>
+<cite>anish:</cite> if soap-action is in WSDL it must be in http header
+</p>
+
+<p class='phone'>
+<cite>rebecca:</cite> is there a situation when it isn't in WSDL?
+</p>
+
+<p class='phone'>
+<cite>anish:</cite> given that it is mandatory, providing an algorithm that would generate a unique URI for each type of message would be very useful.
+</p>
+
+<p class='phone'>
+<cite>mnot:</cite> that is what we have now; although we need to consider the impact if wsdl versions are different.
+</p>
+
+<p class='phone'>
+<cite>marc:</cite> I agree with Anish, we need a psuedo identifier (as unique as possible). This provides the semantics of the message. &nbsp;Algorithm should be based on message itself.
+</p>
+
+<p class='phone'>
+<cite>rebecca:</cite> in gudge's email: action can have the same value in many messages
+</p>
+
+<p class='phone'>
+<cite>tom:</cite> a default algorithm per type of message.
+</p>
+
+<p class='phone'>
+<cite>anish:</cite> how would we go about this per message type without relying on the description format
+</p>
+
+<p class='phone'>
+<cite>jonathan:</cite> it is okay to have different algorithms, but we can create one that will work for both wsdl versions; would you change the target namespace for a new wsdl20 description
+</p>
+
+<p class='phone'>
+<cite>anish:</cite> yes... I'd change ns
+</p>
+
+<p class='phone'>
+<cite>jmarsh:</cite> in 80% case it would be the same
+</p>
+
+<p class='phone'>
+<cite>mnot:</cite> we can't guarantee that with two wsdl version the action would be the same? is this true?
+</p>
+
+<p class='phone'>
+<cite>marc:</cite> it should be based on messages; people want to use action to see what is in message;
+</p>
+
+<p class='phone'>
+<cite>paco:</cite> I disagree... about a PO message being used in different cases;
+</p>
+
+<p class='phone'>
+<cite>marc:</cite> all the industry schemas dont work this way.
+</p>
+
+<p class='phone'>
+<cite>mnot:</cite> two ways we could go: base it on message type or base it on a desc artifact;
+</p>
+
+<p class='phone'>
+<cite>anish:</cite> clarification for marc... where would you get what is in a message type?
+</p>
+
+<p class='phone'>
+<cite>marc:</cite> we know what will go in soap header and body... can we munge those to get the default?
+</p>
+
+<p class='phone'>
+<cite>anish:</cite> how do you definitely say what the default value?
+</p>
+
+<p class='phone'>
+<cite>mnot:</cite> let's get a sense on who wants to explore this direction (message type algorithm)? [a couple people are interested]
+</p>
+
+<p class='phone'>
+<cite>paul:</cite> are we defaulting to global definition? with a hash?
+</p>
+
+<p class='phone'>
+<cite>glen:</cite> why wouldn't we just want to default to the empty string? &nbsp;why would that be a bad idea?
+</p>
+
+<p class='phone'>
+<cite>marc:</cite> so you wouldn't need to look in body
+</p>
+
+<p class='phone'>
+<cite>glen:</cite> in those cases the service provider would put the action in there (why do we care how they derive that?)
+</p>
+
+<p class='phone'>
+<cite>mnot:</cite> three options: 1) based on message type, 2) based on description, 3) do something static? <br>
+... STRAW POLL (can vote more than once): <br>
+... 1) 9 votes <br>
+... 2) 15 votes <br>
+... 3) 6 votes <br>
+... marc, would you like a proposal?
+</p>
+
+<p class='phone'>
+<cite>marc:</cite> I don't want to waste my time since most are interested in the description approach
+</p>
+
+<p class='phone'>
+<cite>mnot:</cite> let's take that off the table until someone is willing to do a proposal? <br>
+... glen, are you still interested in this?
+</p>
+
+<p class='phone'>
+<cite>glen:</cite> yes
+</p>
+
+<p class='phone'>
+<cite>tom:</cite> but this approach takes away the benefits of making it mandatory.
+</p>
+
+<p class='phone'>
+<cite>glen:</cite> coupling between endpoints and intermediaries is problematic; what is the argument against a static value?
+</p>
+
+<p class='phone'>
+<cite>gudge:</cite> a defaulting algorithm allows people to use existing wsdls
+</p>
+
+<p class='phone'>
+<cite>glen:</cite> does the wsdl have action values?
+</p>
+
+<p class='phone'>
+<cite>gudge:</cite> no
+</p>
+
+<p class='phone'>
+<cite>glen:</cite> then they don't care.
+</p>
+
+<p class='phone'>
+<cite>mnot:</cite> we rearguing the point about optionality?
+</p>
+
+<p class='phone'>
+<cite>glen:</cite> I really want to know the rationale??
+</p>
+
+<p class='phone'>
+<cite>steve:</cite> it is a psuedo-optional value if it is static, but is is nice to have an explicit place to know who to do what you are going to do.
+</p>
+
+<p class='phone'>
+<cite>mnot:</cite> we are leaning toward using the desc artifacts. jmarsh mentioned a couple ways to do that: use the status quo and port if forward to wsdl20.
+</p>
+
+<p class='phone'>
+<cite>hugo:</cite> the spec says the action identifies the message
+</p>
+
+<p class='phone'>
+<cite>paco:</cite> it identifies uniquely the action identifier, not the message
+</p>
+
+<p class='phone'>
+<cite>jeff:</cite> what are the cases where you use a different action with the same wsdl? [you wouldn't]
+</p>
+
+<p class='phone'>
+<cite>marc:</cite> with different namespaces you'd get different actions
+</p>
+
+<p class='phone'>
+<cite>jeff:</cite> that is okay... I could have corba idl, wsdl, etc.
+</p>
+
+<p class='phone'>
+<cite>jmarsh:</cite> you could have the same service with two wsdls for 1.1 and 2.0
+</p>
+
+<p class='phone'>
+<cite>steve:</cite> +1 to hugos comment about tools handling this
+</p>
+
+<p class='phone'>
+<cite>mnot:</cite> options: 1) take wsdl 1.1 forward to 2.0 &nbsp;2) take wsdl 2.0 to 1.1 &nbsp;3) separate the two
+</p>
+
+<p class='phone'>
+<cite>davidO:</cite> have we seen what #2 would look like? &nbsp;I'd like to see that.
+</p>
+
+<p class='phone'>
+<cite>hugo:</cite> I would vote for #2 b/c: wsdl20 already has an algorithm (a uri that is dereferenceable)
+</p>
+
+<p class='phone'>
+<cite>gudge:</cite> another approach... have the wsdl wg change their component designators
+</p>
+
+<p class='phone'>
+Straw Poll:
+</p>
+
+<p class='phone'>
+<cite>scribe:</cite> 1) 11 <br>
+... 2) 8 <br>
+... 3) 0
+</p>
+
+<p class='phone'>
+[sigh of relief that no one voted for three]
+</p>
+
+<p class='phone'>
+<cite>jmarsh:</cite> I submitted a proposal for this #1 (responding to Hugo).
+</p>
+
+<p class='phone'>
+jmarsh presents proposal: Take existing values from 11 desc and look at 20 desc and extract the corresponding values; &nbsp;this also maps the MEPs between wsdl 11 and 20.
+</p>
+
+<p class='phone'>
+<cite>gudge:</cite> your degree of confidence is high?
+</p>
+
+<p class='phone'>
+<cite>jmarsh:</cite> yes, I think it will work
+</p>
+
+<p class='phone'>
+<cite>mnot:</cite> when we go to CR, would we have test cases that would test equivalence?
+</p>
+
+<p class='phone'>
+<cite>anish:</cite> if an extension MEP is used then the algorithm would break; this would work for existing MEP, but we may need to extend for custom
+</p>
+
+<p class='phone'>
+<cite>gudge:</cite> the important part is mapping between the two version of WSDL; so for a new MEP in wsdl 20 why map it to wsdl 11?
+</p>
+
+<a name="action14"></a>
+<p class='irc'>
+&lt;<cite>scribe</cite>&gt; <strong>ACTION:</strong> Hugo to come up with a proposal for #2.
+</p>
+
+<p class='phone'>
+<cite>marc:</cite> does this cause us to be dependent on wsdl 20?
+</p>
+
+<p class='phone'>
+<cite>mnot:</cite> we have that already because we must have wsdl 20 bindings.
+</p>
+
+<p class='phone'>
+<cite>jmarsh:</cite> discusses dependency on wsdl 20 wg.
+</p>
+
+<p class='phone'>
+<cite>gudge:</cite> the wsdl rec is a little behind the other specs anyway
+</p>
+
+<p class='phone'>
+<cite>mnot:</cite> can this be done by tomorrow?
+</p>
+
+<p class='phone'>
+<cite>hugo:</cite> yes
+</p>
+
+<p class='irc'>
+&lt;<cite>scribe</cite>&gt; Scribe: Steve Winkler
+</p>
+
+<p class='phone'>
+<cite>Note:</cite> I tried to capture as much of this as possible, but sometimes the dicussion became heated and went to fast or involved whiteboarding that was hard to capture. &nbsp;I've marked below places where I was pretty sure I missed something and it would be helpful if those people could clarify (if the can remember) what they meant. <br>
+... Also, there were 2 marks present and I may have mixed them up, so if you feel that you've been misquoted, please let me know.
+</p>
+
+<h3 id="item26">ISSUE i001 - EPRs vs Identifiers</h3>
+<p class='phone'>
+Possible solution proposals:
+</p>
+
+<p class='phone'>
+<cite>DaveO:</cite> Explain the tradeoffs of EPRs versus URis and justify why we really need identifers in EPRs.
+</p>
+
+<p class='phone'>
+<cite>Paco:</cite> They aren't identifiers and we need to change language to reflect that EPRs don't have identity properties.
+</p>
+
+<p class='phone'>
+<cite>Hugo:</cite> We should get rid of ref props and their functions as identifiers.
+</p>
+
+<p class='phone'>
+<cite>Tom:</cite> Can I get some clarification, are ref params a part of this discussion?
+</p>
+
+<p class='phone'>
+<cite>Jeff:</cite> The only difference between refprops and refparams is that you are allowed to use one in identity comparison.
+</p>
+
+<p class='phone'>
+<cite>Paco:</cite> The spec states props change the metadata and params don't. &nbsp;This has nothing to do with identity.
+</p>
+
+<p class='phone'>
+<cite>DaveO:</cite> Params can also be used as part of an identification structure, but WSA is written such that the things you look at, like metadata doesn't change. &nbsp;Users might claim that a particular param identifies an instance, but within their own implementation. &nbsp;So they will be used as identifiers, but within the implementation.
+</p>
+
+<p class='phone'>
+<cite>MarkN:</cite> section 2.1 sentence ends 'being conveyed' which is confusing and should be looked at later.
+</p>
+
+<p class='phone'>
+<cite>hugo:</cite> ref params not used for identification, with the way the spec is written, so I don't have a problem with ref params.
+</p>
+
+<p class='phone'>
+<cite>Paco:</cite> If params don't identify, you don't have an issue...
+</p>
+
+<p class='phone'>
+<cite>Tom:</cite> Different params can indicate diff resources, but not different metadata. ref props help you find the type, and params help you find a different instance, and both are valid.
+</p>
+
+<p class='phone'>
+<cite>DaveO:</cite> I agree, this will be used to identify instances, primarily within the context of state.
+</p>
+
+<p class='phone'>
+<cite>Tom:</cite> Different props indicate different schema, this is confusing to me.
+</p>
+
+<p class='phone'>
+<cite>Paco:</cite> If the props are different you can't assume that the schema is the same. &nbsp;It's not necessarily different, but you can't assume that it's the same.
+</p>
+
+<p class='phone'>
+<cite>MarcH:</cite> What are the implicatiosn of whether they are an identifier or not?
+</p>
+
+<p class='phone'>
+<cite>Paco:</cite> If they are, we assume that TAG will have a problem.
+</p>
+
+<p class='phone'>
+<cite>MarcH:</cite> But what is the technical difference?
+</p>
+
+<p class='phone'>
+<cite>Paco:</cite> If they are identifiers they have to be unique, comparision has to result in (in)/equality and in the main EPR use cases this assumption would be wrong. &nbsp;If EPRs are different in comparison, then they should point to different resources.
+</p>
+
+<p class='phone'>
+<cite>Bob:</cite> You can prove equality, but not inequality.
+</p>
+
+<p class='phone'>
+<cite>MarkN:</cite> Paco is saying EPRs add to the web arch that you can have 2 EPRs that point to the same thing?
+</p>
+
+<p class='phone'>
+<cite>Paco:</cite> The TAG assumes this may happen, but they try to avoid this. &nbsp;With EPRs in our spec we want to do this. &nbsp;URIs are not being used as identifiers in practical use, they don't imply identity.
+</p>
+
+<p class='phone'>
+<cite>DaveO:</cite> Web arch says that as a service provider, if you use aliasing, problems may result. &nbsp;If you want to have 2 structures for the same thing, that's a feature.
+</p>
+
+<p class='phone'>
+<cite>Paco:</cite> If we say EPRs are identifiers, they will be compared and wrong conclusions will be drawn because they're not implying identity.
+</p>
+
+<p class='phone'>
+<cite>Paul:</cite> A URI gets me to a resource, and a different URI gets me to the same resource, but it doesn't get me to a diff resource. &nbsp;It's a many to one.
+</p>
+
+<p class='phone'>
+<cite>Paco:</cite> Web arch says that it's not desirable to have multiple URIs pointing to one resource because you lose identity.
+</p>
+
+<p class='phone'>
+<cite>Paul:</cite> It's not really an address, but it's directions how to get there. &nbsp;It was a place to send messages, but you had no assumption as to who was going to receive the message at the address.
+</p>
+
+<p class='phone'>
+<cite>Jeff:</cite> It depends on the comparison function.
+</p>
+
+<p class='phone'>
+<cite>Paco:</cite> Through comparison we need to be able to identify.
+</p>
+
+<p class='phone'>
+<cite>MarkN:</cite> So you're raising the bar, and saying even though the web allows this, we shouldn't.
+</p>
+
+<p class='phone'>
+<cite>Paco:</cite> If you have 2 pointers to the same thing, they aren't as valuable as if you had 1 and only 1.
+</p>
+
+<p class='phone'>
+<cite>Jeff:</cite> Let's go back to first prinicples - an identity is an equivalence relation. &nbsp;You have i1 and i2 and some function sameAs which returns a boolean. &nbsp;boolean identity = sameAs(i1, i2);
+</p>
+
+<p class='phone'>
+<cite>Gudge:</cite> Isn't the result of the function really yes, or 'don't know' and not really a boolean.
+</p>
+
+<p class='phone'>
+<cite>Jeff:</cite> In a true identiy it should be a boolean, but this sameAs method is context dependent. E.g. a replication servicehands out services etc., clients of the replication service must consult some delphi to find out that two received services are the same, but if you consult the replicant service, they aren't. &nbsp;The context is provided by where you do your consultation. &nbsp;You have to consult somebody, a factory or a table or something.
+</p>
+
+<p class='phone'>
+<cite>Paco:</cite> I agree, but you have to define the consultation method, otherwise this is broken.
+</p>
+
+<p class='phone'>
+<cite>Jeff:</cite> As a client, I aquire 2 structures and I want to determine if they are references or if they identify the same thing and I need to ask somebody to find out.
+</p>
+
+<p class='phone'>
+<cite>Paco:</cite> But since we're not going to provide that here, we should refrain from doing this.
+</p>
+
+<p class='phone'>
+<cite>DaveO:</cite> But the web arch works good enough, so we don't really need...
+</p>
+
+<p class='phone'>
+<cite>ScribeNote:</cite> Sorry, the discussion was moving fast and I lost the thread here.
+</p>
+
+<p class='phone'>
+<cite>Anish:</cite> Paco doens't want EPRs to be identifiers because he doesn't want people comparing EPRs, but the spec says how to do this.
+</p>
+
+<p class='phone'>
+<cite>Paco:</cite> But not for identity. It's misleading to call these identifiers.
+</p>
+
+<p class='phone'>
+<cite>MarkN:</cite> The reason we need props is that they identify a context, so I'm not sure this will get us anywhere.
+</p>
+
+<p class='phone'>
+<cite>Jonathon:</cite> There is no universal comparison for namespaces, you do it char for char, but that doesn't necessarily guarantee what they point to.
+</p>
+
+<p class='phone'>
+<cite>DaveO:</cite> If a website issues a.org:80/index.html and it issues a.org, within the server they can be the same resource. &nbsp;They are different ids. &nbsp;That is the comparison function (string comp). &nbsp;They identify the same resource on the server, but the strings are different. &nbsp;What are the downsides? &nbsp;When a comparison for equality is made they get a no answer, the server pays the price. &nbsp;Say you are cacheing, the server has to do 2x the work. &nbsp;You want the identities to be the same is so that the comparison can be true, and they can offload the work. &nbsp;This is why the webarch doc says that this is dangerous, but it might &nbsp;be ok, and this is why the web works relatively well and we didn't need to provide a compare method. &nbsp;We could have done this canonically but we didn't because it's in the interest of the URI provider. &nbsp;If you want to say that an EPR is an id, what is an id? &nbsp;The reason you do a comparison is that you want to know that they are not equal. &nbsp;If we say you can compare the EPRs using our compare method and they are different things --&gt; if it hurts, don't do it.
+</p>
+
+<p class='phone'>
+<cite>Paco:</cite> So your point is that the server has perogative and interest in ensuring the ids provide value, what about the clients?
+</p>
+
+<p class='phone'>
+<cite>Jeff:</cite> The client would like to know that they aren't paying the same person 2x when paying a list. &nbsp;Also, EPRs are aquired from different resources, but maybe the resources may be accessed via several hops.
+</p>
+
+<p class='phone'>
+<cite>Glen:</cite> I like a lot of what Paco was saying. &nbsp;It's not really a good idea to think about these as identifiers, but the wording around params and props seems to do exactly that, which makes hugos argument interesting.
+</p>
+
+<p class='phone'>
+<cite>Paco:</cite> The infrastructure can do what they want, but I was trying to make clear to clients what they can expect when they compare EPRs.
+</p>
+
+<p class='phone'>
+<cite>Tom:</cite> Just for clarification, are both params and props used for comparison?
+</p>
+
+<p class='phone'>
+<cite>Paco:</cite> There is no comparison of that kind.
+</p>
+
+<p class='phone'>
+<cite>Dims:</cite> In this discussion, are params and props the same thing?
+</p>
+
+<p class='phone'>
+<cite>Paco:</cite> There is a question between params and props but let's separate that issue from this discussion.
+</p>
+
+<p class='phone'>
+<cite>Gudge:</cite> (Writes a complicated table on the board) <br>
+... Compares several use cases: <a href="http://lists.w3.org/Archives/Public/public-ws-addressing/2004Dec/0084.html">http://lists.w3.org/Archives/Public/public-ws-addressing/2004Dec/0084.html</a> <br>
+... same metadata 1, 2, 3 <br>
+... same serialization 2, 3 <br>
+... different metadata 4? <br>
+... same identity 2,3, 1?, 4?
+</p>
+
+<p class='phone'>
+<cite>Steve:</cite> (waves hands in frustration and gives up - sorry gudge, I couldn't quite get all of this)
+</p>
+
+<p class='phone'>
+<cite>Gudge:</cite> What's the answer for 2,3 for same identity. &nbsp;What it comes down to is what is an identifer?
+</p>
+
+<p class='phone'>
+<cite>Paco:</cite> We don't need to answer this, 2, 3 are out of scope.
+</p>
+
+<p class='phone'>
+<cite>Anish:</cite> (adds porttype service qname, policy, etc to complicate table)
+</p>
+
+<p class='phone'>
+<cite>Anich:</cite> Are 2 and 3 are still the same EPR?
+</p>
+
+<p class='phone'>
+<cite>Gudge:</cite> yes, whatever that resource is supports A and B.
+</p>
+
+<p class='phone'>
+<cite>Hugo:</cite> My interpretation is that 1,2,3 are the same endpoint processing things that would be called a service.
+</p>
+
+<p class='phone'>
+DaveO; The EPR minter should not issue EPRS 2 and 3 with different policy statements or port types if they expect that people will be comparing them for equality.
+</p>
+
+<p class='phone'>
+<cite>Greg:</cite> Who is to say that policy doesn't specify that defines whether to use P or Q, it may be the superset of all of thethings to be used.
+</p>
+
+<p class='phone'>
+<cite>Anish:</cite> What does an EPR represent?
+</p>
+
+<p class='phone'>
+<cite>Greg:</cite> It represents how to get somewhere and policy tells.
+</p>
+
+<p class='phone'>
+<cite>Gudge:</cite> EPR defines what to put in the to and the headers when you want to send a message to that EPR.
+</p>
+
+<p class='phone'>
+<cite>Hugo:</cite> Why do we have a diff between prop/param?
+</p>
+
+<p class='phone'>
+<cite>Gudge:</cite> Because we know certain things about metadata if one is the same.
+</p>
+
+<p class='phone'>
+<cite>Paco:</cite> Metadata, policy, etc., needs to be linked to the EPR so that the client can know what they need to comunicate with an EPR. &nbsp;Metadata can't capture all runtime dynamic stuff, this won't be in the WSDL.
+</p>
+
+<p class='phone'>
+<cite>Jeff:</cite> Is TID part of that identity or not?
+</p>
+
+<a name="action15"></a>
+<p class='irc'>
+&lt;<cite>scribe</cite>&gt; <strong>ACTION:</strong> Gudge to redraw his chart with more columns, put some text around it, and put it on the public list for discussion via email.
+</p>
+
+<p class='phone'>
+<cite>Tom:</cite> I'm confused about why portype is in there if it doesn't really matter? &nbsp;If there's a difference in parts of the ERP and this is important to identity, this needs to be clarified but that's not how I originally read it.
+</p>
+
+<p class='phone'>
+<cite>Bob:</cite> Fundamentally the only thing that matters is the behaviour of what is behind the EPR. &nbsp;Jeff said that in some systems you have an authoritative source to consult, or multiple, but in this case you only have the thing you are accessing. &nbsp;There is no way to compare the behaviour of 2 or 3 EPRs. &nbsp;My concern is that we're not going to be able to get through the issue of bit/bit comparisons to absolutely properly test the identity. &nbsp;The service itself needs to come up with a way to declare its own behaviour, e.g. a behavorial serial number or guid that could be returned and this could be compared, but there's no way short of that to do this with EPRs in today's state.
+</p>
+
+<p class='phone'>
+<cite>Jeff:</cite> What is the contract that you make when you hand out EPRs. &nbsp;What are the contracts? Conclusions can you draw?
+</p>
+
+<p class='phone'>
+<cite>Gudge:</cite> Why do you have to compare things to be able to use it?
+</p>
+
+<p class='phone'>
+<cite>Jeff:</cite> You don't, it depends on what you want to do - reference to Jeff's previous payment example.
+</p>
+
+<p class='phone'>
+<cite>Harris:</cite> The server knows what to do when it receives to requests with different URIs to the same resource, the service should know what to do. Discussion could be moot
+</p>
+
+<p class='phone'>
+<cite>Paco:</cite> But it's the client that needs to know.
+</p>
+
+<p class='phone'>
+<cite>Harris:</cite> But props are opaque.
+</p>
+
+<p class='phone'>
+<cite>Paul:</cite> We're doing this because we've got to go before the judge. &nbsp;Pacos saying we're guilty and Dave is saying we're guilty with mitigating circumstances. In essence, I think of an EPR as a to address or a mail header, but there's a bunch of other stuff that we send with it. &nbsp;I make no assumption about the content, but the recipient should be able to know what to do with it. &nbsp;We're just giving people drirections where to post. &nbsp;Action is another part of this, but why aren't we concerned about this for routing?
+</p>
+
+<p class='phone'>
+<cite>Mark:</cite> it's a URI ;-)
+</p>
+
+<h3 id="item27">Dave's approach to the issue i001.</h3>
+<p class='phone'>
+<cite>DaveO:</cite> In reference to web arch, we can look at: extensibility defined in webarch. &nbsp;Defined based on get in http. &nbsp;Costs due to introducing new id mechanisms, benefits must be high to do so. URI spec defines a resource to be anything that can be identified by a resource. They just didn't want to use 'things'.
+</p>
+
+<p class='phone'>
+<cite>MarkN:</cite> Interesting history, when TBL took this to IETF, it was universal resource id, and now it's uniform resource id, due to pushback from IETF.
+</p>
+
+<p class='phone'>
+<cite>DaveO:</cite> We don't need to say what an EPR identifies, we just need to figure out whether it is used as an identifier. &nbsp;the member submission, dyanmic, id and descr of service instances, etc. etc. (see email). <br>
+... It's important to note that webarch doesn't discuss stateful vs stateless, leaves open/extensible, nor does it discuss cookies. &nbsp;It also doesn't talk about post results, they're not ided by uris. I'll try to focus on EPRs with props/params, but there are obvious parallels to http cookies. &nbsp;The same kind of benefits will apply.
+</p>
+
+<p class='phone'>
+Let's say they are ids, let's show the costs/benefits.
+</p>
+
+<p class='phone'>
+All of this is in Dave's proposal email so I'm not going to retype it here.
+</p>
+
+<p class='phone'>
+<cite>Mark:</cite> Please limit questions to clarification at this point.
+</p>
+
+<p class='phone'>
+<cite>Anish:</cite> Scalability, essentially they are the same, but visibility they are different. &nbsp;It seeems to me that visibility will affect scalabiltiy ,especially because refps are supposed to be opaque.
+</p>
+
+<p class='phone'>
+<cite>DaveO:</cite> Scalability is how many additional components that can interact with me.
+</p>
+
+<p class='phone'>
+<cite>Anish:</cite> What I'm looking at is, if it's just a URI which isn't necessarily opaque, the ability it gives me is that I don't have to go back to the original minter and I can just use the URI. &nbsp;With respect to EPRS, given the opacity of refps it prevents me from changing anything in the EPR and reusing it. &nbsp;That's the scalability I'm looking at.
+</p>
+
+<p class='phone'>
+<cite>DaveO:</cite> The EPR portion of the spec doesn't provide any authoritative URI description as well, so it's opaque to.
+</p>
+
+<p class='phone'>
+<cite>Anish:</cite> If WS-A were to make the same statement as web arch with respect to authortative metadata for creating URIs with EPRs...
+</p>
+
+<p class='phone'>
+<cite>DaveO:</cite> Someone could provide an extension stating explicitly how they are filling refps, and constructing eprs so users would know. &nbsp;As it stands we don't do that in the spec so it's opaque.
+</p>
+
+<p class='phone'>
+<cite>Anish:</cite> I'm disallowed from providing you the additional information, that's how I read the spec. &nbsp;With URIs that's not the case. &nbsp;With refps we explictly block this.
+</p>
+
+<p class='phone'>
+<cite>DaveO:</cite> Isn't that what WS-RF is doing?
+</p>
+
+<p class='phone'>
+<cite>Paco:</cite> If you're a client and you get an EPR, WS-A says you don't know how they are constructed.
+</p>
+
+<p class='phone'>
+<cite>Anish:</cite> The spec explicitly calls out that this is opaque and you're not allowed to describe it. &nbsp;I just want to be clear on this point, but it's not a deal breaker.
+</p>
+
+<p class='phone'>
+<cite>MarcH:</cite> Can we talk security? I'm not sure what you're saying, can you encrypt or sign a portion?
+</p>
+
+<p class='phone'>
+<cite>Dave:</cite> Yes, visibility is a 2 edge sword. &nbsp;If you selectively encrypt/sign EPRs or parts of EPRs you can gain utility. It's similar to HTTP GET vs HTTP POST. Post allows you to hide user/pass whereas GET puts it in the uri and makes it visible.
+</p>
+
+<p class='phone'>
+<cite>MarcH:</cite> But you do that anyway with the To header.
+</p>
+
+<p class='phone'>
+<cite>Dave:</cite> You're saying that the To header is part of the message anyway.
+</p>
+
+<p class='phone'>
+<cite>MarcH:</cite> Do you have a specific use case where you want to sign/encrypt a particular part?
+</p>
+
+<p class='phone'>
+<cite>Dave:</cite> good point.
+</p>
+
+<p class='phone'>
+<cite>Tom:</cite> In the examples, the variants are different, would these differences be reflected in the WSDL?
+</p>
+
+<p class='phone'>
+<cite>DaveO:</cite> The interfaces are the same, the difference is in the deployment. &nbsp;You're deploying them at effectively different addresses.
+</p>
+
+<p class='phone'>
+<cite>Tom:</cite> The second one, all three ports have the same address.
+</p>
+
+<p class='phone'>
+<cite>DaveO:</cite> In the second, you have one piece of software that manages all parts. &nbsp;This brings up a significant advantage, in that you take advanatge of the soap processing model, so you can look at the headers easily. &nbsp;You can write a really easy Xpath to find what you're looking for, but we don't have a structured library to find soemtihng like this in a URI. &nbsp;We get kind of a preprocessor and don't have to microparse.
+</p>
+
+<p class='phone'>
+<cite>Yinling:</cite> Additional cost is also echoing ref p. Is this because of that specific scenario, or is it for all refps?
+</p>
+
+<p class='phone'>
+<cite>DaveO:</cite> The incremental cost is that you have to echo it. &nbsp;You still have to understand replyto, etc., but I'm still going to have my soap model, etc.
+</p>
+
+<p class='phone'>
+<cite>YinLing:</cite> You may have other scenarios where you don't require echoing.
+</p>
+
+<p class='phone'>
+<cite>DaveO:</cite> Yes, but if it's a required part of WSA then if you get a EPR from me that has, you have to support it.
+</p>
+
+<p class='phone'>
+<cite>MarkN:</cite> Ok, so we've got 3 characters from proposal 1 -&gt; <br>
+... Hugo=guilty with execution. <br>
+... Dave=it's only manslaughter. <br>
+... Paco=the glove doesn't fit. <br>
+... Straw poll: Are we identifying something with an EPR? <br>
+... Yes: 9 <br>
+... No: 5 <br>
+... Unsure: 3 <br>
+... Should we go forward with issue 1 by structuring a comparison between EPRs and identifiers, or go forward by changing the language of the spec to reflect that they aren't identifiers, or both?
+</p>
+
+<p class='phone'>
+DaveO; The address field might be different. &nbsp;What happens when everything is different and the message still gets routed to the same resource/piece of software? &nbsp;If it is an identifier, what is it identifying? &nbsp;It is not identifying the resource, it is identifying the protocol and the information necessary to access it. &nbsp;It's further towards the client and you don't want that comparison. &nbsp;It's somewhat of an access channel.
+</p>
+
+<p class='phone'>
+<cite>Hugo:</cite> Whatever we call it, I think it's an identifier. We're only focusing on webservices use. &nbsp;How could I use this not in the context of a soap message, e.g. to make assertions, etc. Address and identifier is the same for me.
+</p>
+
+<p class='phone'>
+<cite>Jeff:</cite> EPRs are used for a lot more than the mechanical comparisons that paul mentioned. &nbsp;People are going to hand out EPRs and they'll get passed around, they contain metadata and whole lot of other stuff, much more than how to put the message on the wire. &nbsp;If we want automated systems to do pass these around and represent web services, with state, then we have to provide the sameAs function.
+</p>
+
+<p class='phone'>
+<cite>Paul:</cite> The reason behind the discussion is that we're using EPRs for 2 reasons. &nbsp;One is passing around headers, etc., and another is for identification. &nbsp;What if we split this, would that help?
+</p>
+
+<p class='phone'>
+<cite>Jeff:</cite> In a distributed system that doesn't work.
+</p>
+
+<p class='phone'>
+Straw Poll: Who thinks we need to tackle identity problem?
+</p>
+
+<p class='phone'>
+<cite>scribe:</cite> Yes: 9 <br>
+... No: 9 <br>
+... don't know: 2
+</p>
+
+<p class='phone'>
+<cite>Jeff:</cite> I'm interesting in doing something concrete. &nbsp;I just want answers.
+</p>
+
+<p class='phone'>
+<cite>Tom:</cite> The concept of an address needs props, params, and action. There are additional things you need but not for dispatching. &nbsp;Gudge said these 3 go on the wire. &nbsp;The problem is that we're using the word address for only one of these definitions. &nbsp;The fact that the spec only uses refprops is another point.
+</p>
+
+<p class='phone'>
+<cite>Harris:</cite> The only Use case I've heard so far for comparison is for cacheing. &nbsp;I'd like to hear about comparing 2 EPRs for identity.
+</p>
+
+<p class='phone'>
+<cite>Glen:</cite> Hugos question should be addressed before this one. &nbsp;If we resolve that by removing refprops then this issue might go away. &nbsp;WSDL has the same issues exactly. &nbsp;They have a model, these are services, these are endpoints. &nbsp;EPR is based on endpoint, so we should describe EPRs in the same detail and granularity that WSDL does.
+</p>
+
+<p class='phone'>
+<cite>MarcH:</cite> Getting back to the EPR comparison function that Jeff mentioned. &nbsp;I think this would be simple. &nbsp;Define a porttype that every WS-A capable service has to implement to provide the comparison.
+</p>
+
+<p class='phone'>
+<cite>Anish:</cite> It would improve interopability.
+</p>
+
+<p class='phone'>
+<cite>Gudge:</cite> My question to jeff is, are we trying to deteremine if 2 EPRs are the same or the thing that is addressed by the EPRs is the same.
+</p>
+
+<p class='phone'>
+<cite>Jeff:</cite> The latter, but note that sameness is context dependent. &nbsp;reference the earlier behavioral discussion from bob and replicator dicussion from jeff.
+</p>
+
+<p class='phone'>
+<cite>MarkN:</cite> If you don't know those contexts, how can you define them? &nbsp;Why do we need to define them?
+</p>
+
+<p class='phone'>
+<cite>Gudge:</cite> The big problem is that half of us thinks the former and half of us thinks the latter. &nbsp;If I do a bit comparison for 1 and 2 and they are the same, I don't need to re-retrieve metadata for 2.
+</p>
+
+<p class='phone'>
+<cite>DaveO:</cite> Use Case -- Got tx service at A, has some method createContext. <br>
+... 1. A <br>
+... 2. A with refprop=foo.
+</p>
+
+<p class='phone'>
+Receiver says, ah, there's a difference, so there may be different metadata. &nbsp;The interface could be different. &nbsp;One could be createContext the other could be the 2phase commit protocol.
+</p>
+
+<p class='phone'>
+<cite>Harris:</cite> refprop is opaque, so he doesn't know.
+</p>
+
+<p class='phone'>
+<cite>DaveO:</cite> but if he's going to do something, and he knows the metadata is different, he may need to do something different, but that's out side of the scope here. ... 3. A with refprop=foo, refparam=dave.
+</p>
+
+<p class='phone'>
+Interesting comparison in 2 if he gets 2 EPRs back with different refprops and he (the client) can choose. &nbsp;When 1 gave back 2 he said that both were equal, resulting in an effective sameAs function. &nbsp;It's an implicit compare instead of explicit.
+</p>
+
+<p class='phone'>
+<cite>Jeff:</cite> I think there are cases where you need explicit. &nbsp;Say you get the 2 EPRs in line 2 from 2 different services A1 and A2.
+</p>
+
+<p class='phone'>
+<cite>Dave:</cite> I described bifurcation, 1 -&gt; 2, and you're talking about unification, going from 2 -&gt; 1 and I'm struggling with that.
+</p>
+
+<p class='phone'>
+<cite>MarkN:</cite> This is the use case (daveos bifurcation) that motivates the current design. &nbsp;Hugos suggestion invalidates this usecase.
+</p>
+
+<p class='phone'>
+<cite>Anish:</cite> +1 to glen about us defining EPRs and WSDL defining endpoints. &nbsp;We need to look at that.
+</p>
+
+<p class='phone'>
+<cite>Paco:</cite> Glen was saying if we go with hugo this issue goes away. &nbsp;That's not true. &nbsp;It doesn't deal with our requirements, and it doesn't help with identity and we're just stuck with URIs -&gt; web arch. &nbsp;The other thing about Tom and action, we have a set of messages, and we can address multiple messages to an endpoint, this is why action is not part of an address.
+</p>
+
+<p class='phone'>
+<cite>Rebecca:</cite> First, an aside - action for dispatching implies that it is part of identity. &nbsp;Next my real point - It seems that there are 4 basic terms of identity; 1. They are the same on the wire format. 2. Identity meant using the same channel to get to a service, which means assuming the same processing. &nbsp;3. Identity meaning same service, in a distributed environement that could be in different places, but doing the same thing. &nbsp;4. Identity can mean the same code, so you end up at the exact same code place. &nbsp;You're never going to get these 4 unified, so why don't we have 4 compare methods, one for each.
+</p>
+
+<p class='phone'>
+<cite>MarkN:</cite> follow on question - which of those do we need to do?
+</p>
+
+<p class='phone'>
+<cite>Hugo:</cite> My proposal, reusing dave's, instead of receiving 2 EPRs, you could receive 2 URIs. &nbsp;Dave has started a structured comparison of the 2 solutions. &nbsp;Dave is saying the TAG isn't saying don't do this, but you have to have a good justification for doing this. &nbsp;I assert we havne't gone there yet. &nbsp;There was always a way to do it with URIs, and this is another way. &nbsp;It has marginal advantages, but it doesn't justify a new identifiaction mechanism on the web. &nbsp;The cost of introduction is very high.
+</p>
+
+<p class='phone'>
+<cite>DaveO:</cite> What is the cost? &nbsp;Not the benefits of another way.
+</p>
+
+<p class='phone'>
+<cite>Hugo:</cite> It's an opportunity cost.
+</p>
+
+<p class='phone'>
+<cite>DaveO:</cite> We've already got a soap processing, WS-A has a reply to, the only cost here is the echoing ability. &nbsp;New software has to be built for that, but that's it.
+</p>
+
+<p class='phone'>
+<cite>Hugo:</cite> Down the line, I'd like to make assertios about ERPs. &nbsp;You're saying, we do what we do without looking at what others are doing. &nbsp;If others want to do RDF assertion, then we'll need to come up with another way. &nbsp;Here's the first problem, then they'll ask for XForms. <br>
+... my proposal is to remove reference properties from the EPR.
+</p>
+
+<p class='phone'>
+<cite>MarkN:</cite> How do you hanlde different meta data?
+</p>
+
+<p class='phone'>
+<cite>Hugo:</cite> Different URIs.
+</p>
+
+<p class='phone'>
+<cite>Anish:</cite> If we do that, we still have params.
+</p>
+
+<p class='phone'>
+<cite>Hugo:</cite> To me, params are just for state.
+</p>
+
+<p class='phone'>
+(general grumbling permeates through the room)
+</p>
+
+<p class='phone'>
+<cite>Tom:</cite> Right now endpoint is the thing behind the URI and WSDL is using endpoint as the URI. &nbsp;We don't want to have different names for those.
+</p>
+
+<p class='phone'>
+<cite>Hugo:</cite> I'm unclear about params that identify. <br>
+... I think I have to rethink my proposal with respect to refparams.
+</p>
+
+<p class='phone'>
+Straw poll: Should EPRS be identifiers?
+</p>
+
+<p class='phone'>
+<cite>scribe:</cite> Yes: 9 <br>
+... No: 7 <br>
+... Unsure: 2
+</p>
+
+<p class='phone'>
+<cite>DaveO:</cite> There's a difference between whether a server or client is doing the comparison, so maybe Paco and I are both right.
+</p>
+
+<p class='phone'>
+<cite>Harris:</cite> +1
+</p>
+
+<p class='phone'>
+<cite>Jeff:</cite> We also might wind up in a place where URIs are, where they are identifiers but they aren't semantically correct.
+</p>
+
+<p class='phone'>
+<cite>Jonathan:</cite> Let's condense our behavioral idea of what we want to achieve first. We need to look at the requirements.
+</p>
+
+<p class='phone'>
+Date: 9 December 2004
+</p>
+
+<p class='irc'>
+&lt;<cite>scribe</cite>&gt; Scribe: Tom Rutt
+</p>
+
+<h3 id="item28">Issue 33 proposal from Jonathan:</h3>
+<p class='phone'>
+Email from Jonathan: <a href="http://lists.w3.org/Archives/Public/public-ws-addressing/2004Dec/0080.html">http://lists.w3.org/Archives/Public/public-ws-addressing/2004Dec/0080.html</a>
+</p>
+
+<p class='phone'>
+<cite>Jonathan:</cite> This extension attribute could also be placed on child elements of the endpoint ref.
+</p>
+
+<p class='phone'>
+<cite>Rebecca:</cite> This meets our needs.
+</p>
+
+<p class='phone'>
+<cite>Hugo:</cite> I support this proposal. &nbsp;We do not have to change our spec.
+</p>
+
+<p class='phone'>
+No objection to accepting Jonathan's proposal.
+</p>
+
+<p class='phone'>
+<a name="resolution07">
+<strong class='resolution'>RESOLUTION: Issue 33 closed with proposal from Jonathan.</strong>
+</p>
+
+<a name="action16"></a>
+<p class='irc'>
+&lt;<cite>scribe</cite>&gt; <strong>ACTION:</strong> Jonathan to coordinate resolution of Issue 33 with WSDL working group.
+</p>
+
+<h3 id="item29">Issue 34: Action defaults</h3>
+<p class='phone'>
+Jonathan took action to take wsdl 1.1 based approach, with a port to wsdl 2.
+</p>
+
+<p class='phone'>
+Hugo took action to define a wsdl 2 based approach with a back port to wsdl 1.1:
+</p>
+
+<p class='phone'>
+Hugo email: <a href="http://lists.w3.org/Archives/Public/public-ws-addressing/2004Dec/0083.html">http://lists.w3.org/Archives/Public/public-ws-addressing/2004Dec/0083.html</a>
+</p>
+
+<p class='phone'>
+Marc H: what is "name".
+</p>
+
+<p class='phone'>
+<cite>Don:</cite> Optional attribute "name" on input and output child of "operation"
+</p>
+
+<p class='phone'>
+Marc H: This can also name fault messages.
+</p>
+
+<p class='phone'>
+Mark N: media type in wsdl 2 cannot apply to WSDL 1.1 document. &nbsp;Using fragment identifier adds risk to our schedule.
+</p>
+
+<p class='phone'>
+<cite>Jonathan:</cite> there has to be a separate media type for defining a subset of fragment IDs.
+</p>
+
+<p class='phone'>
+Mark N: with Hugo's approach someone would have to register a media type. &nbsp;If we do not register it somebody might.
+</p>
+
+<p class='phone'>
+Straw Poll:
+</p>
+
+<p class='phone'>
+<cite>scribe:</cite> * &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;in favor of Jonathan Approach (9) <br>
+... * &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;In favor of Hugo approach (2) <br>
+... * &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Not sure (1)
+</p>
+
+<p class='phone'>
+<cite>Anish:</cite> Jonathan approach has to be enhanced to allow for new MEPs.
+</p>
+
+<p class='phone'>
+<cite>Jonathan:</cite> we have to explain how to deal with extension MEPs.
+</p>
+
+<p class='phone'>
+Mark N: majority is toward Jonathan's approach.
+</p>
+
+<p class='phone'>
+<cite>Jonathan:</cite> need to clarify that the action URI is an opaque identifier, not intended to be dereferenced.
+</p>
+
+<a name="action17"></a>
+<p class='irc'>
+&lt;<cite>scribe</cite>&gt; <strong>ACTION:</strong> Jonathan to modify his proposal to include new MEPs. &nbsp;By next Thursday.
+</p>
+
+<h3 id="item30">Issue 27: pointing at wsdl location in EPRs.</h3>
+<p class='phone'>
+<cite>Anish:</cite> does it apply to port type.
+</p>
+
+<p class='phone'>
+<cite>Jonathan:</cite> I intended the attribute to be used at epr level (e.g, if it applies to both service and port type) or just on Port type.
+</p>
+
+<a name="action18"></a>
+<p class='irc'>
+&lt;<cite>scribe</cite>&gt; <strong>ACTION:</strong> Jonathan should apply editorial license to clarify that the location attribute can be applied at multiple levels.
+</p>
+
+<p class='phone'>
+No objection to close as duplicate of 33.
+</p>
+
+<p class='phone'>
+<a name="resolution08">
+<strong class='resolution'>RESOLUTION: Issue 27 closed as duplicate of issue 33.</strong>
+</p>
+
+<h3 id="item31">Issue 10: EPR robustness</h3>
+<a name="action19"></a>
+<p class='irc'>
+&lt;<cite>scribe</cite>&gt; <strong>ACTION:</strong> Anish to propose resolution for discussion at next Monday teleconf.
+</p>
+
+<p class='phone'>
+Issues 8 and 16: serialization of RefPs
+</p>
+
+<p class='phone'>
+Don Box was invited to explain the design in the member submission.
+</p>
+
+<p class='phone'>
+<cite>Jonathan:</cite> the three possible solutions discussed so far are: <br>
+... 1) &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;wrap properties into new header <br>
+... 2) &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;use attribute to flag header as refP <br>
+... 3) &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;EPR embedded into "To"
+</p>
+
+<p class='phone'>
+David O: pointed out his earlier email discussion, with &nbsp;concern about ref props/params being duplicates of user headers, particularly a security hole that allows a &nbsp;hacker to put a bad RefP into the EPR, ie &lt;SendAssetsToGrandCayman amount="all" fromacct="chris" toacct="hacker"/&gt;
+</p>
+
+<p class='phone'>
+<cite>scribe:</cite> Not sure if the three proposals help.
+</p>
+
+<p class='phone'>
+<cite>Don:</cite> the idea of RefPs has been used in several prior MIB specs. &nbsp;Earlier versions of WS addressing started with EPR in "To". &nbsp;We abandoned this approach because people were already using soap headers to address the thing they are talking to behind the soap boundary. The Microsoft management group also used top level header blocks to address particular management entities. &nbsp;We wanted to support these common scenarios. &nbsp;&nbsp;Having refPs in separate headers allows different intermediaries to act on different headers. &nbsp;Putting these into the single "to" header, would require definition of extensibility points analogous to the soap processing model. &nbsp;Allowing people to give out addresses involves a trust relationship. &nbsp;Sending an EPR in To is such a case. &nbsp;In the end it did not make sense to add a new extensibility point.
+</p>
+
+<p class='phone'>
+<cite>Glen:</cite> Despite the fact that soap headers are data, soap headers are speech acts. &nbsp;They are implying triggering something. &nbsp;Keeping what is being triggered opaque to sender means it does not know what the contract is. &nbsp;&nbsp;There is a two way relationship happening here, forcing the sender to send them as individual soap headers.
+</p>
+
+<p class='phone'>
+<cite>Don:</cite> we view this as just data being send to the receiver.
+</p>
+
+<p class='phone'>
+<cite>Glen:</cite> the wsa:to header is required to be used. &nbsp;With the current approach, wanting to be able to talk to a system with ws-addressing requires processing other headers. &nbsp;Given a qname of a wrapper signalling "ws-addressing" lets the receiver know that the header is for ws-addressing.
+</p>
+
+<p class='phone'>
+<cite>Anish:</cite> I agree with Glen. &nbsp;If in an EPR there is a "transfer money" property, it is supposed to be opaque. &nbsp;One cannot make decisions about soundness of refP because they are supposed to be opaque.
+</p>
+
+<p class='phone'>
+<cite>Gudge:</cite> I view Opaque as meaning you do not have to look at them, but if you want to you can.
+</p>
+
+<p class='phone'>
+Marc H: refPs are components of address, they are not verbs. &nbsp;People should not be using them as verbs.
+</p>
+
+<p class='phone'>
+<cite>Don:</cite> As an example, NT SACL protects a resource, and does not depend on verb.
+</p>
+
+<p class='phone'>
+Marc H: we keep saying refPs are opaque, however they do need to be understood.
+</p>
+
+<p class='phone'>
+<cite>Gudge:</cite> eg. Should not put in a refP which is a security header. &nbsp;Don't do things that can break other things.
+</p>
+
+<p class='phone'>
+<cite>Don:</cite> the language we use to describe the opacity model is causing an inordinate concern. &nbsp;There is no real solution to the security problem.
+</p>
+
+<p class='phone'>
+<cite>Dims:</cite> If we cannot distinguish soap headers on the wire from refPs how can policy be applied?
+</p>
+
+<p class='phone'>
+<cite>Gudge:</cite> it is what the message looks like that matters, not the EPR.
+</p>
+
+<p class='phone'>
+<cite>Dims:</cite> intermediaries do not have access to what generates the eprs.
+</p>
+
+<p class='phone'>
+David O: Google trust example is a good one. &nbsp;The composibility issue is not the core problem (do not issue bad eprs). &nbsp;However the security problem is different. &nbsp;If I ask google for a ref, I have a contract. &nbsp;However this case is different because the receiver did not ask for the EPR. The problem is when a receiver returns a "replyTo" with a hack of &nbsp;its original epr.
+</p>
+
+<p class='phone'>
+<cite>Steve:</cite> what is original reason for refP opacity?
+</p>
+
+<p class='phone'>
+<cite>Paco:</cite> client should understand it has no say in manipulating those properties. &nbsp;The spec assumes pure echo semantics.
+</p>
+
+<p class='phone'>
+<cite>Rebecca:</cite> we are not going to ever be able to remove all security holes.
+</p>
+
+<p class='phone'>
+David O: the question is how far down the security rat hole do you go. &nbsp;I am talking about a single security hole. &nbsp;The threat I am talking about is not fixed by putting the EPR into the "to".
+</p>
+
+<p class='phone'>
+<cite>Jeff:</cite> I do not understand the issue. &nbsp;You have to use software that is part of a trusted computer base. &nbsp;The example of hacked browser is strange. &nbsp;Also, we do not mean opaque, the wording of Paco is more appropriate.
+</p>
+
+<p class='phone'>
+<cite>Bob:</cite> without a mechanism to sign data all bets are off. &nbsp;The only way to protect against echo modification i to use signatures.
+</p>
+
+<p class='phone'>
+David O: we can add text to that affect.
+</p>
+
+<p class='phone'>
+<cite>Gudge:</cite> I am not going to trust anything unless I know it cannot be modified on the wire.
+</p>
+
+<p class='phone'>
+<cite>Anish:</cite> I am missing some sublety in the security scenario, could Dave expand the example.
+</p>
+
+<p class='phone'>
+David O: I already have done this several times in emails. &nbsp;Look for mail sent on 11/24.
+</p>
+
+<p class='phone'>
+Mark N: though we need more discussion,
+</p>
+
+<p class='phone'>
+Last week we asked "Should we be able to identify refPs by examining messages."
+</p>
+
+<p class='phone'>
+Mark asked same question again as straw poll;:
+</p>
+
+<p class='phone'>
+<cite>scribe:</cite> * &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Necessary (9) <br>
+... * &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;not necessary (6) <br>
+... * &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;not sure (4)
+</p>
+
+<p class='phone'>
+<cite>Mark:</cite> need more discussion on Security threat alleviation.
+</p>
+
+<p class='phone'>
+<cite>Paco:</cite> Should ask how many people would have their opinion on the resolution of this issue depending on solving this security risk?
+</p>
+
+<p class='phone'>
+David O: if this security hole did not exist, I would push for status quo.
+</p>
+
+<p class='phone'>
+<cite>Jonathan:</cite> writing policy is easier if you know what has been inserted for ws addressing.
+</p>
+
+<p class='phone'>
+Straw question: If we can prove that the security hole does not exist who would be in favor of status quo?
+</p>
+
+<p class='phone'>
+Dave O is the only one who would change his mind.
+</p>
+
+<p class='phone'>
+<cite>Mark:</cite> continue discussion on the mailing list.
+</p>
+
+<h3 id="item32">Issue 17: purpose of action property</h3>
+<p class='phone'>
+Issue text: The [action] property identifies the input/output/fault message within a WSDL port type and conveys the semantics implied by the message. A WSDL operation name/message name does exactly the same thing. Given this, why is it necessary to provide a WSDL extensibility attribute wsa:Action to set the value of the [action] property? Additionally, there is no requirement that the value of the wsa:Action property uniquely identify the message/operation. An issue related to this is -- What is the relationship of the [action] property with the operation name mapping requirement in WSDL 2.0?
+</p>
+
+<p class='phone'>
+<cite>Anish:</cite> part of this goes away with our new mapping for default action being applied to both wsdl versions. &nbsp;The only thing remaining with this issue is coordination with wsdl working group. They also may have a need to identify each individual message in an operation (due to a minority opinion on operation name feature). &nbsp;Our algorithm generates a URI for each message, which would satisfy this need. &nbsp;If the operation name feature is the same as our action property, we do not want two solutions.
+</p>
+
+<p class='phone'>
+Mark N: can we close this with an action item for coordination with wsdl working group?
+</p>
+
+<p class='phone'>
+<cite>Hugo:</cite> cases of same message name used in two interfaces may cause problems, but this should be a comment on Jonathan's proposal.
+</p>
+
+<p class='phone'>
+<cite>Anish:</cite> Wsdl Uniqueness is confined to a port type, not an operation. <br>
+... same front end for multiple services needs disambiguation. &nbsp;We do not provide guidance on the uniqueness requirements for the user specified actionID.
+</p>
+
+<p class='phone'>
+Mark N: the registry or URIs solves this.
+</p>
+
+<a name="action20"></a>
+<p class='irc'>
+&lt;<cite>scribe</cite>&gt; <strong>ACTION:</strong> Anish to look at clarity of uniqueness requirements for action id.
+</p>
+
+<a name="action21"></a>
+<p class='irc'>
+&lt;<cite>scribe</cite>&gt; <strong>ACTION:</strong> Hugo to provide comment on Jonathan's proposal regarding the uniqueness of Interface name included in action ID default mechanism.
+</p>
+
+<p class='phone'>
+<cite>Anish:</cite> this would be a good topic for a joint meeting.
+</p>
+
+<p class='phone'>
+Anish will raise this coordination topic with the WSDL working group.
+</p>
+
+<h3 id="item33">Issue 35: fixed action uri for faults</h3>
+<p class='phone'>
+Marc H: I would like to change algorithm to generate a non-static action id for faults, just as for non fault messages.
+</p>
+
+<p class='phone'>
+<cite>Anish:</cite> In and out messages are always specified, however the type of the Fault messages is not always described in the WSDL.
+</p>
+
+<p class='phone'>
+<cite>Marc:</cite> we could you the fixed generic fault action ID for that case. &nbsp;I am only concerned bout the ones that are defined in the WSDL description.
+</p>
+
+<p class='phone'>
+Mark N: does anyone see this as a bad thing.
+</p>
+
+<a name="action22"></a>
+<p class='irc'>
+&lt;<cite>scribe</cite>&gt; <strong>ACTION:</strong> Marc H will enhance Jonathan's proposal to cover wsdl defined faults as well as input and output messages.
+</p>
+
+<p class='phone'>
+Issue 23: required properties in EPRs
+</p>
+
+<p class='phone'>
+Mark N: we had straw poll two weeks ago on this. 15 for status quo, 1 to require, 1 unsure.
+</p>
+
+<p class='phone'>
+<cite>Anish:</cite> I have an open Action item on this one. &nbsp;However I do not anticipate changing anyone's mind. &nbsp;I would like a vote on this one before closing.
+</p>
+
+<p class='phone'>
+Mark N: &nbsp;Formal vote:
+</p>
+
+<p class='phone'>
+<cite>scribe:</cite> Does anyone object to closing Issue 23 with the status quo (i.e., destination required, all others are optional). <br>
+... Oracle objects &nbsp;(they want service ID required, in addition to address). <br>
+... Roll call for vote: <br>
+... Support status quo <br>
+... Sap, IONA, w3c Fujitsu, Hitachi, IBM, Bea, Microsoft, Web methods, Novell. <br>
+... Object: Oracle <br>
+... Abstain: sun, HP,
+</p>
+
+<p class='phone'>
+<a name="resolution09">
+<strong class='resolution'>RESOLUTION: Issue 23 Closed with no change required to spec.</strong>
+</p>
+
+<h3 id="item34">Issue 9: cardinality of message information headers.</h3>
+<p class='phone'>
+<cite>Paul:</cite> this is orthogonal to issue regarding multiple routes in an epr. <br>
+... From earlier discussions we came up with two options for solution: <br>
+... Option 1: status quo. <br>
+... Option 2: allow multiple in core, but limit in explicit bindings. <br>
+... Now I would like to introduce a third option: leave use of multiple information headers as an extensibility point. <br>
+... my preferred solution is keep the status Quo. &nbsp;Option 2 is the worst.
+</p>
+
+<p class='phone'>
+Marc H: I speak for option 2. &nbsp;That is, the Core should not constrain cardinality, but have the wsdl and soap bindings constrain them down to not more than one. &nbsp;Option 3 would produce chaos in my opinion.
+</p>
+
+<p class='phone'>
+Marc H: I have a trouble with knowing what to do with option 3 when someone sends multiple replyTo in the message.
+</p>
+
+<p class='phone'>
+Marc H: I could see people inventing other wsdl meps (not Soap MEPs).
+</p>
+
+<p class='phone'>
+Mark N: maybe we should wait for resolving a few more binding issues.
+</p>
+
+<p class='phone'>
+<cite>scribe:</cite> Proposal 1 (9) <br>
+... Proposal 2 (6) <br>
+... Proposal 3 (0)
+</p>
+
+<p class='phone'>
+Mark N: lets leave this open with both proposals 1 and 2 as possible solutions.
+</p>
+
+
+
+</div>
+<h2><a name="ActionSummary">Summary of Action Items</a></h2>
+<!-- Action Items -->
+<strong>[NEW]</strong> <strong>ACTION:</strong> Anish (with Hugo's help) to lead discussion on Issue 21 (requirements). <br />
+<strong>[NEW]</strong> <strong>ACTION:</strong> Anish to look at clarity of uniqueness requirements for action id. <br />
+<strong>[NEW]</strong> <strong>ACTION:</strong> Anish to propose resolution for discussion at next Monday teleconf. <br />
+<strong>[NEW]</strong> <strong>ACTION:</strong> Anish to refine this issue (i010) to specifics. <br />
+<strong>[NEW]</strong> <strong>ACTION:</strong> Contact pub team/philippe to get the WD published. <br />
+<strong>[NEW]</strong> <strong>ACTION:</strong> DavidO to look at issue 22 and come up with a proposal. <br />
+<strong>[NEW]</strong> <strong>ACTION:</strong> Editors to change text: "When present" to be added to second sentence of [fault endpoint] of Section 3 of Core - When formulating a fault message as defined in Section 3.2 and 4, the sender MUST use the contens of the [fault endpoint] when present, of the message being replied to formulate the fault message. <br />
+<strong>[NEW]</strong> <strong>ACTION:</strong> editors to create proposal and incorporate into drafts (in two weeks) <br />
+<strong>[NEW]</strong> <strong>ACTION:</strong> Editors to edit [reply endpoint] to reflect similar changes. <br />
+<strong>[NEW]</strong> <strong>ACTION:</strong> Editors to remove third and fourth and fifth sentences of [fault endpoint] of Section 3 of Core - If the [fault endpoint] is absent, the sender MAY use the contents of the [reply endpoint] to formulate the fault message.  If both the [fault endpoint] and [reply endpoi t] are absent, the sender MAY use the contents of the [source endpoint] to formulate the fault message.  This property may be absent if the sender cannot receive fault messages (e.g. is a one-way application mesage). <br />
+<strong>[NEW]</strong> <strong>ACTION:</strong> Gudge to redraw his chart with more columns, put some text around it, and put it on the public list for discussion via email. <br />
+<strong>[NEW]</strong> <strong>ACTION:</strong> Harris will take on work on Test case document (with Hugo's help). <br />
+<strong>[NEW]</strong> <strong>ACTION:</strong> Hugo to come up with a proposal for #2. <br />
+<strong>[NEW]</strong> <strong>ACTION:</strong> Hugo to provide comment on Jonathan's proposal regarding the uniqueness of Interface name included in action ID default mechanism. <br />
+<strong>[NEW]</strong> <strong>ACTION:</strong> Jonathan should apply editorial license to clarify that the location attribute can be applied at multiple levels. <br />
+<strong>[NEW]</strong> <strong>ACTION:</strong> Jonathan to coordinate resolution of Issue 33 with WSDL working group. <br />
+<strong>[NEW]</strong> <strong>ACTION:</strong> Jonathan to modify his proposal to include new MEPs.  By next Thursday. <br />
+<strong>[NEW]</strong> <strong>ACTION:</strong> JonathanM (with Rebecca) to write this up, and write proposal for issue 33. <br />
+<strong>[NEW]</strong> <strong>ACTION:</strong> Marc H will enhance Jonathan's proposal to cover wsdl defined faults as well as input and output messages. <br />
+<strong>[NEW]</strong> <strong>ACTION:</strong> MarkH to raise a new issue to consider the processing model for our SOAP faults.  (See relevant sentences of Section 3 of SOAP Binding.) <br />
+<strong>[NEW]</strong> <strong>ACTION:</strong> MarkN to notify CG about status of this issue. <br />
+<strong>[NEW]</strong> <strong>ACTION:</strong> Paco to clarify the nature of the properties in the core <br />
+&nbsp;<br />
+
+
+[End of minutes] <br>
+<hr>
+
+<address>
+  Minutes formatted by David Booth's 
+  <a href="http://dev.w3.org/cvsweb/~checkout~/2002/scribe/scribedoc.htm">scribe.perl</a> version 1.122 (<a href="http://dev.w3.org/cvsweb/2002/scribe/">CVS log</a>)<br>
+  $Date: 2008-01-23 05:23:51 $ 
+</address>
+<div class="diagnostics">
+<hr />
+<h2>Scribe.perl diagnostic output</h2>
+[Delete this section before finalizing the minutes.] <br>
+<pre>
+This is scribe.perl Revision: 1.122  of Date: 2005/03/31 04:43:41  
+Check for newer version at <a href="http://dev.w3.org/cvsweb/~checkout~/2002/scribe/">http://dev.w3.org/cvsweb/~checkout~/2002/scribe/</a>
+
+Guessing input format: Plain_Text_Format (score 0.95)
+
+Found Scribe: Jeff
+Inferring ScribeNick: scribe
+Found Scribe: Yin Leng
+Inferring ScribeNick: scribe
+Found Scribe: Harris
+Inferring ScribeNick: scribe
+Found Scribe: Steve Winkler
+Inferring ScribeNick: scribe
+Found Scribe: Tom Rutt
+Inferring ScribeNick: scribe
+Scribes: Jeff, Yin Leng, Harris, Steve Winkler, Tom Rutt
+
+WARNING: No "Present: ... " found!
+Possibly Present: Anich Anish Bob DAvid Dave DaveO Dims Don Gudge Harris Hugo ISSUE JonM Jonathan Jonathon Marc MarcH Mark MarkN Michael Note Owner PaulD Proposal Reb Rebecca Rob ScribeNote Steve SteveW TomR Yinling davidO glen greg jeff jmarsh melder mnot paco paul tom
+You can indicate people for the Present list like this:
+	&lt;dbooth&gt; Present: dbooth jonathan mary
+	&lt;dbooth&gt; Present+ amy
+
+Agenda: <a href="http://lists.w3.org/Archives/Public/public-ws-addressing/2004Dec/0022.html">http://lists.w3.org/Archives/Public/public-ws-addressing/2004Dec/0022.html</a>
+Found Date: 7 Dec 2004
+People with action items: anish apply contact davido editorial editors enhance gudge h harris help hugo jonathan jonathanm license marc markh markn paco philippe proposal pub rebecca s should team will with
+
+WARNING: IRC log location not specified!  (You can ignore this 
+warning if you do not want the generated minutes to contain 
+a link to the original IRC log.)
+
+
+</pre>
+[End of <a href="http://dev.w3.org/cvsweb/~checkout~/2002/scribe/scribedoc.htm">scribe.perl</a> diagnostic output]
+
+</div>
+</body>
+</html>

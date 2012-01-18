@@ -1,0 +1,30 @@
+**** BEGIN LOGGING AT Mon Feb 14 08:37:02 2005
+
+Feb 14 08:37:02 -->	You are now talking on &arch
+Feb 14 08:37:02 ---	Topic for &arch is W3C Architecture Mardi Gras Meeting
+Feb 14 08:37:02 ---	Topic for &arch set by plh at Tue Feb  8 13:43:31 2005
+Feb 14 08:37:32 ---	You are now known as dbooth-home
+Feb 14 09:11:59 -->	plh (plehegar@128.30.52.28) has joined &arch
+Feb 14 10:22:09 ---	Disconnected (Remote host closed socket).
+**** ENDING LOGGING AT Mon Feb 14 10:22:09 2005
+
+**** BEGIN LOGGING AT Mon Feb 14 11:02:06 2005
+
+Feb 14 11:02:06 -->	You are now talking on &arch
+Feb 14 11:02:06 ---	Topic for &arch is W3C Architecture Mardi Gras Meeting
+Feb 14 11:02:06 ---	Topic for &arch set by plh at Tue Feb  8 13:43:31 2005
+Feb 14 11:02:11 <Zakim>	ok, plh; the call is being made
+Feb 14 11:02:18 <Zakim>	WS_Team()11:00AM has now started
+Feb 14 11:02:19 <Zakim>	+Plh
+Feb 14 11:02:23 <larryk>	This is an on-the-record comment
+Feb 14 11:02:26 *	Yves This is an off-the-record comment
+Feb 14 11:02:27 ---	You are now known as dbooth-home
+Feb 14 11:02:27 <Zakim>	+Carine
+Feb 14 11:02:27 -->	RRSAgent (rrs-loggee@128.30.52.30) has joined &arch
+Feb 14 11:02:51 <plh>	Meeting: Test of XChat Log Format
+Feb 14 11:03:06 <dbooth-home>	Scribe: dbooth
+Feb 14 11:03:06 <dbooth-home>	Chair: Hugo
+Feb 14 11:03:06 <dbooth-home>	ScribeNick: dbooth-home
+Feb 14 11:46:05 <dbooth-home>	Topic: Test of XChat Log Format
+Feb 14 11:46:38 *	Yves was the only one to resist the flu
+Feb 14 11:46:50 <dbooth-home>	Hugo: Four score and seven years ago.

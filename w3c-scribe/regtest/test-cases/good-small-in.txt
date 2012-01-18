@@ -1,0 +1,54 @@
+14:54:34 <RRSAgent> RRSAgent has joined #swcg
+14:54:38 <em> agenda?
+14:55:03 <em> Chair: EricM
+14:55:08 <em> Scribe: JimH
+14:57:57 <Ralph> Ralph has joined #swcg
+14:58:36 <DanC> DanC has joined #swcg
+15:00:14 <Ralph> Meeting: Test of Scribe.perl
+15:00:14 <em> zakim, dial emiller-bos
+15:00:14 <Zakim> sorry, em, I don't know what conference this is
+15:00:25 <em> zakim, this is SW_CG
+15:00:25 <Zakim> em, I see SW_CG()10:00AM in the schedule but not yet started.  Perhaps you mean "this will be SW_CG".
+15:00:30 <em> zakim, this will be SW_CG
+15:00:30 <Zakim> ok, em; I see SW_CG()10:00AM scheduled to start now
+15:00:33 <em> zakim, dial emiller-bos
+15:00:33 <Zakim> ok, em; the call is being made
+<dbooth> ACTION DanC: to propose to postpone
+15:00:34 <Zakim> SW_CG()10:00AM has now started
+15:00:36 <Zakim> +Emiller
+15:00:42 <Zakim> +Ralph
+15:02:55 <Zakim> +DanC
+15:04:06 <Zakim> +[UMD]
+15:04:20 <jhendler> jhendler has joined #swcg
+15:04:20 <Ralph> zakim, umd is JimH
+15:04:22 <Zakim> +JimH; got it
+15:04:45 <DanC> Zakim, take up item 1
+15:04:45 <Zakim> agendum 1. "Convene, take roll, review record" taken up [from em]
+15:05:26 <Ralph> Regrets: Ivan
+15:05:45 <jh-scribe> Regrets: danbri
+15:06:24 <DanC> some hesitation at accepting danbri's regrets...
+15:06:48 <DanC> http://lists.w3.org/Archives/Member/w3c-semweb-cg/2004Dec/0040.html
+15:07:06 <jh-scribe> em: proposal to accept  http://lists.w3.org/Archives/Member/w3c-semweb-cg/2004Dec/0040.html 
+15:07:24 <jh-scribe> APPROVED
+<dbooth> ACTION dbooth: to bake bread
+15:07:29 <jh-scribe> jh: scribe
+15:07:52 <jh-scribe> JimH: at risk for Jan 14
+15:07:55 <Ralph> Ralph slightly at risk for 14 Jan; may be a few minutes late
+15:08:01 <jh-scribe> em: next meeting, Jan 14
+15:08:17 <Ralph> q+ to talk about scribe list
+15:08:26 <DanC> scribe list from last minutes: David Guus Ivan Brian JimH DanC DanBri Ralph
+15:08:44 <DanC> if we put JimH at the end: David Guus Ivan Brian DanC DanBri Ralph JimH
+15:09:56 <jh-scribe> discussion of scribe list management
+15:11:14 <jh-scribe> next scribe: David
+15:11:24 <jh-scribe> (until we hear otherwise)
+15:12:02 <jh-scribe> em: any other agenda items?
+15:12:09 <DanC> agenda + calconnect
+15:12:33 <em> agenda+ CIO/CTO symposium
+15:13:22 <Ralph> zakim, next agendum
+15:13:22 <Zakim> agendum 2. "Misc action item review" taken up [from em]
+15:13:32 <Ralph> ACTION Jim: followup on public-owl-dev announcement
+15:13:46 <Ralph> Jim: I've forgotten the CG's intention here
+15:14:09 <Ralph> ... note that rdf-rules is very active at the moment with lots of mention of OWL
+15:14:39 <Ralph> ... are we trying to move all of rdf-rules discussion to owl-dev or to separate OWL from Rules discussion?
+15:14:58 <Ralph> EricM: the original request was to create a development list for OWL
+15:15:06 <jh-scribe> Jim: okay, I have it, leave this as CONT and I'll do it

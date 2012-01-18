@@ -1,0 +1,47 @@
+This is scribe.perl Revision: 1.122  of Date: 2005/03/31 04:43:41  
+Check for newer version at http://dev.w3.org/cvsweb/~checkout~/2002/scribe/
+
+Jabber_Saved_Format                      0.20
+RRSAgent_Visible_HTML_Text_Paste_Format  0.00
+RRSAgent_HTML_Format                     0.00
+Mirc_Text_Format                         0.04
+Yahoo_IM_Format                          0.00
+RRSAgent_Text_Format                     0.96
+Mirc_Timestamped_Log_Format              0.00
+Irssi_ISO8601_Log_Text_Format            0.96
+Plain_Text_Format                        0.00
+XChat_Timestamped_Log_Format             0.00
+Normalized_Format                        0.04
+Guessing input format: RRSAgent_Text_Format (score 0.96)
+
+No ScribeNick specified.  Guessing ScribeNick: jh-scribe
+Found Scribe: JimH
+
+WARNING: No "Present: ... " found!
+Possibly Present: DanC Emiller EricM Jim JimH Ralph UMD dbooth em inserted jh jhendler
+You can indicate people for the Present list like this:
+	<dbooth> Present: dbooth jonathan mary
+	<dbooth> Present+ amy
+
+
+WARNING: Replacing previous Regrets list. (Old list: Ivan)
+Use 'Regrets+ ... ' if you meant to add people without replacing the list,
+such as: <dbooth> Regrets+ danbri
+
+Regrets: danbri
+
+WARNING: No date found!  Assuming today.  (Hint: Specify
+the W3C IRC log URL, and the date will be determined from that.)
+Or specify the date like this:
+<dbooth> Date: 12 Sep 2002
+
+People with action items: danc dbooth jim
+
+WARNING: Input appears to use implicit continuation lines.
+You may need the "-implicitContinuations" option.
+
+
+WARNING: IRC log location not specified!  (You can ignore this 
+warning if you do not want the generated minutes to contain 
+a link to the original IRC log.)
+

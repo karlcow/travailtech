@@ -1,0 +1,9 @@
+2005-03-28T15:09:45Z <ericP> Sandro: The quick brown fox 
+  jumpted over the lazy dog.
+2005-03-28T15:09:56Z <ericP> ... but didn't get hurt
+2005-03-28T15:11:48Z <DanC> (hmm... four score and seven years 
+  ago our fathers)
+2005-03-28T15:12:17Z <ericP> Ralph: brought forth a new nation
+2005-03-28T15:12:33Z <ericP> ... conceived in liberty.
+2005-03-28T15:12:51-0500 <ericP> ... and dedicated to the proposition.
+

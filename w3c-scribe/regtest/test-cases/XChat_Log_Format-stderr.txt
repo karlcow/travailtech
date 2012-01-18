@@ -1,0 +1,37 @@
+This is scribe.perl Revision: 1.122  of Date: 2005/03/31 04:43:41  
+Check for newer version at http://dev.w3.org/cvsweb/~checkout~/2002/scribe/
+
+Jabber_Saved_Format                      0.20
+RRSAgent_Visible_HTML_Text_Paste_Format  0.10
+RRSAgent_HTML_Format                     0.00
+Mirc_Text_Format                         0.10
+Yahoo_IM_Format                          0.00
+RRSAgent_Text_Format                     0.00
+Mirc_Timestamped_Log_Format              0.00
+Irssi_ISO8601_Log_Text_Format            0.00
+Plain_Text_Format                        0.00
+XChat_Timestamped_Log_Format             1.00
+Normalized_Format                        0.00
+Guessing input format: XChat_Timestamped_Log_Format (score 1.00)
+
+Found Scribe: dbooth
+Found ScribeNick: dbooth-home
+
+WARNING: No "Present: ... " found!
+Possibly Present: Carine Hugo Plh ScribeNick larryk
+You can indicate people for the Present list like this:
+	<dbooth> Present: dbooth jonathan mary
+	<dbooth> Present+ amy
+
+
+WARNING: No date found!  Assuming today.  (Hint: Specify
+the W3C IRC log URL, and the date will be determined from that.)
+Or specify the date like this:
+<dbooth> Date: 12 Sep 2002
+
+People with action items: 
+
+WARNING: IRC log location not specified!  (You can ignore this 
+warning if you do not want the generated minutes to contain 
+a link to the original IRC log.)
+

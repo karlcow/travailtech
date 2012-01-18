@@ -1,0 +1,721 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+
+	<title>Scribe.perl -- Generate meeting minutes from an IRC log</title>
+  <link rel="stylesheet" type="text/css" href="http://www.w3.org/Guide/guide2006.css" />
+  <link rel="shortcut icon" href="http://www.w3.org/Icons/WWW/Literature.gif" />
+<style type="text/css" media="screen">
+th, td {
+	border-bottom: 1px solid #999;}
+td.command {width:35%;
+	border:none;
+	border-bottom: 1px solid #999;
+	background: white;}
+td.help {
+	border:none;
+	border-bottom: 1px solid #999;
+	background: #efefef;
+	padding-left: 1em;}
+</style>
+
+</head>
+
+<body>
+	<div id="header">
+		<span class="logo"><a href="http://www.w3.org/"><img src="http://www.w3.org/Icons/WWW/w3c_home_nb" alt="W3C" height="48" width="72"/></a></span>
+		<div class="breadcrumb">
+			<a href="http://www.w3.org/Member/">Member</a> &#x2192; <a href="http://www.w3.org/Guide/">The Art of Consensus</a> &#x2192; <h1>Generate Meeting Minutes from an IRC Log</h1>
+		</div>
+		<p class="baseline">This <strong>Guidebook</strong> is the collected wisdom of the W3C Group Chairs and other collaborators.</p>
+	</div>
+
+	<div class="toc">
+		<h4>Also On This Page &#x2192; </h4>
+		<ul>
+			<li><a href="#Quick_Start_Guide" style="font-weight: bold;">Quick Start Guide</a> &nbsp;&bull;&nbsp; </li>
+			<li><a href="#Pros_and_Cons_of_Using_Scribe.perl">Pros and Cons</a> &nbsp;&bull;&nbsp; </li>
+			<li><a href="#running">Running it</a> &nbsp;&bull;&nbsp; </li>
+			<li><a href="#options">Options</a> &nbsp;&bull;&nbsp; </li>
+			<li><a href="#one_time_commands">Commands</a> &nbsp;&bull;&nbsp; </li>
+			<li><a href="#editing_the_log">Editing the Log</a> &nbsp;&bull;&nbsp; </li>
+			<li><a href="#input_formats">Input Formats</a> &nbsp;&bull;&nbsp; </li>
+			<li><a href="#Environment_Variables">Environment Variables</a></li>
+		</ul>
+	</div>
+	
+<p><em>Please feel free to make improvements to this document and the source code and check them into CVS.  Thanks!</em>  -- David Booth</p>
+
+<h2 id="intro">Introduction</h2>
+	
+<p><a href="http://dev.w3.org/cvsweb/%7Echeckout%7E/2002/scribe/">Scribe.perl</a> is a perl script for generating meeting minutes from an IRC, IM or other log file that follows some simple minuting conventions.  It is easy to use and requires no installation.  It was primarily designed for use in and around W3C, but can also be used in other environments.  (For use in other environments, see the <a href="#input_formats">Input Formats</a> section and the <a href="#templateOption">-template</a> and <a href="#plainOption">-plain</a> options.)</p>
+
+
+<h2 id="Quick_Start_Guide">Quick Start Guide</h2>
+
+<h3 id="invite">Step 1:  Invite <a href="http://www.w3.org/2002/03/RRSAgent">RRSAgent</a> and  <a href="http://www.w3.org/2001/12/zakim-irc-bot.html">Zakim bot</a></h3>
+
+
+<p>Skip this step if you're not using W3C's IRC</p>
+
+<table>
+<tbody>
+<tr>
+	<th>IRC Command</th>
+	<th>Explanation</th>
+</tr>
+<tr>
+	<td class="command">/invite rrsagent #ws-arch</td>
+	<td class="help"><samp>#ws-arch</samp> should be your IRC channel</td>
+</tr>
+<tr>
+	<td class="command">/invite zakim #ws-arch</td>
+	<td class="help">#ws-arch should be your IRC channel</td>
+</tr>
+<tr>
+	<td class="command">zakim, this will be ws_arch</td>
+	<td class="help">ws_arch should be your meeting name as shown in the <a href="http://www.w3.org/Guide/1998/08/teleconference-calendar">W3C teleconference calendar</a></td>
+</tr>
+</tbody></table>
+
+<h3 id="start-meeting">Step 2: Start the meeting:</h3>
+
+<table>
+<tbody>
+<tr>
+	<th>IRC Command</th>
+	<th>Explanation</th>
+</tr>
+<tr>
+	<td class="command">Scribe: David Booth</td>
+	<td class="help">(Optional) David Booth is the name of the scribe as it should appear in the generated minutes.  The ScribeNick will be used instead if Scribe is not specified.  If there are multiple scribes: Issue this command and the ScribeNick: command whenever the scribe name changes.</td>
+</tr>
+<tr>
+	<td class="command">ScribeNick: dbooth</td>
+	<td class="help">dbooth is the IRC nickname of the scribe.  The ScribeNick will be guessed if neither Scribe nor ScribeNick are specified.  HINT: Do <span style="text-decoration: underline;">not</span> change your IRC nickname to "scribe".  If there are multiple scribes: Issue this command and the Scribe: command whenever the scribe nickname changes.</td>
+</tr>
+<tr>
+	<td class="command">Meeting: WS Arch Teleconference</td>
+	<td class="help">Record meeting title</td>
+</tr>
+<tr>
+	<td class="command">Chair: Mike</td>
+	<td class="help">Record who chaired</td>
+</tr>
+</tbody>
+</table>
+
+
+	<h3 id="notes">Step 3: Take notes in IRC:</h3>
+
+<table>
+<tbody>
+<tr>
+	<th>IRC Command</th>
+	<th>Explanation</th>
+</tr>
+<tr>
+	<td class="command">Topic: Debate on Feature X</td>
+	<td class="help">Use "Topic: . . ." at the
+start of each agenda topic.  Alternatively, you can use <a href="http://www.w3.org/2001/12/zakim-irc-bot.html#agenda">Zakim bot's agenda control</a>, which is recognized by default.  (See the -useZakimTopics option below.)</td>
+</tr>
+<tr>
+	<td class="command">Mike: Feature X is great</td>
+	<td class="help">Record what Mike said.  NOTE: Speaker's name must not contain spaces!</td>
+</tr>
+<tr>
+	<td class="command">... and easy to implement.</td>
+	<td class="help">Mike's statement continues.  (NOTE: Do not use blank space indentation alone to indicate continuation lines.  That syntax was previously permitted, but was found to be too error prone -- particularly when text was pasted -- so it is no longer supported.)</td>
+</tr>
+<tr>
+	<td class="command">ACTION: Frank to order lunch</td>
+	<td class="help">Record new action.</td>
+</tr>
+<tr>
+	<td class="command">ACTION: Mary to write spec [PENDING]  </td>
+	<td class="help">Record old action and status:
+DONE, PENDING, or DROPPED The action status may also be on a line by itself immediately following the action item.</td>
+</tr>
+<tr>
+	<td class="command">[PENDING] ACTION: Mary to write spec</td>
+	<td class="help">Alternate syntax for recording action status.</td>
+</tr>
+<tr>
+	<td class="command">RESOLUTION: Accept Frank's proposal</td>
+	<td class="help">Indicate how an issue or topic was resolved.</td>
+</tr>
+<tr>
+	<td class="command">s/Mary/Marie/</td>
+	<td class="help">Change most recent occurrence of "Mary" to "Marie".  The old string is currently treated as a literal string -- not a regex.  Alternate syntax: s|Mary|Marie|</td>
+</tr>
+<tr>
+	<td class="command">s/Mary/Marie/g</td>
+	<td class="help">Change all previous occurrences of "Mary" to "Marie".</td>
+</tr>
+<tr>
+	<td class="command">s/Mary/Marie/G</td>
+	<td class="help">Change all previous and future occurrences of "Mary" to "Marie" (within this document).</td>
+</tr>
+<tr>
+	<td class="command">i/Time to vote/Topic: Vote on Feature Y</td>
+	<td class="help">Insert a "Topic: Vote on Feature Y" line before the line containing the literal string "Time to vote" (not a regex).  Alternate syntax: i|Time to vote|Topic: Vote on Feature Y</td>
+</tr>
+</tbody>
+</table>
+
+<h3 id="finish-meeting">Step 4: Finish the meeting</h3>
+
+<table>
+<tbody>
+<tr>
+	<th>IRC Command</th>
+	<th>Explanation</th>
+</tr>
+<tr>
+	<td class="command">zakim, bye</td>
+	<td class="help">Dismiss zakim bot, which will generate a list of attendees.  Use "Present: ..." (described below) instead if you aren't using zakim bot.</td>
+</tr>
+<tr>
+	<td class="command">rrsagent, make log public</td>
+	<td class="help">(For public minutes and logs) Change the permissions on the IRC logs.  Note that the permission changes are queued and it may be a minute or so before they take effect.</td>
+</tr>
+<tr>
+	<td class="command">rrsagent, draft minutes</td>
+	<td class="help">Tell <a href="http://www.w3.org/2002/03/RRSAgent#minutes">RRSAgent</a> <a href="http://www.w3.org/2002/03/RRSAgent#minutes">to generate minutes</a> from the log as written so far, inheriting access permissions from the log permissions.  Note the location of the generated minutes.  Skip this step if you are not using RRSAgent.</td>
+</tr>
+<tr>
+	<td class="command">rrsagent, bye</td>
+	<td class="help">Dismiss RRSAgent (if used).</td>
+</tr>
+<tr>
+	<td class="command">(Download and edit the generated minutes)</td>
+	<td class="help">If you're using RRSAgent, then just edit the generated minutes and you are done. </td>
+</tr>
+</tbody>
+</table>
+
+<p>Continue to Step 5 if you wish to run scribe.perl manually or if you are not using RRSAgent.
+</p>	
+
+<h3 id="generate-minutes">Step 5: Generate minutes</h3>
+
+<table>
+<tbody>
+<tr>
+	<th>Shell Command</th>
+	<th>Explanation</th>
+</tr>
+<tr>
+	<td class="command">(Save a copy of the IRC log, such as http://www.w3.org/2002/04/05-arch-irc.txt)</td>
+	<td class="help">(Hint: If RRSAgent wrote the minutes to http://...foo-minutes, then the IRC log will be at http://...foo-irc.txt.)</td>
+</tr>
+<tr>
+	<td class="command">(<a href="http://dev.w3.org/cvsweb/%7Echeckout%7E/2002/scribe/scribe.perl">Download scribe.perl</a>)</td>
+	<td class="help">No installation is needed, but you must have <a href="http://www.perl.com/download.csp">perl</a>.</td>
+</tr>
+<tr>
+	<td class="command">perl scribe.perl log.txt &gt; minutes.html</td>
+	<td class="help">(Generate minutes.)</td>
+</tr>
+<tr>
+	<td class="command">(Review and make adjustments.)</td>
+	<td class="help">If the result isn't good enough, either: 1. edit your copy of the log file and regenerate the HTML; or 2. manually edit the resulting HTML.  Option 1 is best if you forgot to indicate who is scribe ("Scribe: ..."), or if you forgot to mark a topic start ("Topic: ...").</td>
+</tr>
+</tbody>
+</table>
+
+	<h2 id="Pros_and_Cons_of_Using_Scribe.perl">Pros and Cons of Using Scribe.perl</h2>
+	
+<h3 id="pros">Pros</h3>
+
+<ul>
+	<li>It's free, it's open source, and it usually works.</li>
+	<li>It runs anywhere that perl is installed.  (I hope!  Please let me know if it doesn't.)</li>
+	<li>Easy to use.  It uses conventions that are used in many W3C working groups.</li>
+	<li>It recognizes several input and log formats.</li>
+	<li>If you don't like the format it generates, you can supply your own template using the -template option.</li>
+</ul>
+
+<h3 id="cons">Cons</h3>
+
+<ul>
+	<li>You still need to do some manual clean-up.</li>
+	<li>It doesn't recognize all minuting conventions.  (Suggestion: Learn its conventions, they're simple.)</li>
+	<li>The code is a mess.  (Sorry!)</li>
+</ul>
+
+
+<h2 id="running">Running scribe.perl</h2>
+
+<p>Scribe.perl reads standard input and writes to standard output:</p>
+
+<pre class="command">perl scribe.perl [options] &lt; log.txt &gt; minutes.html</pre>
+
+<p>It can also be <a href="http://www.w3.org/2002/03/RRSAgent#minutes">invoked by RRSAgent</a> from IRC (provided you're using RRSAgent):</p>
+
+<pre class="command">rrsagent, draft minutes</pre>
+
+<h2 id="options">Options</h2>
+
+<p>Options described below are grouped in several categories:</p>
+
+<ul>
+	<li><a href="options_input_style">Input Style Options</a></li>
+	<li><a href="options_output_format">Output Format Options</a></li>
+	<li><a href="options_template">Template Options</a></li>
+	<li><a href="options_scribe_identification">Scribe Identification Options</a></li>
+	<li><a href="options_misc">Miscellaneous Options</a></li>
+</ul>
+
+<p>There are three ways to specify options (from highest to lowest priority):</p>
+
+<ul>
+	<li>On the shell command line, when invoking scribe.perl</li>
+	<li>Using the "<a href="#command_scribeoptions">ScribeOptions:</a>" command in IRC</li>
+	<li>Via the <a href="#Environment_Variables">SCRIBEOPTIONS</a> environment variable</li>
+</ul>
+
+<h3 id="options_input_style">Input Style Options</h3>
+
+<p>These options are used to accommodate the different input syntaxes and scribing styles.</p>
+	
+<h4 id="dashTopics">-dashTopics</h4>
+
+<p>Indicate that dash lines are used to indicate that the next line is the start of a new topic, such as:</p>
+<pre class="command">&lt;Philippe&gt; ---
+&lt;Philippe&gt; Review of Action Items
+</pre>
+<p>instead of</p>
+<pre class="command">Topic: Review of Action Items
+</pre>
+
+
+<h4 id="implicitContinuations">-implicitContinuations</h4>
+
+<p>Indicate that the scribe used implicit continuation lines like this:</p>	
+
+<pre class="command">&lt;dbooth&gt; Mary: Now is the time
+&lt;dbooth&gt; for all good men and women
+&lt;dbooth&gt; to come to the aid of their party.
+</pre>
+
+<p>instead of this:</p>
+
+<pre class="command">&lt;dbooth&gt; Mary: Now is the time
+&lt;dbooth&gt; ... for all good men and women
+&lt;dbooth&gt; ... to come to the aid of their party.
+</pre>
+
+<p>The implicit continuation style is not recommended, because it is ambiguous. For example, the "(Group agrees)" statement below will be incorrectly attributed to Mary, instead of being a scribe comment:</p>	
+
+<pre class="command">&lt;dbooth&gt; Mary: Now is the time
+&lt;dbooth&gt; for all good men and women
+&lt;dbooth&gt; to come to the aid of their party.
+&lt;dbooth&gt; (Group agrees)</pre>
+
+<h4 id="useZakimTopics">-useZakimTopics</h4>
+
+<p>[Default] Use Zakim bot to change topics, such as "zakim, take up next agendum". Specifically, treat Zakim statements like:</p>
+
+<pre class="command">&lt;Zakim&gt; agendum 2. &quot;UTF16 PR issue&quot; taken up [from MSMscribe]
+</pre>
+<p>as equivalent to the command:</p>
+
+<pre class="command">&lt;scribe&gt; Topic: UTF16 PR issue </pre>
+
+<h4 id="noUseZakimTopics">-noUseZakimTopics</h4>
+
+<p>Turn off the -useZakimTopics option.</p>
+
+<h4 id="inputFormat">-inputFormat NameOfFormat</h4>
+
+<p>Force input to be treated as NameOfFormat, which must be one of the formats listed in <a href="#input_formats">Input Formats</a>.  This option is not normally needed, as the input format will normally be guessed.</p>
+
+<h4 id="options_output_format">Output Format Options</h4>
+
+<p>These options control the output format.</p>	
+
+<dl>
+<dt>-tidy</dt>
+<dd>Pipe the output through "tidy -c".  This only works if you have tidy already installed.  At present, it also causes tidy's console output to be jumbled in with the console messages from scribe.perl, which makes it hard to read scribe.perl's warnings.</dd>	
+<dt>-scribeOnly</dt>
+<dd>Only include what the scribe wrote. Discard IRC statements made by others.</dd>
+<dt>-draft</dt>
+<dd>[DEFAULT] Include a "- DRAFT -" header in the formatted output, to remind you that the generated minutes still need manual editing.</dd>
+<dt>-final</dt>
+<dd>Omit the "- DRAFT -" header in the formatted output.</dd>
+<dt>-embedDiagnostics</dt>
+<dd>Embed scribe.perl's diagnostic output into the generated minutes.  This is most useful when scribe.perl is run as part of an automated process that otherwise would not display the diagnostic output to the user.</dd>	
+<dt>-noEmbedDiagnostics</dt>
+<dd>[DEFAULT] Write diagnostic output to the console (stderr).  However, in the case of a fatal error, diagnostic output will still be written to stdout (instead of generated minutes), to avoid producing an empty and uninformative minutes file.</dd>
+<dt id="trustRRSAgent_option">-trustRRSAgent</dt>
+<dd><p>Take the action items from what RRSAgent says when it is dismissed (&quot;&lt;RRSAgent&gt; I see 9 open action items...&quot;), rather than from the original text that was written in IRC when the action was recorded (&quot;&lt;dbooth&gt; ACTION: ...").   This option has pros and cons:</p>
+<p>Pros:</p>
+<ul>
+	<li>It enables scribe.perl to add "[recorded in http://...]" to action items.  </li>
+<li>Changes to action items that were made through RRSAgent commands ("ACTION 4 = whatever") are reflected in action items that are output.</li>
+</ul>		
+<p>Cons:</p> 
+
+<ul>
+	<li>Changes to action items that were made with "s/old/new/" commands have no effect, because RRSAgent doesn't process them. </li>
+<li>Action items continuation lines (beginning with "...") are not recognized. </li>
+<li>An action status that is on the line after the action item will not be recognized.</li>
+</ul>
+</dd>
+
+<dt>-noTrustRRSAgent</dt>
+<dd>(DEFAULT) Turn off the -trustRRSAgent option.  I.e.,  get the action items from wherever they were initially written. This permits action items to be corrected using "s/old/new/" commands instead of RRSAgent commands.
+</dd>
+</dl>
+
+<h3 id="options_template">Template Options</h3>
+
+<p>Scribe.perl uses templates for generating the formatted output.  There are a few built in, but you can specify your own if you wish.</p>
+
+
+<dl>
+	<dt id="plainOption">-plain</dt>
+	<dd>Use the built-in plain (non-W3C) template.</dd>
+	<dt>-public</dt>
+	<dd>(DEFAULT) Use the built-in W3C template that is styled for public access.</dd>
+	<dt>-member</dt>
+	<dd>Use the built-in W3C template that is styled for W3C member-only access.</dd>
+	<dt>-team</dt>
+	<dd>Use the built-in W3C template that is styled for W3C team-only access.</dd>
+	<dt>-mit</dt>
+	<dd>Use the built-in W3C template that is styled for W3C MIT site meetings.   After scribe.perl generates your HTML, you still have to manually insert  the  "Two Minutes" reports.  Use the <a href="http://cgi.w3.org/team-bin/mit-2mins">Two Minutes CGI Script</a> to generate them.</dd>
+	<dt id="templateOption">-template templateFile.html</dt>
+	<dd>Use templateFile.html as the template for generating the minutes.</dd>
+	<dt>-sampleTemplate</dt>
+	<dd>Show me a sample template file.  (This outputs the default template.)</dd>
+</dl>
+
+<h3 id="options_scribe_identification">Scribe Identification Options</h3>
+
+<dl>
+<dt>-scribe Name</dt>
+<dd>Specify the name of the scribe, as it should appear in the generated minutes. If Name appears in the input as an IRC nickname, it will also be taken as the scribe's nickname, as if specified by the -scribeNick option (below).  This option may be used multiple times to indicate multiple scribes.</dd>
+<dt>-scribeNick nickName</dt>
+<dd>Indicate the IRC nickname of the scribe, which is used to figure out which lines were written by the scribe.  This option may be used multiple times to indicate multiple scribeNicks.</dd>
+</dl>
+
+<h3 id="options_misc">Miscellaneous Options</h3>
+
+<dl>
+<dt>-minutes http://example.org/2005/01-baking-club-minutes</dt>
+<dd>Specify the URL where you will eventually publish the generated minutes.   This does not cause the minutes to be published for you!  Rather it allows each ACTION item to include a pointer to its original context in the minutes, such as:
+<pre class="command">ACTION: dbooth to bake 3 cakes 
+	[recorded in http://example.org/2005/01-baking-club-minutes#action01]
+</pre>
+This option is not usually needed if RRSAgent is used, because the minutes URL will be inferred from lines such as:
+<pre class="command">&lt;dbooth&gt; rrsagent, draft minutes 
+&lt;RRSAgent&gt; I have made the request to generate 
+	http://www.w3.org/2005/01/07-swcg-minutes dbooth
+</pre>
+</dd>
+<dt>-sampleInput</dt>
+<dd>Show me some sample input, so I can learn how to use this program.  Input is ignored if this option is used.</dd>
+<dt>-sampleOutput</dt>
+<dd>Show me some sample output.  Input is ignored if this option is used.</dd>
+</dl>
+
+<h2 id="one_time_commands">Commands</h2>
+
+<p>Commands are interspersed with other minuted text in your IRC log, except that each command must be on a line by itself. Commands may be issued by anyone -- not only the scribe. Syntax is shown below by example, with italicized portions variable.</p>	
+
+<h3 id="correcting_mistakes">Editing Commands</h3>
+
+<p>These editing commands are usually the easiest way to correct simple mistakes or add clarifications. (Of course, they don't take effect until you run scribe.perl on your IRC log.)
+</p>	
+
+<pre class="command">s/old/new/
+s/old/new
+s|old|new|
+s|old|new
+</pre>
+
+<p>Replace the most recent occurrence of old with new.  Old is currently treated as a literal string (it will be escaped using quotemeta(...)) -- not a regular expression.  These are processed in order, first to last.  NOTE: If you correct an action item using s/old/new/, then you should not use the -trustRRSAgent option.  Conversely, if you use "ACTION=..." to correct an action item using RRSAgent, then you should use the -trustRRSAgent option.  For further explanation, see the <a href="#trustRRSAgent_option">-trustRRSAgent option</a>.</p>	
+
+<pre class="command">s/old/new/g 
+s|old|new|g</pre>
+
+<p>Replace globally from this point backward.</p>
+
+<pre class="command">s/old/new/G 
+s|old|new|G</pre>
+
+<p>Replace globally, both forward and backward.</p>	
+
+<pre class="command">i/locationString/lineToInsert
+i/locationString/lineToInsert/
+i|locationString|lineToInsert
+i|locationString|lineToInsert|
+</pre>
+
+<p>Insert lineToInsert before the line containing locationString, which is currently treated as a literal string (it will be escaped using quotemeta(...)), not a regular expression.  This is most helpful if you forgot to insert a "Topic: " command.</p>
+
+<p>For example, the following use of the i// command:</p>
+
+<pre class="command">&lt;Arthur&gt; Finished with issue LC71; on to LC82.
+&lt;Arthur&gt; Frank: This is about syntax
+&lt;Arthur&gt; ... Do we care about syntax?
+&lt;dbooth&gt; i/Frank: This is about/Topic: Issue LC82
+</pre>
+
+<p>is converted to:</p>
+
+<pre class="command">&lt;Arthur&gt; Finished with issue LC71; on to LC82.
+&lt;inserted&gt; Topic: Issue LC82
+&lt;Arthur&gt; Frank: This is about syntax
+&lt;Arthur&gt; ... Do we care about syntax?
+</pre>
+
+<h3 id="commands_general">General Commands</h3>
+
+<pre class="command">Meeting: Baking Club</pre>
+<p>Use "Baking Club" as the title of the meeting minutes.  This command should only be done once.
+</p>	
+<pre class="command">Chair: Jonathan</pre>
+
+<p>Jonathan was the meeting chair.  This command should only be done once.</p>
+	
+<pre class="command">Scribe: Mary</pre>
+
+<p>Mary was the scribe.  The Scribe command is to indicate the full name of the scribe. If the name given in the Scribe command matches an IRC name, then it will also be used as the ScribeNick.  If you also use the ScribeNick command (below), then you can use the Scribe command to give the full name of the scribe, rather than the IRC nickname.  The Scribe command can be used more than once, which indicates that multiple scribes were used during the meeting.
+</p>	
+
+	<pre class="command" id="ScribeNick">ScribeNick: MaryScr</pre>
+	
+<p>MaryScr was the IRC nickname used by the scribe.  Use this (and the "Scribe:" command above) if the scribe's IRC nickname was cryptic.  The ScribeNick command can be used more than once, which indicates that multiple scribes were used during the meeting.
+</p>	
+
+<pre class="command">Agenda: http://www.example.com/agenda.html</pre>
+
+<p>Specify the agenda URL (optional).  This command should only be done once.</p>	
+	
+<pre class="command">Present: Jonathan, Mary, Barbara, Steve</pre>
+	<p>Explicitly indicate who was present.  If you're using Zakim bot you probably will not need to do this, because the script is usually able to figure out who was present.</p>
+	
+	<pre class="command">Regrets: Nathan, Emma</pre>
+	<p>Indicate who sent regrets (optional).</p>
+	
+	<pre class="command">Date: 05 Dec 2002</pre>
+	<p>Specify the meeting date.  Not usually needed, because the default is auto set from the IRC log name or the current date.</p>
+	
+	<pre class="command">ACTION: Frank, Mary and Kate to propose solution for issue 42</pre>
+	<pre class="command">ACTION: David to clean the kitchen [PENDING]</pre>
+	<p>Give an action item.  Action recipients should be listed before the word "to".  Action status may be given at the end or on the next line: [DONE], [PENDING], or [DROPPED].  Several synonyms of these status keywords are also recognized.</p>
+	
+	<pre class="command">RESOLUTION: Issue 42 closed as duplicate of issue 21</pre>
+	<p>Indicate a decision that the group has made.</p>
+	
+	<pre class="command">Log: http://www.w3.org/2002/11/07-ws-arch-irc</pre>
+	<p>Explicitly indicate the IRC log location.  Not usually needed, because the script normally infers it from statements like:</p>
+
+<pre class="command">&lt;dbooth&gt; rrsagent, where am i?
+&lt;RRSAgent&gt; See http://www.w3.org/2002/11/07-ws-arch-irc#T13-59-36
+</pre>
+
+<pre class="command" id="command_scribeoptions">ScribeOptions: -tidy -dashTopics -embedDiagnostics</pre>
+<p>Specify options inline, as if they had been written on the command line like:
+</p>
+
+<pre class="command">perl scribe.perl -tidy -dashTopics -embedDiagnostics</pre>	
+
+<pre class="command">NamedAnchorHere: foo</pre>
+
+<p>Cause a named anchor foo to be generated at this point in the minutes, such as:</p>
+
+<p>This is mostly for use internally by scribe.perl.</p>
+
+<h2 id="editing_the_log">Manually Editing the Log</h2>
+
+<p>In addition to the "realtime" <a href="#correcting_mistakes">editing commands</a> above, you may manually edit your IRC log with a text editor (by mimicking the log format) before running scribe.perl. This is most useful for commands that have a broad effect on the generated HTML. For most log formats (except HTML), you can leave off the timestamps on lines that you insert.
+</p>	
+
+<p>Here is an example snippet of an IRC log in which the commands "ScribeNick: tw" and "Topic: Fire Alarms" are have been inserted using a text editor.</p>
+
+<pre class="command">20:11:21 &lt;tw&gt; Scribe: TedWilliams
+&lt;tw&gt; ScribeNick: tw
+20:11:34 &lt;tw&gt; Topic: Printers
+20:11:49 &lt;tw&gt; alan: Printers are working now
+&lt;tw&gt; Topic: Fire Alarms
+20:12:27 &lt;tw&gt; ralph: Fire marshall assured us that the system is working.
+</pre>
+
+<p>(Note that the IRC name &lt;tw&gt; <i>is</i> required, though for most commands it does not matter what IRC name is specified.)</p>
+
+
+<h2 id="input_formats">Input Formats</h2>
+
+<p>Several log formats are recognized, and are described below:</p>
+
+<ul>
+		<li><a href="#RRSAgent_Text_Format">RRSAgent_Text_Format</a>  (RECOMMENDED)</li>
+		<li><a href="#RRSAgent_HTML_Format">RRSAgent_HTML_Format</a></li>
+		<li><a href="#RRSAgent_Visible_HTML_Text_Paste_Format">RRSAgent_Visible_HTML</a></li>
+		<li><a href="#RRSAgent_Visible_HTML_Text_Paste_Format">_Text_Paste_Format</a></li>
+		<li><a href="scribedoc.htm#Mirc_Timestamped_Log_Format">Mirc_Timestamped_Log_Format</a></li>
+
+		<li><a href="#Mirc_Text_Format">Mirc_Text_Format</a></li>
+
+		<li><a href="#Normalized_Format">Normalized_Format</a></li>
+
+		<li><a href="#XChat_Timestamped_Log_Format">XChat_Timestamped_Log_Format</a></li>
+
+		<li><a href="#Irssi_ISO8601_Log_Text_Format">Irssi_ISO8601_Log_Text_Format</a></li>
+
+		<li><a href="#Yahoo_IM_Format">Yahoo_IM_Format</a></li>
+
+		<li><a href="#Plain_Text_Format">Plain_Text_Format</a></li>
+	</ul>
+	
+	
+	<p>Scribe.perl guesses which format you have used by seeing which format best matches the input.  If necessary, you can specify the input format explicitly using the -inputFormat option and specifying the name of the format such as "-inputFormat RRSAgent_Text_Format".  The names of the formats are actually the perl function names used in the code. 
+	</p>
+	<p>If you have a log format that is not recognized:</p>
+
+	<ol>
+		<li>Try doing global search/replace in a text editor, to convert it into a recognized format, such as <a href="scribedoc.htm#Normalized_Format">Normalized_Format</a>; and
+		</li>
+<li>Please email an example to dbooth@w3.org so that I can consider adding support for it.</li>
+	</ol>
+
+	<h3 id="RRSAgent_Text_Format">RRSAgent_Text_Format (RECOMMENDED)</h3>
+	
+	<p>The plain text format (*.txt) produced by RRSAgent.  Hint: add ".txt" to the RRSAgent log URL to get the text version, such as: http://www.w3.org/2002/11/07-ws-arch-irc.txt .  The timestamps are ignored (except in guessing the input format), so you can safely edit the log and add lines without having to fake timestamps.  <a href="http://www.w3.org/2003/03/03-ws-desc-irc.txt">Example:</a></p>
+
+<pre class="command">20:41:27 &lt;dbooth&gt; Mike: Feature X would benefit users.
+20:41:37 &lt;dbooth&gt; ... and implementation would be easy.
+20:41:47 &lt;ericn&gt; I agree.
+</pre>
+
+<h3 id="RRSAgent_HTML_Format">RRSAgent_HTML_Format</h3>
+
+<p>The HTML format (*.html) produced by RRSAgent.  This is the raw HTML code.  <a href="http://www.w3.org/2003/03/03-ws-desc-irc.html">Example:</a>
+</p>
+
+<pre class="command">
+&lt;dt id=&quot;T20-41-27&quot;&gt;20:41:27 [dbooth]&lt;/dt&gt;
+	&lt;dd&gt;Mike: Feature X would benefit users. &lt;/dd&gt;
+&lt;dt id=&quot;T20-41-37&quot;&gt;20:41:37 [dbooth]&lt;/dt&gt;
+	&lt;dd&gt;... and implementation would be easy. &lt;/dd&gt;
+&lt;dt id=&quot;T20-41-37&quot;&gt;20:41:47 [ericn]&lt;/dt&gt;
+	&lt;dd&gt;I agree. &lt;/dd&gt;
+</pre>
+
+	<h3 id="RRSAgent_Visible_HTML_Text_Paste_Format">RRSAgent_Visible_HTML_Text_Paste_Format</h3>
+	
+<p>This is for the format that is visible in the browser when RRSAgent's HTML is displayed.  I.e., when you display the *.html log in a browser, and then copy and paste the text from the browser window, only the displayed text is copied -- not the raw HTML tags.  <a href="http://lists.w3.org/Archives/Public/www-archive/2004Jan/att-0002/ExampleFormat-RRSAgent_Visible_HTML_Text_Paste_Format.txt">Example:</a>
+</p>
+<pre class="command">20:41:27 [dbooth]
+     Mike: Feature X would benefit users.
+20:41:37 [dbooth]
+     ... and implementation would be easy.20:41:47 [ericn]
+     I agree.
+</pre>
+
+	<h3 id="Mirc_Timestamped_Log_Format">Mirc_Timestamped_Log_Format</h3>
+	
+	<p>Timestamped log format produced by mIRC.  Example:
+	</p>
+<pre class="command">
+[19:35] &lt;Zakim&gt; Steven should now be muted
+[19:36] &lt;ph&gt; http://lists.w3.org/Archives/Member/w3c-html-cg/2004JanMar/0038.html
+[19:36] * Zakim hears Steven&apos;s hand up
+[19:36] * Zakim sees Steven on the speaker queue
+</pre>
+
+	<h3 id="Mirc_Text_Format">Mirc_Text_Format</h3>
+	
+<p>	The format produced by mIRC when you do Buffer--&gt;Save As.  Example:
+</p>	
+<pre class="command">
+&lt;dbooth&gt; Mike: Feature X would benefit users.
+&lt;dbooth&gt; ... and implementation would be easy.
+&lt;dbooth&gt; This is pretending to be a long
+ line that mIRC breaks in order to display,
+ but scribe.perl will re-join into a single line.
+&lt;ericn&gt; I agree.
+</pre>
+
+	<h3 id="Normalized_Format">Normalized_Format</h3>
+	
+	<p>This is the format used internally by scribe.perl.  Scribe.perl converts all other formats to this format before processing.   Superficially it looks similar to the Mirc_Text_Format, except that Mirc_Text_Format may contain broken lines that still need to be rejoined back into single, long lines.  Example:
+</p>
+<pre class="command">&lt;dbooth&gt; Mike: Feature X would benefit users.
+&lt;dbooth&gt; ... and implementation would be easy.
+&lt;dbooth&gt; This is pretending to be a long line that mIRC breaks in order to display, but scribe.perl will re-join into a single line.
+&lt;ericn&gt; I agree.
+</pre>
+
+	<h3 id="XChat_Timestamped_Log_Format">XChat_Timestamped_Log_Format</h3>
+	<p>Timestamped log format produced by X-Chat.  <a href="http://lists.w3.org/Archives/Public/www-archive/2005Feb/0026.html">Example</a>:</p>
+<pre class="command" id="body">
+**** BEGIN LOGGING AT Mon Feb 14 11:02:06 2005
+
+Feb 14 11:02:06 --&gt;   You are now talking on &amp;arch
+Feb 14 11:02:06 ---  Topic for &amp;arch is W3C Architecture Mardi Gras Meeting
+Feb 14 11:02:06 ---    Topic for &amp;arch set by plh at Tue Feb  8 13:43:31 2005
+Feb 14 11:02:11 &lt;Zakim&gt;  ok, plh; the call is being made
+Feb 14 11:02:18 &lt;Zakim&gt; WS_Team()11:00AM has now started
+Feb 14 11:02:19 &lt;Zakim&gt;    +Plh
+Feb 14 11:02:23 &lt;larryk&gt;   This is an on-the-record comment
+Feb 14 11:02:26 *    Yves This is an off-the-record comment
+**** ENDING LOGGING AT Mon Feb 14 10:22:09 2005
+</pre>
+
+	<h3 id="Irssi_ISO8601_Log_Text_Format">Irssi_ISO8601_Log_Text_Format</h3>
+	
+	<p>The format produced by Irssi logging with <a href="http://www.w3.org/TR/NOTE-datetime">ISO8601 timestamp</a> prefixes.  Example:</p>
+
+<pre class="command">2003-12-18T15:27:21-0500 &lt;dbooth&gt; Mike: Feature X would benefit users.
+2003-12-18T15:27:36-0500 &lt;dbooth&gt; ... and implementation would be easy.
+2003-12-18T15:27:36-0500 &lt;ericn&gt; I agree.
+</pre>
+
+<p>The date, seconds and timezone are optional, so the following is also recognized:
+</p>
+<pre class="command">15:27 &lt;dbooth&gt; Mike: Feature X would benefit users.
+15:27 &lt;dbooth&gt; ... and implementation would be easy.
+15:27 &lt;ericn&gt; I agree.
+</pre>
+
+	<h3 id="Yahoo_IM_Format">Yahoo_IM_Format</h3>
+	
+	<p>The format produced when you save a Yahoo IM session.  Example:</p>
+<pre class="command">dbooth: Mike: Feature X would benefit users.
+dbooth: ... and implementation would be easy.
+ericn: I agree.
+</pre>
+
+	<h3 id="Plain_Text_Format">Plain_Text_Format</h3>
+	
+	<p>Line-oriented plain text format.  This format is intended for occasions when the scribe doesn't have access to IRC, and simply takes notes in a text editor.  Example:
+	</p>
+<pre class="command">
+	Mike: Feature X would benefit users.... and implementation would be easy.
+Eric agrees.
+</pre>
+
+	<h2 id="Environment_Variables">Environment Variables</h2>
+	
+	<p>The SCRIBEOPTIONS environment variable holds the default options that one wants to use.  It is not required.   Example for a Bourne-style shell:
+	</p>
+	<pre>
+export SCRIBEOPTIONS="-trustRRSAgent"
+</pre>
+	
+	<hr />
+
+	<address>
+		Author: <a href="mailto:dbooth@w3.org">David Booth</a>
+		This software is available for use under the <a href="http://www.w3.org/Consortium/Legal/2002/copyright-software-20021231">W3C Software License</a>.
+		$Date: 2009-09-10 22:00:58 $
+	</address>
+</body>
+</html>

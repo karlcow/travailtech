@@ -1,0 +1,15 @@
+13:02:04 <Norm> Scribe: timbl
+13:02:04 <Norm> Chair: Stuart
+13:02:04 <Norm> Meeting: TAG f2f meeting, Ottawa
+13:02:04 <Norm> Date: 0 August 2004
+13:02:04 <Norm> Agenda: http://www.w3.org/2001/tag/2004/08/09-11-tag.html
+13:06:48 <RRSAgent> RRSAgent has joined #tagmem
+13:13:29 <DanC_jam> DanC_jam has joined #tagmem
+13:13:35 <Roy> Roy has joined #tagmem
+13:13:41 <skw-scribe> Present: RF, PC, DC,SW, TBL, NW(Chair)
+13:13:49 <DanC_jam> RRSAgent, pointer?
+13:13:49 <RRSAgent> See http://www.w3.org/2004/08/10-tagmem-irc#T13-13-49
+13:14:17 <timbl> -------------------------------------------------
+13:14:39 <skw-scribe> Issue diwg-1
+13:15:49 <skw-scribe> DC: requested discussion because we say nothing about URI with question marks in them.
+13:16:29 <skw-scribe> DC: May be a useful distinction between machine generated and human generated rather than statically/dynamically generated URI

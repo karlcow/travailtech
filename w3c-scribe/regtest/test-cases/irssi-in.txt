@@ -1,0 +1,374 @@
+14:26 -!- Zakim [rrs-bridgg@128.30.52.30] has joined #dawg
+14:26 -!- RRSAgent [rrs-loggee@128.30.52.30] has joined #dawg
+14:26 <RRSAgent> logging to http://www.w3.org/2005/03/29-dawg-irc
+14:27 -!- kendall [Kendall@216.164.63.95] has joined #dawg
+14:27 <DanC> agenda + Convene, take roll, review records and agenda http://lists.w3.org/Archives/Public/public-rdf-dawg/2005JanMar/0510.html
+14:27  * Zakim notes agendum 1 added
+14:27 <AndyS> Regrets for next week (April 5)
+14:27 <DanC> agenda + Use Cases and Requirements publication
+14:27  * Zakim notes agendum 2 added
+14:28 <DanC> agenda + issue: sort
+14:28  * Zakim notes agendum 3 added
+14:28 <DanC> agenda + issue: valueTesting
+14:28  * Zakim notes agendum 4 added
+14:28 <DanC> agenda + SPARQL QL LC Candidate
+14:28  * Zakim notes agendum 5 added
+14:28 <DanC> agenda + privacy section for protocol spec
+14:28  * Zakim notes agendum 6 added
+14:28 <DanC> agenda + issue: wsdlAbstractProtocol, fromUnionQuery
+14:28  * Zakim notes agendum 7 added
+14:28 <DanC> agenda + issue: xmlAbstractSyntax
+14:28  * Zakim notes agendum 8 added
+14:28 <DanC> agenda + issue: serviceDescription
+14:28  * Zakim notes agendum 9 added
+14:29 -!- thompsonbry [thompsonbr@69.17.64.215] has joined #dawg
+14:29 <DanC> Zakim, this is dawg
+14:29 <Zakim> ok, DanC; that matches SW_DAWG()9:30AM
+14:29 <Zakim> +Yoshio
+14:29  * DanC Zakim, call DanC-BOS
+14:29  * Zakim ok, DanC; the call is being made
+14:29 <Zakim> +DanC
+14:29 <AndyS> zakim, who is on the phone?
+14:29 <Zakim> On the phone I see Kevin, ??P1, Yoshio, DanC (muted)
+14:30 <Zakim> +BryanT
+14:30 -!- DanC changed the topic of #dawg to: RDF Data Access 29 Mar. scribe: ???
+14:30 <AndyS> zakim,??P1 is AndyS
+14:30 <Zakim> +AndyS; got it
+14:30  * ericP zakim, please dial ericP-617
+14:30  * Zakim ok, ericP; the call is being made
+14:30 <Zakim> +EricP
+14:30 <Yoshio> Hello
+14:30 <Zakim> +Kendall_Clark
+14:30 <kendall> zakim, mute me
+14:30 <Zakim> Kendall_Clark should now be muted
+14:30 -!- JanneS [janne.saar@194.29.198.121] has joined #dawg
+14:30 <DanC> Zakim, list attendees
+14:30 <Zakim> As of this point the attendees have been Kevin, Yoshio, DanC, BryanT, AndyS, EricP, Kendall_Clark
+14:31 -!- patH [phayes@65.212.118.4] has joined #dawg
+14:31 <ericP> EricP is scribe
+14:31 <DanC> Meeting: RDF Data Access Weekly Teleconference
+14:31 <Zakim> +PatH
+14:31 <DanC> Scribe: EricP
+14:31 <DanC> Chair: DanC
+14:31 <DanC> Zakim, take up agendum 1
+14:31 <Zakim> agendum 1. "Convene, take roll, review records and agenda http://lists.w3.org/Archives/Public/public-rdf-dawg/2005JanMar/0510.html" taken up [from DanC]
+14:31 <DanC> Zakim, who is on the phone?
+14:31 <Zakim> On the phone I see Kevin, AndyS, Yoshio, DanC, BryanT, EricP, Kendall_Clark (muted), PatH
+14:32 <DanC> regrets: DaveB, SteveH, JosD
+14:32 <kendall> zakim, unmute me
+14:32 <Zakim> Kendall_Clark should no longer be muted
+14:32 <JanneS> I'm trying to call in - just a sec
+14:32 <DanC> minutes from last week http://lists.w3.org/Archives/Public/public-rdf-dawg/2005JanMar/0472.html ... ammendment...
+14:32 <DanC> ammendment... http://lists.w3.org/Archives/Public/public-rdf-dawg/2005JanMar/0520.html
+14:33 <ericP> PROPOSED: accept last weeks minutes as a true record --> <http://lists.w3.org/Archives/Public/public-rdf-dawg/2005JanMar/0472>
+14:33 <ericP> RESOLVED
+14:33 <DanC> ACTION DaveB: to consider use of xsi:dataType ala comment from Steer
+14:33  * RRSAgent records action 1
+14:34 <ericP> ACTION DanC: follow up re optional test based on op:dateTime triple
+14:34 <ericP> ACTION EricP: to pair with SteveH on making the HTML test results page
+14:34 <ericP> ACTION SteveH: to to revise test manifest w.r.t. "background" and named graphs
+14:34 <ericP> ACTION DaveB: to to propose source test to approve
+14:34 <ericP> ACTION AndyS: to add the above graph test cases (analagous to valueTesting test cases) (don't expect quick delivery)
+14:34 <ericP> ACTION SteveH: prepare test cases for publication as WG Note (no deadline/urgency)
+14:34  * RRSAgent records action 2
+14:34 <Yoshio> I think there is considarable  concern on XML serialization of the resutl (<mail> vs. <var name="mail"> issue)
+14:34  * RRSAgent records action 3
+14:34  * RRSAgent records action 4
+14:34  * RRSAgent records action 5
+14:34  * RRSAgent records action 6
+14:34  * RRSAgent records action 7
+14:34 <ericP> ALL CONTINUED without discussion
+14:34 <DanC> agenda + xml results <mail> vs. <var name="mail">
+14:34  * Zakim notes agendum 10 added
+14:34 <Zakim> +??P7
+14:34 <JanneS> Zakim, ??P7 is JanneS
+14:34 <Zakim> +JanneS; got it
+14:35 <DanC> next meeting: 5 Apr...
+14:35 <DanC> regrets 5 Apr AndyS
+14:36 <DanC> RESOVLED to cancel 5 Apr telcon, and meet 12 Apr.
+14:36 <DanC> Zakim, next agendum
+14:36 <Zakim> agendum 2. "Use Cases and Requirements publication" taken up [from DanC]
+14:37 <ericP> ACTION KC, AFS, EP: publish usecases 1.148 + revision to 2.18 by KC, reviewed by AFS, plus editorial fixups by KC, ok'd by EricP
+14:37 <ericP> DONE: http://www.w3.org/TR/2005/WD-rdf-dawg-uc-20050325/ and http://www.w3.org/2001/sw/DataAccess/UseCases is back to editor's draft status 1.158
+14:37 <DanC> "We invite feedback on which features are required for a first version of SPARQL and which should be postponed in order to expedite deployment of others." -- http://www.w3.org/TR/2005/WD-rdf-dawg-uc-20050325/
+14:38 <DanC> Zakim, next agendum
+14:38 <Zakim> agendum 3. "issue: sort" taken up [from DanC]
+14:39 <ericP> ACTION Kendall: To rewrite 2.18: change the title, don't motivate "update", spell "WSDL" correctly. :>
+14:39 <ericP> DONE: http://www.w3.org/2001/sw/DataAccess/UseCases 1.149
+14:39  * RRSAgent records action 8
+14:39 <DanC> action -8
+14:39  * RRSAgent drops action 8, Kendall to To rewrite 2.18: change the title, don't motivate "update", spell "WSDL" correctly. :>
+14:40 <ericP> ACTION PatH: review sort design in 2 weeks
+14:40  * RRSAgent records action 9
+14:40 <DanC> 1.278 http://www.w3.org/2001/sw/DataAccess/rq23/
+14:40 <ericP> andy believes he has reached a quiescient (SP?) state
+14:41 <ericP> ACTION Kevin: review sort design at earliest convenience
+14:41 <ericP> http://lists.w3.org/Archives/Public/public-rdf-dawg/2005JanMar/0483.html
+14:41  * RRSAgent records action 10
+14:41 <Yoshio> quiescent
+14:42 <AndyS> Google :: define:quiescent => "refers to a state of resting, inactivity or latency"
+14:43 <AndyS> Also "A volcano, which is not active, but is still registering seismic activity." :-)
+14:43 <thompsonbry> How could we extend from lexical comparison to achieve value comparison in a subsequent design?
+14:44 <ericP> Kevin: I pointed out a few issues (consistency with distinct and a few others)
+14:44 <ericP> ... Thought the interest was in ORDER BY and LIMIT, which is doable with LEXICAL sort
+14:45 <ericP> Andy, lexical ordering doesn't neccesarily give you total ordering
+14:46 <ericP> Kevin: we could have a future syntax for value ordering
+14:47 <Yoshio> I think the problem is that data could be gathered from various sources, where the data type are different
+14:47 <ericP> Andy: my pref is to go with value ordering (what people expect)
+14:47 <ericP> ... we can do lexical sort with str(?foo)
+14:49 <DanC> Zakim, next agendum
+14:49 <Zakim> agendum 4. "issue: valueTesting" taken up [from DanC]
+14:49 <thompsonbry> Andy, how does typing interact with functions to specify how a value sort will be applied?
+14:49 <ericP> DanC: we can also postpoine... no takers.
+14:49 <ericP> ACTION EricP: to propose to close valueTesting (bonus points for test cases, to EricP or others)
+14:49  * RRSAgent records action 11
+14:50 <AndyS> See doc : can write "ORDER BY x:func(?x)" as a (partial) ordering 
+14:50 <ericP> CONTINUED. expect to meet end of month deadline
+14:50 <ericP> action -10
+14:50  * RRSAgent drops action 10, Kevin to review sort design at earliest convenience
+14:52 <AndyS> q+ to ask about !=
+14:52  * Zakim sees AndyS on the speaker queue
+14:52 <DanC> ack andys
+14:52 <Zakim> AndyS, you wanted to ask about !=
+14:52  * Zakim sees no one on the speaker queue
+14:54 <DanC> (I suspect "error" is misleading terminology... "unkown" might communicate the notion better)
+14:54 <Yoshio> q+ to ask if this applies to cases where there is no data for deciding the equality
+14:54  * Zakim sees Yoshio on the speaker queue
+14:55 <ericP> EricP: how do people feel about requiring explicity casts where XQuery would not require them?
+14:55 <ericP> [ no probs with it ]
+14:56 <ericP> #invocation
+14:56 <ericP> #StandardOperations
+14:57  * DanC q+ to ask if the "x"^^mytype != "y"^^mytpe test is in the test suite, and ask for a volunteer if not
+14:57  * Zakim sees Yoshio, DanC on the speaker queue
+14:59  * DanC q+ about compliance and unknown datatypes
+14:59  * Zakim DanC, you typed too many words without commas; I suspect you forgot to start with 'to ...'
+14:59 <DanC> ack yoshio
+14:59 <Zakim> Yoshio, you wanted to ask if this applies to cases where there is no data for deciding the equality
+14:59  * Zakim sees DanC on the speaker queue
+14:59  * DanC q+ to reiterate suggestion about compliance and unknown datatypes
+14:59  * Zakim sees DanC on the speaker queue
+15:00  * Yoshio typing in IRC would help me a lot
+15:00  * Yoshio please
+15:01 <ericP> Yoshio: how about unknown equiv in sorting?
+15:02 <ericP> PatH: how about we don't define it so folks don't rely on it.
+15:02 <Yoshio> me: even if they are of the same data type
+15:02 <ericP> tx
+15:03 <DanC> ack danc
+15:03 <Zakim> DanC, you wanted to ask if the "x"^^mytype != "y"^^mytpe test is in the test suite, and ask for a volunteer if not and to reiterate suggestion about compliance and unknown
+15:03 <Zakim> ... datatypes
+15:03  * Zakim sees no one on the speaker queue
+15:03 <ericP> AndyS: in SQL world, people do rely on the ordering and causes trouble
+15:04 <DanC> ACTION AndyS: propose a test re "x"^^mytype != "y"^^mytpe
+15:04  * RRSAgent records action 12
+15:05  * AndyS persuaded by arg for stable, non-determinate ordering so processors that know more datatypes, do better.
+15:09 <DanC> Zakim, next agendum
+15:09 <Zakim> agendum 5. "SPARQL QL LC Candidate" taken up [from DanC]
+15:09 <ericP> ACTION AndyS: to clarify 5.4 w/r/t closed world assumption
+15:09  * RRSAgent records action 13
+15:09 <ericP> CONTINUED
+15:09 <ericP> ... pending discussion with Bob and Jess
+15:10 <ericP> Jeff
+15:11 <AndyS> s/Jeff/Geoff/
+15:11 <ericP> tx
+15:11 <Yoshio> I'm for construct *
+15:11 <ericP> ACTION AndyS: to explain how to get a whole graph with CONSTRUCT * and GRAPH.
+15:11  * RRSAgent records action 14
+15:11 <kendall> long conversation sorta put me off attending to it carefully, sorry :>
+15:12 <AndyS> It's not CONSTRUCT * but there is "Accessing Graphs in the RDF Dataset"
+15:13 <DanC> "Accessing Graphs in the RDF Dataset" -- http://www.w3.org/2001/sw/DataAccess/rq23/#construct
+15:13 <ericP> DONE , above pointer
+15:13 <ericP> action -14
+15:13  * RRSAgent drops action 14, AndyS to to explain how to get a whole graph with CONSTRUCT * and GRAPH.
+15:14 <kendall> (hmm, another reason for a getGraph in the protocol is for implementations taht don't support construct at all.)
+15:14 <ericP> ACTION DaveB: consider dots in qnames, report on impact on turtle
+15:14  * RRSAgent records action 15
+15:16 <ericP> AndyS: won't get rid of all the todos by thur.
+15:16 <ericP> ... which way do you want it?
+15:18 <kendall> it's by-invitation only, so Eric's trying to be respectful of that. :>
+15:18 <kendall> it was scheduled a long time ago, btw
+15:19 <thompsonbry> Dan, since Andy will be pulling hair for the 31st, why don't we just back the candidate for review by another week - especially since we have one meeting canceled.
+15:20 <ericP> regrets 2 week hence: EricP, DaveB, SteveH
+15:20 <ericP> plus, AndyS, if i recall his vacation schedule
+15:22  * AndyS back by April 12 - maybe be swapped in by then, may not
+15:24 <DanC> ACTION DanC: review editors draft (delivered 31 Mar) by 5 Mar
+15:24  * RRSAgent records action 16
+15:25 <SimonR> (5 Apr?)
+15:25 <Yoshio> (time shift? : )
+15:25 <DanC> ACTION 16= DanC: review editors draft (delivered 31 Mar) by 5 Apr
+15:25  * RRSAgent records action 16 replaced
+15:25 <kendall> Simon: hi! didin't realize you were here!
+15:25 <SimonR> I'm sneaky.  ;)
+15:26 <DanC> Kendall expects Bijan to review it
+15:27 <DanC> ACTION EricP: notify the WG of editors draft (or change of plans) by 31 Mar
+15:27  * RRSAgent records action 17
+15:28 <ericP> DanC: Andy, anything test that does not have a clear outcome is critical path
+15:28 <DanC> Zakim, next agendum
+15:28 <Zakim> agendum 6. "privacy section for protocol spec" taken up [from DanC]
+15:29 <DanC> ACTION KendallC: incorporate EricP's privacy text, salting to taste
+15:29  * RRSAgent records action 18
+15:29 <ericP> ACTION EricP: propose "privacy considerations" for SPARQL protocol
+15:29  * RRSAgent records action 19
+15:29 <ericP> DONE
+15:29 <ericP> action 19
+15:30 <DanC> Zakim, next agendum
+15:30 <Zakim> agendum 7. "issue: wsdlAbstractProtocol, fromUnionQuery" taken up [from DanC]
+15:31 <DanC> http://www.w3.org/2001/sw/DataAccess/issues#wsdlAbstractProtocol
+15:31 <kendall> "wsdl interfaces" better than "abstract protocol",  but -shrug-
+15:31 <ericP> KendallC: happy with the WSDL except some bits of WSDL 2.0 that I don't know how to spell
+15:34 <ericP> ... have carefully tried to document a non-researchy interface
+15:34 <kendall> don't know how to spell *yet* :>
+15:36 <DanC> "(SPARQLQuery and SPARQLDiscovery and SPARQLQueryAndDiscovery)"
+15:38 <DanC> SPARQLQuery SPARQLSaddle SPARQLQS
+15:38 <kendall> SPARQLQuery -> SparqlQuery; SPARQLDiscovery -> SparqlSaddle; SPARQLQueryAndDiscovery -> SparqlQS
+15:38  * Yoshio s/SparlDropGraph/SparqlDropGraph/
+15:39 <ericP> KendallC: total of 8 interfaces
+15:39 <DanC> OPTIONS: all 5 primary (total 8), 3 SPARQLQuery SPARQLSaddle SPARQLQS, other (none, something else)
+15:39 <ericP> ... 5 primative interfaces and 3 unions of them
+15:39 <kendall> 5 primary, 4 "union interfaces
+15:39 <kendall> s/union/derived/
+15:39 <DanC> OPTIONS: all 5 primary (total 9), 3 SPARQLQuery SPARQLSaddle SPARQLQS, other (none, something else)
+15:40 <DanC> Zakim who's on the phone?
+15:40 <DanC> Zakim, who's on the phone?
+15:40 <Zakim> On the phone I see Kevin, AndyS, Yoshio, DanC, BryanT, EricP, Kendall_Clark, PatH, JanneS
+15:40 <thompsonbry> Do we have a mapping of these interfaces onto the use cases?
+15:41 <ericP> AndyS: interested in 3. don't know how datasets work in this proposal
+15:41 <kendall> ooh, yoshio makes a good point. thanks. have a mispelling.
+15:41 <ericP> Kevin: nothign to say, not at boston
+15:41 <ericP> Yoshio: nothing to say
+15:41 <ericP> DanC: in favor of 3
+15:42 <ericP> BryanT: want to interface to create and drop graphs
+15:42 <ericP> EricP: 3
+15:42 <ericP> KendallC: pass
+15:42 <ericP> PatH: pass
+15:43 <ericP> Janne: originally wanted lots of primitives. now want minimal set. 3.
+15:44 <ericP> KendallC: (unpassing) i remember 3 getting the most support in BOS. Graph retrieval has support to go to its own interface.
+15:45 <ericP> DanC: JosD pointed out an existing interface and the room got quiet.
+15:46 <DanC> s/JosD/JaceK/
+15:46 <ericP> tx
+15:46 <ericP> KendallC: not making a pitch for the derived interfaces. just thought they were a nice organisational tool.
+15:47 <thompsonbry> Own what issue?
+15:48 <ericP> ACTION: KendallC to own WSDL interfaces.
+15:48  * RRSAgent records action 20
+15:49 <ericP> action -20
+15:49  * RRSAgent drops action 20, KendallC to own WSDL interfaces.
+15:49 <JanneS> (I have to run for tonight - cheers)
+15:49 <ericP> ACTION KendallC: to add WSDL description of protocol to editor's draft, propose to WG.
+15:49  * RRSAgent records action 21
+15:49 <DanC> make sure it includes wsdlAbstractProtocol
+15:49 <Zakim> -JanneS
+15:49 -!- JanneS [janne.saar@194.29.198.121] has quit [Quit: JanneS]
+15:49 <ericP> action -21
+15:49  * RRSAgent drops action 21, KendallC to to add WSDL description of protocol to editor's draft, propose to WG.
+15:50 <DanC> Zakim, next agendum
+15:50 <Zakim> agendum 8. "issue: xmlAbstractSyntax" taken up [from DanC]
+15:50 <ericP> ACTION KendallC: to tie WSDL description (wsdlAbstractProtocol) of protocol to editor's draft, propose to WG.
+15:50  * RRSAgent records action 22
+15:50 <DanC> http://www.w3.org/2001/sw/DataAccess/issues#xmlAbstractSyntax
+15:51 <DanC>   http://www.w3.org/2001/sw/DataAccess/sparqlx.xsd
+15:51 <DanC>   http://www.w3.org/2001/sw/DataAccess/sparqlx.rnc
+15:51 <DanC>   http://www.w3.org/2001/sw/DataAccess/sparqlx.rng
+15:52 <ericP> scribe is losing connectivity
+15:52 <ericP> notes at risk
+15:53 <DanC> # SPARQL Abstract Syntax Seaborne, Andy (Monday, 21 March)  http://lists.w3.org/Archives/Public/public-rdf-dawg/2005JanMar/0393.html
+15:54 <DanC> sparqlx.rnc 1.6 makes sense to me, i think
+15:57 <ericP> KendallC: wasn't going to invest much work if it was not likely to gain support
+15:57 <ericP> PatH: what are the design goals of the XML serialization?
+15:58 <ericP> DanC: making two contrete syntaxes makes the abstract syntax clear
+15:59 <ericP> ... in web services, the input in defined by XS datatypes.
+15:59 <AndyS> <> rdfs:seeAlso http://www.w3.org/TR/xqueryx/
+16:00 <ericP> [plus, i keep getting hints that my connectivity is at risk]
+16:00 <AndyS> FWIW I didn't make the abstract syntax obvious because there was only one concrete syntax 
+16:00 <ericP> BryanT: how coupled is the human syntax to the X-syntax
+16:00 <kendall> oh, also, another design goal is to not worry overly about being able to roundtrip from surface syntax to xml and back -- hence, no PREFIX in the XML.
+16:01 <ericP> Andy: change from RDQL to N3 syntax did not impact the abstract syntax
+16:02 <ericP> [missing all voice now]
+16:02 <ericP> can i get a substitute scribe?
+16:02 <DanC> ACTION KendallC: work out remaining details in sparqlx.{rnc,xsd,rng}: expression syntax, order-by stuff
+16:02  * RRSAgent records action 23
+16:02  * AndyS suggests making it lisp-like (prefix notation) with pointy brackets
+16:03 <kendall> zakim, mute me
+16:03 <Zakim> Kendall_Clark should now be muted
+16:03 <DanC> Zakim, agenda?
+16:03 <Zakim> I see 3 items remaining on the agenda:
+16:03 <Zakim> 8. issue: xmlAbstractSyntax [from DanC]
+16:03 <Zakim> 9. issue: serviceDescription [from DanC]
+16:03 <Zakim> 10. xml results <mail> vs. <var name="mail"> [from DanC]
+16:03 <kendall> gah! too many phones :<
+16:03 <kendall> zakim, unmute me
+16:03 <Zakim> Kendall_Clark should no longer be muted
+16:04 <DanC> Zakim, pick a scribe
+16:04 <Zakim> Not knowing who is chairing or who scribed recently, I propose Kendall_Clark
+16:04 <DanC> then let's do meet 5 Apr, KC to scribe.
+16:05 <ericP> ADJOUNRED
+16:05 <Zakim> -PatH
+16:05 <Zakim> -BryanT
+16:05 <Zakim> -Kevin
+16:05 <Zakim> -DanC
+16:05 <Zakim> -Yoshio
+16:05 -!- KevinW [Kevin.Wilk@192.6.19.190] has left #dawg []
+16:05 -!- thompsonbry [thompsonbr@69.17.64.215] has quit [Quit: thompsonbry]
+16:05 <Zakim> -Kendall_Clark
+16:05 -!- kendall [Kendall@216.164.63.95] has quit [Quit: leaving]
+16:05 <DanC> ericp, shall we get RRSAgent to make the minutes?
+16:05 <Zakim> -AndyS
+16:05 <ericP> danc, please
+16:05 <DanC> RRSAgent, please draft minutes
+16:05 <RRSAgent> I have made the request to generate http://www.w3.org/2005/03/29-dawg-minutes.html DanC
+16:05 <ericP> i tried to be diligent about actions to that end
+16:06 <ericP> did you beat me to ,access, or did rrsagent do it?
+16:06 <DanC> Zakim, list attendees
+16:06 <Zakim> As of this point the attendees have been Kevin, Yoshio, DanC, BryanT, AndyS, EricP, Kendall_Clark, PatH, JanneS
+16:06 <DanC> I did ,access
+16:06 <DanC> sometimes rrsagent seems to, but I did it anyway
+16:07  * DanC tries to get janne to show up as present...
+16:07 <DanC> RRSAgent, please draft minutes
+16:07 <RRSAgent> I have made the request to generate http://www.w3.org/2005/03/29-dawg-minutes.html DanC
+16:07 <DanC> Present+ JanneS
+16:07 <Zakim> -EricP
+16:07 <DanC> RRSAgent, please draft minutes
+16:07 <Zakim> SW_DAWG()9:30AM has ended
+16:07 <RRSAgent> I have made the request to generate http://www.w3.org/2005/03/29-dawg-minutes.html DanC
+16:07 <Zakim> Attendees were Kevin, Yoshio, DanC, BryanT, AndyS, EricP, Kendall_Clark, PatH, JanneS
+16:08 -!- Yoshio [chatzilla@128.30.52.28] has quit [Quit: Chatzilla 0.9.67 [Firefox 1.0/20041108]]
+16:08 <DanC> hmm... better edit this out " RESOVLED to cancel 5 Apr telcon, and meet 12 Apr."
+16:09 <DanC> tell you what, ericp, I'll take it from here.
+16:09 <DanC> RRSAgent, bye
+16:09 <RRSAgent> I see 18 open action items:
+16:09 <RRSAgent> ACTION: DaveB to to consider use of xsi:dataType ala comment from Steer [1]
+16:09 <RRSAgent>   recorded in http://www.w3.org/2005/03/29-dawg-irc#T14-33-46
+16:09 <RRSAgent> ACTION: DanC to follow up re optional test based on op:dateTime triple [2]
+16:09 <RRSAgent>   recorded in http://www.w3.org/2005/03/29-dawg-irc#T14-34-00
+16:09 <RRSAgent> ACTION: EricP to to pair with SteveH on making the HTML test results page [3]
+16:09 <RRSAgent>   recorded in http://www.w3.org/2005/03/29-dawg-irc#T14-34-00-1
+16:09 <RRSAgent> ACTION: SteveH to to to revise test manifest w.r.t. "background" and named graphs [4]
+16:09 <RRSAgent>   recorded in http://www.w3.org/2005/03/29-dawg-irc#T14-34-00-2
+16:09 <RRSAgent> ACTION: DaveB to to to propose source test to approve [5]
+16:10 <RRSAgent>   recorded in http://www.w3.org/2005/03/29-dawg-irc#T14-34-00-3
+16:10 <RRSAgent> ACTION: AndyS to to add the above graph test cases (analagous to valueTesting test cases) (don't expect quick delivery) [6]
+16:10 <RRSAgent>   recorded in http://www.w3.org/2005/03/29-dawg-irc#T14-34-00-4
+16:10 <RRSAgent> ACTION: SteveH to prepare test cases for publication as WG Note (no deadline/urgency) [7]
+16:10 <RRSAgent>   recorded in http://www.w3.org/2005/03/29-dawg-irc#T14-34-03
+16:10 <RRSAgent> ACTION: PatH to review sort design in 2 weeks [9]
+16:10 <RRSAgent>   recorded in http://www.w3.org/2005/03/29-dawg-irc#T14-40-11
+16:10 <RRSAgent> ACTION: EricP to to propose to close valueTesting (bonus points for test cases, to EricP or others) [11]
+16:10 <RRSAgent>   recorded in http://www.w3.org/2005/03/29-dawg-irc#T14-49-44
+16:10 <RRSAgent> ACTION: AndyS to propose a test re "x"^^mytype != "y"^^mytpe [12]
+16:10 <RRSAgent>   recorded in http://www.w3.org/2005/03/29-dawg-irc#T15-04-30
+16:10 <RRSAgent> ACTION: AndyS to to clarify 5.4 w/r/t closed world assumption [13]
+16:10 <RRSAgent>   recorded in http://www.w3.org/2005/03/29-dawg-irc#T15-09-28
+16:10 <RRSAgent> ACTION: DaveB to consider dots in qnames, report on impact on turtle [15]
+16:10 <RRSAgent>   recorded in http://www.w3.org/2005/03/29-dawg-irc#T15-14-34
+16:10 <RRSAgent> ACTION: DanC: review editors draft (delivered 31 Mar) by 5 Apr [16]
+16:10 <RRSAgent>   recorded in http://www.w3.org/2005/03/29-dawg-irc#T15-24-59
+16:10 <RRSAgent> ACTION: EricP to notify the WG of editors draft (or change of plans) by 31 Mar [17]
+16:10 <RRSAgent>   recorded in http://www.w3.org/2005/03/29-dawg-irc#T15-27-01
+16:10 <RRSAgent> ACTION: KendallC to incorporate EricP's privacy text, salting to taste [18]
+16:10 -!- AndyS [AndyS@192.6.10.2] has quit [Ping timeout]
+16:10 <RRSAgent>   recorded in http://www.w3.org/2005/03/29-dawg-irc#T15-29-05
+16:10 <RRSAgent> ACTION: EricP to propose "privacy considerations" for SPARQL protocol [19]
+16:10 <RRSAgent>   recorded in http://www.w3.org/2005/03/29-dawg-irc#T15-29-28
+16:10 <RRSAgent> ACTION: KendallC to to tie WSDL description (wsdlAbstractProtocol) of protocol to editor's draft, propose to WG. [22]
+16:11 <RRSAgent>   recorded in http://www.w3.org/2005/03/29-dawg-irc#T15-50-26
+16:11 <RRSAgent> ACTION: KendallC to work out remaining details in sparqlx.{rnc,xsd,rng}: expression syntax, order-by stuff [23]
+16:11 <RRSAgent>   recorded in http://www.w3.org/2005/03/29-dawg-irc#T16-02-57
+16:11 -!- RRSAgent [rrs-loggee@128.30.52.30] has left #dawg []

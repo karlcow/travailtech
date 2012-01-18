@@ -1,0 +1,388 @@
+00:00:37 <pauld> marsh: are you proposing a mapping from wsa:action into a wsdl 'op-code' ?
+00:00:58 <pauld> hugo: i think this is more or less what we were talking about
+00:01:23 <pauld> dbooth: this approach would solve what i was talking about
+00:01:55 <pauld> paco: how would this help, unless action values are distinct
+00:02:47 <pauld> hugo: possible to have multiple different messages with the same action going to the same operation, e.g. logging service
+00:02:59 <dbooth> q+ to explain motivation for uniqueness
+00:04:23 <pauld> discussion of uniqueness, GED and action may form a unique pair
+00:04:26 <Marsh> ack db
+00:04:26 <Zakim> dbooth, you wanted to explain motivation for uniqueness
+00:04:33 <anish> q+
+00:05:04 <pauld> dbooth: operation mapping requirement tries to solve "what do you do with a message" problem
+00:05:12 <umit> q+
+00:06:03 <pauld> glen: no, operations exist for a reason - i want to "do something". the operation is the verb, not just a bag
+00:06:03 <mnot> mnot has joined #ws-desc
+00:06:52 <asir> asir has joined #ws-desc
+00:07:04 <umit> The reason that the default ACtion values solve the problem is that it uniquely identifies both the operation and the message. The moment one starts from deviating from assigning the default Action values, then uniqueness requirements must be met in order to identify the operation and the message. 
+00:07:26 <pauld> dbooth: well know. you might not necessarily want to think this way. WSDL describes the Web service (there may be zero, one or many WSDLs in play).
+00:07:50 <pauld> q+
+00:08:37 <pauld> ... what do i need to do with a message when it comes in
+00:08:56 <pauld> ... maybe that a message may result in multiple 'actions'
+00:09:10 <pauld> +1 to dbooth, with feeling
+00:09:49 <pauld> glen: you need to know, somehow. which operation is in play
+00:09:59 <pauld> marsh: what has this to do with unique actions
+00:10:20 <dbooth> q+ bijan
+00:10:28 <Marsh> ack hugo
+00:10:33 <Zakim> hugo, you wanted to say that he think that the (action, message) pair needs to be unique, not the action alone
+00:11:59 <pauld> hugo: i think that the (action, message) pair needs to be unique, not the action alone. possible to have 2 op-codes for different messages. 
+00:11:59 <Marsh> ack umit
+00:14:07 <pauld> umit: action might not identify anything, you have other mechanisms. we might not be able to solve this problem, only make suggestions.
+00:14:15 <Marsh> ack anish
+00:14:18 <Marsh> ack paul
+00:16:36 <dbooth> PaulD: "WSDL isn't the Web service. WSDL *describes* the Web service."
+00:16:41 <dbooth> +1 to Paul's quote!
+00:16:47 <Marsh> ack bijan
+00:17:38 <kliu> kliu has joined #ws-desc
+00:19:01 <alewis> q+
+00:20:11 <Marsh> ack alewis
+00:20:33 <pauld> discussion between dbooth and bijan about higher level actions, grouping operations into choreography. maybe extra information in the header to achieve this
+00:22:18 <pauld> amy: there are lots of other mechanisms for determining the actual processing undertaken beyond 'action' encoded in the message
+00:22:48 <pauld> tom: what can we do to go forward here. close with no action!
+00:24:25 <pauld> paco: do we have to provide an actual mechanism? the default dispatching could be 'action'. current text allows you to do what you want.
+00:25:13 <pauld> paco: action is just one of many possible mechanisms
+00:25:55 <pauld> anish: action satisfies this requirement, action+GED satisfies this requirement. we're done
+00:26:08 <pauld> marsh: should we require actions to be unique?
+00:26:23 <pauld> anish: we already said (in ws-addr) no
+00:26:55 <umit> q+
+00:27:06 <pauld> ... it's up to you if you want to use an extensibility mechanism
+00:28:17 <pauld> marsh: maybe it's only action+GED that is unique, then you'd have an invalid WSDL. my service could still work with other magic dispatching mechanism
+00:29:51 <Marsh> ack umit
+00:29:56 <alewis> why do you have to have something at some level to tell anyone else how you're doing this?
+00:29:59 <pauld> paco: suspects there's a bug in the spec: why do we cite the interface as the place to describe the dispatching mechanism?
+00:30:04 <alewis> this is the same silly argument as before!
+00:30:32 <dbooth> q+
+00:30:36 <pauld> i'm coming round to amy's POV on this topic
+00:30:38 <Marsh> ack db
+00:31:05 <pauld> but have yet to convince folks back home
+00:32:15 <alewis> if you're wearing a straitjacket, you don't *need* an overcoat.
+00:32:17 <pauld> dbooth: you need an explicit way of describing the 'verb' at the abstact level. this is a foundation spec. once that is done we can drop the operation mapping requirement
+00:32:58 <pauld> glen: then we can toss out operations
+00:33:28 <pauld> paco: context may provide dispatching.
+00:33:59 <TomJ> I am not willing to support any addition to the spec that introduces a 'verb' that replaces the operation.
+00:34:17 <prasad> q+
+00:34:18 <pauld> dbooth: operations are convinient metaphores. also there are protocols that do request-response
+00:34:34 <pauld> marsh: i need some concrete proposals here
+00:34:46 <pauld> dbooth: sanjiva was working towards one
+00:35:16 <pauld> anish: we can take the last F2F discussion and form a proposal aligned to ws-addressing
+00:35:49 <pauld> marsh: maybe we need to move sanjiva's proposal forward
+00:36:27 <kliu> +1 to amy's why  statement - all we have to do is to provide a way so people can indicate what mechanism they use to distinct the message if they choose to do so, no MUST is necessary here
+00:36:33 <Marsh> ack prasad
+00:36:34 <pauld> tom: we spent a lot of time on this already. let's vote and move forward. i vote no
+00:37:29 <pauld> prasad: it's a small change at the ws-addr level to require uique action uris
+00:37:39 <pauld> s/uique/unique/
+00:38:39 <pauld> daveo: keen to vote, but interested in relationship between this and wsa:action. 
+00:38:51 <pauld> tom: yeah, it gives you the 'verb'
+00:39:10 <pauld> daveo: people may or may not be using ws-addr
+00:39:12 <prasad> s/action uris/action uris for all input or output messages in an interface/
+00:41:06 <pauld> paco: it's only on the server that an ambiguous WSDL is a problem. doesn't impact client interoperability
+00:41:23 <pauld> anish: action values don't have to be unique
+00:42:10 <pauld> daveo: nothing we can do here that makes wsdl 2.0 simpler here?
+00:43:36 <pauld> ... i haven't heard anything that makes WSDL 2.0 simpler when ws-addr is engaged. lets close this issue.
+00:43:56 <prasad> Anish: We can require them to be different (not unique) in an interface. I.e. distinct URI for each different message in an xface.
+00:45:31 <pauld> anish: you can still have two 'in' messages for an operation which aren't unique
+00:46:02 <dbooth> Anish is right.  The granularity of the op name mapping requirement is wrong.  
+00:46:35 <umit> We already agreed that there is a granularity issue, didn't we at the last f2f? 
+00:47:19 <pauld> marsh: what do we need to change to resolve paco's bug?
+00:48:00 <dbooth> http://dev.w3.org/cvsweb/~checkout~/2002/ws/desc/wsdl20/wsdl20.html?content-type=text/html;%20charset=utf-8#Interface_OperationName
+00:48:59 <pauld> arthur: it's only the input GEDs that have to be unique - the service executes the operation based on the inputs, output is causality
+00:49:20 <pauld> ... who cares if the outputs aren't unique
+00:50:02 <pauld> marsh: in the case where there are two outputs.
+00:50:42 <pauld> arthur: corollation of outputs back to the input is a different problem. 
+00:51:39 <pauld> ... back to LC82. text seems like overkill in the way it's written. it's lawyer-speak
+00:51:54 <prasad> I agree :)
+00:52:28 <pauld> marsh, tom: just the first message in a MEP has to be unique
+00:52:31 <prasad> Text in the spec not the issue ..
+00:52:43 <pauld> glen: yes, but also the first in the OUT as well
+00:53:37 <pauld> discussion of 'client' and 'server' roles 
+00:54:40 <pauld> jeffm: forget client/server and think in terms of recipient. response doesn't have to have uniqueness
+00:55:11 <pauld> marsh: we're getting close here. two buckets - in messages, out messages
+00:55:42 <pauld> jeffm: it's the side that's doing dispatch that requires uniqueness
+00:56:59 <prasad> If I redirect responses via replyTo, don't I have to worry about which operation and other such at the recipient end?
+00:57:02 <pauld> rapid discussion of dispatch info required in respect to the MEP in play
+00:58:30 <pauld> tom: i only need to understand which operation / MEP is in play. first message does that
+00:59:26 <pauld> tony: need a new term e.g. "initiating message" or "unsolicited messgage" (brits giggle) 
+00:59:53 <pauld> ... problem is terminology is overloaded
+01:00:43 <pauld> kevin: how does this work. are we requiring 'state' in an operation?
+01:00:46 <pauld> tom: yup
+01:00:56 <umit> ouch!
+01:01:01 <pauld> ... that's the way it works
+01:01:26 <dorchard> dorchard has joined #ws-desc
+01:01:46 <Zakim> -Hugo
+01:01:54 <Zakim> +Hugo
+01:02:00 <Zakim> -Umit_Yalcinalp
+01:03:08 <Zakim> +Umit_Yalcinalp
+01:03:23 <pauld> tom and anish play dispatch tennis across the room ..
+01:04:08 <pauld> anish: in the message, there is some kind of client identitiy? if that is the case, i could buy uique GED for first message argument
+01:04:19 <pauld> s/uique/unique/
+01:05:51 <pauld> tony: starting more than one MEP async without corollation mechansim isn't going to work
+01:07:19 <kliu> q+
+01:07:38 <alewis> q+
+01:07:52 <pauld> paco: do we need to specify the corollation mechanism in play as well? a service doesn't want to divulge its implementation
+01:08:20 <Marsh> q+ tony
+01:08:21 <pauld> tom: a complex MEP requires a corollation mechanism
+01:08:25 <Marsh> ack kl
+01:09:59 <pauld> kevin: could have two alternative ins, this would imply they would have to have a unique GED
+01:11:15 <Marsh> ack al
+01:13:08 <umit> Uniqueness is always defined with respect to a domain. What is the domain we are talking about here anyway? I made a posting to WS-Addressing for this issue: http://lists.w3.org/Archives/Public/public-ws-addressing/2005Jan/0035.html
+01:14:59 <pauld> amy: i'm violently opposed to making this stricter. it's none of your buisiness how my messages are dispatched. other out of band dispatch mechanisms not described in WSDL may be in play.
+01:15:53 <Marsh> ack tony
+01:15:56 <pauld> ... you're preoccupied to code-generation langauges. it isn't the web service generation language
+01:15:58 <pauld> +1 to amy
+01:16:08 <dbooth> +1 to amy also
+01:16:35 <anish> q+
+01:16:44 <TomJ> But that doesn't invalidate the use case that code generation *is* important, and if a generation engine doesn't have enough info in the WSDL do the job, then perhaps the WSDL is not complete.
+01:16:50 <umit> I disagree with Amy on one point. WSD is for clients to be able to communicate with the service. If the service requires a specific way of interacting with it from the client to aid in dispatching, then it must be explicit, either in the usage of WS-Addressing, marker,etc
+01:16:55 <alewis> horsefeathers, tom!
+01:17:17 <pauld> tony: once the first 
+01:17:17 <dbooth> WSDL is never a complete description of the service anyway.
+01:17:19 <alewis> if you want a web services code generation language working group, petition the director!  i call scope creep!
+01:17:21 <TomJ> Are you saying that my use case is not valid?
+01:17:33 <pauld> s/once the first/corollation is the key here/
+01:17:41 <alewis> yes, tom, code generation is out of scope for a description language.
+01:17:46 <Roberto> I disagree with Amy too. If operations surface in the description, it should be possible to discriminate them. Otherwise you can define one operation per service and you're done.
+01:18:13 <alewis> more to the point, my use cases (describing legacy services) conflicts with your use case (demanding explication of service internals)
+01:19:11 <Arthur> sorry amy, but i disagree. we absolutely need wsdl to be complete enough for a client to access the service without the need for any additional out-of-band information
+01:19:21 <alewis> irrelevant, arthur.
+01:19:28 <alewis> not what the argument is about.
+01:19:29 <Arthur> no it isn't
+01:19:30 <pauld> marsh: need to wrap up. we're not going to get agreement here given it's a difference in architectural views
+01:19:40 <Arthur> you are an in obvous minority here
+01:19:41 <umit> Ah, that is a separate discussion Arthur. Is WSDL the complete and one-and-only contract? 
+01:19:48 <alewis> the client *has* the information: it can construct the message.
+01:20:24 <Arthur> if it isn't even complete enough for a client to access the service, then it has failed to meet a significant requirement
+01:20:42 <alewis> i repeat, there isn't a question of the client being unable to access the service.
+01:21:19 <alewis> the use case presented, instead, is for generation of code to implement the service.
+01:21:22 <alewis> i don't buy it.
+01:21:23 <pauld> proposal #1: first GED in the initiatting message of a MEP has to be unique
+01:22:05 <Arthur> wsdl MUST support code generation
+01:23:19 <alewis> horsefeathers, arthur.
+01:23:23 <pauld> s/first GED in the initiatting message of a MEP has to be unique/initiating message of an operation must be distinguishable/
+01:23:52 <pauld> tom: this relaxes what we currently have
+01:24:07 <pauld> ... this will make amy happier
+01:24:26 <TomJ> s/will/may/
+01:24:42 <pauld> proposal #2: all messages in a given direction need to be distinguishable
+01:24:51 <Arthur> call me Pegasus then
+01:25:11 <pauld> ... within an interface
+01:25:33 <hugo> proposal #2 for me
+01:25:43 <prasad> Distinguishable based on what criteria? GED?
+01:26:03 <Zakim> -Dbooth
+01:26:24 <alewis> return at +25 after next hour?
+01:26:29 <Zakim> -Bijan_Parsia
+01:26:30 <Marsh> Yes.
+01:26:36 <Zakim> -ALewis
+01:26:38 <pauld> LUNCH, BACK at 13:30 local time
+01:27:01 <Zakim> -Prasad_Yendluri
+01:27:03 <Zakim> -Roberto
+01:27:05 <umit> Ah, I may miss this fun 
+01:27:17 <prasad> Me too
+01:27:34 <alewis> ugh.
+01:28:28 <Zakim> -Umit_Yalcinalp
+01:37:11 <Zakim> +DavidB
+01:38:11 <Zakim> -DavidB
+01:49:36 <Zakim> -Asir
+02:02:18 <umit> umit has left #ws-desc
+02:03:03 <RRSAgent> See http://www.w3.org/2005/01/20-ws-desc-irc#T02-02-18
+02:04:29 <michael> michael has joined #ws-desc
+02:31:20 <Zakim> -Hugo
+02:32:40 <dbooth> dbooth has joined #ws-desc
+02:32:45 <alewis> not there yet?
+02:34:47 <dbooth> zakim, call dbooth-mit
+02:34:47 <Zakim> ok, dbooth; the call is being made
+02:35:16 <Zakim> +Asir
+02:35:22 <dbooth> zakim, wake up!
+02:35:22 <Zakim> I don't understand 'wake up!', dbooth
+02:35:52 <Zakim> +ALewis
+02:36:06 <Zakim> +[Sun]
+02:36:20 <Zakim> +DBooth
+02:36:26 <Zakim> +Bijan_Parsia
+02:41:05 <Marsh> OK, we're about to start again.
+02:41:12 <alewis> for i in $(cat issues.list | cut -f 1) ; do echo "Issue $i closed" ; done
+02:41:12 <Marsh> Zakim, who's on the phone?
+02:41:12 <Zakim> On the phone I see Hugo.Haas, Asir, ALewis (muted), Roberto, DBooth, Bijan_Parsia
+02:41:40 <Zakim> +Hugo
+02:41:50 <Marsh> resuming
+02:42:26 <hugo> Zakim, Hugo is Melbourne
+02:42:26 <Zakim> +Melbourne; got it
+02:43:25 <dbooth> rrsagent, draft minutes
+02:44:09 <Arthur> scribe: arthur
+02:44:10 <Marsh> Scribes: Paul(done), Arthur, DaveO, Anish
+02:45:15 <GlenD> GlenD has joined #ws-desc
+02:45:52 <Arthur> taking a poll now
+02:46:22 <dbooth> rrsagent, where am i?
+02:46:22 <RRSAgent> See http://www.w3.org/2005/01/20-ws-desc-irc#T02-46-22
+02:46:31 <Marsh> Proposal #1`: /initiating message of an operation must be distinguishable
+02:46:40 <Marsh>  proposal #2: all messages in a given direction need to be distinguishable
+02:47:04 <Marsh> Proposal #3: All messages in the "in" direction need to be distinguishable.
+02:47:07 <alewis> NOTA?
+02:48:10 <Paco> Paco has joined #ws-desc
+02:48:14 <Marsh> Status quo: All messages need to be distinguishable, right?
+02:48:22 <alewis> could "none of the above" be added to that list, please?
+02:48:46 <Marsh> Proposal #4: none.
+02:49:21 <Roberto> 2
+02:51:10 <Marsh> Zakim, who's on the phone?
+02:51:10 <Zakim> On the phone I see Hugo.Haas, Melbourne, Asir, ALewis (muted), Roberto, DBooth, Bijan_Parsia
+02:53:17 <Arthur> results of poll are #1 has 7, #2 has 5, #3 has 2, #4 has 2
+02:53:57 <Arthur> now distinguish between #1 or #2
+02:55:20 <Marsh>  proposal #2: all messages in a given direction need to be distinguishable
+02:55:20 <Arthur> new results are #1 has 6, #2 has 10
+02:57:27 <Arthur> Tom: this means if two operations return the same GED, e.g. PurchaseOrder, then they must be distinguished
+02:58:47 <pauld> paul: this is reopening the discussion
+02:59:10 <Arthur> Anish: yes, that's why we had 3 proposals
+03:00:10 <Arthur> Glen: this does not allow the common case where the return message is distinguished by the content, e.g. the response if correlated to the request which is normally distinguished
+03:01:11 <Arthur> Anish: the GED is not the only way to distinguish
+03:01:28 <Marsh> q+ tony
+03:01:32 <Marsh> q+ mark
+03:01:37 <Arthur> Glen: does that mean the MEP can be used, e.g. if the outs are correlated to the in?
+03:01:58 <Marsh> ack anish
+03:02:02 <Marsh> ack tony
+03:02:17 <Marsh> q+ anish
+03:02:24 <Marsh> q+ kevin
+03:02:49 <Marsh> ack mark
+03:03:00 <Marsh> ack anish
+03:03:16 <Arthur> Mark: I'd like to see the proposals restated by how the messages are distinguished
+03:04:21 <Marsh> ack kevin
+03:04:39 <Arthur> q+
+03:05:40 <Marsh> ack arthur
+03:05:43 <Marsh> q+ Mark
+03:06:01 <Marsh> q+ Anish
+03:06:33 <Marsh> q - marlk
+03:06:38 <Marsh> q- mark
+03:06:40 <Marsh> q-anish
+03:06:56 <Arthur> Arthur: points out that the spec currently only discussed the GED as the way to distinguish operations
+03:07:41 <Arthur> Jonathan: does anyone object to #2?
+03:07:49 <Arthur> Arthur and Glen object
+03:08:23 <alewis> we're forcing people to say things that they may not need to say.
+03:08:23 <Marsh> Bijan: Are we allowing people to say things they wouldn't be able to say otherwise, or are we restricting them from something something they can't say now.
+03:08:25 <dorchard> And DaveO objects without seeing the exact wording.  This feels like something is being slipped in.
+03:08:25 <dbooth> Bijan: Would this be allowing people to say things that they wouldn't otherwise be able to say, or restricting them from saying bad things?
+03:09:32 <asir> Arthur and Glen, what are your objections ??
+03:09:46 <pauld> paul: went for #2 as a second best option. an operation is symetrical exchange of messages.
+03:10:09 <Marsh> q+ tony
+03:10:19 <Arthur> Arthur: WSDL 2.0 as currently spec'ed (2.2.1.1) makes many WSDL 1.1 operations illegal
+03:10:34 <Marsh> q+ anish
+03:11:41 <Marsh> ack tony
+03:12:51 <Marsh> ack anish
+03:12:57 <Arthur> Glen: request-response operations establish a correlation so #1 is less restrictive than #2
+03:13:17 <Arthur> Tony: Is Anish's concern related to asynch?
+03:14:47 <Arthur> AnishL I can buy the argument that we don't need this feature at all since its up to the designer of the service to route the inputs anyway it sees fit
+03:15:05 <Arthur> s/AnishL/Anish:/
+03:16:35 <Arthur> Anish: We are saying that the designer of the service must advertise to the world how operations with the same inputs are distinguished
+03:17:32 <Arthur> Anish: I can see the point that is being made by the people who filed the minority opinion, but why are we taking half measures?
+03:19:46 <kliu> kliu has joined #ws-desc
+03:24:35 <Arthur> Arthur: do we have to add information to the definition of MEPs to indicate that they have a way to distinguish operations, e.g. by correlating the request to the response?
+03:26:04 <Arthur> Tony: discuss asynch versus synch
+03:27:27 <Arthur> Paul: there are many ways to correlate messages, depending on the transport, etc.
+03:29:47 <pauld> VOTE VOTE VOTE
+03:34:23 <dbooth> q+ to say that I think this discussion is too focused on WSDL's idiosyncracies and is not really addressing the issue that I raised
+03:34:42 <Marsh> dbooth, we're really deep into Arthur's issue #82.
+03:35:02 <dbooth> Oh, we've passed my issues?
+03:35:21 <dbooth> I guess we've  bumped back to Arthur's.
+03:35:32 <asir> well they are interconnected
+03:35:33 <Marsh> pretty much I think.  This poll doesn't seem to be a complete solution to yours as well, AFAICT
+03:38:22 <Zakim> +Canon
+03:46:33 <jjm> jjm has joined #ws-desc
+03:47:48 <Arthur> Arthur: maybe we need to have the MEP specify it's key which is a subset of the messages that are sufficient to identify the operation
+03:48:28 <jjm> zakim, where am i?
+03:48:28 <Zakim> I don't understand your question, jjm.
+03:48:55 <Arthur> Jonathan: how many people are in favour of removing the ONMR versus trying to fix the spec?
+03:48:56 <anish> btw, the action attr does not help u, david, as it is not required to be unique
+03:49:38 <dbooth> Anish, I don't think uniqueness is necessary.  If the action is the same, the semantics are the same.  That's fine.
+03:49:53 <Arthur> Glen: i feel we need to capture something
+03:50:23 <pauld> you're less likely to cut yourself with a sharp knife
+03:50:23 <Arthur> Jonathan: yes, but is is practicle and testable? we can't prevent people from writing bad interfaces
+03:50:27 <anish> david, then why are there two different operations/messages if the semantics are the same
+03:50:46 <dbooth> anish, i dunno, i didn't write that WSDL document!
+03:50:58 <anish> :-)
+03:51:00 <Arthur> straw poll
+03:51:35 <Arthur> Who is in favour of removing ONMR as a normative part of the spec
+03:52:22 <jjm> abstain
+03:52:54 <Roberto> opposed
+03:53:49 <anish> opposed -- don't throw the baby out with the bathwater
+03:54:26 <Arthur> 14 in favour of dropping ONMR and 4 who want to keep it
+03:54:41 <Arthur> Formal vote now.
+03:55:26 <dbooth> +1 to best practice
+03:55:37 <Arthur> Proposal on the table is to move ONMR to a Best Practice document.
+03:55:37 <asir> +1 to best practice
+03:55:40 <jjm> abstain
+03:56:52 <alewis> q+
+03:56:57 <dbooth> q-
+03:56:57 <anish> q+
+03:58:31 <dbooth> Non-normative note
+03:58:40 <Arthur> Jeff:best practices have little practical impact
+03:59:24 <Arthur> Jonathan: I recommend that we simply rename the current section to make it a Best Practice and not a Requirement
+03:59:52 <dbooth> Damn, fire alarm at MIT again
+04:00:02 <Marsh> qa+ mark
+04:00:05 <Marsh> q+ mark
+04:00:07 <dbooth> Hugo and i need to evacuate again
+04:00:08 <Marsh> q+ anish
+04:00:10 <Arthur> q+
+04:00:23 <Marsh> ack alewis
+04:00:28 <Zakim> -DBooth
+04:01:04 <Arthur> Amy: TIBCO would remove our formal objection if ONM is a Best Practice
+04:01:07 <Marsh> ack anish
+04:01:59 <Arthur> Anish: Even if it is a Best Practice we need to resolve the issue. What do we recommend? #1 or #2.
+04:03:09 <Arthur> Paco: We could clearly state the requirement instead of recommending the solution.
+04:03:42 <Marsh> ack mark
+04:04:09 <Marsh> ack arthur
+04:05:28 <Arthur> Mark: In RFC 2119, SHOULD is fairly strong, so not appropriate here
+04:06:21 <Arthur> Arthur: this problem is wider than interface design since it is possible to have two services at the same endpoint, each with different interfaces, which may receive messages with the same GED.
+04:06:44 <Arthur> Arthur: The Best Practice should not be confined to the interface design.
+04:07:04 <Arthur> Tony: +1 to Paco - just document the problem
+04:09:01 <kliu> VOTE, let's vote
+04:09:57 <Arthur> Jonathan: In summary, we need to have a Best Practice and explain the problem and possible solutions.
+04:12:01 <alewis> 30 mins?
+04:12:04 <Arthur> Jonathan: go on break then take the formal vote
+04:12:04 <anish> --- break ---
+04:12:07 <alewis> x:40?
+04:12:12 <Roberto> wasn't it 20 minutes?
+04:12:21 <alewis> x:30, then?
+04:12:22 <Marsh> No, 20 min
+04:12:25 <Marsh> tes,
+04:12:30 <alewis> 'kay
+04:12:30 <Arthur> resume at 3:30pm Melbourne time
+04:12:31 <Roberto> 'k
+04:12:35 <Zakim> -Bijan_Parsia
+04:12:38 <Zakim> -ALewis
+04:12:42 <Zakim> -Roberto
+04:25:28 <dbooth> dbooth has joined #ws-desc
+04:25:56 <dbooth> zakim, call dbooth-mit
+04:25:56 <Zakim> ok, dbooth; the call is being made
+04:25:57 <Zakim> +Dbooth
+04:26:23 <dbooth> rrsagent, where am i?
+04:26:23 <RRSAgent> See http://www.w3.org/2005/01/20-ws-desc-irc#T04-26-23
+04:27:47 <dbooth> rrsagent, bye
+04:27:47 <RRSAgent> I see 2 open action items:
+04:27:47 <RRSAgent> ACTION: dbooth and KevinL to scope remaining primer work and identify who needs to supply what advanced topic sections [1]
+04:27:47 <RRSAgent>   recorded in http://www.w3.org/2005/01/19-ws-desc-irc#T22-43-45
+04:27:47 <RRSAgent> ACTION: editors to call out the difference between WSDL 1.1 and 2.0 in respect to single interface per service [2]
+04:27:47 <RRSAgent>   recorded in http://www.w3.org/2005/01/19-ws-desc-irc#T23-25-28
+04:28:00 <RRSAgent> RRSAgent has joined #ws-desc
+04:28:00 <RRSAgent> is logging to http://www.w3.org/2005/01/20-ws-desc-irc
+04:28:38 <Zakim> +ALewis
+04:29:53 <Marsh> Will resume with a Vote on whether to convert the ONMP to a Best Practice section, carefully delineating the problems that might arise from not having an identifiable mechanism in the message to distinguish which operation the message belongs to.
+04:31:16 <Marsh> Resuming now.
+04:31:16 <dbooth> ONMP == Operation Name Mapping Requirement
+04:31:36 <Zakim> +[Sun]
+04:31:47 <pauld> s/ONMP/ONMR/
+04:31:53 <pauld> s/ONMP/ONMR/g
+04:32:02 <Arthur> Voting begins...
+04:33:11 <dorchard> glenn, why did you abstain?
+04:35:38 <Arthur> 10 yes, 3 no, 3 abstain
+04:35:59 <Arthur> Jonathan: Would any no voters file a formal objection?
+04:36:16 <Arthur> Jeff: Very possibly.
+04:36:41 <Marsh> Yes: W3C, BT, Canon, TIBCO, SOAP, Microsoft, BEA CA, IBM, webMethods
+04:36:47 <Marsh> No: Sun, Oracle, Macromedia
+04:36:56 <Marsh> Abstain: Sonic, Education.au
+04:38:28 <asir> did u miss SAP?
+04:38:50 <Marsh> YES: +SAP
+04:39:16 <Marsh> s/SOAP/SAP/
+04:39:37 <pauld> s/YES: +SAP/.../
+04:39:59 <Arthur> Jeff/Anish: express concers, BP carries little weight, still need to decide on the wording
+04:40:04 <Zakim> +Bijan_Parsia
+04:40:05 <dbooth> s/...//
+04:40:10 <asir> all right, 1 of 3 down :-)
+<dbooth> s/BadSubstitution/Something/
+04:40:24 <Roberto> for the record, Sun will consider filing a formal objection too
+04:40:57 <Arthur> Now discussing LC82
+04:41:26 <Arthur> Jonathan: Can we ask editors for wording and then discuss it?
+04:42:01 <dbooth> rrsagent, make log member

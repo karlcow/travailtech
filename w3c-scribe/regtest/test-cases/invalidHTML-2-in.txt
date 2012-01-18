@@ -1,0 +1,17 @@
+19:28:54 <RRSAgent> RRSAgent has joined &mit
+19:28:54 <RRSAgent> logging to http://www.w3.org/2005/02/15-mit-irc
+19:28:56 <RalphS> Meeting: HTML Validity
+19:29:01 <Zakim> Zakim has joined &mit
+19:29:05 <RalphS> zakim, this will be mit
+19:29:05 <Zakim> ok, RalphS; I see Team_MIT(site)2:30PM scheduled to start in 1 minute
+19:30:09 <SusanL> SusanL has joined &mit
+19:30:11 <Zakim> Team_MIT(site)2:30PM has now started
+19:30:18 <SusanL> Zakim, please dial SusanL-BOS
+19:30:18 <Zakim> ok, SusanL; the call is being made
+19:30:19 <Zakim> +MIT531
+19:30:29 <Dave> Dave has joined &mit
+19:30:33 <Zakim> +Ted
+19:30:33 <dbooth> Topic: Validity Test
+19:30:33 <dbooth> Chair: Alan
+19:30:33 <dbooth> Scribe: dbooth
+19:30:36 <RalphS> Previous: 2005-02-08 http://www.w3.org/2005/02/08-mit-minutes

@@ -1,0 +1,60 @@
+#! /usr/bin/perl -w
+
+# Accept *-diffs.txt files that are empty.
+# I.e., for any *-diffs.txt file that is empty, copy *-new.htm to *-out.htm.
+# See regtest.perl.
+
+my @files = @ARGV;
+@files = <*-in.*> if !@files;	# Default to all
+
+# Now process them
+foreach my $fIn (@files)
+	{
+	# warn "NEXTTTTT: $fIn\n";
+	next if $fIn =~ m/\Ajunk/i;
+	next if $fIn =~ m/\A\-/;
+	my ($fBase) = &BaseNames($fIn);
+	# warn "fIn: $fIn  fBase: $fBase\n";
+	my $fOutOld = "$fBase\-out\.htm";
+	my $fOutNew = "$fBase\-new\.htm";
+	my $fDiffs = "$fBase\-diffs\.txt";
+	my $fStderr = "$fBase\-stderr\.txt";
+	next if (!-e $fDiffs);
+	if (-z $fDiffs)
+		{
+		warn "ACCEPTING: $fOutNew\n"; 
+		my $fPreviousOut = "$fBase\-prevout.htm";
+		warn "  Renaming $fOutNew to $fOutOld\n";
+		(rename($fOutOld, $fPreviousOut) && rename($fOutNew, $fOutOld)) || warn "  Could not rename $fOutNew to $fOutOld\n";
+		unlink($fDiffs) || warn "  Could not unlink $fDiffs\n";
+		}
+	else	{
+		warn "Keeping: $fOutNew\n"; 
+		}
+	}
+
+################# BaseNames ###################
+sub BaseNames
+{
+# Get the base names of the files
+my %uniqFiles = ();
+my @baseFiles = ();
+foreach my $fRaw (@_)
+	{
+	my $fBase = $fRaw;
+	$fBase =~ s/\.txt\Z//;
+	$fBase =~ s/\.htm\Z//;
+	$fBase =~ s/\-in\Z//;
+	$fBase =~ s/\-out\Z//;
+	$fBase =~ s/\-new\Z//;
+	$fBase =~ s/\-diffs\Z//;
+	$fBase =~ s/\-stderr\Z//;
+	if (!exists($uniqFiles{$fBase}))
+		{
+		$uniqFiles{$fBase} = $fRaw;
+		push(@baseFiles, $fBase);
+		}
+	}
+return(@baseFiles);
+}
+

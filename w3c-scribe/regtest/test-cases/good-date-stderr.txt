@@ -1,0 +1,41 @@
+This is scribe.perl Revision: 1.122  of Date: 2005/03/31 04:43:41  
+Check for newer version at http://dev.w3.org/cvsweb/~checkout~/2002/scribe/
+
+Jabber_Saved_Format                      0.20
+RRSAgent_Visible_HTML_Text_Paste_Format  0.00
+RRSAgent_HTML_Format                     0.00
+Mirc_Text_Format                         0.00
+Yahoo_IM_Format                          0.00
+RRSAgent_Text_Format                     1.00
+Mirc_Timestamped_Log_Format              0.00
+Irssi_ISO8601_Log_Text_Format            1.00
+Plain_Text_Format                        0.00
+XChat_Timestamped_Log_Format             0.00
+Normalized_Format                        0.00
+Guessing input format: RRSAgent_Text_Format (score 1.00)
+
+Found Scribe: timbl
+Inferring ScribeNick: timbl
+
+WARNING: 1 scribe lines found (out of 15 total lines.)
+Are you sure you specified a correct ScribeNick?
+
+
+WARNING: No "Topic:" lines found.
+
+Present: RF PC DC SW TBL NW(Chair)
+Agenda: http://www.w3.org/2001/tag/2004/08/09-11-tag.html
+Found Date: 9 Aug 2004
+People with action items: 
+
+WARNING: Input appears to use implicit continuation lines.
+You may need the "-implicitContinuations" option.
+
+
+WARNING: No "Topic: ..." lines found!  
+Resulting HTML may have an empty (invalid) <ol>...</ol>.
+
+Explanation: "Topic: ..." lines are used to indicate the start of 
+new discussion topics or agenda items, such as:
+<dbooth> Topic: Review of Amy's report
+

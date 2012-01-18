@@ -1,0 +1,66 @@
+This is scribe.perl Revision: 1.122  of Date: 2005/03/31 04:43:41  
+Check for newer version at http://dev.w3.org/cvsweb/~checkout~/2002/scribe/
+
+Jabber_Saved_Format                      0.20
+RRSAgent_Visible_HTML_Text_Paste_Format  0.00
+RRSAgent_HTML_Format                     0.00
+Mirc_Text_Format                         0.18
+Yahoo_IM_Format                          0.00
+RRSAgent_Text_Format                     0.82
+Mirc_Timestamped_Log_Format              0.00
+Irssi_ISO8601_Log_Text_Format            0.82
+Plain_Text_Format                        0.00
+XChat_Timestamped_Log_Format             0.00
+Normalized_Format                        0.18
+Guessing input format: RRSAgent_Text_Format (score 0.82)
+
+Succeeded: s|ONMP|ONMR|
+WARNING: Bad s||| command: s|belongs|BadExtraSubstitution| extra junk
+Succeeded: s|Resuming|SUCCEEDED WITH TRAILING SPACE|
+Succeeded: s|now.|SUCCEEDED WITH TRAILING SPACE|
+Succeeded: s|ONMP|ONMR|g
+FAILED: s|BadgSubstitution|PaulD|g
+Succeeded: s|<Marsh>|<JMarsh>|G
+FAILED: s|BadGSubstitution|PaulD|G
+Succeeded: s|SOAP|SAP|
+Succeeded: s|YES: +SAP|...|
+Succeeded: s|...||
+FAILED: s|BadSubstitution|Something|
+Succeeded: i|Voting begins|Topic: Vote on Op Name
+Succeeded: i|Anish: express concers|Topic: Expressing Concerns (trailing |) 
+FAILED: i|FailedInsertionLocation|Topic: Failed Topic
+Found embedded ScribeOptions:  -embedDiagnostics
+
+*** RESTARTING DUE TO EMBEDDED OPTIONS ***
+
+Jabber_Saved_Format                      0.20
+RRSAgent_Visible_HTML_Text_Paste_Format  0.05
+RRSAgent_HTML_Format                     0.00
+Mirc_Text_Format                         0.96
+Yahoo_IM_Format                          0.00
+RRSAgent_Text_Format                     0.00
+Mirc_Timestamped_Log_Format              0.00
+Irssi_ISO8601_Log_Text_Format            0.00
+Plain_Text_Format                        0.00
+XChat_Timestamped_Log_Format             0.05
+Normalized_Format                        1.00
+WARNING: Bad s||| command: s|belongs|BadExtraSubstitution| extra junk
+FAILED: s|BadgSubstitution|PaulD|g
+FAILED: s|BadGSubstitution|PaulD|G
+FAILED: s|BadSubstitution|Something|
+FAILED: i|FailedInsertionLocation|Topic: Failed Topic
+Found Scribe: Arthur
+Inferring ScribeNick: Arthur
+
+WARNING: No "Present: ... " found!
+Possibly Present: ALewis Bijan_Parsia JMarsh Jeff Jonathan Roberto Sun asir dbooth dorchard inserted pauld
+You can indicate people for the Present list like this:
+	<dbooth> Present: dbooth jonathan mary
+	<dbooth> Present+ amy
+
+Got date from IRC log name: 20 Jan 2005
+People with action items: 
+
+WARNING: Input appears to use implicit continuation lines.
+You may need the "-implicitContinuations" option.
+

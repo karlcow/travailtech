@@ -1,0 +1,285 @@
+17:56:52 <RRSAgent> RRSAgent has joined #tagmem
+17:56:52 <RRSAgent> logging to http://www.w3.org/2005/02/22-tagmem-irc
+17:56:59 <Chris> Chris has joined #tagmem
+17:58:29 <Zakim> TAG_Weekly()12:30PM has now started
+17:58:36 <Zakim> +??P0
+17:59:00 <Vincent> Zakim, P0 is Vincent
+17:59:00 <Zakim> sorry, Vincent, I do not recognize a party named 'P0'
+18:00:15 <ht> zakim, ? is Vincent
+18:00:15 <Zakim> +Vincent; got it
+18:00:22 <ht> zakim, please call ht-781
+18:00:22 <Zakim> ok, ht; the call is being made
+18:00:23 <Zakim> +Ht
+18:00:24 <Zakim> -Ht
+18:00:45 <ht> zakim, please call ht-781
+18:00:45 <Zakim> ok, ht; the call is being made
+18:00:46 <Zakim> +Norm
+18:00:46 <Zakim> +Ht
+18:00:48 <Zakim> -Ht
+18:01:00 <Zakim> +Roy
+18:01:20 <Zakim> +DanC
+18:01:44 <Ed> Ed has joined #tagmem
+18:01:48 <Chris> zakim, dial chris-617
+18:01:48 <Zakim> ok, Chris; the call is being made
+18:01:50 <Zakim> +Chris
+18:02:20 <ht> zakim, please call ht-781
+18:02:20 <Zakim> ok, ht; the call is being made
+18:02:22 <Zakim> +Ht
+18:02:22 <Zakim> -Ht
+18:02:23 <Roy> Roy has joined #tagmem
+18:02:29 <Chris> zakim, who is here?
+18:02:29 <Zakim> On the phone I see Vincent, Norm, Roy, DanC, Chris
+18:02:30 <Zakim> On IRC I see Roy, Ed, Chris, RRSAgent, Zakim, Vincent, Norm, ht, DanC
+18:03:21 <ht> zakim, please call ht-work
+18:03:21 <Zakim> ok, ht; the call is being made
+18:03:23 <Zakim> +Ht
+18:03:35 <Zakim> +??P3
+18:03:49 <ht> zakim, ? is ed
+18:03:49 <Zakim> +ed; got it
+18:05:00 <DanC> Scribe: DanC
+18:05:04 <ht> ht has changed the topic to: http://www.w3.org/2001/tag/2005/02/22-agenda.html
+18:05:06 <Chris> Chris has changed the topic to: http://www.w3.org/2001/tag/2005/02/22-agenda.html
+18:05:26 <Zakim> +DOrchard
+18:05:30 <DanC> Topic: Roll call
+18:05:35 <DanC> Zakim, list attendees
+18:05:35 <Zakim> As of this point the attendees have been Vincent, Ht, Norm, Roy, DanC, Chris, ed, DOrchard
+18:05:50 <DanC> Topic:  Accept this agenda?
+18:05:58 <DanC> Agenda: http://www.w3.org/2001/tag/2005/02/22-agenda.html
+18:06:14 <DanC> Topic: Date of Next telcon
+18:06:25 <DanC> propose Tuesday 8 March 2005
+18:07:05 <DanC> regrets DaveO for 8 Mar
+18:07:15 <DanC> VQ has a conflict with 8 Mar
+18:07:48 <DanC> VQ is available to prepare an agenda, but not to run the meeting
+18:07:50 <ht> regrets HST for 8 March
+18:08:08 <DanC> NDW offers to run the 8 Mar telcon
+18:08:36 <DanC> (are we resolved? doesn't seem critical... can decide 28Feb, I suppose)
+18:08:46 <DanC> Topic: Meeting Records
+18:08:58 <DanC> -> http://www.w3.org/2005/02/07-tagmem-minutes.html minutes 7 Feb
+18:09:10 <DanC> -> http://lists.w3.org/Archives/Public/www-tag/2005Feb/att-0112/Feb142005FormattedMinutes.html 14 Feb minutes
+18:09:24 <dorchard> dorchard has joined #tagmem
+18:09:35 <noah> noah has joined #tagmem
+18:09:59 <DanC> DC: 2nd proposal to OK 7 Feb minutes
+18:10:39 <DanC> VQ: I've reviewed actions from the telcons... many seem to be done; I'll get back to the others 28Feb
+18:10:48 <DanC> ... unless there are comments now
+18:11:33 <DanC> noah notes being done with his action on extensibility
+18:11:44 <DanC> Topic: Change location of June f2f? (Edinburgh?)
+18:12:13 <DanC> VQ: recall we agreed to meet near Nice just after the W3C AC meeting, but it's no longer convenient for Chris...
+18:12:26 <DanC> ... and HT has offered to host...
+18:12:33 <DanC> ... some preferences each way...
+18:12:36 <Roy> Edinburgh +1
+18:12:42 <noah> France +1
+18:12:53 <noah> (if someone will host, of course)
+18:13:14 <DanC> Chris: I have not told Coralie (prospective INRIA local organizer) to cancel our meeting in June
+18:13:17 <noah> Edinburgh OK if not, just trying to save travel wear n tear
+18:13:24 <DanC> VQ: to expects to attend the AC meeting?
+18:13:28 <DanC> DC: I do
+18:13:30 <DanC> DO: I do
+18:13:32 <noah> NM: I do
+18:13:33 <DanC> HT: I do
+18:13:59 <DanC> NDW: I prefer Edingburgh, though that reduces the chance I'll attend the AC meeting
+18:14:05 <Ed> I will not be at the AC meeting
+18:14:05 <DanC> VQ: I expect TimBL to attend the AC meeting
+18:14:29 <DanC> Roy: I think timbl had a conflict with the June 8 Date
+18:16:03 <DanC> "TimBL was also unable to comfirm in-person attendance." re 8-10 June. http://www.w3.org/2001/tag/2004/10/05-07-tag.html#meeting-plans
+18:17:09 <DanC> HT: I think I can hold my hosting reservations for a month without much cost in case I cancel
+18:17:46 <DanC> VQ: so let's take another week to consider it
+18:18:02 <DanC> ACTION VQ: contact Coralie re 8-10 June meeting arrangements at INRIA.
+18:18:18 <DanC> CL: you might ask her about Cannes vs Sophia while you're at it
+18:19:01 <DanC> Topic: W3C Technical Plenary TAG F2F Monday am 28th February 2005
+18:19:14 <DanC> -> http://www.w3.org/2001/tag/2005/02/28-agenda.html proposed agenda
+18:19:31 <noahf2fRoom> noahf2fRoom has joined #tagmem
+18:19:35 <DanC> (er... half an hour of admin? hmm.)
+18:20:35 <DanC> DC: hmm... .5hr of admin seems like a lot for a 2hr meeting...
+18:20:45 <DanC> VQ: some is more than admin... issues list maintenance
+18:21:33 <Chris> start discussing issue list stuff in email to get up to speed?
+18:21:54 <DanC> (not sure there's much to discuss, other than who volunteers to do it)
+18:22:37 <Zakim> -Ht
+18:23:14 <Zakim> +Ht
+18:23:45 <DanC> VQ: I expect to update the agenda tomorrow with comments received; I'm willing to take comments up to the meeting day
+18:24:00 <DanC> Topic: W3C Technical Plenary TAG Liaisons
+18:24:08 <DanC> VQ: re XML Core joint meeting...
+18:24:35 <DanC> -> http://www.w3.org/2001/tag/2005/01/TechnicalPlenaryLiaisons.html Tentative TAG Liaison Meeting Schedule
+18:24:49 <DanC> VQ: PaulG proposes 10:30 to noon Thu for XML Core/TAG join telcon
+18:25:08 <DanC> ACTION NDW: let himself know . ;-)
+18:25:50 <DanC> ACTION 2 = NDW: let XML Core WG know yes, we agree to meet Thu 3 Mar 10:30am in Cambridge
+18:26:09 <DanC> VQ: note "14:45-15:45 Joint with CDF-WG"
+18:26:16 <DanC> ... on Monday
+18:26:19 <noah> Cambridge?  The F2F is in East Boston, AFAIK
+18:26:34 <DanC> HT: no liaison meetings Tuesday?
+18:26:36 <DanC> VQ: right
+18:26:38 <noah> Specifically, at the Logan airport Hyatt Hotel
+18:26:54 <DanC> s/in Cambridge/in Boston/
+18:27:49 <DanC> VQ reviews liaison schedule Revision 1.21  2005/02/22 17:26:09  vquint
+18:28:21 <DanC> Topic: New Issue?: Adding terms to a namespace, xml:id/C14N discussions
+18:28:33 <DanC> -> http://lists.w3.org/Archives/Public/www-tag/2005Feb/0015.html Norm's request
+18:29:11 <DanC> (hmm... seems to fall under versioning41, but so does all of life, the universe, and everything, so maybe a specific issue is good)
+18:29:37 <Chris-again> Chris-again has joined #tagmem
+18:29:55 <Zakim> -Chris
+18:30:06 <Chris-again> zakim, dial chris-617
+18:30:06 <Zakim> ok, Chris-again; the call is being made
+18:30:07 <Zakim> +Chris
+18:30:33 <DanC> DC: issue name ideas?
+18:30:47 <DanC> NDW: nameSpaceTerms-NN, maybe?
+18:31:04 <Roy> nameAdditions-NN ?
+18:31:16 <Chris-again> reservedNoReally?
+18:32:13 <DanC> NDW: some urgency motivates a separate issue from versioning41: having a TAG decision before end of xml:id CR period would be nice
+18:32:14 <Vincent> ack DanC
+18:32:14 <Zakim> DanC, you wanted to ask about timing expectations
+18:33:32 <Roy> digestable +1
+18:34:12 <DanC> DO: so the results of this new issue could be folded into work on versioning41?
+18:34:15 <Zakim> +[Microsoft]
+18:34:24 <DanC> NDW: sure, but this seems independent of schema languages etc. [?]
+18:34:45 <paulc> paulc has joined #tagmem
+18:34:47 <DanC> HT: people often read more into the namespace REC than is there; I'd like to take this opportunity to clarify
+18:35:04 <DanC> Zakim, [Microsoft] is PaulC
+18:35:04 <Zakim> +PaulC; got it
+18:35:33 <Norm> http://lists.w3.org/Archives/Public/www-tag/2005Feb/0015.html
+18:35:38 <Norm> That's the URI paulc 
+18:35:46 <RRSAgent> See http://www.w3.org/2005/02/22-tagmem-irc#T18-35-38
+18:36:45 <DanC> DO: one thing that's in the [draft] finding now is a discussion of relationship between terms, [missed?], which seems relevant
+18:38:21 <DanC> RF: [good point about issues : findings. can't summarize real-time]. I suggest "nameAddition" because the identity questions don't seem to be the main thing
+18:38:36 <ht> q+ to disagree with Norm
+18:38:55 <DanC> NDW: ...[missed?]... crux of it is xml: namespace [?]
+18:39:10 <Chris-again> ... and is it bounded or not
+18:39:27 <DanC> CL: yes, that is the main thing... one spec made an assuption about the xml: namespace, and unless "will not change" is explicitly stated, that's not safe
+18:39:36 <Vincent> ack ht
+18:39:36 <Zakim> ht, you wanted to disagree with Norm
+18:39:44 <DanC> [scribe gives up trying to keep up]
+18:40:15 <Roy> We can have one finding answer multiple issues, but tracking multiple issues under a single issue name simply because we expect them to be answered in one finding would be a mistake, IMO.
+18:40:24 <DanC> HT: to speak of "adding names to a namespace" doesn't make sense. the names are all there.
+18:40:36 <DanC> NDW: while I might agree, that's not universally agreed
+18:40:55 <noah> +1, I agree with Henry. At the very least, we shouldn't preclude in advance that possible formulation
+18:40:56 <Chris-again> HT: namespace is a set, unbounded, all names already exist in it
+18:41:16 <dorchard> The first part of the finding has an attempt at formal description of the architecture of languages http://lists.w3.org/Archives/Public/www-tag/2004Nov/att-0071/versioning-part1.html
+18:41:45 <noah> If you're looking for a name for an issue (I can't quite tell), how about "immutableNamespaces"?
+18:42:38 <ht> namespaceState?
+18:42:44 <DanC> +1 namespaceState
+18:43:06 <Ed> +1 namespaceState
+18:43:51 <DanC> VQ: seems we're agreed (agreeing?) to add an issue, in addition to, while perhaps related to, issue 41
+18:44:17 <Chris-again> +1 namespaceState
+18:44:31 <Roy> +1 namespaceState
+18:44:40 <dorchard> +1 namespaceState
+18:44:53 <Norm> +1 namespaceState
+18:45:01 <DanC> RESOLVED: to accept issue namespaceState.
+18:47:05 <Chris-again> q+ to add that a cc should be sent to affected WGs
+18:47:30 <DanC> PC: we need to announce the issue to tag-announce
+18:47:52 <DanC> VQ: ndw's request serves as an issue summary?
+18:47:55 <DanC> Ed: OK
+18:48:01 <Roy> +1
+18:48:40 <DanC> ACTION NDW: announce TAG's acknolwedgement of issue nameSpaceState-NN
+18:49:40 <paulc> q+
+18:50:22 <DanC> ack danc
+18:50:22 <Zakim> DanC, you wanted to note traditions and to 
+18:50:23 <Norm> q_
+18:50:25 <Norm> q+
+18:50:48 <DanC> NDW, HT, DO volunteer to "work on it"
+18:51:14 <DanC> ACTION NDW: work with HT, DO on namespaceState
+18:51:28 <Chris-again> ack Chris
+18:51:28 <Zakim> Chris-again, you wanted to add that a cc should be sent to affected WGs
+18:52:06 <ht> HST has in mind to try to summarise, in a way the owners would acknowledge as fair, the various positions so far articulated at the base of the ongoing discussion
+18:52:19 <DanC> tx for the sketch, ht. pls do
+18:52:30 <DanC> (not in this meeting, I assume)
+18:52:37 <ht> Correct DanC
+18:52:46 <DanC> PC: add this to the 3 Mar TAG/XML Core agenda?
+18:52:50 <DanC> NDW: yes, quite
+18:53:05 <DanC> PC: pending XML Core work depends on this?
+18:53:09 <DanC> NDW: xml:id CR exit
+18:53:57 <DanC> PC: is there room for this on the TAG/XML Core agenda?
+18:54:01 <DanC> NDW/VQ: think so, yes
+18:54:12 <Norm> q-
+18:54:33 <Vincent> ack paulc
+18:54:53 <DanC> Topic: New Issue?: Relationship of URI schemes to protocols
+18:54:57 <Roy> my input is already in www-tag
+18:55:06 <DanC> -> http://lists.w3.org/Archives/Public/www-tag/2005Feb/0013.html Noah's request
+18:55:31 <DanC> (re which, Roy?)
+18:55:41 <Roy> previous topic
+18:56:11 <noah> Does it make any sense to delay consideration of my request until I am there to discuss, or is the intent fairly clear from the note?
+18:56:54 <DanC> DC suggests straw poll; if we can say "yes" today, very well. if not, let's wait 'till noah can make his case
+18:56:59 <noah> I suppose that, selfishly, I'd be glad if you accept the issue now without me, but if you're inclined to drop it I might welcome a chance to defend it a bit, if that's not too disruptive.
+18:57:43 <DanC> RF: having trouble differentiating this from work going on in uri mailing list
+18:57:50 <DanC> DC: why do you want/need to differentiate?
+18:57:54 <DanC> RF: good question...
+18:58:19 <DanC> RF: 0013 doesn't [do it for me].
+18:58:29 <DanC> DC: let's wait 'till Noah can make his case.
+18:58:31 <DanC> VQ: very well.
+18:58:56 <DanC> Topic: Run through Open Issues list looking for progress
+18:59:04 <noah> Roy, either in these minutes or by email, maybe you could send URIs to pertinent thread in URI list?  Thanks.
+18:59:07 <DanC> -> http://www.w3.org/2001/tag/issues.html?view=normal&closed=1 issues list
+18:59:48 <DanC> VQ: continuing from 7 Feb
+19:00:05 <DanC> VQ: continuing from 7 Feb, when we got to xmlFunctions-34 ...
+19:00:24 <DanC> VQ: I'm interested in names relevant to each issue.
+19:00:29 <Roy> Noah, there is ongoing discussion on uri@w3.org regarding rfc2717-2718 replacement that contains instructions on what to include in scheme spec.
+19:01:42 <Norm> Appalling but true
+19:02:57 <Roy> Noah, http://lists.w3.org/Archives/Public/uri/2005Feb/0042.html
+19:03:31 <DanC> -> http://www.w3.org/2004/01/rdxh/specbg.html Storing Data in Documents: The Design History and Rationale for GRDDL
+19:03:51 <DanC> DC: [long ...] I'd like reviewer for specbg
+19:03:55 <DanC> HT: I'm happy to review
+19:04:00 <DanC> NDW: [cut off?]
+19:04:36 <DanC> ACTION HT: review " Storing Data in Documents ..."
+19:05:02 <DanC> ACTION NDW: review " Storing Data in Documents ..."
+19:05:45 <DanC> Topic: issue review. siteData-36
+19:06:23 <DanC> DC: [can't type and summarize]
+19:07:35 <DanC> ... something like: next time a /robots.txt situation comes around, I'd like to have something in place that's better than a hard-coded name
+19:07:52 <DanC> CL: meanwhile, /robots.txt is quite useful.
+19:08:30 <DanC> VQ: any takers?
+19:08:36 <DanC> NDW: some interest, but not much bandwidth
+19:08:51 <DanC> DC: haven't have a "lightbulb" idea. prefer to leave it in the "someday" pile
+19:09:00 <DanC> Topic: issue review. abstractComponentRefs-37
+19:09:22 <DanC> DO: this came from a request from the web services description WG...
+19:09:55 <DanC> ... (1) when we come up with a component designator, is it designating an abstract component, or a piece of syntax in the WSDL doc?
+19:10:03 <DanC> ... (2) [missed?]
+19:10:41 <DanC> ... and the TAG said: (1) designates abstract component (2) we discussed lots of options and said "yeah, the one in your WD is OK"
+19:12:00 <DanC> ( trying to confirm that we've approved this finding... http://www.w3.org/2001/tag/doc/abstractComponentRefs-20031030 )
+19:12:54 <DanC> HST: XML Schema work on component designators is relevant...
+19:13:02 <Vincent> ack DanC
+19:14:54 <DanC> -> http://www.w3.org/2001/tag/doc/abstractComponentRefs-20031030 Abstract Component References Draft TAG Finding 30 Oct 2003
+19:15:09 <DanC> HT notes...
+19:15:15 <DanC> -> http://lists.w3.org/Archives/Public/www-tag/2004Jan/0007.html Comments from MSM on behalf of Schema WG
+19:15:55 <ht> MSM reports Schema WG was not happy
+19:18:05 <ht> HST hears DO saying that it doesn't actually answer the question, yet
+19:19:43 <ht> q+ to volunteer to take this finding on, in a month or two
+19:20:48 <Chris-again> ack ht
+19:20:48 <Zakim> ht, you wanted to volunteer to take this finding on, in a month or two
+19:22:07 <DanC> VQ: ok, so we are where we are.
+19:22:26 <DanC> Topic: issue review: putMediaType-38
+19:23:31 <DanC> DC: offshoot of issue 7
+19:23:52 <DanC> CL: there was some WEBDAV criticism in the discussion?
+19:23:56 <DanC> DC: yes, I think so
+19:24:19 <DanC> RF: perhaps it should be reassigned to me
+19:24:57 <DanC> -> http://www.w3.org/2001/tag/issues.html?view=normal&closed=1#putMediaType-38 putMediaType-38
+19:26:19 <Roy> ACTION: Roy to prepare putMediaType-38 for further discussion
+19:26:52 <DanC> Topic: issue review rdfURIMeaning-39
+19:27:39 <DanC> -> http://lists.w3.org/Archives/Public/www-tag/2003Jul/0127.html Re: New issue - Meaning of URIs in RDF documents
+19:28:33 <Roy> I am planning to work on URIGoodPractice-40 next week during TP when I can talk to DaveO
+19:28:33 <DanC> DanC: gee... can't remember the gist of this. let's wait 'till TimBL is around
+19:28:54 <DanC> Topic: issue review URIGoodPractice-40
+19:29:07 <DanC> RF: related to abstractComponentRefs-37 ...
+19:30:55 <DanC> DO: in discussion of XPointer () stuff, I recall some criticism from RF, which spawned this issue
+19:31:39 <DanC> VQ: ok, that's it for today
+19:32:20 <DanC> ADJOURN.
+19:32:32 <Zakim> -DanC
+19:32:38 <Chris-again> zakim, drop me
+19:32:38 <Zakim> sorry, Chris-again, I do not see a party named 'Chris-again'
+19:32:43 <Zakim> -Ht
+19:32:46 <Chris-again> zakim, drop Chris
+19:32:46 <Zakim> Chris is being disconnected
+19:32:47 <Zakim> -Chris
+19:32:47 <Zakim> -Norm
+19:32:58 <Zakim> -PaulC
+19:33:00 <Zakim> -DOrchard
+19:33:02 <Zakim> -Vincent
+19:33:03 <Zakim> -ed
+19:33:05 <Roy> zakim, where are the minutes?
+19:33:05 <Zakim> I don't understand your question, Roy.
+19:33:11 <DanC> RRSAgent, pointer?
+19:33:11 <RRSAgent> See http://www.w3.org/2005/02/22-tagmem-irc#T19-33-11
+19:33:17 <DanC> RRSAgent, please draft minutes
+19:33:17 <RRSAgent> I have made the request to generate http://www.w3.org/2005/02/22-tagmem-minutes DanC
+19:33:32 <Zakim> -Roy
+19:33:33 <Zakim> TAG_Weekly()12:30PM has ended
+19:33:34 <Zakim> Attendees were Vincent, Ht, Norm, Roy, DanC, Chris, ed, DOrchard, PaulC
+19:34:01 <DanC> Meeting: Technical Architecture Group (TAG) Weekly Teleconference
+19:34:13 <DanC> Chair: Vincent
+19:34:21 <DanC> Regrets: TimBL, Noah
+19:34:38 <DanC> RRSAgent, please draft minutes
+19:34:38 <RRSAgent> I have made the request to generate http://www.w3.org/2005/02/22-tagmem-minutes DanC

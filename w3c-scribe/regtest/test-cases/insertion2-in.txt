@@ -1,0 +1,44 @@
+<dbooth> ScribeOptions: -embedDiagnostics
+<dbooth> Meeting: Test Meeting
+<dbooth> Chair: JMarsh
+<dbooth> Scribe: Arthur
+04:28:00 <RRSAgent> RRSAgent has joined #ws-desc
+04:28:00 <RRSAgent> is logging to http://www.w3.org/2005/01/20-ws-desc-irc
+04:28:38 <Zakim> +ALewis
+04:29:53 <Marsh> Will resume with a Vote on whether to convert the ONMP to a Best Practice section, carefully delineating the problems that might arise from not having an identifiable mechanism in the message to distinguish which operation the message belongs to.
+04:31:16 <Marsh> Resuming now.|
+04:31:16 <dbooth> ONMP == Operation Name Mapping Requirement
+04:31:36 <Zakim> +[Sun]
+04:31:47 <pauld> s|ONMP|ONMR|
+04:31:47 <pauld> s|belongs|BadExtraSubstitution| extra junk
+04:31:47 <pauld> s|Resuming|SUCCEEDED WITH TRAILING SPACE| 
+04:31:47 <pauld> s|now.|SUCCEEDED WITH TRAILING SPACE 
+04:31:53 <pauld> s|ONMP|ONMR|g
+04:31:53 <pauld> s|BadgSubstitution|PaulD|g
+04:31:53 <Marsh> s|<Marsh>|<JMarsh>|G
+04:31:53 <pauld> s|BadGSubstitution|PaulD|G
+04:32:02 <Arthur> Voting begins...
+04:33:11 <dorchard> glenn, why did you abstain?
+04:35:38 <Arthur> 10 yes, 3 no, 3 abstain
+04:35:59 <Arthur> Jonathan: Would any no voters file a formal objection?
+04:36:16 <Arthur> Jeff: Very possibly.
+04:36:41 <Marsh> Yes: W3C, BT, Canon, TIBCO, SOAP, Microsoft, BEA CA, IBM, webMethods
+04:36:47 <Marsh> No: Sun, Oracle, Macromedia
+04:36:56 <Marsh> Abstain: Sonic, Education.au
+04:38:28 <asir> did u miss SAP?
+04:38:50 <Marsh> YES: +SAP
+04:39:16 <Marsh> s|SOAP|SAP|
+04:39:37 <pauld> s|YES: +SAP|...|
+04:39:59 <Arthur> Jeff/Anish: express concers, BP carries little weight, still need to decide on the wording
+04:40:04 <Zakim> +Bijan_Parsia
+04:40:05 <dbooth> s|...||
+04:40:10 <asir> all right, 1 of 3 down :-)
+<dbooth> s|BadSubstitution|Something|
+04:40:24 <Roberto> for the record, Sun will consider filing a formal objection too
+<dbooth> i|Voting begins|Topic: Vote on Op Name
+<dbooth> i|Anish: express concers|Topic: Expressing Concerns (trailing |) |
+04:40:57 <Arthur> Now discussing LC82
+04:41:26 <Arthur> Jonathan: Can we ask editors for wording and then discuss it?
+<dbooth> i|FailedInsertionLocation|Topic: Failed Topic
+04:42:01 <dbooth> After failed insertion
+04:42:01 <dbooth> rrsagent, make log member

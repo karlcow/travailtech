@@ -1,0 +1,1255 @@
+Agenda: http://lists.w3.org/Archives/Public/public-ws-addressing/2004Dec/0022.html
+Meeting: Web Services Addressing Working Group Face-to-Face
+Date: 7 December 2004
+Chair: Mark Nottingham
+
+Topic: Assignment of scribes
+    Tues AM - Jeff
+    Tues PM - Yin Leng
+    Wed AM - Harris
+    Wed PM - Steve W
+    Thurs AM - Tom
+
+Scribe: Jeff
+
+Topic: Agenda Review
+Go through issues in order of agenda
+Spend tomorrow on last few issues -- issue 1, serialization
+
+Topic: Action Item Review
+       done by chair
+
+Topic: Approval of minutes
+Unanimous consent to approve minutes from 2004-11-29 teleconf
+
+Topic: Schedule Issues
+
+   Mark puts up slide of schedule as specified in charter.
+   Next f2f in AU - Jan, in BOS at Tech Plenary - early March
+   The Chair notes that the schedule calls for going to LC at the end of January, and that several members who have done this before don't believe this is possible. Mark has had discussions with Team and emphasizes that if we get to end of Jan f2f and it does not look like we are close, he would have to question the "health of the group".
+  DaveO: question on schedule -- lets say finish jan f2f, say we've made progress and closed say 15 out of 39 issues, and opened a few more - so that there are around 30 open issues, so it feels like there is still a considerable amount of work. Is there a possibility that the WG would be terminated?
+   Mark: yes. I would have to go to the director and seek a charter modification. Don't want the WG to turn into a 2 year group. If it doesn't look like convergence is happening quickly and with reasonable confidence it can be predicted how long it will take, then i would probably recommend to terminate. Last Call by March is the absolute last passible slippage without dire consequences.
+   Hugo: Team would evaluate the situation. There are other options too. Start a 2.0 WG.
+   Michael: many of issues are inter-related and it is hard to deal with them individually.
+   Mark: tried to sort the issues into buckets
+   Steve: some of the problem is terminology and people talking a bit at cross purposes
+   Marc: more optimistic, why the gloom and doom so soon?, even though its raining :-)
+   Mark: need to focus more on the actual docs, not issues
+   Marc: no point in having a fully polished draft if there are lots of outstanding issues it would help if we had an dependency graph of issues
+   Mark: As we discuss the issues, keep the schedule in mind, have a full discussion, but then come to make a decision
+
+   Mark: Discussion of telecom schedule: Note on an exceptional basis a company can appoint an expert to represent them for a particular meeting. Decision is to cancel telecom on Dec 27. currently 30 open issues with 2 f2fs and 6 telecons to close
+
+Topic: WD Publication
+   Hugo: hasn't heard anything back from pub team.
+    ACTION: Contact pub team/philippe to get the WD published.
+Editors have a copy (actually 2 since both gudge and marc have done it independently :-) that has incorporated the resolution of issue 3 (wsdl meps). Mark asks it would useful to get hard copies of the latest WSDL draft.
+
+The current copies reflect the issues already closed -- issue 2, 3, 5, 12, maybe 30
+
+Topic: i039 - Spec name versioning
+     Owner: Hugo Haas
+     Proposal: Change the titles to: Web Services Addressing 1.0 - (Core|(SOAP|WSDL) Binding)
+
+Marc: asks if all the cross-ref links in the docs should be updated with new title.
+Mark: give editors freedom to update refs as appropriate
+Marc: don't need to version all the docs in lock step
+Mark: do we need to change the namespace uri's?
+RESOLUTION: Close issue 39:  no objections to the proposal and editors and team have appropriate latitude to do the right thing with the short name and cross-
+
+Topic: i010 - EPR Robustness
+     Owner: Anish Karmarkar
+Mark: A number of other issues relating to this topic, can we close this one and just use those other ones.
+Anish: This is a different issue -- this should be about service qname and not just using a uri. Others seemed to want to make it a generic metadata issue.
+ACTION: Anish to refine this issue (i010) to specifics.
+
+If others want to generalize about metadata then they should raise this issue. JMarsh notes that issue 23 really addresses the specifics Anish is talking about and that 10 would be a duplicate if it were refined.
+
+Topic: i036 - WS-Addressing MIME Media Type
+     Owner: Greg Truty
+     2004-11-29: Greg to talk to James Snell about registering a media-type for WS-A (issue 036). Due 2004-12-06.
+Greg reports that James is ok with dropping this given how much work this will entail. James had wanted to define a specific mime-type for ws-addressing.
+Mark N: Proposal CLOSE 36 by declining to define a media type. no objections
+RESOLUTION: i036 closed with no action
+
+Topic: i011 - EPRs in To
+     Owner: Harris Reynolds
+Why isn't the value of the To property an EPR?
+Tom: Glen has other proposals for issues (8/16) that would cover this.
+Anish: Other dimension in addition to refp's there is additional info that is avail in EPR, which is lost in the message (e.g. epr can contain the qname of the service element). This is a dup of 13.
+DAvidO: If issue raiser thinks this is a potential solution to another issue, can we close it with no harm.
+Marc: CLOSE, no action as dup of 8, 13, 16. no objections
+RESOLUTION: i011 closed as dup
+
+Topic: i037 - Replace QNames with anyURI
+     Owner: Harris Reynolds
+     2004-11-29: Harris and Hugo to make a proposal for issue 037 (Qnames vs URIs). Due 2004-12-07
+Harris to keep qnames that refer to port type, etc., but keep uri for relationship.
+
+Mark: Should we continue to use Qname to refer to WSDL elements? lots of nods Should we use a uri for the relationship type?
+DAvid: Why have relationship type if there is only one value? Ans: extensibility
+DAvidO: doesn't like it, gudge: unnecessary
+JMarsh: are there other specs that are defining groups of relationship types
+Tom: if it doesn't matter that much, why change it?
+Steve: messages are transient, so can't/shouldn't use qname to get back
+DavidO: seems like there is little need to make the relationship into a "resource". Reason for using uri's is to exchange a/o make available on the web. So why bother?
+Marc: trivial change, why wouldn't we do it? straightforward, simple -- improves things
+Hugo: agrees with Marc. Reason for uri is to differentiate between relatinships. More natural to use uri.
+DavidO: TAG hasn't outlawed qnames. XQuery is going use qnames for F&O description
+JMarsh: advantage of that scheme is you can then see the related ones? Do we think if when people extend this will they want to go to one namespace and find the related one.
+Straw poll: Status quo - 3 Chg to uri - 11
+Proposal: For relationship type attribute, use URI - value we define will use a slash not a hash
+RESOLUTION: Close i037, accept proposal - no objections
+
+Topic: i021 - WSDL Extension for Addressing
+     Owner: Hugo Haas
+     2004-11-29: Hugo to expand on his proposal for issue 021. Due 2004-12-07.
+Hugo has a proposal. Nov 6 email Re: Issue 021 detailed proposal (was Re: Issue 021: WSDL Extension for Addressing)
+Hugo presents.
+JMarsh: will there be interop problem if some use this as a "feature" and some as an "extension"?
+DavidO: the issue is if there were no minority objection, the "normal" way to do this would be to use F&P? Does this mean there are 2 ways to do this because of the F&P disagreement?
+JMarsh: which do i have to support to be conformant? e.g. 2 wsdl docs: one does a required extension, and one in a required feature -- wouldn't it be better for there to be one canonical way.
+DavidO: if we bless one here as mandatory, what does that mean?
+JMarsh: likes element extension because of wsdl 1.1 compatibility
+Paul: if we publish uri as a feature, and if i have a wsdl processor that doesn't support f&p, how can i support the wsa (i.e. it winds up being an implicit requirement on wsdl processors)
+Hugo: trying to finesse the wsdl 2.0 f&p controversy and look at the functionality, but i've failed :-)
+JMarsh: put something in the conformance section which tells people what to do
+Marc: not clear whether this references what's in the SOAP spec and not the WSDL spec
+JMarsh: concerned that proposal looks like a definition of a URI which i can put in my WSDL -- what is then required?
+Marc: what about calling it a "soap feature"
+Anish: why do we need to add anything in the core? this is about wsdl.
+Marc: mutters - that was my point
+Hugo: knows he had a good reason
+Jeff: If we take JMarsh's statement that we should assume f&p will stay, are u saying that we still shouldn't use them?
+JMarsh: essentially yes -- because element will be defined in wsa spec, everyone will have to recognize it-
+DavidO: Wondering if way to make it so that effectively one uri, either a qname syntax or a uri property
+JMarsh: What do I have to look for in my WSDL document? Maybe i have to do both?
+Anish: this is an interop problem created by wsdl. They've provided 2 ways to do the same thing, so maybe we should deal with that and support both. As far as WSDL 1.1, you can backport the WSDL 2.0 F&P functionality as a wsdl 1.1 extensibility point - see WS-Reliability OASIS standard.
+Rebecca: makes point that have to do extension for wsdl 1.1
+Paul: doesn't like that this seems to implicitly have required = true
+DavidO: Option a: extension element in both wsdl 1.1 and wsdl 2.0
+   ... option b: mandatory extension element in 1.1, optional extension in 2.0 or f&P in 2.0
+   ... option c: mandatory extension element in 1.1, mandatory feature in 2.0
+   ... option d: mandatory extension element in 1.1, mandatory feature and  
+extension in 2.0
+   ... option e: backport f&P to 1.1 and then use that
+Anish: motivation for using f&p in wsdl 2.0 is if i already have uri's  
+for soap 1.2 then i can just plug them in and use them
+
+MarkN: straw poll:
+    ... one way only across wsdl versions - 9
+    ... more than one way - 4
+    ... not sure - 4
+... If we were to go down the oneway route: it would have to be either:
+    ... extensibility element for both wsdl 1.1 and wsdl 2.0
+    ... f&p with backport of f&p to wsdl 1.1
+JMarsh: would like to see it defined so that i could use f&p if i so choose
+Hugo: has preference for one way because it is simpler. Worried a great deal about having a wg that defines the language and another wg saying don't use that feature. Hugo states he was really after a soap feature.
+MarkN: all we have to do is choose a way forward, publish it, and then talk to/receive comments -- we can adjust approach in LC
+Hugo: flag this is a SOAP feature, open content model, ed note: we have this open issue with WSDL 2.0
+MarkN: doesn't understand how this can be a SOAP feature, when wsa isn't supposed to have a dependency on soap
+Hugo: xmlp has defined a formal way to describe extensions, etc.
+Marc/Anish: why should this even be in the wsa core? Why couldn't this be in the soap binding?
+Hugo: wants to know what the diff between wsa core and what would essentially be a soap feature module.
+Anish: before we go down the path of selecting one way, we should consider what is going to be in the wsa soap binding spec. Might help in making this choice. Thinking more: not sure this is actually an interop problem. If we say exactly how it is specified in WSDL, not sure there is an interop issue, even if there are 2 ways because for each way we would define what shows up in the wire.
+JMarsh/DAvidO: but its a complexity problem
+Marc: uncomfortable making the decision for another wg, essentially profiling the wsdl 2.0 spec
+Rebecca: not everyone is going to be using soap, and if this is bound to soap .....
+Paul/Hugo: but its the soap abstract model
+Paul: WSDL 2.0 defines 2 ways. But do they really plan to impose that everyone will have to implement both. We should just pick one way.
+Marc: putting 2 things in wsdl, its not hard, We should define both, and not make this decision
+DavidO: the notion that the WSA WG does not own its ability to define its own extensibility floors me. We should not be required do use both mechanisms. I wish there was only one way, but the wsdl couldn't do that, so we have to solve the problem.
+Marc: i'm not sure yet which is the better way, and it is trivial to support both.
+JMArsh: are u ok with me rejecting some wsdl which has f&p required=true
+Jeff: getting tired of repeating the same arguments :-)
+MarkN: agrees. Doesn't think anyone's mind has changed. Proposes to define one way - the extensible element.
+DavidO: and add a "natural" mapping to a uri
+MarkN:  in wsdl 1.1 would this be an extension? lots of nods
+Anish: what about using a small well-defined subset?
+DavidO: asks Anish to make a proposal for what that would look like?
+JMarsh: define an extension for use in 1.1 and 2.0 -- the question is what else goes into the conformance section - we recommend for interop that you use extension. Doesn't care if we also define feature, as long as he doesn't have to implement it.
+Hugo: lets assume we have lots of extensions, and we have some sort of processing model. It would be very handy to have a uri to describe the feature (lower case f)
+JMarsh: there is utility in defining the property
+
+Hugo: gets back to the proposal.
+   ... Wonders if scopes will have to be defined for these "properties" -- answer is yes. (Hugo sighs)
+   .. There is problem of conformance also.
+
+Mark: Wonders if definition of these properties in the core should really be a separate issue?
+JMarsh: wsdl sets some of the props, the mep sets more, there might be more at runtime
+Marc: Issue is how to put these props into the wsdl.
+
+Mark: discussion has focused on how to express -- whether to use extensibility syntax, etc. We had a straw poll which gives us an indication of how folks would like to proceed.
+   ... This obscures how these props are actually used, when to use them, what their scope is, etc.
+   ... We need to a way to name them. Could be SOAP 1.2 Properties.
+Marc: the minimum we need to do is to define uri's for these props for use in wsdl.
+
+Summary of Issues:
+    Props/features vs. extensions discussion
+    Semantics/syntax of what does it mean to use these props/extensions
+    What are the actual requirements, i.e. which props should be defined
+
+
+
+
+
+Topic: i022 - Relationship to the SOAP binding framework
+     Owner: Marc Hadley
+
+Topic: i033 - Reference to WSDL definition in an EPR
+     Owner: Rebecca Bergersen
+     Proposal:  
+<http://www.w3.org/mid/7ED3E4E1953E8C43BE701691ABB717DA40B1C2@amereast-ems2.boston.amer.iona.com>
+
+Topic: i027 - Pointing to WSDL location in EPRs
+     Owner: Anish Karmarkar
+
+Topic: i029 - Disallowing Faults
+     Owner: Harris Reynolds
+     2004-11-29: Harris to make a proposal for clarifying the text around wsa:FaultTo (WRT issue 029). Due 2004-12-07.
+
+Scribe: Yin Leng
+
+Topic: Issue 21
+
+Have discussion till 1:30  to get requirements for WSDL extension for addressing.
+Say addressing is in use, no more.
+Other extreme is detail language that describes in dynamic way how to use WSDL, and MEPs will also be used.
+Need then to give WSDL annotation.  Not actual capability to be described.
+
+Hugo: Proposal: Runtime vs. WSDL.
+Anish: At what level in WSDL, how do they compose, it may make sense to make reference to properties, for example.
+Hugo: in his email outlining proposal, destination, action, refpr and refpa are the suggested ones.
+Marc: REfpr and refpa are additional data about address. 
+JonM: Talking abt Use case where SOAP hdr are injected.
+JonM: If using SOAP, add extra hdr, addressing-like hdr. Seems like 2 types of wrappers being proposed, including that of ADF.
+JonM: Prefer injecting addressing hdrs, not have ADF also have wrappers.
+Anish: Refpr refpa fix the values that go into the msg, not just the schema.
+MarcH: If use hdrs, how do you know which are refpr and which refpa?
+Gudge: Refpr are static for a long time, they don't change, whereas refpa change (e.g. tran ID), some dynamic things won't go into the WSDL. Anish: Both refpr and refpa are dynamic.
+Gudge: what scope do we specify at? port level? port seems closest to EPR.  
+If at operation level, then could see parameters being put in
+
+MarkN: 1. What props should WSDL contain?  Which hdrs do we need props on?
+... - destination
+... - action
+... - refprop
+... - refparm
+
+... 2. What should you be able to do with these?
+... - What prop values should WSDL control?
+... - controlling presence?
+
+... 3. What scopes do they apply to?
+... - which WSDL contructs do they apply to?
+... - What is the scope of prop wrt MEP
+
+... - porttype/interface
+... - operations		(binding/interface)
+... - message (ref)		(binding/interface)
+... - port
+... - service
+
+
+Gudge: Some optional ones
+Anish: Also need to specify how they are composed
+Gudge: If specified at both port and operational level, then need to say which wins, i.e. the granularity of scope.
+
+Discussion on 1:
+Anish: why is relationship not included?
+Hugo: Relationship seems at a higher level.
+Tom: What is the criteria for why things are in EPR vs WSDL? MarkN: Find someone to lead this discussion
+
+ACTION: Anish (with Hugo's help) to lead discussion on Issue 21 (requirements).
+Hugo: We need to define SOAP extension too, 
+MarkN: Agreed, though there may be some pushback on making it a SOAP module.
+
+ACTION: MarkN to notify CG about status of this issue.
+
+Topic: Issue 22
+
+
+MarkN: related somewhat to issue 21. Want bounded discussion in relation to MEPs.
+Anish: would be nice if sending request as SOAP over HTTP, have response do the same SOAP over HTTP.
+MarkN: how much do we want to align with SOAP MEP?
+Anish: does the SOAP 1.2 binding require you to use response in the same http session?
+MarkN: need to address SOAP 1.1 as well as 1.2
+Glen: also problem with SOAP 1.2 does not support using the same http session.
+MarkN: Which use cases do we address in our deliverables?
+DavidO: Are some issues on SOAP 1.2, but not 1.1, so only need to solve with SOAP 1.2.
+Maybe it is possible that in the case of SOAP 1.2, we use WSDL 2.0; in SOAP 1.1 there is no working group on that.
+SOAP 1.2 is smaller in terms of granualarity of binding.
+Anish: 2 kinds of problems.
+... 1. The ability to receive a msg on a diff http mesg.
+... 2. How do we say that incoming msg is on http, but the response binding is dynamically decided by the sender of the msg.  Glen says could define a binding for that.
+... Need to think of problem at 2 levels. In summary:
+... 1. Use same transport for in and out.
+... 2. Use diff transport for in and out, and then need to specify new binding.
+
+DavidO: In WSDL, notion of the SOAP binding. Also, there are a number of diff SOAP bindings, related to the multiple SOAP http (in, out on same,diff transports) bindings.
+... If WS-Addr needs to introduce new SOAP bindings, should let WSDL SOAP binding add the bindings.
+Glen: could also use extensibility to do the work.
+
+MarkN: Can someone take this work?  Can SOAP 1.2 be supported?
+Gudge: Can we (gave example) effectively use SOAP as just a format, not as a protocol?
+Anish: Do we want to encourage people to overwrite the way SOAP 1.2 binding works by specifying something in WS-Addr? It will violate what SOAP http binding defines.  It is specifying changing the binding at message level, not operations level.
+JonM: We are doing standards extension to binding instead of doing binding re-work.  
+Anish: Need WSDL to specify things at msg level as opposed to operations level, so there is no need to specify multiple bindings for diff combinations of transport protocols for in and out, and can re-use.
+DavidO: If you know at design time what transport bindings you want, seems complex to add WSA extensions to do that.
+Glen: If you know at design time what you want, can use WSA extn (use one WSDL in-out MEP which is mapped to diff SOAP in-out MEPs) to specify the rules for what transports to use.
+MarkN: Need to decide on following options, also who does it?:
+... 1. Extend/override binding	- 
+... 2. create new binding		-
+... 3. silent			-
+... 4. don't know			-
+
+... Changed to straw poll on:
+... 1. get it nailed down, relation to SOAP binding needs to be specified - 16
+.... 2. leave it loose and sloppy, doesn't need to be specified - 0
+... 3. don't know - 2
+
+DavidO: need to have a number of common scenarios for this work, also the concern is wrt interoperability.
+Anish: need to address interop wrt reply-to.
+Glen: need to be taken care of before we go finals to make work of this WG really worthwhile.
+Paul: need to think of CR, therefore need the use cases, some lightweight use case document.
+ACTION: Harris will take on work on Test case document (with Hugo's help).
+ISSUE: The chair will open another issue about use cases for test cases.
+
+MarkN: Straw poll
+... 1. 12 that this is on critical path.
+... 2. 2 that this is not on critical path.
+
+Greg: RefPr and refpa have value in themselves.  Thee are also security considerations that have not been considered yet.  So suggesting maybe even a separate work on these areas.
+DavidO: async in relation to reply-to are important issues (as far as his company is concern) to be resolved.
+
+ACTION: DavidO to look at issue 22 and come up with a proposal.
+
+Topic: Issue 33
+
+Anish: Is PaulD's issue mainly that of cardinality of the WSDL 1.1 wrt to service Qname.
+SteveW:  Can you within a single EPR, have 2 descriptions, i.e. 2WSDL?
+Anish: If you describ using multiple ways, you better have same description.
+JonM: If you start with the message exchange, can describe in diff ways, WSDL 1.1, then later add compactible description using WSDL 2.0, using the same service QName.
+PaulD: Put a service up, push it to customer.  Then add more endpoints to the same service, with hdiff description in diff WSDL.  If msg interaction is the same, should not be diff QName.
+TomR: Old customers see old EPR, new customers may see both new and old.
+DavidO: Reality is not possible to have perfect description language.  So end up with iterations of description languages.  All diff descriptions, so identifier for description should not change just because of diff description format.
+Anish: Should schema be changed?
+DavidO: Changing QName is major change.
+TomR: Don't want 2 incompactible service IDs being referred to by 2 WSDLs.
+Anish: Clarification Q.  Can the URI or reference point to service doc which contains n number of services?  Is that a co-constraint?
+MarkN: No constraint.
+DavidO: Issue 27 is about adding WSDL location.  33?
+Rebecca: 33 is about being able to find WSDL for a particular service element, also get context , the whole document.  Have a late binding, received a msg in intermediary, then need to change transport to pass msg on.  So need context to pull this thing together.  
+Now there are diff issues (issue 27).  Now I think 33 and 27 are the same issue.
+PaulD: The word "link" which is loose and free, which causes a problem for understanding.
+DavidO: Should there be a friendly amendment to use "WSDL location"?
+Reb: Didn't want to use reference (too overloaded).  Pointer is too vague.
+JonM: WSDL locations are links. 
+
+MarkN: Do we have a number of places where hints/links are required?
+... Do we need to identify the links?
+... Do we provide a dialect to hint at what is at the other end of the link?
+JonM: Maybe we need only to say whether it is WSDL 1.1. or WSDL 2.0, not full dialect?
+
+... <EPR>
+...	<wsdl:servicedefinition> URI </wsdl:servicedefinition>
+
+...	<extensible>
+
+... <EPR>
+
+Question is cardinality of <wsdl:servicedefinition>? Is it 0, 1, or ...?
+
+Hugo: Is this specified in Core spec or WSDL binding spec?
+Reb: Core.
+Hugo: seems strange, it is not WSDL-version independent.
+Propose service definition document can be pointed to, but document can be anything.
+SteveW: Define type of document to give hint of what the document contains.
+Anish: Why can't we say something specific to WSDL without being specific to WSDL version?
+Hugo: Thought we wanted to do something for WSDL 1.1, something for WSDL2.0, so thought wanted something specific to WSDL version.
+
+JonM: propose that WSD WG do:
+... <EPR>
+... <wsdl:servicedefinition> URI </wsdl:servicedefinition>
+... <wsa:service wsdli:wsdllocation="xx xx"> (these xx xx refer to pair of data)
+... <extensible>
+... <EPR>
+
+Anish: propose that WSD WG do:
+... <EPR>
+...	<wsdl:servicedefinition> URI </wsdl:servicedefinition>
+
+...	<wsa:portType wsdli:wsdllocation="xx xx">
+...	<wsa:service wsdli:wsdllocation="xx xx">
+
+...	<extensible>
+
+... <EPR>
+
+
+
+ACTION: JonathanM (with Rebecca) to write this up, and write proposal for issue 33.
+
+Topic: Issue 29
+
+Gudge: What is this issue trying to solve?  Don't give me those faults?  If I can't receive faults, and someone sends me faults, I can't receive it, so what? If you don't want to receive faults, just don't provide the EPRs.
+Anish: So you say out of scope.
+Gudge: Yes
+SteveW: Is the spec text saying a processing model.
+Gudge: I don't think the spec is trying to define a processing model.
+
+Anish: propose remove text about fault sending other than that related to explicit [fault endpoint] being present. Silent on what you want to do if [fault endpoint] absent. 
+Gudge: Wants to run things past Paco before change.
+
+
+MarkN: The approach is to
+... 1. Remove text	12
+... 2. Clarify text	5
+... 3. Don't care	2
+
+RESOLUTION : Close issue i029.
+ACTION: Editors to change text: "When present" to be added to second sentence of [fault endpoint] of Section 3 of Core - When formulating a fault message as defined in Section 3.2 and 4, the sender MUST use the contens of the [fault endpoint] when present, of the message being replied to formulate the fault message.
+
+ACTION: Editors to remove third and fourth and fifth sentences of [fault endpoint] of Section 3 of Core - If the [fault endpoint] is absent, the sender MAY use the contents of the [reply endpoint] to formulate the fault message.  If both the [fault endpoint] and [reply endpoi t] are absent, the sender MAY use the contents of the [source endpoint] to formulate the fault message.  This property may be absent if the sender cannot receive fault messages (e.g. is a one-way application mesage).
+ACTION: Editors to edit [reply endpoint] to reflect similar changes.
+
+ACTION: MarkH to raise a new issue to consider the processing model for our SOAP faults.  (See relevant sentences of Section 3 of SOAP Binding.)
+
+Question:  Is this a SOAP fault?
+TomR: We need to define what we mean by fault.  Specifying SOAP fault is one way.  Or WSDL fault.
+MarkN: Do we need to define some sort of defnull semantics? 0
+... Who is against going down this path? majority
+
+Topic: Issue 38
+
+Gudge has sent an email with a proposal today.  Gudge will print it out now.
+
+Date: 8 December 2004
+
+Scribe: Harris
+
+mnot: Recap of previous day, plan for covering issues today
+
+Topic: i038 discussion
+
+paco: asks for clarification on Gudges perspective;
+tom: everyone has different interpretations;  Q. How do you know when to use this ReplyTo in the future wo/ a contract?? Tom thinks it'd be a good idea to have a contract specifying when to use a Reply.
+Marc: doesn't think Gudge's proposal goes far enough; it doesn't give rules about when I get a replyto what does that exactly mean.
+mnot: Do we want to nail down this issue or wait to solve issue 021
+tom:  The tricky part is the replyto is a completely different service; do we need some wsdl ornamentation to clarify this
+paco: WSDL is not the only part of the contract.  What about BPEL?  This is also a contract with partnerlinks, etc.
+davidO:  it at least supports the WSDL meps, but could be broader as well.
+melder:  Do we need to resolve this?
+mnot:  agree... what does this mean for our spec?
+marc: how does this relate to i021?  How far are we going to go specifying the detail of replyto.
+paco: we can specify this explicitly for WSDL meps, but admit other possibilities
+mnot: for i021 hugo and anish will look at properties/wsdl extensions... the next steps is to go beyond i021... there is some orthoganality between these two issues
+tom:  I assumed the replyto was for an asynch callback.
+marc: Q. If I send you a message with a ReplyTo, what would you do?
+gudge: the reply should be a correlated message with an id
+mnot: the replyto is a soap header... is there a processing model for the node receiving it?
+gudge: if you are doing a wsdl20 mep... it tells you where to send the message.
+mnot:  is there a processing semantic?
+anish: depends on the context
+gudge: if you are doing an in/out mep the replyto tells you where to send the response
+anish: in the context of an MEP you would know what to do with replyto.
+marc:  I dont' want to disallow anything, I just want this to be clear.
+anish: we can specify exactly how this works for the MEPs we are responsible for
+marc: it is loosey-goosey now what happens in the default case; what about a better default.
+tom: the PO I send would have a reply to that would receive the invoice.  Should the infrstructure remember replyto for months?
+gudge: wsa is pipes, elbows... stuff to build plumbing;
+melder:  1) don't say anyting about reply to, 2) specify one or more ways to use reply 3) there is just ONE way to use replyto
+gudge: a variation on 2 is to make it context dependent on MEP
+gudge: in general in SOAP you can ingore stuff you dont' understand
+mnot: moving forward... do we need to add clarification in spec?  do we describe this in WSDL? in SOAP MEPs?  I'm concerned
+mnot: we need to reconcile what is in CVS regarding the variance in drafts between editors;  
+marc: editors need to go through WSDL document to clarify this
+marc: the core needs to be clarified as well
+paco: the core needs to contain statment about using replyto based on context
+ACTION: Paco to clarify the nature of the properties in the core
+mnot: regarding wsdl binding;  should editors work on resolving this?
+ACTION: editors to create proposal and incorporate into drafts (in two weeks)
+jmarsh: what exactly are we adding to wsdl binding?
+marc: clarification of using replyto for MEPs
+
+Topic: i028 discussion
+mnot: similar issue, if we can conclude i038 that should take care of this
+jmarsh: then can we close this issue
+mnot: objection to closing this issue?
+no objection - ISSUE CLOSED
+RESOLUTION: i028 closed
+
+Topic: i034 discussion (also discussion about making it mandatory)
+mnot: this is talking about how you calculate the default action from WSDL, esp when they conflict
+hugo: proposal not to have defaults... make it explicit in WSDL;  should discuss whether action is manditory.
+tom: I like conditional instead of optional;  if it is in WSDL is must be on the wire
+mnot: three places for action... in WSDL, on the wire, and if it isn't on the wire the default could appear as a property
+tom: action shouldn't be mandatory if wsdl is designed not to need it
+
+mnot: Core says action is mandatory (i031); WSDL spec... some MEPs will say action mandatory for default (i034); in SOAP layer...
+tom: clients want to use messages the same way they do today (with "action" as first child of soap body)
+gudge: do you really need to use ws addressing in this case?
+tom: my EPR only has a url... I want minimal behavior;
+gudge: how is EPR transmitted?  EPRs in application layer
+tom: why do you need extra action?  EPRs communicated via configuration, bath room walls
+anish: flip question around;  why does it need to be manatory?
+marc: implementations work this way today
+jmarsh: how do you distinguish between the two arguments here
+tom: we need the replyto
+hugo: action is important because it allows reusing the exact same message to different operations
+marc: action discussion is religious, not technical;  soap-action redux.  service can require it or not.
+paco: migration from legacy web services to new services;  should we drive the discussion based on the past?  that may be short-sighted.  by putting action in spec we simplify the situation.  now is the time to fix this.
+marc: the client just does what it is told
+paco: this doesnt seem like the right way to go... action is clean and nice, removing need to crack open the message
+gudge: I don't disagree with marc... you can build services without action. our concerns are that there are cases when you can't see the body (intermediary, body encrypted), and action allows dispatch.  Higher levels protocols can make action manatory... my concern is bifurcating the stack implementations
+marc: the service decides
+gudge: we think there are more things that may need it besides service
+davidO: related to soap-action... my problem is that an http header was created irrespective of SOAP; so a soap stack couldn't always expect it was there;  therefore it was stuffed into the body... this lead us to the rpc styly we have today.  We have the opportunity to define the mandatory header block so soap stacks have a centralized place to have this information
+anish: service designer can put action it
+davidO: by requiring action, we can build cleaner applications (intermediaries, dispatchers, etc.).  The soap-action is not exactly the same;  one argument is that people will put garbage in action... that is okay.  Like putting garbage into zip code on html form.. if it is required you can dispatch info to sales... even if some data is invalid
+marc: I think this analogy is invalid
+davidO: since it is mandatory it allows dispatching;  if optional 25% of people give zip; if valid 95% of info is valid which is better;
+anish: what about i023... making service qname required?  same argument... "our stacks don't need it"; this discussion is bizarre;
+greg: this is partly a business decision; lots of companies are making $$ with this stuff... with action mandatory this is more simple.
+marc: this assumes companies are dispatching on action;  spec says action is used for dispatch;
+tom: this is religion.  this is great for those that want it... it should be conditional.
+steve: we have these same factions in SAP; this is hard, but making it mandatory leads us in the right path, but adding garbage to it is a bad idea;  we use a mechanism like anonymous that you can ignore.
+Rob: the don't ask, don't tell policy
+davidO: the web was successful b/c of constraints: 1) set of verbs, notably GET 2) always uri 3) self-describing data.  It could have said all this stuff was optional etc. Fielding mentions visibilitiy... action provides this.
+rebecca: to steve... you are putting in special values... isn't that about the same as not having a value?
+steve: yes, but w/ it mandatory it simplifies the stack
+glen: if you put a value in a required data item... expectations need to be set for interoperability
+steve: I don't disagree... what about a middle ground with action that won't be used
+davidO: like a null action
+marc: re use of action with soap faults: is action fundamental to soap or layered on top?
+glen: I think action is layered on top
+marc: it isn't very optional to some
+mnot: has anyone's mind changed?
+
+... straw poll: should action be mandatory?
+... status quo:	13
+... relax req.:	6
+... not sure:	0
+... straw poll from last telecon was much different
+
+mnot: we are making progress (assuming people are keeping an open mind); discuss w3c procedure regarding votes/process;
+hugo: would people object?
+
+mnot: call to order;  in a week the positions flipped;  should we move forward to resolve this?
+paul: I changed my mind;  it makes sense architecturally to make it mandatory, but others can put garbage in
+anish: mark little has strong feelings
+tom: not sure if I'll be filing an objection
+anish: we should give notice on votes
+mnot: this f2f was advertised for weeks
+davidO: quotes mLittle reqarding his position
+mnot: I am touched by our "togetherness"
+mnot: Does anyone object to maintaining status quo (formally)?
+mnot: formal vote - 9 Y, 5 N, 1 abstain
+mnot: of the 5 voting no, will anyone file a formal objection? [it doesn't seem so]
+mnot: resolves this issue (031) with status quo
+
+Topic: Back to i034 (defaulting of action)
+
+mnot: anish is the owner
+rebecca: you need a value if it is mandatory that we all agree on for interop;
+hugo: this issue came about from abstracting spec out of WSDL; ideally we'd have the same action for the default regardless of description; we need to state this explicity; bottom line: will we have to add this to WSDL everytime? This is a tool kit problem; this should be explicit in the WSDL.
+anish: I pointed out the same problem of determining which WSDL version is being used.  A default could be based on WSDL version.
+paco: if I publish a service via wsdl11 and use a wsdl20 desc;  default doesn't cause a problem;
+anish: artifacts in both wsdl could be the same.
+tom: are you allowed to use wsa addressig with existing wsdl?  if so we need a default?
+marc: why not just us the anonymous action?
+jmarsh: today with wsa action embedded in wsdl it means you support it but don't require it
+tom: client doesn't have to change, but infrastructure will handle it;
+glen: the server is what will need this and it would have to change to start using wsa.
+marc: it seems neater if there isn't a default;  but I still like a default.
+hugo: the default is good enough;  if you  want an action it should be explicit. (there are many ways to default);  static algorithm vs dynamic algorithm based on wsdl for determining wsa action;
+straw poll
+... do we need dynamic algorithm?
+... In general the answer seemed to be yes.
+jmarsh: do we want to specifiy this action in the WSDL (hopefully unique per operation).
+glen: it is possible to have multiple wsdls pointing to same place.
+paul: http soap-action is optional today.
+anish: if soap-action is in WSDL it must be in http header
+rebecca: is there a situation when it isn't in WSDL?
+anish: given that it is mandatory, providing an algorithm that would generate a unique URI for each type of message would be very useful.
+mnot: that is what we have now; although we need to consider the impact if wsdl versions are different.
+marc: I agree with Anish, we need a psuedo identifier (as unique as possible). This provides the semantics of the message.  Algorithm should be based on message itself.
+rebecca: in gudge's email: action can have the same value in many messages
+tom: a default algorithm per type of message.
+anish: how would we go about this per message type without relying on the description format
+jonathan: it is okay to have different algorithms, but we can create one that will work for both wsdl versions; would you change the target namespace for a new wsdl20 description
+anish: yes... I'd change ns
+jmarsh: in 80% case it would be the same
+mnot: we can't guarantee that with two wsdl version the action would be the same? is this true?
+marc: it should be based on messages; people want to use action to see what is in message;
+paco: I disagree... about a PO message being used in different cases;
+marc: all the industry schemas dont work this way.
+mnot: two ways we could go: base it on message type or base it on a desc artifact;
+anish: clarification for marc... where would you get what is in a message type?
+marc: we know what will go in soap header and body... can we munge those to get the default?
+anish: how do you definitely say what the default value?  
+mnot: let's get a sense on who wants to explore this direction (message type algorithm)? [a couple people are interested]
+paul: are we defaulting to global definition? with a hash?
+glen: why wouldn't we just want to default to the empty string?  why would that be a bad idea?
+marc: so you wouldn't need to look in body
+glen: in those cases the service provider would put the action in there (why do we care how they derive that?)
+mnot: three options: 1) based on message type, 2) based on description, 3) do something static?
+
+... STRAW POLL (can vote more than once):
+... 1) 9 votes
+... 2) 15 votes
+... 3) 6 votes
+
+mnot: marc, would you like a proposal? 
+marc: I don't want to waste my time since most are interested in the description approach
+mnot: let's take that off the table until someone is willing to do a proposal?
+mnot: glen, are you still interested in this?
+glen: yes
+tom: but this approach takes away the benefits of making it mandatory.
+glen: coupling between endpoints and intermediaries is problematic; what is the argument against a static value?
+gudge: a defaulting algorithm allows people to use existing wsdls
+glen: does the wsdl have action values? 
+gudge: no
+glen: then they don't care.
+mnot: we rearguing the point about optionality?
+glen: I really want to know the rationale??
+steve: it is a psuedo-optional value if it is static, but is is nice to have an explicit place to know who to do what you are going to do.
+mnot: we are leaning toward using the desc artifacts. jmarsh mentioned a couple ways to do that: use the status quo and port if forward to wsdl20.
+hugo: the spec says the action identifies the message
+paco: it identifies uniquely the action identifier, not the message
+jeff: what are the cases where you use a different action with the same wsdl? [you wouldn't]
+marc: with different namespaces you'd get different actions
+jeff: that is okay... I could have corba idl, wsdl, etc.
+jmarsh: you could have the same service with two wsdls for 1.1 and 2.0
+steve: +1 to hugos comment about tools handling this
+
+mnot: options: 1) take wsdl 1.1 forward to 2.0  2) take wsdl 2.0 to 1.1  3) separate the two
+
+davidO: have we seen what #2 would look like?  I'd like to see that.
+hugo: I would vote for #2 b/c: wsdl20 already has an algorithm (a uri that is dereferenceable)
+gudge: another approach... have the wsdl wg change their component designators
+
+Straw Poll:
+... 1) 11
+... 2) 8
+... 3) 0
+
+[sigh of relief that no one voted for three]
+jmarsh: I submitted a proposal for this #1 (responding to Hugo).
+jmarsh presents proposal: Take existing values from 11 desc and look at 20 desc and extract the corresponding values;  this also maps the MEPs between wsdl 11 and 20.
+gudge: your degree of confidence is high?
+jmarsh: yes, I think it will work
+mnot: when we go to CR, would we have test cases that would test equivalence?
+anish: if an extension MEP is used then the algorithm would break; this would work for existing MEP, but we may need to extend for custom
+gudge: the important part is mapping between the two version of WSDL; so for a new MEP in wsdl 20 why map it to wsdl 11?
+ACTION: Hugo to come up with a proposal for #2.
+marc: does this cause us to be dependent on wsdl 20?
+mnot: we have that already because we must have wsdl 20 bindings.
+jmarsh: discusses dependency on wsdl 20 wg.
+gudge: the wsdl rec is a little behind the other specs anyway
+mnot: can this be done by tomorrow?
+hugo: yes
+
+Scribe: Steve Winkler
+
+Note: I tried to capture as much of this as possible, but sometimes the dicussion became heated and went to fast or involved whiteboarding that was hard to capture.  I've marked below places where I was pretty sure I missed something and it would be helpful if those people could clarify (if the can remember) what they meant.
+
+Note: Also, there were 2 marks present and I may have mixed them up, so if you feel that you've been misquoted, please let me know.
+
+Topic: ISSUE i001 - EPRs vs Identifiers
+
+Possible solution proposals: 
+
+DaveO: Explain the tradeoffs of EPRs versus URis and justify why we really need identifers in EPRs.
+
+Paco: They aren't identifiers and we need to change language to reflect that EPRs don't have identity properties.
+
+Hugo: We should get rid of ref props and their functions as identifiers.  
+
+Tom: Can I get some clarification, are ref params a part of this discussion?
+
+Jeff: The only difference between refprops and refparams is that you are allowed to use one in identity comparison.
+
+Paco: The spec states props change the metadata and params don't.  This has nothing to do with identity.
+
+DaveO:  Params can also be used as part of an identification structure, but WSA is written such that the things you look at, like metadata doesn't change.  Users might claim that a particular param identifies an instance, but within their own implementation.  So they will be used as identifiers, but within the implementation.
+
+MarkN: section 2.1 sentence ends 'being conveyed' which is confusing and should be looked at later.
+
+hugo: ref params not used for identification, with the way the spec is written, so I don't have a problem with ref params.
+
+Paco:  If params don't identify, you don't have an issue...
+
+Tom: Different params can indicate diff resources, but not different metadata. ref props help you find the type, and params help you find a different instance, and both are valid.
+
+DaveO: I agree, this will be used to identify instances, primarily within the context of state.
+
+Tom: Different props indicate different schema, this is confusing to me. 
+
+Paco: If the props are different you can't assume that the schema is the same.  It's not necessarily different, but you can't assume that it's the same.
+
+MarcH: What are the implicatiosn of whether they are an identifier or not?
+
+Paco: If they are, we assume that TAG will have a problem.
+
+MarcH: But what is the technical difference?
+
+Paco: If they are identifiers they have to be unique, comparision has to result in (in)/equality and in the main EPR use cases this assumption would be wrong.  If EPRs are different in comparison, then they should point to different resources.
+
+Bob: You can prove equality, but not inequality.
+
+MarkN: Paco is saying EPRs add to the web arch that you can have 2 EPRs that point to the same thing?  
+
+Paco: The TAG assumes this may happen, but they try to avoid this.  With EPRs in our spec we want to do this.  URIs are not being used as identifiers in practical use, they don't imply identity.  
+
+DaveO: Web arch says that as a service provider, if you use aliasing, problems may result.  If you want to have 2 structures for the same thing, that's a feature.
+
+Paco: If we say EPRs are identifiers, they will be compared and wrong conclusions will be drawn because they're not implying identity.
+
+Paul: A URI gets me to a resource, and a different URI gets me to the same resource, but it doesn't get me to a diff resource.  It's a many to one.
+
+Paco: Web arch says that it's not desirable to have multiple URIs pointing to one resource because you lose identity.
+
+Paul: It's not really an address, but it's directions how to get there.  It was a place to send messages, but you had no assumption as to who was going to receive the message at the address.
+
+Jeff: It depends on the comparison function.
+
+Paco: Through comparison we need to be able to identify.
+
+MarkN: So you're raising the bar, and saying even though the web allows this, we shouldn't.
+
+Paco: If you have 2 pointers to the same thing, they aren't as valuable as if you had 1 and only 1. 
+
+Jeff: Let's go back to first prinicples - an identity is an equivalence relation.  You have i1 and i2 and some function sameAs which returns a boolean.  boolean identity = sameAs(i1, i2);
+
+Gudge: Isn't the result of the function really yes, or 'don't know' and not really a boolean.
+
+Jeff: In a true identiy it should be a boolean, but this sameAs method is context dependent. E.g. a replication servicehands out services etc., clients of the replication service must consult some delphi to find out that two received services are the same, but if you consult the replicant service, they aren't.  The context is provided by where you do your consultation.  You have to consult somebody, a factory or a table or something.
+
+Paco: I agree, but you have to define the consultation method, otherwise this is broken.  
+
+Jeff: As a client, I aquire 2 structures and I want to determine if they are references or if they identify the same thing and I need to ask somebody to find out.
+
+Paco:  But since we're not going to provide that here, we should refrain from doing this.
+
+DaveO: But the web arch works good enough, so we don't really need...
+
+ScribeNote: Sorry, the discussion was moving fast and I lost the thread here.
+
+Anish: Paco doens't want EPRs to be identifiers because he doesn't want people comparing EPRs, but the spec says how to do this.
+
+Paco: But not for identity. It's misleading to call these identifiers.
+
+MarkN: The reason we need props is that they identify a context, so I'm not sure this will get us anywhere.
+
+Jonathon:  There is no universal comparison for namespaces, you do it char for char, but that doesn't necessarily guarantee what they point to.  
+
+DaveO:  If a website issues a.org:80/index.html and it issues a.org, within the server they can be the same resource.  They are different ids.  That is the comparison function (string comp).  They identify the same resource on the server, but the strings are different.  What are the downsides?  When a comparison for equality is made they get a no answer, the server pays the price.  Say you are cacheing, the server has to do 2x the work.  You want the identities to be the same is so that the comparison can be true, and they can offload the work.  This is why the webarch doc says that this is dangerous, but it might  be ok, and this is why the web works relatively well and we didn't need to provide a compare method.  We could have done this canonically but we didn't because it's in the interest of the URI provider.  If you want to say that an EPR is an id, what is an id?  The reason you do a comparison is that you want to know that they are not equal.  If we say you can compare the EPRs using our compare method and they are different things --> if it hurts, don't do it.  
+
+Paco: So your point is that the server has perogative and interest in ensuring the ids provide value, what about the clients?
+
+Jeff:  The client would like to know that they aren't paying the same person 2x when paying a list.  Also, EPRs are aquired from different resources, but maybe the resources may be accessed via several hops.  
+
+Glen: I like a lot of what Paco was saying.  It's not really a good idea to think about these as identifiers, but the wording around params and props seems to do exactly that, which makes hugos argument interesting.
+
+Paco: The infrastructure can do what they want, but I was trying to make clear to clients what they can expect when they compare EPRs. 
+
+Tom: Just for clarification, are both params and props used for comparison?
+
+Paco: There is no comparison of that kind. 
+
+Dims: In this discussion, are params and props the same thing?  
+
+Paco: There is a question between params and props but let's separate that issue from this discussion.
+
+Gudge: (Writes a complicated table on the board)
+
+Gudge: Compares several use cases: http://lists.w3.org/Archives/Public/public-ws-addressing/2004Dec/0084.html
+
+... same metadata 1, 2, 3
+... same serialization 2, 3
+... different metadata 4?
+... same identity 2,3, 1?, 4?
+
+Steve: (waves hands in frustration and gives up - sorry gudge, I couldn't quite get all of this)
+
+Gudge: What's the answer for 2,3 for same identity.  What it comes down to is what is an identifer?
+
+Paco: We don't need to answer this, 2, 3 are out of scope.
+
+Anish: (adds porttype service qname, policy, etc to complicate table) 
+
+Anich: Are 2 and 3 are still the same EPR?
+
+Gudge: yes, whatever that resource is supports A and B.
+
+Hugo: My interpretation is that 1,2,3 are the same endpoint processing things that would be called a service. 
+
+DaveO; The EPR minter should not issue EPRS 2 and 3 with different policy statements or port types if they expect that people will be comparing them for equality.
+
+Greg: Who is to say that policy doesn't specify that defines whether to use P or Q, it may be the superset of all of thethings to be used.
+
+Anish: What does an EPR represent?
+
+Greg: It represents how to get somewhere and policy tells.
+
+Gudge: EPR defines what to put in the to and the headers when you want to send a message to that EPR.
+
+Hugo: Why do we have a diff between prop/param?
+
+Gudge: Because we know certain things about metadata if one is the same.
+
+Paco: Metadata, policy, etc., needs to be linked to the EPR so that the client can know what they need to comunicate with an EPR.  Metadata can't capture all runtime dynamic stuff, this won't be in the WSDL.  
+
+Jeff: Is TID part of that identity or not?
+
+ACTION: Gudge to redraw his chart with more columns, put some text around it, and put it on the public list for discussion via email.
+
+Tom: I'm confused about why portype is in there if it doesn't really matter?  If there's a difference in parts of the ERP and this is important to identity, this needs to be clarified but that's not how I originally read it.
+
+Bob: Fundamentally the only thing that matters is the behaviour of what is behind the EPR.  Jeff said that in some systems you have an authoritative source to consult, or multiple, but in this case you only have the thing you are accessing.  There is no way to compare the behaviour of 2 or 3 EPRs.  My concern is that we're not going to be able to get through the issue of bit/bit comparisons to absolutely properly test the identity.  The service itself needs to come up with a way to declare its own behaviour, e.g. a behavorial serial number or guid that could be returned and this could be compared, but there's no way short of that to do this with EPRs in today's state.
+
+Jeff: What is the contract that you make when you hand out EPRs.  What are the contracts? Conclusions can you draw?
+
+Gudge: Why do you have to compare things to be able to use it?
+
+Jeff: You don't, it depends on what you want to do - reference to Jeff's previous payment example.
+
+Harris: The server knows what to do when it receives to requests with different URIs to the same resource, the service should know what to do. Discussion could be moot
+
+Paco: But it's the client that needs to know.
+
+Harris: But props are opaque. 
+
+Paul:  We're doing this because we've got to go before the judge.  Pacos saying we're guilty and Dave is saying we're guilty with mitigating circumstances. In essence, I think of an EPR as a to address or a mail header, but there's a bunch of other stuff that we send with it.  I make no assumption about the content, but the recipient should be able to know what to do with it.  We're just giving people drirections where to post.  Action is another part of this, but why aren't we concerned about this for routing?
+
+Mark: it's a URI ;-)
+
+
+Topic: Dave's approach to the issue i001.
+
+DaveO: In reference to web arch, we can look at: extensibility defined in webarch.  Defined based on get in http.  Costs due to introducing new id mechanisms, benefits must be high to do so. URI spec defines a resource to be anything that can be identified by a resource. They just didn't want to use 'things'. 
+
+MarkN: Interesting history, when TBL took this to IETF, it was universal resource id, and now it's uniform resource id, due to pushback from IETF.
+
+DaveO: We don't need to say what an EPR identifies, we just need to figure out whether it is used as an identifier.  the member submission, dyanmic, id and descr of service instances, etc. etc. (see email).
+
+DaveO: It's important to note that webarch doesn't discuss stateful vs stateless, leaves open/extensible, nor does it discuss cookies.  It also doesn't talk about post results, they're not ided by uris. I'll try to focus on EPRs with props/params, but there are obvious parallels to http cookies.  The same kind of benefits will apply.
+
+Let's say they are ids, let's show the costs/benefits. 
+
+All of this is in Dave's proposal email so I'm not going to retype it here.  
+
+Mark: Please limit questions to clarification at this point.
+
+Anish: Scalability, essentially they are the same, but visibility they are different.  It seeems to me that visibility will affect scalabiltiy ,especially because refps are supposed to be opaque.  
+
+DaveO: Scalability is how many additional components that can interact with me.  
+
+Anish:  What I'm looking at is, if it's just a URI which isn't necessarily opaque, the ability it gives me is that I don't have to go back to the original minter and I can just use the URI.  With respect to EPRS, given the opacity of refps it prevents me from changing anything in the EPR and reusing it.  That's the scalability I'm looking at.
+
+DaveO: The EPR portion of the spec doesn't provide any authoritative URI description as well, so it's opaque to. 
+
+Anish: If WS-A were to make the same statement as web arch with respect to authortative metadata for creating URIs with EPRs...
+
+DaveO: Someone could provide an extension stating explicitly how they are filling refps, and constructing eprs so users would know.  As it stands we don't do that in the spec so it's opaque. 
+
+Anish: I'm disallowed from providing you the additional information, that's how I read the spec.  With URIs that's not the case.  With refps we explictly block this.
+
+DaveO: Isn't that what WS-RF is doing?
+
+Paco: If you're a client and you get an EPR, WS-A says you don't know how they are constructed.
+
+Anish: The spec explicitly calls out that this is opaque and you're not allowed to describe it.  I just want to be clear on this point, but it's not a deal breaker. 
+
+MarcH: Can we talk security? I'm not sure what you're saying, can you encrypt or sign a portion?
+
+Dave: Yes, visibility is a 2 edge sword.  If you selectively encrypt/sign EPRs or parts of EPRs you can gain utility. It's similar to HTTP GET vs HTTP POST. Post allows you to hide user/pass whereas GET puts it in the uri and makes it visible.
+
+MarcH: But you do that anyway with the To header.
+
+Dave: You're saying that the To header is part of the message anyway.  
+
+MarcH: Do you have a specific use case where you want to sign/encrypt a particular part?
+
+Dave: good point.
+
+Tom: In the examples, the variants are different, would these differences be reflected in the WSDL?
+
+DaveO: The interfaces are the same, the difference is in the deployment.  You're deploying them at effectively different addresses.  
+
+Tom: The second one, all three ports have the same address.
+
+DaveO: In the second, you have one piece of software that manages all parts.  This brings up a significant advantage, in that you take advanatge of the soap processing model, so you can look at the headers easily.  You can write a really easy Xpath to find what you're looking for, but we don't have a structured library to find soemtihng like this in a URI.  We get kind of a preprocessor and don't have to microparse.   
+
+Yinling: Additional cost is also echoing ref p. Is this because of that specific scenario, or is it for all refps?
+
+DaveO: The incremental cost is that you have to echo it.  You still have to understand replyto, etc., but I'm still going to have my soap model, etc.  
+
+YinLing: You may have other scenarios where you don't require echoing.
+
+DaveO: Yes, but if it's a required part of WSA then if you get a EPR from me that has, you have to support it.
+
+MarkN: Ok, so we've got 3 characters from proposal 1 ->  
+... Hugo=guilty with execution.
+... Dave=it's only manslaughter.
+... Paco=the glove doesn't fit.
+
+... Straw poll: Are we identifying something with an EPR?
+... Yes: 9
+... No: 5
+... Unsure: 3
+
+MarkN: Should we go forward with issue 1 by structuring a comparison between EPRs and identifiers, or go forward by changing the language of the spec to reflect that they aren't identifiers, or both?
+
+DaveO; The address field might be different.  What happens when everything is different and the message still gets routed to the same resource/piece of software?  If it is an identifier, what is it identifying?  It is not identifying the resource, it is identifying the protocol and the information necessary to access it.  It's further towards the client and you don't want that comparison.  It's somewhat of an access channel.
+
+Hugo: Whatever we call it, I think it's an identifier. We're only focusing on webservices use.  How could I use this not in the context of a soap message, e.g. to make assertions, etc. Address and identifier is the same for me.  
+
+Jeff: EPRs are used for a lot more than the mechanical comparisons that paul mentioned.  People are going to hand out EPRs and they'll get passed around, they contain metadata and whole lot of other stuff, much more than how to put the message on the wire.  If we want automated systems to do pass these around and represent web services, with state, then we have to provide the sameAs function.  
+
+Paul: The reason behind the discussion is that we're using EPRs for 2 reasons.  One is passing around headers, etc., and another is for identification.  What if we split this, would that help?
+
+Jeff: In a distributed system that doesn't work.
+
+
+Straw Poll: Who thinks we need to tackle identity problem? 
+... Yes: 9
+... No: 9
+... don't know: 2
+
+Jeff: I'm interesting in doing something concrete.  I just want answers.
+
+Tom: The concept of an address needs props, params, and action. There are additional things you need but not for dispatching.  Gudge said these 3 go on the wire.  The problem is that we're using the word address for only one of these definitions.  The fact that the spec only uses refprops is another point.  
+
+Harris: The only Use case I've heard so far for comparison is for cacheing.  I'd like to hear about comparing 2 EPRs for identity.  
+
+Glen: Hugos question should be addressed before this one.  If we resolve that by removing refprops then this issue might go away.  WSDL has the same issues exactly.  They have a model, these are services, these are endpoints.  EPR is based on endpoint, so we should describe EPRs in the same detail and granularity that WSDL does.
+
+MarcH: Getting back to the EPR comparison function that Jeff mentioned.  I think this would be simple.  Define a porttype that every WS-A capable service has to implement to provide the comparison.  
+
+Anish: It would improve interopability.
+
+Gudge:  My question to jeff is, are we trying to deteremine if 2 EPRs are the same or the thing that is addressed by the EPRs is the same.  
+
+Jeff: The latter, but note that sameness is context dependent.  reference the earlier behavioral discussion from bob and replicator dicussion from jeff.
+
+MarkN: If you don't know those contexts, how can you define them?  Why do we need to define them?
+
+Gudge: The big problem is that half of us thinks the former and half of us thinks the latter.  If I do a bit comparison for 1 and 2 and they are the same, I don't need to re-retrieve metadata for 2.
+
+DaveO:  Use Case -- Got tx service at A, has some method createContext.  
+... 1. A
+... 2. A with refprop=foo.
+
+Receiver says, ah, there's a difference, so there may be different metadata.  The interface could be different.  One could be createContext the other could be the 2phase commit protocol. 
+
+Harris: refprop is opaque, so he doesn't know.
+
+DaveO: but if he's going to do something, and he knows the metadata is different, he may need to do something different, but that's out side of the scope here. ... 3. A with refprop=foo, refparam=dave.
+
+Interesting comparison in 2 if he gets 2 EPRs back with different refprops and he (the client) can choose.  When 1 gave back 2 he said that both were equal, resulting in an effective sameAs function.  It's an implicit compare instead of explicit.
+
+Jeff: I think there are cases where you need explicit.  Say you get the 2 EPRs in line 2 from 2 different services A1 and A2.
+
+Dave: I described bifurcation, 1 -> 2, and you're talking about unification, going from 2 -> 1 and I'm struggling with that.
+
+MarkN: This is the use case (daveos bifurcation) that motivates the current design.  Hugos suggestion invalidates this usecase.
+
+Anish: +1 to glen about us defining EPRs and WSDL defining endpoints.  We need to look at that.  
+
+Paco:  Glen was saying if we go with hugo this issue goes away.  That's not true.  It doesn't deal with our requirements, and it doesn't help with identity and we're just stuck with URIs -> web arch.  The other thing about Tom and action, we have a set of messages, and we can address multiple messages to an endpoint, this is why action is not part of an address. 
+
+Rebecca: First, an aside - action for dispatching implies that it is part of identity.  Next my real point - It seems that there are 4 basic terms of identity; 1. They are the same on the wire format. 2. Identity meant using the same channel to get to a service, which means assuming the same processing.  3. Identity meaning same service, in a distributed environement that could be in different places, but doing the same thing.  4. Identity can mean the same code, so you end up at the exact same code place.  You're never going to get these 4 unified, so why don't we have 4 compare methods, one for each. 
+
+MarkN: follow on question - which of those do we need to do?
+
+Hugo: My proposal, reusing dave's, instead of receiving 2 EPRs, you could receive 2 URIs.  Dave has started a structured comparison of the 2 solutions.  Dave is saying the TAG isn't saying don't do this, but you have to have a good justification for doing this.  I assert we havne't gone there yet.  There was always a way to do it with URIs, and this is another way.  It has marginal advantages, but it doesn't justify a new identifiaction mechanism on the web.  The cost of introduction is very high. 
+
+DaveO: What is the cost?  Not the benefits of another way.  
+
+Hugo: It's an opportunity cost. 
+
+DaveO: We've already got a soap processing, WS-A has a reply to, the only cost here is the echoing ability.  New software has to be built for that, but that's it.
+
+Hugo: Down the line, I'd like to make assertios about ERPs.  You're saying, we do what we do without looking at what others are doing.  If others want to do RDF assertion, then we'll need to come up with another way.  Here's the first problem, then they'll ask for XForms.  
+
+Hugo: my proposal is to remove reference properties from the EPR.
+
+MarkN: How do you hanlde different meta data?
+
+Hugo: Different URIs.
+
+Anish: If we do that, we still have params.
+
+Hugo: To me, params are just for state. 
+
+(general grumbling permeates through the room)
+
+Tom: Right now endpoint is the thing behind the URI and WSDL is using endpoint as the URI.  We don't want to have different names for those. 
+
+Hugo: I'm unclear about params that identify.
+
+Hugo: I think I have to rethink my proposal with respect to refparams.
+
+
+Straw poll: Should EPRS be identifiers? 
+... Yes: 9 
+... No: 7
+... Unsure: 2
+
+
+DaveO: There's a difference between whether a server or client is doing the comparison, so maybe Paco and I are both right.
+
+Harris: +1
+
+Jeff: We also might wind up in a place where URIs are, where they are identifiers but they aren't semantically correct. 
+
+Jonathan: Let's condense our behavioral idea of what we want to achieve first. We need to look at the requirements.
+
+Date: 9 December 2004
+
+Scribe: Tom Rutt
+
+Topic: Issue 33 proposal from Jonathan:
+Email from Jonathan: http://lists.w3.org/Archives/Public/public-ws-addressing/2004Dec/0080.html
+
+Jonathan: This extension attribute could also be placed on child elements of the endpoint ref.
+
+Rebecca: This meets our needs.
+
+Hugo: I support this proposal.  We do not have to change our spec.
+
+No objection to accepting Jonathan's proposal.
+
+RESOLUTION: Issue 33 closed with proposal from Jonathan.
+
+ACTION: Jonathan to coordinate resolution of Issue 33 with WSDL working group.
+
+Topic: Issue 34: Action defaults
+Jonathan took action to take wsdl 1.1 based approach, with a port to wsdl 2.
+
+Hugo took action to define a wsdl 2 based approach with a back port to wsdl 1.1:
+Hugo email: http://lists.w3.org/Archives/Public/public-ws-addressing/2004Dec/0083.html
+
+Marc H: what is "name".
+
+Don: Optional attribute "name" on input and output child of "operation"
+
+Marc H: This can also name fault messages.
+
+Mark N: media type in wsdl 2 cannot apply to WSDL 1.1 document.  Using fragment identifier adds risk to our schedule.
+
+Jonathan: there has to be a separate media type for defining a subset of fragment IDs.
+
+Mark N: with Hugo's approach someone would have to register a media type.  If we do not register it somebody might.
+
+Straw Poll:  
+... *	in favor of Jonathan Approach (9)
+... *	In favor of Hugo approach (2)
+... *	Not sure (1)
+
+Anish: Jonathan approach has to be enhanced to allow for new MEPs.
+
+Jonathan: we have to explain how to deal with extension MEPs.
+
+Mark N: majority is toward Jonathan's approach.
+
+Jonathan: need to clarify that the action URI is an opaque identifier, not intended to be dereferenced.
+
+ACTION: Jonathan to modify his proposal to include new MEPs.  By next Thursday.
+
+
+
+Topic: Issue 27: pointing at wsdl location in EPRs.
+
+Anish: does it apply to port type.
+
+Jonathan: I intended the attribute to be used at epr level (e.g, if it applies to both service and port type) or just on Port type.
+
+Action: Jonathan should apply editorial license to clarify that the location attribute can be applied at multiple levels.
+
+No objection to close as duplicate of 33.
+
+RESOLUTION: Issue 27 closed as duplicate of issue 33.
+
+TOPIC: Issue 10: EPR robustness
+
+ACTION: Anish to propose resolution for discussion at next Monday teleconf.
+
+Issues 8 and 16: serialization of RefPs
+
+Don Box was invited to explain the design in the member submission.
+
+Jonathan: the three possible solutions discussed so far are:
+... 1)	wrap properties into new header
+... 2)	use attribute to flag header as refP
+... 3)	EPR embedded into "To"
+
+David O: pointed out his earlier email discussion, with  concern about ref props/params being duplicates of user headers, particularly a security hole that allows a  hacker to put a bad RefP into the EPR, ie <SendAssetsToGrandCayman amount="all" fromacct="chris" toacct="hacker"/>  
+... Not sure if the three proposals help.
+
+Don: the idea of RefPs has been used in several prior MIB specs.  Earlier versions of WS addressing started with EPR in "To".  We abandoned this approach because people were already using soap headers to address the thing they are talking to behind the soap boundary. The Microsoft management group also used top level header blocks to address particular management entities.  We wanted to support these common scenarios.   Having refPs in separate headers allows different intermediaries to act on different headers.  Putting these into the single "to" header, would require definition of extensibility points analogous to the soap processing model.  Allowing people to give out addresses involves a trust relationship.  Sending an EPR in To is such a case.  In the end it did not make sense to add a new extensibility point.
+
+Glen: Despite the fact that soap headers are data, soap headers are speech acts.  They are implying triggering something.  Keeping what is being triggered opaque to sender means it does not know what the contract is.   There is a two way relationship happening here, forcing the sender to send them as individual soap headers.
+
+Don: we view this as just data being send to the receiver.
+
+Glen: the wsa:to header is required to be used.  With the current approach, wanting to be able to talk to a system with ws-addressing requires processing other headers.  Given a qname of a wrapper signalling "ws-addressing" lets the receiver know that the header is for ws-addressing.
+
+Anish: I agree with Glen.  If in an EPR there is a "transfer money" property, it is supposed to be opaque.  One cannot make decisions about soundness of refP because they are supposed to be opaque.
+
+Gudge: I view Opaque as meaning you do not have to look at them, but if you want to you can.
+
+Marc H: refPs are components of address, they are not verbs.  People should not be using them as verbs.
+
+Don: As an example, NT SACL protects a resource, and does not depend on verb.
+
+Marc H: we keep saying refPs are opaque, however they do need to be understood.  
+
+Gudge: eg. Should not put in a refP which is a security header.  Don't do things that can break other things.
+
+Don: the language we use to describe the opacity model is causing an inordinate concern.  There is no real solution to the security problem.
+
+Dims: If we cannot distinguish soap headers on the wire from refPs how can policy be applied?
+
+Gudge: it is what the message looks like that matters, not the EPR.
+
+Dims: intermediaries do not have access to what generates the eprs.  
+
+David O: Google trust example is a good one.  The composibility issue is not the core problem (do not issue bad eprs).  However the security problem is different.  If I ask google for a ref, I have a contract.  However this case is different because the receiver did not ask for the EPR. The problem is when a receiver returns a "replyTo" with a hack of  its original epr.
+
+Steve: what is original reason for refP opacity?
+
+Paco: client should understand it has no say in manipulating those properties.  The spec assumes pure echo semantics. 
+
+Rebecca: we are not going to ever be able to remove all security holes.
+
+David O: the question is how far down the security rat hole do you go.  I am talking about a single security hole.  The threat I am talking about is not fixed by putting the EPR into the "to".
+
+Jeff: I do not understand the issue.  You have to use software that is part of a trusted computer base.  The example of hacked browser is strange.  Also, we do not mean opaque, the wording of Paco is more appropriate.
+
+Bob: without a mechanism to sign data all bets are off.  The only way to protect against echo modification i to use signatures. 
+
+David O: we can add text to that affect.
+
+Gudge: I am not going to trust anything unless I know it cannot be modified on the wire.
+
+Anish: I am missing some sublety in the security scenario, could Dave expand the example.
+
+David O: I already have done this several times in emails.  Look for mail sent on 11/24.
+
+Mark N: though we need more discussion,
+
+Last week we asked "Should we be able to identify refPs by examining messages."
+
+Mark asked same question again as straw poll;: 
+... *	Necessary (9)
+... *	not necessary (6)
+... *	not sure (4)
+
+Mark: need more discussion on Security threat alleviation.
+
+Paco: Should ask how many people would have their opinion on the resolution of this issue depending on solving this security risk?
+
+David O: if this security hole did not exist, I would push for status quo.
+
+Jonathan: writing policy is easier if you know what has been inserted for ws addressing.
+
+Straw question: If we can prove that the security hole does not exist who would be in favor of status quo?
+
+Dave O is the only one who would change his mind.
+
+Mark: continue discussion on the mailing list.
+
+Topic: Issue 17: purpose of action property
+Issue text: The [action] property identifies the input/output/fault message within a WSDL port type and conveys the semantics implied by the message. A WSDL operation name/message name does exactly the same thing. Given this, why is it necessary to provide a WSDL extensibility attribute wsa:Action to set the value of the [action] property? Additionally, there is no requirement that the value of the wsa:Action property uniquely identify the message/operation. An issue related to this is -- What is the relationship of the [action] property with the operation name mapping requirement in WSDL 2.0?
+
+Anish: part of this goes away with our new mapping for default action being applied to both wsdl versions.  The only thing remaining with this issue is coordination with wsdl working group. They also may have a need to identify each individual message in an operation (due to a minority opinion on operation name feature).  Our algorithm generates a URI for each message, which would satisfy this need.  If the operation name feature is the same as our action property, we do not want two solutions.
+
+Mark N: can we close this with an action item for coordination with wsdl working group?
+
+Hugo: cases of same message name used in two interfaces may cause problems, but this should be a comment on Jonathan's proposal.
+
+Anish:  Wsdl Uniqueness is confined to a port type, not an operation.
+
+Anish: same front end for multiple services needs disambiguation.  We do not provide guidance on the uniqueness requirements for the user specified actionID.
+
+Mark N: the registry or URIs solves this.
+
+ACTION: Anish to look at clarity of uniqueness requirements for action id.
+
+ACTION: Hugo to provide comment on Jonathan's proposal regarding the uniqueness of Interface name included in action ID default mechanism.
+
+Anish: this would be a good topic for a joint meeting.
+
+Anish will raise this coordination topic with the WSDL working group.
+
+
+Topic: Issue 35: fixed action uri for faults
+Marc H: I would like to change algorithm to generate a non-static action id for faults, just as for non fault messages.
+
+Anish: In and out messages are always specified, however the type of the Fault messages is not always described in the WSDL.
+
+Marc: we could you the fixed generic fault action ID for that case.  I am only concerned bout the ones that are defined in the WSDL description.
+
+Mark N: does anyone see this as a bad thing.
+
+ACTION: Marc H will enhance Jonathan's proposal to cover wsdl defined faults as well as input and output messages.
+
+Issue 23: required properties in EPRs
+Mark N: we had straw poll two weeks ago on this. 15 for status quo, 1 to require, 1 unsure.
+
+Anish: I have an open Action item on this one.  However I do not anticipate changing anyone's mind.  I would like a vote on this one before closing.
+
+Mark N:  Formal vote: 
+
+... Does anyone object to closing Issue 23 with the status quo (i.e., destination required, all others are optional).
+
+... Oracle objects  (they want service ID required, in addition to address).
+
+... Roll call for vote: 
+... Support status quo
+... Sap, IONA, w3c Fujitsu, Hitachi, IBM, Bea, Microsoft, Web methods, Novell.
+
+... Object: Oracle 
+
+... Abstain: sun, HP,
+
+
+RESOLUTION: Issue 23 Closed with no change required to spec.
+
+Topic: Issue 9: cardinality of message information headers.
+
+Paul: this is orthogonal to issue regarding multiple routes in an epr.
+
+Paul: From earlier discussions we came up with two options for solution:
+... Option 1: status quo.
+... Option 2: allow multiple in core, but limit in explicit bindings.
+
+... Now I would like to introduce a third option: leave use of multiple information headers as an extensibility point.
+
+Paul: my preferred solution is keep the status Quo.  Option 2 is the worst.
+
+Marc H: I speak for option 2.  That is, the Core should not constrain cardinality, but have the wsdl and soap bindings constrain them down to not more than one.  Option 3 would produce chaos in my opinion.
+
+Marc H: I have a trouble with knowing what to do with option 3 when someone sends multiple replyTo in the message.
+
+Marc H: I could see people inventing other wsdl meps (not Soap MEPs).
+
+Mark N: maybe we should wait for resolving a few more binding issues.
+
+... Proposal 1 (9)
+... Proposal 2 (6)
+... Proposal 3 (0)
+
+Mark N: lets leave this open with both proposals 1 and 2 as possible solutions.
+
+
+
+
+
+
+
+
+

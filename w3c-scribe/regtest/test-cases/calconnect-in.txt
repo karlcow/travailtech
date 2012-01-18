@@ -1,0 +1,5 @@
+19:31:42 <plh> Meeting: MIT Site meeting
+19:31:47 <plh> Chair: Alan Kotok
+20:04:25 <wendy> Scribe: RalphS
+19:42:45 <RalphS> -> http://lists.w3.org/Archives/Team/w3t-archive/2005Jan/0134.html "calconnect meeting in Seattle 11-13 Jan", DanC, 2005-01-07
+19:42:45 <Wendy> -> http://lists.w3.org/Archives/Team/w3t-archive/2005Jan/0134.html "calconnect meeting in Seattle 11-13 Jan", DanC, 2005-01-07

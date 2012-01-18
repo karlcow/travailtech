@@ -1,0 +1,1325 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang='en'>
+<head>
+  <title>TAG f2f meeting, Ottawa -- 9 Aug 2004</title>
+  <link type="text/css" rel="STYLESHEET" href="http://www.w3.org/StyleSheets/base.css">
+  <link type="text/css" rel="STYLESHEET" href="http://www.w3.org/StyleSheets/public.css">
+  <link type="text/css" rel="STYLESHEET" href="http://www.w3.org/2004/02/minutes-style.css">
+  <meta content="TAG f2f meeting, Ottawa" name="Title">  
+  <meta content="text/html; charset=iso-8859-1" http-equiv="Content-Type">
+</head>
+
+<body>
+<p><a href="http://www.w3.org/"><img src="http://www.w3.org/Icons/w3c_home" alt="W3C" border="0"
+height="48" width="72"></a> 
+
+</p>
+
+<h1> - DRAFT - </h1>
+<h1>TAG f2f meeting, Ottawa</h1>
+<h2>9 Aug 2004</h2>
+
+<p><a href='http://www.w3.org/2001/tag/2004/08/09-11-tag.html'>Agenda</a></p>
+
+
+<p>See also: <a href="http://www.w3.org/2004/08/10-tagmem-irc">IRC log</a></p>
+
+<h2><a name="attendees">Attendees</a></h2>
+
+<div class="intro">
+<dl>
+<dt>Present</dt>
+<dd>RF, PC, DC, SW, TBL, NW(Chair)</dd>
+<dt>Regrets</dt>
+<dd></dd>
+<dt>Chair</dt>
+<dd>Stuart </dd>
+<dt>Scribe</dt>
+<dd>timbl</dd>
+</dl>
+</div>
+
+<h2>Contents</h2>
+<ul>
+  <li><a href="#agenda">Topics</a>
+	<ol>
+	<li><a href="#item01">s/At times, there may be/A problem has been/</a></li>
+
+	</ol>
+  </li>
+  <li><a href="#ActionSummary">Summary of Action Items</a></li>
+</ul>
+<hr>
+<div class="meeting">
+
+<p class='irc'>
+&lt;<cite>Norm</cite>&gt; Scribe: timbl
+</p>
+
+<p class='irc'>
+&lt;<cite>Norm</cite>&gt; Date: 9 August 2004
+</p>
+
+<p class='phone'>
+-------------------------------------------------
+</p>
+
+<p class='irc'>
+&lt;<cite>skw-scribe</cite>&gt; Issue diwg-1
+</p>
+
+<p class='irc'>
+&lt;<cite>skw-scribe</cite>&gt; DC: requested discussion because we say nothing about URI with question marks in them.
+</p>
+
+<p class='irc'>
+&lt;<cite>skw-scribe</cite>&gt; DC: May be a useful distinction between machine generated and human generated rather than statically/dynamically generated URI
+</p>
+
+<p class='irc'>
+&lt;<cite>skw-scribe</cite>&gt; TBL: One of his notes is content-negotiated... example of a spanish user that wanted to read the english version
+</p>
+
+<p class='irc'>
+&lt;<cite>skw-scribe</cite>&gt; CL arrives
+</p>
+
+<p class='irc'>
+&lt;<cite>skw-scribe</cite>&gt; CL: User should be able to express a preference.
+</p>
+
+<p class='irc'>
+&lt;<cite>skw-scribe</cite>&gt; RF: Customers like this when the 'system' makes a good initial default choice, but don't like an inability to easily change the 'default' if it is not a good choice.
+</p>
+
+<p class='irc'>
+&lt;<cite>skw-scribe</cite>&gt; PC: Comment points at 3.6.2 URI Persistence and there are no examples in that section (at the time of the comment).
+</p>
+
+<p class='irc'>
+&lt;<cite>skw-scribe</cite>&gt; PC: May be some examples by transcusion with link at the bottom...
+</p>
+
+<p class='irc'>
+&lt;<cite>skw-scribe</cite>&gt; PC: ...eg when a mapping application makes up a URI for a map location.... those should be persistent and sharable.
+</p>
+
+<p class='irc'>
+&lt;<cite>skw-scribe</cite>&gt; CL: Yes.... should be say session dependent or time dependent.
+</p>
+
+<p class='irc'>
+&lt;<cite>skw-scribe</cite>&gt; PC: For some of the interaction with banks etc. the URI are not useful outside the given session
+</p>
+
+<p class='irc'>
+&lt;<cite>skw-scribe</cite>&gt; CL: Would like to have 4 examples:
+</p>
+
+<p class='irc'>
+&lt;<cite>skw-scribe</cite>&gt; 1: Map example with ?lat, ?long
+</p>
+
+<p class='irc'>
+&lt;<cite>skw-scribe</cite>&gt; 2: Ditto plus sessionid
+</p>
+
+<p class='irc'>
+&lt;<cite>DanC_jam</cite>&gt; I'd sure like to be able to bookmark links in my private banking data!
+</p>
+
+<p class='irc'>
+&lt;<cite>skw-scribe</cite>&gt; 3: Private financial data where inappropriate to share data
+</p>
+
+<p class='irc'>
+&lt;<cite>skw-scribe</cite>&gt; TBL: Still might want to share with other appropriate people...
+</p>
+
+<p class='irc'>
+&lt;<cite>skw-scribe</cite>&gt; CL: Ok... maybe drop the 3rd example.
+</p>
+
+<p class='irc'>
+&lt;<cite>skw-scribe</cite>&gt; DC: eg. myYahoo.com.
+</p>
+
+<p class='irc'>
+&lt;<cite>skw-scribe</cite>&gt; 4: URI in the address bar remains the same despite navigation.
+</p>
+
+<p class='irc'>
+&lt;<cite>skw-scribe</cite>&gt; NW: So would a proposal to include these examples address this comment.
+</p>
+
+<p class='irc'>
+&lt;<cite>DanC_jam</cite>&gt; (discussing a spectrum, with examples and plusses and minuses starts to sound more like a finding than a section of the arch doc)
+</p>
+
+<p class='irc'>
+&lt;<cite>Roy</cite>&gt; <a href="http://www.prescod.net/rest/mistakes/">http://www.prescod.net/rest/mistakes/</a>
+</p>
+
+<p class='irc'>
+&lt;<cite>skw-scribe</cite>&gt; PC: I'm frusrtated when I'm forced to navigate from the top....
+</p>
+
+<p class='irc'>
+&lt;<cite>skw-scribe</cite>&gt; RF: But it is not called URI persistence.
+</p>
+
+<p class='irc'>
+&lt;<cite>skw-scribe</cite>&gt; RF: The examples being discussed are about bookmarkable/reusable URI.
+</p>
+
+<p class='irc'>
+&lt;<cite>skw-scribe</cite>&gt; NW: Definitely a section under representation management... possibly a new subsection.
+</p>
+
+<p class='irc'>
+&lt;<cite>skw-scribe</cite>&gt; NW: ....called "Supporting Navigation"
+</p>
+
+<p class='irc'>
+&lt;<cite>skw-scribe</cite>&gt; NW: Further discussion....
+</p>
+
+<p class='irc'>
+&lt;<cite>skw-scribe</cite>&gt; DC: .... new text needs four eyeballs IMO.
+</p>
+
+<p class='irc'>
+&lt;<cite>skw-scribe</cite>&gt; Issue diwg-2
+</p>
+
+<p class='irc'>
+&lt;<cite>skw-scribe</cite>&gt; DC: Overtaken by events....
+</p>
+
+<p class='irc'>
+&lt;<cite>skw-scribe</cite>&gt; (diwg-2 don't communicate language info in URIs).
+</p>
+
+<p class='irc'>
+&lt;<cite>skw-scribe</cite>&gt; DC: Do we cover this in the MetadataInURI finding?
+</p>
+
+<p class='irc'>
+&lt;<cite>skw-scribe</cite>&gt; CL: If you have five languages you should have 6 URI, one for each specific URI and one content-neg'ed resource
+</p>
+
+<p class='irc'>
+&lt;<cite>skw-scribe</cite>&gt; DC: There is no obligation to put the 'flag' in the URI.
+</p>
+
+<p class='irc'>
+&lt;<cite>skw-scribe</cite>&gt; CL: Worthwhile example.... trivial to write.
+</p>
+
+<p class='irc'>
+&lt;<cite>skw-scribe</cite>&gt; DC: Very relevant to metaDataInURI-31.
+</p>
+
+<p class='irc'>
+&lt;<cite>skw-scribe</cite>&gt; NW: we only talk about content-neg wrt to frag ids.
+</p>
+
+<p class='irc'>
+&lt;<cite>Roy</cite>&gt; re. prev topic title, "Shared URI space" is another possibility
+</p>
+
+<a name="action01"></a>
+<p class='irc'>
+&lt;<cite>skw-scribe</cite>&gt; <strong>ACTION:</strong> CL to draft text on language negotiation for inclusion in webarch., [recorded in <a href="http://www.w3.org/2004/08/10-tagmem-irc">http://www.w3.org/2004/08/10-tagmem-irc</a>]
+</p>
+
+<a name="action02"></a>
+<p class='irc'>
+&lt;<cite>skw-scribe</cite>&gt; <strong>ACTION:</strong> SW to Include example on lang info in URI to metadatainURI finding [recorded in <a href="http://www.w3.org/2004/08/10-tagmem-irc">http://www.w3.org/2004/08/10-tagmem-irc</a>]
+</p>
+
+<p class='irc'>
+&lt;<cite>DanC_jam</cite>&gt; . <a href="http://www.w3.org/2001/tag/doc/metaDataInURI-31.html">http://www.w3.org/2001/tag/doc/metaDataInURI-31.html</a>
+</p>
+
+<p class='irc'>
+&lt;<cite>Norm</cite>&gt; Issues URI: <a href="http://www.w3.org/2001/tag/2003/lc1209/issues.html">http://www.w3.org/2001/tag/2003/lc1209/issues.html</a>
+</p>
+
+<p class='irc'>
+&lt;<cite>skw-scribe</cite>&gt; RF: When the resource is language specific, inclusion of a language tag in a URI is not identifying information and notg metadata... it's role has changed.
+</p>
+
+<p class='irc'>
+&lt;<cite>skw-scribe</cite>&gt; NW: The word language does not appear in the draft finding....
+</p>
+
+<p class='irc'>
+&lt;<cite>DanC_jam</cite>&gt; re lang info in URIs, I recommend borrowing from <a href="http://www.w3.org/DesignIssues/Generic">http://www.w3.org/DesignIssues/Generic</a>
+</p>
+
+<p class='irc'>
+&lt;<cite>DanC_jam</cite>&gt; e.g. remember to discuss http Vary: while you're at it
+</p>
+
+<p class='irc'>
+&lt;<cite>skw-scribe</cite>&gt; Done with diwg-2
+</p>
+
+<p class='irc'>
+&lt;<cite>skw-scribe</cite>&gt; Issue diwg-3 <a href="http://www.w3.org/2001/tag/2003/lc1209/issues.html#diwg3">http://www.w3.org/2001/tag/2003/lc1209/issues.html#diwg3</a>
+</p>
+
+<p class='irc'>
+&lt;<cite>skw-scribe</cite>&gt; Resting discussion of accessing different (device specific) representations.
+</p>
+
+<p class='irc'>
+&lt;<cite>skw-scribe</cite>&gt; CL: Seems to be about representations that are tailored for specific devices.
+</p>
+
+<p class='irc'>
+&lt;<cite>skw-scribe</cite>&gt; DC: Is there anything that we can borrow/refer to from DI Principles
+</p>
+
+<p class='irc'>
+&lt;<cite>skw-scribe</cite>&gt; DC: Excert and cite DI Principles....
+</p>
+
+<p class='irc'>
+&lt;<cite>skw-scribe</cite>&gt; NW: Ok... yes... but what and where.
+</p>
+
+<p class='irc'>
+&lt;<cite>skw-scribe</cite>&gt; CL: I think delivery context appear in our doc.
+</p>
+
+<p class='irc'>
+&lt;<cite>skw-scribe</cite>&gt; NW: No... it doesn't
+</p>
+
+<p class='irc'>
+&lt;<cite>skw-scribe</cite>&gt; RF: Section on interaction should have a section on gateways and transformations.
+</p>
+
+<p class='irc'>
+&lt;<cite>skw-scribe</cite>&gt; CL: Ok... we should borrow text from DI principles.
+</p>
+
+<p class='irc'>
+&lt;<cite>Roy</cite>&gt; eventually
+</p>
+
+<p class='irc'>
+&lt;<cite>skw-scribe</cite>&gt; NW: Deep down in section 3.2.1 we added "...or transformed dynamically according to the ...." in response to a DIWG comment.
+</p>
+
+<p class='irc'>
+&lt;<cite>skw-scribe</cite>&gt; CL: ref para after GPN in 4.3 (recombination stuff).
+</p>
+
+<p class='irc'>
+&lt;<cite>skw-scribe</cite>&gt; CL: ...it's explaining what delivery context does rather than using the term delivery context.
+</p>
+
+<p class='irc'>
+&lt;<cite>skw-scribe</cite>&gt; NW: So have we already addressed their comment?
+</p>
+
+<p class='irc'>
+&lt;<cite>skw-scribe</cite>&gt; CL: No... we need to use this text....
+</p>
+
+<p class='irc'>
+&lt;<cite>skw-scribe</cite>&gt; NW: So return to question of where in our doc it should go.
+</p>
+
+<p class='irc'>
+&lt;<cite>skw-scribe</cite>&gt; CL: It is &nbsp;to do with content/presentation....
+</p>
+
+<p class='irc'>
+&lt;<cite>Chris</cite>&gt; 4.3. Separation of Content, Presentation, and Interaction
+</p>
+
+<p class='irc'>
+&lt;<cite>skw-scribe</cite>&gt; NW: So work DI Section 2.2.3 into our Section 4.3 and add ref to DI princples.
+</p>
+
+<p class='irc'>
+&lt;<cite>skw-scribe</cite>&gt; NW: ... and that should address their comment?
+</p>
+
+<p class='irc'>
+&lt;<cite>skw-scribe</cite>&gt; general assent.
+</p>
+
+<p class='irc'>
+&lt;<cite>skw-scribe</cite>&gt; Done diwg-3
+</p>
+
+<p class='irc'>
+&lt;<cite>skw-scribe</cite>&gt; Issue manola-27 <a href="http://www.w3.org/2001/tag/2003/lc1209/issues.html#manola-27">http://www.w3.org/2001/tag/2003/lc1209/issues.html#manola-27</a>
+</p>
+
+<p class='irc'>
+&lt;<cite>skw-scribe</cite>&gt; "Provide examples of mistaken attempts to restrict URI usage."
+</p>
+
+<p class='irc'>
+&lt;<cite>skw-scribe</cite>&gt; PC: Seem offended by the 1st para in 3.6.3 in that it may be reasonable to hide the existence of the reource. ie. doesn like "... it is unreasonable to prohibit others from merely identifying the resource."
+</p>
+
+<p class='irc'>
+&lt;<cite>skw-scribe</cite>&gt; TBL: But why shouldn't it get a URI.
+</p>
+
+<p class='irc'>
+&lt;<cite>skw-scribe</cite>&gt; DC: 403/404 responses are orthogonal to whether it gets a URI or not.
+</p>
+
+<p class='irc'>
+&lt;<cite>skw-scribe</cite>&gt; RF: What he's asking about is situations where the person is prevented from having a URI upon which to base an access.
+</p>
+
+<a name="action03"></a>
+<p class='irc'>
+&lt;<cite>skw-scribe</cite>&gt; <strong>ACTION:</strong> NW to Add to 3.6.2 "that doesnt [recorded in <a href="http://www.w3.org/2004/08/10-tagmem-irc">http://www.w3.org/2004/08/10-tagmem-irc</a>]
+</p>
+
+<p class='irc'>
+&lt;<cite>skw-scribe</cite>&gt; NW: We wrote para from point of view of deep linking, he's read it from a security and access control POV.
+</p>
+
+<p class='irc'>
+&lt;<cite>skw-scribe</cite>&gt; NW: ...no good example spring instantly to mind.
+</p>
+
+<p class='irc'>
+&lt;<cite>skw-scribe</cite>&gt; NW: Propose that addressong manola-27 by adding security considerations text.
+</p>
+
+<p class='irc'>
+&lt;<cite>skw-scribe</cite>&gt; RF: I think that he's also objecting to the last paragraph (which refers to Web Access control mechanisms).
+</p>
+
+<p class='irc'>
+&lt;<cite>DanC_jam</cite>&gt; change "but it is unreasonable to prohibit others from merely identifying the resource" to "but merely identifying the resource is like referring to a book by title. Except when people have agreed to keep titles confidential, they are free to exchange them."
+</p>
+
+<p class='irc'>
+&lt;<cite>DanC_jam</cite>&gt; e+
+</p>
+
+<p class='irc'>
+&lt;<cite>skw-scribe</cite>&gt; TBL: Propose "For very high security applications you may want to suppress the difference between 403 and 404 response codes." [Tim did I get that right?]
+</p>
+
+<p class='irc'>
+&lt;<cite>Chris</cite>&gt; +1 to suggested text
+</p>
+
+<p class='irc'>
+&lt;<cite>Chris</cite>&gt; .... may want to return 404 when a 403 would be more correct but expose secutity information
+</p>
+
+<p class='irc'>
+&lt;<cite>DanC_jam</cite>&gt; change "but it is unreasonable to prohibit others from merely identifying the resource" to "but merely identifying the resource is like referring to a book by title. Except when people have agreed to keep titles or URIs confidential, they are free to exchange them."
+</p>
+
+<p class='irc'>
+&lt;<cite>Chris</cite>&gt; yes, that is good. at a different level of abstraction
+</p>
+
+<p class='irc'>
+&lt;<cite>skw-scribe</cite>&gt; TBL: We have been a little obsure wrt to the legal case that motivated the text.
+</p>
+
+<p class='irc'>
+&lt;<cite>Roy</cite>&gt; +1 too
+</p>
+
+<p class='irc'>
+&lt;<cite>skw-scribe</cite>&gt; DC: I still think that the text I propose is reponsive to the comment.
+</p>
+
+<p class='irc'>
+&lt;<cite>Roy</cite>&gt; +1 to Dan's text
+</p>
+
+<p class='irc'>
+&lt;<cite>skw-scribe</cite>&gt; NW: I think we have agreement to Dan's text to address manola-27
+</p>
+
+<p class='irc'>
+&lt;<cite>skw-scribe</cite>&gt; TBL: ... add wtoe that in some high security apps it may be desirable to suppress the distinction between access control failure and the non-existence of a resource.
+</p>
+
+<p class='irc'>
+&lt;<cite>Norm</cite>&gt; i18nwg20
+</p>
+
+<p class='irc'>
+&lt;<cite>skw-scribe</cite>&gt; Issue i18nwg-20 <a href="http://www.w3.org/2001/tag/2003/lc1209/issues.html#i18nwg-20">http://www.w3.org/2001/tag/2003/lc1209/issues.html#i18nwg-20</a>
+</p>
+
+<p class='irc'>
+&lt;<cite>Chris</cite>&gt; Propose to accept the changes for i18nwg20
+</p>
+
+<p class='irc'>
+&lt;<cite>skw-scribe</cite>&gt; <a href="http://www.w3.org/2001/tag/webarch/#metadata-inconsistencies">http://www.w3.org/2001/tag/webarch/#metadata-inconsistencies</a>
+</p>
+
+<p class='irc'>
+&lt;<cite>Norm</cite>&gt; <a href="http://www.w3.org/2001/tag/webarch/">http://www.w3.org/2001/tag/webarch/</a>
+</p>
+
+<p class='irc'>
+&lt;<cite>skw-scribe</cite>&gt; DC: We have an admonision against using text/* in 4.5.7
+</p>
+
+<p class='irc'>
+&lt;<cite>skw-scribe</cite>&gt; DC: ie. we say pretty much what they ask in 4.5.7
+</p>
+
+<h3 id="item01">s/At times, there may be/A problem has been/</h3>
+<p class='irc'>
+&lt;<cite>skw-scribe</cite>&gt; CL: Yes... but they point out that that is just a specific instance of a more general problem and they are asking us to address the more general problem
+</p>
+
+<p class='irc'>
+&lt;<cite>Chris</cite>&gt; <a href="http://lists.w3.org/Archives/Public/public-webarch-comments/2004JanMar/1060.html">http://lists.w3.org/Archives/Public/public-webarch-comments/2004JanMar/1060.html</a>
+</p>
+
+<p class='irc'>
+&lt;<cite>skw-scribe</cite>&gt; CL: &lt;quotes from original email&gt;
+</p>
+
+<p class='irc'>
+&lt;<cite>skw-scribe</cite>&gt; ... We are on comment 20 *NOT* comment 5.
+</p>
+
+<p class='irc'>
+&lt;<cite>Chris</cite>&gt; &nbsp;&nbsp;&nbsp;- Always make sure you know what the character encoding of a
+</p>
+
+<p class='irc'>
+&lt;<cite>Chris</cite>&gt; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;document or message is.
+</p>
+
+<p class='irc'>
+&lt;<cite>Chris</cite>&gt; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- Make sure that it's easy for server managers and authors to configure
+</p>
+
+<p class='irc'>
+&lt;<cite>Chris</cite>&gt; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;and test metadata on the server, to make sure it's correct.
+</p>
+
+<p class='irc'>
+&lt;<cite>Chris</cite>&gt; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- No arbitrary defaults for specs
+</p>
+
+<p class='irc'>
+&lt;<cite>Chris</cite>&gt; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- No out-of-the-box with arbitrary settings
+</p>
+
+<p class='irc'>
+&lt;<cite>skw-scribe</cite>&gt; CL: There is no standard for content authors to influence important bits of sever configuration.
+</p>
+
+<p class='irc'>
+&lt;<cite>skw-scribe</cite>&gt; TBL: Maybe the GPN should be....
+</p>
+
+<p class='irc'>
+&lt;<cite>Chris</cite>&gt; quotes from right section **20 ** of document
+</p>
+
+<p class='irc'>
+&lt;<cite>Chris</cite>&gt; &nbsp;&nbsp;&nbsp;- Always make sure you know what the character encoding of a
+</p>
+
+<p class='irc'>
+&lt;<cite>Chris</cite>&gt; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;document or message is.
+</p>
+
+<p class='irc'>
+&lt;<cite>Chris</cite>&gt; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- Make sure that it's easy for server managers and authors to configure
+</p>
+
+<p class='irc'>
+&lt;<cite>Chris</cite>&gt; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;and test metadata on the server, to make sure it's correct.
+</p>
+
+<p class='irc'>
+&lt;<cite>Chris</cite>&gt; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- No arbitrary defaults for specs
+</p>
+
+<p class='irc'>
+&lt;<cite>Chris</cite>&gt; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- No out-of-the-box with arbitrary settings
+</p>
+
+<p class='irc'>
+&lt;<cite>skw-scribe</cite>&gt; NW: reminds TBL of an action item to write text addressing the configuration information that should be available to content authors.
+</p>
+
+<p class='irc'>
+&lt;<cite>DanC_jam</cite>&gt; somedaypile += standardized .htaccess files (in RDF?)
+</p>
+
+<p class='irc'>
+&lt;<cite>Chris</cite>&gt; 'easy .... for authors' is not doable - no standard way for authoring toools to do this
+</p>
+
+<p class='irc'>
+&lt;<cite>skw-scribe</cite>&gt; NW: proposes that we have made enough changes to suggest that we have tried to address this comment.
+</p>
+
+<p class='irc'>
+&lt;<cite>skw-scribe</cite>&gt; NW: Anyone want to see more changes to address this?
+</p>
+
+<p class='irc'>
+&lt;<cite>skw-scribe</cite>&gt; CL: The section doesn't really address what they are talking about....
+</p>
+
+<p class='irc'>
+&lt;<cite>skw-scribe</cite>&gt; CL: We do say some things about character encoding wrt to XML.
+</p>
+
+<p class='irc'>
+&lt;<cite>skw-scribe</cite>&gt; CL: There has been a recent thread on character encoding for CSS.
+</p>
+
+<p class='irc'>
+&lt;<cite>skw-scribe</cite>&gt; CL: eg... a CSS stylesheet failed due to inclusion of a natural language comment.
+</p>
+
+<p class='irc'>
+&lt;<cite>skw-scribe</cite>&gt; NW: I assert that I have already made a GPN out of the four i18nwg-20 bullets.
+</p>
+
+<p class='irc'>
+&lt;<cite>Chris</cite>&gt; so, the fact that we restrict this to xml sort of implies that plain text. /css etc are not covered
+</p>
+
+<p class='irc'>
+&lt;<cite>skw-scribe</cite>&gt; NW: Further discussion....?
+</p>
+
+<p class='irc'>
+&lt;<cite>skw-scribe</cite>&gt; Issue rosenberg-5 <a href="http://www.w3.org/2001/tag/2003/lc1209/issues.html#rosenberg-5">http://www.w3.org/2001/tag/2003/lc1209/issues.html#rosenberg-5</a>
+</p>
+
+<p class='irc'>
+&lt;<cite>skw-scribe</cite>&gt; NW: Recaps previous telcon discussion that this originated with IAB.
+</p>
+
+<p class='irc'>
+&lt;<cite>skw-scribe</cite>&gt; CL: Questions whether we have already closed rosenberg-4.
+</p>
+
+<p class='irc'>
+&lt;<cite>Chris</cite>&gt; (once we are done with 5 .... please can we do 4 <a href="http://www.w3.org/2001/tag/2003/lc1209/issues.html#rosenberg4)">http://www.w3.org/2001/tag/2003/lc1209/issues.html#rosenberg4)</a>
+</p>
+
+<p class='irc'>
+&lt;<cite>skw-scribe</cite>&gt; DC: rosenberg-5 suggests referencing RFC3688. RFC3688 is directly counter to some priniples of Web Arch... towit: encourages the use of URI aliases.
+</p>
+
+<p class='irc'>
+&lt;<cite>skw-scribe</cite>&gt; PC: Notes that it also invokes the IETF concensus process.
+</p>
+
+<p class='irc'>
+&lt;<cite>skw-scribe</cite>&gt; RF: Would it be responsive to this comment by citing the document as an example of bad practice wrt URI aliasing.
+</p>
+
+<p class='irc'>
+&lt;<cite>skw-scribe</cite>&gt; PC: Why we put this in Webarch rather than respond directly to the RFC.
+</p>
+
+<p class='irc'>
+&lt;<cite>skw-scribe</cite>&gt; DC: I was suggesting doing both.
+</p>
+
+<p class='irc'>
+&lt;<cite>skw-scribe</cite>&gt; PC: I think we only need do the one.
+</p>
+
+<p class='irc'>
+&lt;<cite>skw-scribe</cite>&gt; NW: I think it would be good to make the comment back IAB
+</p>
+
+<p class='irc'>
+&lt;<cite>skw-scribe</cite>&gt; NW: Does anyone feel obliged to respond to the IETF/IAB.
+</p>
+
+<p class='irc'>
+&lt;<cite>skw-scribe</cite>&gt; DC: yes I do...
+</p>
+
+<p class='irc'>
+&lt;<cite>Chris</cite>&gt; for 4, s/RTSP [RFC2326])/SIP (RFC 3261)/
+</p>
+
+<p class='irc'>
+&lt;<cite>skw-scribe</cite>&gt; NW: Dan... will you take that action?
+</p>
+
+<p class='irc'>
+&lt;<cite>skw-scribe</cite>&gt; DC: yes.
+</p>
+
+<a name="action04"></a>
+<p class='irc'>
+&lt;<cite>skw-scribe</cite>&gt; <strong>ACTION:</strong> DC respond to IETF/IAB wrt to rosenberg-5 [recorded in <a href="http://www.w3.org/2004/08/10-tagmem-irc">http://www.w3.org/2004/08/10-tagmem-irc</a>]
+</p>
+
+<p class='irc'>
+&lt;<cite>Chris</cite>&gt; and voice-over-IP (such as RTSP [RFC2326]).
+</p>
+
+<p class='irc'>
+&lt;<cite>skw-scribe</cite>&gt; Issue rosenberg-4 <a href="http://www.w3.org/2001/tag/2003/lc1209/issues.html#rosenberg-4">http://www.w3.org/2001/tag/2003/lc1209/issues.html#rosenberg-4</a>
+</p>
+
+<p class='irc'>
+&lt;<cite>skw-scribe</cite>&gt; CL: Propose we simply accept the replacement reference they suggest.
+</p>
+
+<p class='irc'>
+&lt;<cite>skw-scribe</cite>&gt; RF: Explains some of the details of RTSP, RTP, and SIP.
+</p>
+
+<p class='irc'>
+&lt;<cite>Chris</cite>&gt; we could (optionally ) also say we do not deal with streaming command control like RTSP
+</p>
+
+<p class='irc'>
+&lt;<cite>skw-scribe</cite>&gt; [lost discussion]
+</p>
+
+<p class='irc'>
+&lt;<cite>skw-scribe</cite>&gt; DC: I think the intent of this section was to include analog channels.
+</p>
+
+<p class='irc'>
+&lt;<cite>Chris</cite>&gt; the whole section? i think not
+</p>
+
+<p class='irc'>
+&lt;<cite>skw-scribe</cite>&gt; RF: What are we trying to say here... why is this here... we're not going to talk about interactions between the Web and VoIP.
+</p>
+
+<p class='irc'>
+&lt;<cite>skw-scribe</cite>&gt; DC: I believe it is relevant to this document as a future direction. I want to click on web links with telephone numbers.
+</p>
+
+<p class='irc'>
+&lt;<cite>skw-scribe</cite>&gt; CL: But we don't care about all the 'little details' (flow control etc...).
+</p>
+
+<p class='irc'>
+&lt;<cite>skw-scribe</cite>&gt; DC: I do....
+</p>
+
+<p class='irc'>
+&lt;<cite>skw-scribe</cite>&gt; DC: Can you bookmark minutes 3-5 of a VoIP conversation.
+</p>
+
+<p class='irc'>
+&lt;<cite>skw-scribe</cite>&gt; TBL: Propose VoIP ref SIP, streaming &nbsp;media ref RTSP.
+</p>
+
+<p class='irc'>
+&lt;<cite>Chris</cite>&gt; proprose t respond to them saying that 'such as' was an editorial error
+</p>
+
+<p class='irc'>
+&lt;<cite>skw-scribe</cite>&gt; NW: Proposal to cite both RSTP and SIP for streaming media and VoIP respectively.
+</p>
+
+<p class='irc'>
+&lt;<cite>Chris</cite>&gt; +1 to suggested text
+</p>
+
+<p class='irc'>
+&lt;<cite>skw-scribe</cite>&gt; Assent.
+</p>
+
+<p class='irc'>
+&lt;<cite>skw-scribe</cite>&gt; Break:
+</p>
+
+<p class='irc'>
+&lt;<cite>Norm</cite>&gt; Diff: <a href="http://www.w3.org/2001/tag/webarch/July7-Aug10-diff.html">http://www.w3.org/2001/tag/webarch/July7-Aug10-diff.html</a>
+</p>
+
+<p class='irc'>
+&lt;<cite>DanC_jam</cite>&gt; the example in 2.3.2 under <a href="http://www.w3.org/2001/tag/webarch/#identifiers-comparison">http://www.w3.org/2001/tag/webarch/#identifiers-comparison</a> seems responsive to Renato's comment of 8 July <a href="http://lists.w3.org/Archives/Public/public-webarch-comments/2004JulSep/0001.html">http://lists.w3.org/Archives/Public/public-webarch-comments/2004JulSep/0001.html</a>
+</p>
+
+<p class='irc'>
+&lt;<cite>DanC_jam</cite>&gt; (sigh; much spam in <a href="http://lists.w3.org/Archives/Public/public-webarch-comments/">http://lists.w3.org/Archives/Public/public-webarch-comments/</a> )
+</p>
+
+<p class='irc'>
+&lt;<cite>DanC_jam</cite>&gt; I'm not inclined to put Renato's overloading comment on the critical path <a href="http://lists.w3.org/Archives/Public/public-webarch-comments/2004JulSep/0004.html">http://lists.w3.org/Archives/Public/public-webarch-comments/2004JulSep/0004.html</a>
+</p>
+
+<p class='irc'>
+&lt;<cite>skw-scribe</cite>&gt; I agree
+</p>
+
+<p class='irc'>
+&lt;<cite>DanC_jam</cite>&gt; ugh; Hayes's comments didn't make it into the list. <a href="http://lists.w3.org/Archives/Public/public-webarch-comments/2004JanMar/1057.html">http://lists.w3.org/Archives/Public/public-webarch-comments/2004JanMar/1057.html</a>
+</p>
+
+<p class='irc'>
+&lt;<cite>DanC_jam</cite>&gt; and QA sent a request for teleconference, though I can't quite find their comments. <a href="http://lists.w3.org/Archives/Public/public-webarch-comments/2004JanMar/1056.html">http://lists.w3.org/Archives/Public/public-webarch-comments/2004JanMar/1056.html</a>
+</p>
+
+<p class='irc'>
+&lt;<cite>Noah</cite>&gt; At the end of yesterday's call, it was suggested that it might be helpful for some of us who are involved in Schema WG work on versioning to dial into your call now. &nbsp;Would those of you on the Tag prefer that I do or don't join? &nbsp;Either way is fine; &nbsp;whatever's best for you. &nbsp;Thank you.
+</p>
+
+<p class='irc'>
+&lt;<cite>paulc</cite>&gt; Versioning discussion by XML Schema WG:
+</p>
+
+<p class='irc'>
+&lt;<cite>paulc</cite>&gt; <a href="http://lists.w3.org/Archives/Member/w3c-xml-schema-wg/2004Aug/0006.html">http://lists.w3.org/Archives/Member/w3c-xml-schema-wg/2004Aug/0006.html</a>
+</p>
+
+<p class='irc'>
+&lt;<cite>Noah</cite>&gt; You might also want to look at the analysis that I did for the schema WG. &nbsp;This was sent in an email to the tag which can be found at <a href="http://lists.w3.org/Archives/Public/www-tag/2004Aug/0010.html.">http://lists.w3.org/Archives/Public/www-tag/2004Aug/0010.html.</a>
+</p>
+
+<p class='irc'>
+&lt;<cite>Noah</cite>&gt; The note which actually carries the analysis was an HTML attachment to that email and can be found at: &nbsp;<a href="http://lists.w3.org/Archives/Public/www-tag/2004Aug/att-0010/NRMVersioningProposal.html">http://lists.w3.org/Archives/Public/www-tag/2004Aug/att-0010/NRMVersioningProposal.html</a>
+</p>
+
+<p class='irc'>
+&lt;<cite>skw-scribe</cite>&gt; David Orchard joins.
+</p>
+
+<p class='irc'>
+&lt;<cite>Noah</cite>&gt; The note is roughly in two parts: &nbsp;the first sets out some general goals and considerations that may be of interest for any analysis of versioning. &nbsp;The later sections speculate on some particular mechanisms that we might use in XML schema to support versioning.
+</p>
+
+<p class='irc'>
+&lt;<cite>skw-scribe</cite>&gt; NW: Invites David to intro topic....
+</p>
+
+<p class='irc'>
+&lt;<cite>skw-scribe</cite>&gt; DO: Thanks... for appointment as finding editor.
+</p>
+
+<p class='irc'>
+&lt;<cite>skw-scribe</cite>&gt; DO: Outlines work plan at <a href="http://lists.w3.org/Archives/Public/www-tag/2004Jul/0027.html">http://lists.w3.org/Archives/Public/www-tag/2004Jul/0027.html</a>
+</p>
+
+<p class='irc'>
+&lt;<cite>skw-scribe</cite>&gt; DO: See's work as producing two documents, one generic and one applying those generic approaches to specific languages.
+</p>
+
+<p class='irc'>
+&lt;<cite>skw-scribe</cite>&gt; DO: Another issue that's come up in REST/Web Services is protocol extensibility. Can think of a protocol as a language.
+</p>
+
+<p class='irc'>
+&lt;<cite>skw-scribe</cite>&gt; DO: Notion of compatibility of groups of operations - an interface - cf Web Services/ATOM.
+</p>
+
+<p class='irc'>
+&lt;<cite>skw-scribe</cite>&gt; These are things that haven't been explored very fully in the current finding.
+</p>
+
+<p class='irc'>
+&lt;<cite>DanC_jam</cite>&gt; (bummer; pointers in 0027 got kinda broken in the archive)
+</p>
+
+<p class='irc'>
+&lt;<cite>skw-scribe</cite>&gt; PC: The extensibility finding has never been finalised, but parts were abstracted into web arch. Do the changes you propose affect the webarch doc?
+</p>
+
+<p class='phone'>
+(eg to <a href="http://www.pacificspirit.com/blog/2004/05/26/substitution_rules_must_be_in_v10)">http://www.pacificspirit.com/blog/2004/05/26/substitution_rules_must_be_in_v10)</a>
+</p>
+
+<p class='irc'>
+&lt;<cite>skw-scribe</cite>&gt; DO: No... Webarch does habe some material on namespace management and some discussion of language exstensibility (subset/superset languages).
+</p>
+
+<p class='irc'>
+&lt;<cite>skw-scribe</cite>&gt; PC: Anything that would affect a 2nd LC on webarch in september?
+</p>
+
+<p class='irc'>
+&lt;<cite>skw-scribe</cite>&gt; DO: I want to change the examples to a much more common name example, first name/last name add middle name... plus other examples throughout.
+</p>
+
+<p class='irc'>
+&lt;<cite>skw-scribe</cite>&gt; DO: In part 1 TAG finding there is very little discussion of diff between extensibility and versioning.
+</p>
+
+<p class='irc'>
+&lt;<cite>skw-scribe</cite>&gt; DO: Versioning is when a namespace owner revises their language.
+</p>
+
+<p class='irc'>
+&lt;<cite>skw-scribe</cite>&gt; DO: Extensibility is when someone else includes something else in you language.
+</p>
+
+<p class='irc'>
+&lt;<cite>skw-scribe</cite>&gt; He doesn't appear to be.
+</p>
+
+<p class='irc'>
+&lt;<cite>Roy</cite>&gt; Related work (30MB dissertation of Peyman Oreizy): <a href="http://www.ics.uci.edu/~peymano/papers/thesis.pdf">http://www.ics.uci.edu/~peymano/papers/thesis.pdf</a>
+</p>
+
+<p class='irc'>
+&lt;<cite>skw-scribe</cite>&gt; DO: [going too fast for me to sumarise....]
+</p>
+
+<p class='irc'>
+&lt;<cite>Norm</cite>&gt; Yes, thanks, Noah. I failed to plan this very well.
+</p>
+
+<p class='irc'>
+&lt;<cite>Noah</cite>&gt; Sure no problem.
+</p>
+
+<p class='irc'>
+&lt;<cite>Chris</cite>&gt; substitutability seemes cleaer to me, actually
+</p>
+
+<p class='irc'>
+&lt;<cite>Chris</cite>&gt; yes, svg does that
+</p>
+
+<p class='irc'>
+&lt;<cite>DanC_jam</cite>&gt; (this summary confirms my intuition that this is a book-length topic)
+</p>
+
+<p class='irc'>
+&lt;<cite>skw-scribe</cite>&gt; DO: Moves on to thoughts on how to apply these concepts to protocols.
+</p>
+
+<p class='irc'>
+&lt;<cite>skw-scribe</cite>&gt; DO: Concluded that a MU flag is not of much use. Protocols take place over a different space/time context. Would prefe to know capabilities up front.
+</p>
+
+<p class='irc'>
+&lt;<cite>skw-scribe</cite>&gt; DO: Processing of protocols maybe somewhat distributed.
+</p>
+
+<p class='irc'>
+&lt;<cite>skw-scribe</cite>&gt; DO: Final topic to include is "service compatibility". By service I mean a collection of operations.
+</p>
+
+<p class='irc'>
+&lt;<cite>DanC_jam</cite>&gt; stuart, I think it's sufficient to say:
+</p>
+
+<p class='irc'>
+&lt;<cite>skw-scribe</cite>&gt; DO: What kind of changes in an interface preserve or break compatibilty
+</p>
+
+<p class='irc'>
+&lt;<cite>DanC_jam</cite>&gt; DO summarizes plan in <a href="http://lists.w3.org/Archives/Public/www-tag/2004Jul/0027.html">http://lists.w3.org/Archives/Public/www-tag/2004Jul/0027.html</a>
+</p>
+
+<p class='irc'>
+&lt;<cite>skw-scribe</cite>&gt; Ok... saves my fingers...
+</p>
+
+<p class='phone'>
+(A protocol A is a subprotocol of B if for every state transition arc in A there is an equivalanet transtion in B, and for that arc in A the message languge of the message sent in the transition in A is a sublanguage of the message for the equivalent arc in B.)
+</p>
+
+<p class='irc'>
+&lt;<cite>DanC_jam</cite>&gt; I'm all for telling stories about how extensibility has happened.
+</p>
+
+<p class='irc'>
+&lt;<cite>Roy</cite>&gt; related work: <a href="http://doi.acm.org/10.1145/288195.288269">http://doi.acm.org/10.1145/288195.288269</a>
+</p>
+
+<p class='irc'>
+&lt;<cite>skw-scribe</cite>&gt; TBL: DO said lots about substitutability. We were thinking of lang for webarch for treating version X as version Y, &nbsp;say ignoring bits you don't understand, but might be more acurate to think of sets of mappings between language versions.
+</p>
+
+<p class='irc'>
+&lt;<cite>skw-scribe</cite>&gt; TBL: DO was looking for words and that concepts around this notion of mappings might yield usefula language.
+</p>
+
+<p class='irc'>
+&lt;<cite>skw-scribe</cite>&gt; PC: Schedule?
+</p>
+
+<p class='phone'>
+(total mappings, tim rememebrs, from msm's comments yesterday)
+</p>
+
+<p class='irc'>
+&lt;<cite>Roy</cite>&gt; <a href="http://www.webster-dictionary.org/definition/substitutability">http://www.webster-dictionary.org/definition/substitutability</a>
+</p>
+
+<p class='irc'>
+&lt;<cite>skw-scribe</cite>&gt; DO: Hmm.... most of topics have a URI for an assoicated blog URI.
+</p>
+
+<p class='irc'>
+&lt;<cite>skw-scribe</cite>&gt; DO: Planing to continue working on the finding after addressing a few things in the work plan... maybe mid-September.
+</p>
+
+<p class='irc'>
+&lt;<cite>Roy</cite>&gt; <a href="http://en.wikipedia.org/wiki/Liskov_substitution_principle">http://en.wikipedia.org/wiki/Liskov_substitution_principle</a>
+</p>
+
+<p class='irc'>
+&lt;<cite>Chris</cite>&gt; do the xsd schema techniques map to the rng ones? Are there additional techniques applicable to the extra functionality of rng?
+</p>
+
+<p class='irc'>
+&lt;<cite>skw-scribe</cite>&gt; NW: My schedule should be more open mid-Sept onwards.
+</p>
+
+<p class='irc'>
+&lt;<cite>skw-scribe</cite>&gt; NW: Ref some plans to do Ext/Vers with XML Schema... anythoughts on joint workplan?
+</p>
+
+<p class='irc'>
+&lt;<cite>skw-scribe</cite>&gt; DO: Ok... come back to that once we've discussed 2nd (Schema specific) part of document.
+</p>
+
+<p class='irc'>
+&lt;<cite>Chris</cite>&gt; wondering whether NRL has applicability here to extensibility
+</p>
+
+<p class='irc'>
+&lt;<cite>Chris</cite>&gt; Namespace Routing Language
+</p>
+
+<p class='irc'>
+&lt;<cite>DanC_jam</cite>&gt; Namespace Routing Language (NRL) <a href="http://www.thaiopensource.com/relaxng/nrl.html">http://www.thaiopensource.com/relaxng/nrl.html</a>
+</p>
+
+<p class='irc'>
+&lt;<cite>Chris</cite>&gt; <a href="http://www.thaiopensource.com/relaxng/nrl.html">http://www.thaiopensource.com/relaxng/nrl.html</a>
+</p>
+
+<p class='irc'>
+&lt;<cite>Chris</cite>&gt; Abstract
+</p>
+
+<p class='irc'>
+&lt;<cite>Chris</cite>&gt; The XML Namespaces Recommendation allows an XML document to be composed of elements and attributes from multiple independent namespaces. Each of these namespaces may have its own schema; the schemas for different namespaces may be in different schema languages. The problem then arises of how the schemas can be composed in order to allow validation of the complete document. This document proposes the Namespace Routing Language (NRL) as a solution to this problem. NR
+</p>
+
+<p class='irc'>
+&lt;<cite>skw-scribe</cite>&gt; DO: resumes review of plan for part 2 in <a href="http://lists.w3.org/Archives/Public/www-tag/2004Jul/0027.html">http://lists.w3.org/Archives/Public/www-tag/2004Jul/0027.html</a>
+</p>
+
+<p class='irc'>
+&lt;<cite>Chris</cite>&gt; in particular I am thinking of
+</p>
+
+<p class='irc'>
+&lt;<cite>Chris</cite>&gt; 10 Open schemas
+</p>
+
+<p class='irc'>
+&lt;<cite>Chris</cite>&gt; Up to now, sections validated by one subschema have not participated in the validation of parent sections. Modern schema languages, such as W3C XML Schema and RELAX NG, can use wildcards to allow elements and attributes from any namespace in particular contexts. It is useful to take advantage of this in order to allow one subschema to constrain the contexts in which sections validated by other subschemas can occur.
+</p>
+
+<p class='irc'>
+&lt;<cite>Chris</cite>&gt; and
+</p>
+
+<p class='irc'>
+&lt;<cite>Chris</cite>&gt; 14 Transparent namespaces
+</p>
+
+<p class='irc'>
+&lt;<cite>Chris</cite>&gt; Many schema languages can deal with the kind of extensibility that involves adding child elements or attributes from different namespaces. A more difficult kind of extensibility is where we need to be able to wrap an extension element around an existing non-extension element. This can arise with namespaces describing templating and versioning.
+</p>
+
+<p class='irc'>
+&lt;<cite>skw-scribe</cite>&gt; CL: Refers DO to NRL.
+</p>
+
+<p class='irc'>
+&lt;<cite>skw-scribe</cite>&gt; Discussion of compound documents.
+</p>
+
+<p class='irc'>
+&lt;<cite>skw-scribe</cite>&gt; PC: One of my concerns would be addressed by knowing the title of the 2nd document. Propose "Best practice for versioning and extensibility with??????"
+</p>
+
+<p class='irc'>
+&lt;<cite>skw-scribe</cite>&gt; NW: I think of it more as a set of case studies rather than best practices.
+</p>
+
+<p class='irc'>
+&lt;<cite>skw-scribe</cite>&gt; DO: the problem I have with the term best practice or case studies... is that your making some particular choices [????]
+</p>
+
+<p class='irc'>
+&lt;<cite>skw-scribe</cite>&gt; PC: Ok... I'll take another pass. XML Schema are going to be looking at versioning of Schema and want to make sure that we're not treading on WG toes. If this work is helping others recognise and wrok on problems this is a positive effect.
+</p>
+
+<p class='irc'>
+&lt;<cite>skw-scribe</cite>&gt; DO: I'd like to have some XML Schema 1.0 material. I'm very pleased that XML Schema WG is taking this work seriously.
+</p>
+
+<p class='irc'>
+&lt;<cite>skw-scribe</cite>&gt; DO: They've encounter the same problems of subsumption that I did.
+</p>
+
+<p class='irc'>
+&lt;<cite>skw-scribe</cite>&gt; DO: Subsumpsion realtionships between content models.
+</p>
+
+<p class='irc'>
+&lt;<cite>skw-scribe</cite>&gt; NW: I want to put a stronger stake in the ground. The work DO/NW propose is broader than what we could reasonably expect the XML Schema WG to address.
+</p>
+
+<p class='irc'>
+&lt;<cite>skw-scribe</cite>&gt; NW: I expect us to work together with other WGs &nbsp;in those places interest coincide
+</p>
+
+<p class='irc'>
+&lt;<cite>skw-scribe</cite>&gt; DO: I'm having some difficulty in understanding how to tie in some of Noah's material into the finding. There's probably not much that we can do in the finding right now wrt to how to do this with XML Schema 1.0
+</p>
+
+<p class='irc'>
+&lt;<cite>skw-scribe</cite>&gt; PC: Reiterates that the public discussion of the topic has a positive effect and has engaged a number of interested parties
+</p>
+
+<p class='irc'>
+&lt;<cite>skw-scribe</cite>&gt; PC: I think the TAG having opinions that has influence over things that WG's are doing is a good thing.
+</p>
+
+<p class='irc'>
+&lt;<cite>skw-scribe</cite>&gt; PC: I'd like this document to highlight things that you can/can't do with say the current schema language.
+</p>
+
+<p class='irc'>
+&lt;<cite>skw-scribe</cite>&gt; DO: Agree.
+</p>
+
+<p class='irc'>
+&lt;<cite>skw-scribe</cite>&gt; DO: Would you, Paul, agree with adding this part 2 as a TAG deliverable.
+</p>
+
+<p class='irc'>
+&lt;<cite>skw-scribe</cite>&gt; PC: I'd prioritise the webarch document. This (part 2) is a horizontal cut... and I think it is appropriate for the TAG to do this. If we can get something of part 2 in order for December we can take that for more focussed feedback from the AC in december.
+</p>
+
+<p class='irc'>
+&lt;<cite>skw-scribe</cite>&gt; DC: I don't think its a case of permission or forgiveness, we stuck our toe in the water and people asked of more.
+</p>
+
+<p class='irc'>
+&lt;<cite>skw-scribe</cite>&gt; DO: My personal read is that the public would like the TAG to be looking at more forward looking issues.
+</p>
+
+<p class='irc'>
+&lt;<cite>skw-scribe</cite>&gt; PC: I think that TAG can look back and say that we have done a good job with various things where folks have picked up theads from TAG discssion (eg. Binary XML, Xlink... etc).
+</p>
+
+<p class='irc'>
+&lt;<cite>skw-scribe</cite>&gt; DO: So I'd like to know whether the TAG wants an official part 2 deliverable.
+</p>
+
+<p class='irc'>
+&lt;<cite>skw-scribe</cite>&gt; TBL: Are RDF/OWL covered in part 2?
+</p>
+
+<p class='irc'>
+&lt;<cite>skw-scribe</cite>&gt; DO: Yes... I'd expect to cover extensibility and versioning in RDF/OWL.
+</p>
+
+<p class='irc'>
+&lt;<cite>skw-scribe</cite>&gt; DO: Top 3 languages that I encounter are XML Schema, Relax NG and RDF/OWL.
+</p>
+
+<p class='irc'>
+&lt;<cite>skw-scribe</cite>&gt; NW: Does anybody think that we shouldn't be doing a part 2.
+</p>
+
+<p class='irc'>
+&lt;<cite>skw-scribe</cite>&gt; No dissent.
+</p>
+
+<p class='irc'>
+&lt;<cite>skw-scribe</cite>&gt; NW: I think we have assent to do this.
+</p>
+
+<p class='irc'>
+&lt;<cite>skw-scribe</cite>&gt; DC: Schedule ag
+</p>
+
+<p class='irc'>
+&lt;<cite>skw-scribe</cite>&gt; DC: Schedule question again?
+</p>
+
+<p class='irc'>
+&lt;<cite>skw-scribe</cite>&gt; DO: I'd aim for mid-October for two revised findings on these topics.
+</p>
+
+<p class='irc'>
+&lt;<cite>Norm</cite>&gt; I think mid-October is the right timeframe
+</p>
+
+<p class='irc'>
+&lt;<cite>skw-scribe</cite>&gt; DO: This would dovetail with presentation to AC.
+</p>
+
+<p class='irc'>
+&lt;<cite>skw-scribe</cite>&gt; DO: would an earlier revision be useful for the TAG's October F2F?
+</p>
+
+<p class='irc'>
+&lt;<cite>skw-scribe</cite>&gt; NW: Too early to say.
+</p>
+
+<p class='irc'>
+&lt;<cite>Norm</cite>&gt; PC: Middle October is safer
+</p>
+
+<p class='irc'>
+&lt;<cite>Norm</cite>&gt; DO: I wanted to add that I think the Schema 1.1 work is really interesting and to the extent that the TAG has been able to influence that work, as a member of the communtiy, I've been veryp leased to see that interaction.
+</p>
+
+<p class='irc'>
+&lt;<cite>Norm</cite>&gt; DO: I think that work on Schema 1.1 has a real opportunity to raise the bar. I think to the extent that the finding can influence that and there can be an ongoing dialogn, I thin kthat is all goodness.
+</p>
+
+<p class='irc'>
+&lt;<cite>Norm</cite>&gt; DO: And other groups, too.
+</p>
+
+<p class='irc'>
+&lt;<cite>Norm</cite>&gt; SW: Would the rdf/owl stuff be a topic for the Semantic Web BPWG.
+</p>
+
+<p class='irc'>
+&lt;<cite>Norm</cite>&gt; DO: Yes, I think so. I would expect that the same sorts of interaction soccur there.
+</p>
+
+<p class='irc'>
+&lt;<cite>Norm</cite>&gt; timbl: Versioning of ontologies is a hot research topic and there's a lot of practical work being done on it as well.
+</p>
+
+<p class='irc'>
+&lt;<cite>Norm</cite>&gt; timbl: There are people who's life's work is the evolution of ontologies so there should be something to connect tol.
+</p>
+
+<p class='irc'>
+&lt;<cite>Norm</cite>&gt; DO: And I think the TAG can have a connection between that and the schema working group. That connection can be fairly close in both cases.
+</p>
+
+<p class='irc'>
+&lt;<cite>Norm</cite>&gt; DO: One of the reasons we haven't had too much interaction so far is that we haven't had many direct examples. I think having concrete examples will help.
+</p>
+
+<p class='irc'>
+&lt;<cite>Norm</cite>&gt; DO: One thing on the finding is that I feel comfortable working on the schema material, there's only so far that I'll be able to take the ball when it comes to RDF/OWL. I'll try to take the ball down the field aways, but I have no belief that I'll be able to make it into the end zone.
+</p>
+
+<p class='irc'>
+&lt;<cite>Norm</cite>&gt; timbl: Maybe we can find some people to connect to on that topic.
+</p>
+
+<p class='phone'>
+Bijan
+</p>
+
+<p class='irc'>
+&lt;<cite>Norm</cite>&gt; DO: I'm just pointing out the realities of my ability to learn the material.
+</p>
+
+<p class='irc'>
+&lt;<cite>Norm</cite>&gt; DO: Each question I ask about RDF/OWL takes longer to answer than I would have hoped because of differing world views.
+</p>
+
+<p class='irc'>
+&lt;<cite>Norm</cite>&gt; DO: Open vs. closed world assumptions, data types, etc. There are things that are somewhat complicated in the view. There might come to a point where this will all work out,
+</p>
+
+<p class='irc'>
+&lt;<cite>Norm</cite>&gt; DO: Maybe we'll get concrete "do it this way or that way" results
+</p>
+
+<p class='irc'>
+&lt;<cite>Norm</cite>&gt; PC: I will even speculate that I can't do as much of a review of the schema part as you can. So one of the thing's I'll encourage the TAG to do is make sure this document gets wider review. That's a tactic that will be useful in this area.
+</p>
+
+<p class='irc'>
+&lt;<cite>Norm</cite>&gt; NW thanks DO for participating remotely from his vacation.
+</p>
+
+<p class='irc'>
+&lt;<cite>Norm</cite>&gt; (on behalf of the tag)
+</p>
+
+
+
+</div>
+<h2><a name="ActionSummary">Summary of Action Items</a></h2>
+<!-- Action Items -->
+<strong>[NEW]</strong> <strong>ACTION:</strong> CL to draft text on language negotiation for inclusion in webarch., [recorded in <a href="http://www.w3.org/2004/08/10-tagmem-irc">http://www.w3.org/2004/08/10-tagmem-irc</a>] <br />
+<strong>[NEW]</strong> <strong>ACTION:</strong> DC respond to IETF/IAB wrt to rosenberg-5 [recorded in <a href="http://www.w3.org/2004/08/10-tagmem-irc">http://www.w3.org/2004/08/10-tagmem-irc</a>] <br />
+<strong>[NEW]</strong> <strong>ACTION:</strong> NW to Add to 3.6.2 "that doesnt [recorded in <a href="http://www.w3.org/2004/08/10-tagmem-irc">http://www.w3.org/2004/08/10-tagmem-irc</a>] <br />
+<strong>[NEW]</strong> <strong>ACTION:</strong> SW to Include example on lang info in URI to metadatainURI finding [recorded in <a href="http://www.w3.org/2004/08/10-tagmem-irc">http://www.w3.org/2004/08/10-tagmem-irc</a>] <br />
+&nbsp;<br />
+
+
+[End of minutes] <br>
+<hr>
+
+<address>
+  Minutes formatted by David Booth's 
+  <a href="http://dev.w3.org/cvsweb/~checkout~/2002/scribe/scribedoc.htm">scribe.perl</a> version 1.122 (<a href="http://dev.w3.org/cvsweb/2002/scribe/">CVS log</a>)<br>
+  $Date: 2008-01-23 05:23:54 $ 
+</address>
+<div class="diagnostics">
+<hr />
+<h2>Scribe.perl diagnostic output</h2>
+[Delete this section before finalizing the minutes.] <br>
+<pre>
+This is scribe.perl Revision: 1.122  of Date: 2005/03/31 04:43:41  
+Check for newer version at <a href="http://dev.w3.org/cvsweb/~checkout~/2002/scribe/">http://dev.w3.org/cvsweb/~checkout~/2002/scribe/</a>
+
+Guessing input format: RRSAgent_Text_Format (score 1.00)
+
+FAILED: s/At times, there may be/A problem has been/
+Succeeded: s/goof/good/
+Succeeded: s/RDF BPWG/Semantic Web BPWG/
+Found Scribe: timbl
+Inferring ScribeNick: timbl
+
+WARNING: No "Topic:" lines found, but dash separators were found.  
+Defaulting to -dashTopics option.
+
+Present: RF PC DC SW TBL NW(Chair)
+Agenda: <a href="http://www.w3.org/2001/tag/2004/08/09-11-tag.html">http://www.w3.org/2001/tag/2004/08/09-11-tag.html</a>
+Found Date: 9 Aug 2004
+People with action items: cl dc nw respond sw
+
+WARNING: Input appears to use implicit continuation lines.
+You may need the "-implicitContinuations" option.
+
+
+</pre>
+[End of <a href="http://dev.w3.org/cvsweb/~checkout~/2002/scribe/scribedoc.htm">scribe.perl</a> diagnostic output]
+
+</div>
+</body>
+</html>

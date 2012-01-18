@@ -1,0 +1,791 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang='en'>
+<head>
+  <title>Technical Architecture Group (TAG) Weekly Teleconference -- 22 Feb 2005</title>
+  <link type="text/css" rel="STYLESHEET" href="http://www.w3.org/StyleSheets/base.css">
+  <link type="text/css" rel="STYLESHEET" href="http://www.w3.org/StyleSheets/public.css">
+  <link type="text/css" rel="STYLESHEET" href="http://www.w3.org/2004/02/minutes-style.css">
+  <meta content="Technical Architecture Group (TAG) Weekly Teleconference" name="Title">  
+  <meta content="text/html; charset=iso-8859-1" http-equiv="Content-Type">
+</head>
+
+<body>
+<p><a href="http://www.w3.org/"><img src="http://www.w3.org/Icons/w3c_home" alt="W3C" border="0"
+height="48" width="72"></a> 
+
+</p>
+
+<h1> - DRAFT - </h1>
+<h1>Technical Architecture Group (TAG) Weekly Teleconference</h1>
+<h2>22 Feb 2005</h2>
+
+<p><a href='http://www.w3.org/2001/tag/2005/02/22-agenda.html'>Agenda</a></p>
+
+
+<p>See also: <a href="http://www.w3.org/2005/02/22-tagmem-irc">IRC log</a></p>
+
+<h2><a name="attendees">Attendees</a></h2>
+
+<div class="intro">
+<dl>
+<dt>Present</dt>
+<dd>Vincent, Ht, Norm, Roy, DanC, Chris, ed, DOrchard, PaulC</dd>
+<dt>Regrets</dt>
+<dd>TimBL, Noah</dd>
+<dt>Chair</dt>
+<dd>Vincent </dd>
+<dt>Scribe</dt>
+<dd>DanC</dd>
+</dl>
+</div>
+
+<h2>Contents</h2>
+<ul>
+  <li><a href="#agenda">Topics</a>
+	<ol>
+	<li><a href="#item01">Roll call</a></li>
+<li><a href="#item02">Accept this agenda?</a></li>
+<li><a href="#item03">Date of Next telcon</a></li>
+<li><a href="#item04">Meeting Records</a></li>
+<li><a href="#item05">Change location of June f2f? (Edinburgh?)</a></li>
+<li><a href="#item06">W3C Technical Plenary TAG F2F Monday am 28th February 2005</a></li>
+<li><a href="#item07">W3C Technical Plenary TAG Liaisons</a></li>
+<li><a href="#item08">New Issue?: Adding terms to a namespace, xml:id/C14N discussions</a></li>
+<li><a href="#item09">New Issue?: Relationship of URI schemes to protocols</a></li>
+<li><a href="#item10">Run through Open Issues list looking for progress</a></li>
+<li><a href="#item11">issue review. siteData-36</a></li>
+<li><a href="#item12">issue review. abstractComponentRefs-37</a></li>
+<li><a href="#item13">issue review: putMediaType-38</a></li>
+<li><a href="#item14">issue review rdfURIMeaning-39</a></li>
+<li><a href="#item15">issue review URIGoodPractice-40</a></li>
+
+	</ol>
+  </li>
+  <li><a href="#ActionSummary">Summary of Action Items</a></li>
+</ul>
+<hr>
+<div class="meeting">
+
+<p class='irc'>
+&lt;<cite>scribe</cite>&gt; Scribe: DanC
+</p>
+
+<h3 id="item01">Roll call</h3>
+<h3 id="item02">Accept this agenda?</h3>
+<h3 id="item03">Date of Next telcon</h3>
+<p class='phone'>
+propose Tuesday 8 March 2005
+</p>
+
+<p class='phone'>
+regrets DaveO for 8 Mar
+</p>
+
+<p class='phone'>
+VQ has a conflict with 8 Mar
+</p>
+
+<p class='phone'>
+VQ is available to prepare an agenda, but not to run the meeting
+</p>
+
+<p class='irc'>
+&lt;<cite>ht</cite>&gt; regrets HST for 8 March
+</p>
+
+<p class='phone'>
+NDW offers to run the 8 Mar telcon
+</p>
+
+<p class='phone'>
+(are we resolved? doesn't seem critical... can decide 28Feb, I suppose)
+</p>
+
+<h3 id="item04">Meeting Records</h3>
+<p class='phone'>
+<a href="http://www.w3.org/2005/02/07-tagmem-minutes.html">minutes 7 Feb</a>
+</p>
+
+<p class='phone'>
+<a href="http://lists.w3.org/Archives/Public/www-tag/2005Feb/att-0112/Feb142005FormattedMinutes.html">14 Feb minutes</a>
+</p>
+
+<p class='phone'>
+<cite>DC:</cite> 2nd proposal to OK 7 Feb minutes
+</p>
+
+<p class='phone'>
+<cite>VQ:</cite> I've reviewed actions from the telcons... many seem to be done; I'll get back to the others 28Feb <br>
+... unless there are comments now
+</p>
+
+<p class='phone'>
+noah notes being done with his action on extensibility
+</p>
+
+<h3 id="item05">Change location of June f2f? (Edinburgh?)</h3>
+<p class='phone'>
+<cite>VQ:</cite> recall we agreed to meet near Nice just after the W3C AC meeting, but it's no longer convenient for Chris... <br>
+... and HT has offered to host... <br>
+... some preferences each way...
+</p>
+
+<p class='irc'>
+&lt;<cite>Roy</cite>&gt; Edinburgh +1
+</p>
+
+<p class='irc'>
+&lt;<cite>noah</cite>&gt; France +1
+</p>
+
+<p class='irc'>
+&lt;<cite>noah</cite>&gt; (if someone will host, of course)
+</p>
+
+<p class='phone'>
+<cite>Chris:</cite> I have not told Coralie (prospective INRIA local organizer) to cancel our meeting in June
+</p>
+
+<p class='irc'>
+&lt;<cite>noah</cite>&gt; Edinburgh OK if not, just trying to save travel wear n tear
+</p>
+
+<p class='phone'>
+<cite>VQ:</cite> to expects to attend the AC meeting?
+</p>
+
+<p class='phone'>
+<cite>DC:</cite> I do
+</p>
+
+<p class='phone'>
+<cite>DO:</cite> I do
+</p>
+
+<p class='irc'>
+&lt;<cite>noah</cite>&gt; NM: I do
+</p>
+
+<p class='phone'>
+<cite>HT:</cite> I do
+</p>
+
+<p class='phone'>
+<cite>NDW:</cite> I prefer Edingburgh, though that reduces the chance I'll attend the AC meeting
+</p>
+
+<p class='irc'>
+&lt;<cite>Ed</cite>&gt; I will not be at the AC meeting
+</p>
+
+<p class='phone'>
+<cite>VQ:</cite> I expect TimBL to attend the AC meeting
+</p>
+
+<p class='phone'>
+<cite>Roy:</cite> I think timbl had a conflict with the June 8 Date
+</p>
+
+<p class='phone'>
+"TimBL was also unable to comfirm in-person attendance." re 8-10 June. <a href="http://www.w3.org/2001/tag/2004/10/05-07-tag.html#meeting-plans">http://www.w3.org/2001/tag/2004/10/05-07-tag.html#meeting-plans</a>
+</p>
+
+<p class='phone'>
+<cite>HT:</cite> I think I can hold my hosting reservations for a month without much cost in case I cancel
+</p>
+
+<p class='phone'>
+<cite>VQ:</cite> so let's take another week to consider it
+</p>
+
+<a name="action01"></a>
+<p class='irc'>
+&lt;<cite>scribe</cite>&gt; <strong>ACTION:</strong> VQ to contact Coralie re 8-10 June meeting arrangements at INRIA. [recorded in <a href="http://www.w3.org/2005/02/22-tagmem-minutes#action01">http://www.w3.org/2005/02/22-tagmem-minutes#action01</a>]
+</p>
+
+<p class='phone'>
+<cite>CL:</cite> you might ask her about Cannes vs Sophia while you're at it
+</p>
+
+<h3 id="item06">W3C Technical Plenary TAG F2F Monday am 28th February 2005</h3>
+<p class='phone'>
+<a href="http://www.w3.org/2001/tag/2005/02/28-agenda.html">proposed agenda</a>
+</p>
+
+<p class='phone'>
+(er... half an hour of admin? hmm.)
+</p>
+
+<p class='phone'>
+<cite>DC:</cite> hmm... .5hr of admin seems like a lot for a 2hr meeting...
+</p>
+
+<p class='phone'>
+<cite>VQ:</cite> some is more than admin... issues list maintenance
+</p>
+
+<p class='irc'>
+&lt;<cite>Chris</cite>&gt; start discussing issue list stuff in email to get up to speed?
+</p>
+
+<p class='phone'>
+(not sure there's much to discuss, other than who volunteers to do it)
+</p>
+
+<p class='phone'>
+<cite>VQ:</cite> I expect to update the agenda tomorrow with comments received; I'm willing to take comments up to the meeting day
+</p>
+
+<h3 id="item07">W3C Technical Plenary TAG Liaisons</h3>
+<p class='phone'>
+<cite>VQ:</cite> re XML Core joint meeting...
+</p>
+
+<p class='phone'>
+<a href="http://www.w3.org/2001/tag/2005/01/TechnicalPlenaryLiaisons.html">Tentative TAG Liaison Meeting Schedule</a>
+</p>
+
+<p class='phone'>
+<cite>VQ:</cite> PaulG proposes 10:30 to noon Thu for XML Core/TAG join telcon
+</p>
+
+<a name="action02"></a>
+<p class='irc'>
+&lt;<cite>scribe</cite>&gt; <strong>ACTION:</strong> NDW to let himself know . ;-) [recorded in <a href="http://www.w3.org/2005/02/22-tagmem-minutes#action02">http://www.w3.org/2005/02/22-tagmem-minutes#action02</a>]
+</p>
+
+<p class='phone'>
+ACTION 2 = NDW: let XML Core WG know yes, we agree to meet Thu 3 Mar 10:30am in Boston
+</p>
+
+<p class='phone'>
+<cite>VQ:</cite> note "14:45-15:45 Joint with CDF-WG" <br>
+... on Monday
+</p>
+
+<p class='irc'>
+&lt;<cite>noah</cite>&gt; Cambridge? &nbsp;The F2F is in East Boston, AFAIK
+</p>
+
+<p class='phone'>
+<cite>HT:</cite> no liaison meetings Tuesday?
+</p>
+
+<p class='phone'>
+<cite>VQ:</cite> right
+</p>
+
+<p class='irc'>
+&lt;<cite>noah</cite>&gt; Specifically, at the Logan airport Hyatt Hotel
+</p>
+
+<p class='phone'>
+VQ reviews liaison schedule Revision 1.21 &nbsp;2005/02/22 17:26:09 &nbsp;vquint
+</p>
+
+<h3 id="item08">New Issue?: Adding terms to a namespace, xml:id/C14N discussions</h3>
+<p class='phone'>
+<a href="http://lists.w3.org/Archives/Public/www-tag/2005Feb/0015.html">Norm's request</a>
+</p>
+
+<p class='phone'>
+(hmm... seems to fall under versioning41, but so does all of life, the universe, and everything, so maybe a specific issue is good)
+</p>
+
+<p class='phone'>
+<cite>DC:</cite> issue name ideas?
+</p>
+
+<p class='phone'>
+<cite>NDW:</cite> nameSpaceTerms-NN, maybe?
+</p>
+
+<p class='irc'>
+&lt;<cite>Roy</cite>&gt; nameAdditions-NN ?
+</p>
+
+<p class='irc'>
+&lt;<cite>Chris-again</cite>&gt; reservedNoReally?
+</p>
+
+<p class='phone'>
+<cite>NDW:</cite> some urgency motivates a separate issue from versioning41: having a TAG decision before end of xml:id CR period would be nice
+</p>
+
+<p class='irc'>
+&lt;<cite>Zakim</cite>&gt; DanC, you wanted to ask about timing expectations
+</p>
+
+<p class='irc'>
+&lt;<cite>Roy</cite>&gt; digestable +1
+</p>
+
+<p class='phone'>
+<cite>DO:</cite> so the results of this new issue could be folded into work on versioning41?
+</p>
+
+<p class='phone'>
+<cite>NDW:</cite> sure, but this seems independent of schema languages etc. [?]
+</p>
+
+<p class='phone'>
+<cite>HT:</cite> people often read more into the namespace REC than is there; I'd like to take this opportunity to clarify
+</p>
+
+<p class='irc'>
+&lt;<cite>Norm</cite>&gt; <a href="http://lists.w3.org/Archives/Public/www-tag/2005Feb/0015.html">http://lists.w3.org/Archives/Public/www-tag/2005Feb/0015.html</a>
+</p>
+
+<p class='irc'>
+&lt;<cite>Norm</cite>&gt; That's the URI paulc
+</p>
+
+<p class='phone'>
+<cite>DO:</cite> one thing that's in the [draft] finding now is a discussion of relationship between terms, [missed?], which seems relevant
+</p>
+
+<p class='phone'>
+<cite>RF:</cite> [good point about issues : findings. can't summarize real-time]. I suggest "nameAddition" because the identity questions don't seem to be the main thing
+</p>
+
+<p class='phone'>
+<cite>NDW:</cite> ...[missed?]... crux of it is xml: namespace [?]
+</p>
+
+<p class='irc'>
+&lt;<cite>Chris-again</cite>&gt; ... and is it bounded or not
+</p>
+
+<p class='phone'>
+<cite>CL:</cite> yes, that is the main thing... one spec made an assuption about the xml: namespace, and unless "will not change" is explicitly stated, that's not safe
+</p>
+
+<p class='irc'>
+&lt;<cite>Zakim</cite>&gt; ht, you wanted to disagree with Norm
+</p>
+
+<p class='phone'>
+[scribe gives up trying to keep up]
+</p>
+
+<p class='irc'>
+&lt;<cite>Roy</cite>&gt; We can have one finding answer multiple issues, but tracking multiple issues under a single issue name simply because we expect them to be answered in one finding would be a mistake, IMO.
+</p>
+
+<p class='phone'>
+<cite>HT:</cite> to speak of "adding names to a namespace" doesn't make sense. the names are all there.
+</p>
+
+<p class='phone'>
+<cite>NDW:</cite> while I might agree, that's not universally agreed
+</p>
+
+<p class='irc'>
+&lt;<cite>noah</cite>&gt; +1, I agree with Henry. At the very least, we shouldn't preclude in advance that possible formulation
+</p>
+
+<p class='irc'>
+&lt;<cite>Chris-again</cite>&gt; HT: namespace is a set, unbounded, all names already exist in it
+</p>
+
+<p class='irc'>
+&lt;<cite>dorchard</cite>&gt; The first part of the finding has an attempt at formal description of the architecture of languages <a href="http://lists.w3.org/Archives/Public/www-tag/2004Nov/att-0071/versioning-part1.html">http://lists.w3.org/Archives/Public/www-tag/2004Nov/att-0071/versioning-part1.html</a>
+</p>
+
+<p class='irc'>
+&lt;<cite>noah</cite>&gt; If you're looking for a name for an issue (I can't quite tell), how about "immutableNamespaces"?
+</p>
+
+<p class='irc'>
+&lt;<cite>ht</cite>&gt; namespaceState?
+</p>
+
+<p class='phone'>
++1 namespaceState
+</p>
+
+<p class='irc'>
+&lt;<cite>Ed</cite>&gt; +1 namespaceState
+</p>
+
+<p class='phone'>
+<cite>VQ:</cite> seems we're agreed (agreeing?) to add an issue, in addition to, while perhaps related to, issue 41
+</p>
+
+<p class='irc'>
+&lt;<cite>Chris-again</cite>&gt; +1 namespaceState
+</p>
+
+<p class='irc'>
+&lt;<cite>Roy</cite>&gt; +1 namespaceState
+</p>
+
+<p class='irc'>
+&lt;<cite>dorchard</cite>&gt; +1 namespaceState
+</p>
+
+<p class='irc'>
+&lt;<cite>Norm</cite>&gt; +1 namespaceState
+</p>
+
+<p class='phone'>
+<strong class='resolution'>RESOLUTION: to accept issue namespaceState.</strong>
+</p>
+
+<p class='phone'>
+<cite>PC:</cite> we need to announce the issue to tag-announce
+</p>
+
+<p class='phone'>
+<cite>VQ:</cite> ndw's request serves as an issue summary?
+</p>
+
+<p class='phone'>
+<cite>Ed:</cite> OK
+</p>
+
+<p class='irc'>
+&lt;<cite>Roy</cite>&gt; +1
+</p>
+
+<a name="action03"></a>
+<p class='irc'>
+&lt;<cite>scribe</cite>&gt; <strong>ACTION:</strong> NDW to announce TAG's acknolwedgement of issue nameSpaceState-NN [recorded in <a href="http://www.w3.org/2005/02/22-tagmem-minutes#action03">http://www.w3.org/2005/02/22-tagmem-minutes#action03</a>]
+</p>
+
+<p class='irc'>
+&lt;<cite>Zakim</cite>&gt; DanC, you wanted to note traditions and to
+</p>
+
+<p class='irc'>
+&lt;<cite>Norm</cite>&gt; q_
+</p>
+
+<p class='phone'>
+NDW, HT, DO volunteer to "work on it"
+</p>
+
+<a name="action04"></a>
+<p class='irc'>
+&lt;<cite>scribe</cite>&gt; <strong>ACTION:</strong> NDW to work with HT, DO on namespaceState [recorded in <a href="http://www.w3.org/2005/02/22-tagmem-minutes#action04">http://www.w3.org/2005/02/22-tagmem-minutes#action04</a>]
+</p>
+
+<p class='irc'>
+&lt;<cite>Zakim</cite>&gt; Chris-again, you wanted to add that a cc should be sent to affected WGs
+</p>
+
+<p class='irc'>
+&lt;<cite>ht</cite>&gt; HST has in mind to try to summarise, in a way the owners would acknowledge as fair, the various positions so far articulated at the base of the ongoing discussion
+</p>
+
+<p class='phone'>
+tx for the sketch, ht. pls do
+</p>
+
+<p class='phone'>
+(not in this meeting, I assume)
+</p>
+
+<p class='irc'>
+&lt;<cite>ht</cite>&gt; Correct DanC
+</p>
+
+<p class='phone'>
+<cite>PC:</cite> add this to the 3 Mar TAG/XML Core agenda?
+</p>
+
+<p class='phone'>
+<cite>NDW:</cite> yes, quite
+</p>
+
+<p class='phone'>
+<cite>PC:</cite> pending XML Core work depends on this?
+</p>
+
+<p class='phone'>
+<cite>NDW:</cite> xml:id CR exit
+</p>
+
+<p class='phone'>
+<cite>PC:</cite> is there room for this on the TAG/XML Core agenda?
+</p>
+
+<p class='phone'>
+NDW/VQ: think so, yes
+</p>
+
+<h3 id="item09">New Issue?: Relationship of URI schemes to protocols</h3>
+<p class='irc'>
+&lt;<cite>Roy</cite>&gt; my input is already in www-tag
+</p>
+
+<p class='phone'>
+<a href="http://lists.w3.org/Archives/Public/www-tag/2005Feb/0013.html">Noah's request</a>
+</p>
+
+<p class='phone'>
+(re which, Roy?)
+</p>
+
+<p class='irc'>
+&lt;<cite>Roy</cite>&gt; previous topic
+</p>
+
+<p class='irc'>
+&lt;<cite>noah</cite>&gt; Does it make any sense to delay consideration of my request until I am there to discuss, or is the intent fairly clear from the note?
+</p>
+
+<p class='phone'>
+DC suggests straw poll; if we can say "yes" today, very well. if not, let's wait 'till noah can make his case
+</p>
+
+<p class='irc'>
+&lt;<cite>noah</cite>&gt; I suppose that, selfishly, I'd be glad if you accept the issue now without me, but if you're inclined to drop it I might welcome a chance to defend it a bit, if that's not too disruptive.
+</p>
+
+<p class='phone'>
+<cite>RF:</cite> having trouble differentiating this from work going on in uri mailing list
+</p>
+
+<p class='phone'>
+<cite>DC:</cite> why do you want/need to differentiate?
+</p>
+
+<p class='phone'>
+<cite>RF:</cite> good question... <br>
+... 0013 doesn't [do it for me].
+</p>
+
+<p class='phone'>
+<cite>DC:</cite> let's wait 'till Noah can make his case.
+</p>
+
+<p class='phone'>
+<cite>VQ:</cite> very well.
+</p>
+
+<h3 id="item10">Run through Open Issues list looking for progress</h3>
+<p class='irc'>
+&lt;<cite>noah</cite>&gt; Roy, either in these minutes or by email, maybe you could send URIs to pertinent thread in URI list? &nbsp;Thanks.
+</p>
+
+<p class='phone'>
+<a href="http://www.w3.org/2001/tag/issues.html?view=normal&amp;closed=1">issues list</a>
+</p>
+
+<p class='phone'>
+<cite>VQ:</cite> continuing from 7 Feb <br>
+... continuing from 7 Feb, when we got to xmlFunctions-34 ... <br>
+... I'm interested in names relevant to each issue.
+</p>
+
+<p class='irc'>
+&lt;<cite>Roy</cite>&gt; Noah, there is ongoing discussion on uri@w3.org regarding rfc2717-2718 replacement that contains instructions on what to include in scheme spec.
+</p>
+
+<p class='irc'>
+&lt;<cite>Norm</cite>&gt; Appalling but true
+</p>
+
+<p class='irc'>
+&lt;<cite>Roy</cite>&gt; Noah, <a href="http://lists.w3.org/Archives/Public/uri/2005Feb/0042.html">http://lists.w3.org/Archives/Public/uri/2005Feb/0042.html</a>
+</p>
+
+<p class='phone'>
+<a href="http://www.w3.org/2004/01/rdxh/specbg.html">Storing Data in Documents: The Design History and Rationale for GRDDL</a>
+</p>
+
+<p class='phone'>
+<cite>DC:</cite> [long ...] I'd like reviewer for specbg
+</p>
+
+<p class='phone'>
+<cite>HT:</cite> I'm happy to review
+</p>
+
+<p class='phone'>
+<cite>NDW:</cite> [cut off?]
+</p>
+
+<a name="action05"></a>
+<p class='irc'>
+&lt;<cite>scribe</cite>&gt; <strong>ACTION:</strong> HT to review " Storing Data in Documents ..." [recorded in <a href="http://www.w3.org/2005/02/22-tagmem-minutes#action05">http://www.w3.org/2005/02/22-tagmem-minutes#action05</a>]
+</p>
+
+<a name="action06"></a>
+<p class='irc'>
+&lt;<cite>scribe</cite>&gt; <strong>ACTION:</strong> NDW to review " Storing Data in Documents ..." [recorded in <a href="http://www.w3.org/2005/02/22-tagmem-minutes#action06">http://www.w3.org/2005/02/22-tagmem-minutes#action06</a>]
+</p>
+
+<h3 id="item11">issue review. siteData-36</h3>
+<p class='phone'>
+<cite>DC:</cite> [can't type and summarize] <br>
+... something like: next time a /robots.txt situation comes around, I'd like to have something in place that's better than a hard-coded name
+</p>
+
+<p class='phone'>
+<cite>CL:</cite> meanwhile, /robots.txt is quite useful.
+</p>
+
+<p class='phone'>
+<cite>VQ:</cite> any takers?
+</p>
+
+<p class='phone'>
+<cite>NDW:</cite> some interest, but not much bandwidth
+</p>
+
+<p class='phone'>
+<cite>DC:</cite> haven't have a "lightbulb" idea. prefer to leave it in the "someday" pile
+</p>
+
+<h3 id="item12">issue review. abstractComponentRefs-37</h3>
+<p class='phone'>
+<cite>DO:</cite> this came from a request from the web services description WG... <br>
+... (1) when we come up with a component designator, is it designating an abstract component, or a piece of syntax in the WSDL doc? <br>
+... (2) [missed?] <br>
+... and the TAG said: (1) designates abstract component (2) we discussed lots of options and said "yeah, the one in your WD is OK"
+</p>
+
+<p class='phone'>
+( trying to confirm that we've approved this finding... <a href="http://www.w3.org/2001/tag/doc/abstractComponentRefs-20031030">http://www.w3.org/2001/tag/doc/abstractComponentRefs-20031030</a> )
+</p>
+
+<p class='phone'>
+<cite>HST:</cite> XML Schema work on component designators is relevant...
+</p>
+
+<p class='phone'>
+<a href="http://www.w3.org/2001/tag/doc/abstractComponentRefs-20031030">Abstract Component References Draft TAG Finding 30 Oct 2003</a>
+</p>
+
+<p class='phone'>
+HT notes...
+</p>
+
+<p class='phone'>
+<a href="http://lists.w3.org/Archives/Public/www-tag/2004Jan/0007.html">Comments from MSM on behalf of Schema WG</a>
+</p>
+
+<p class='irc'>
+&lt;<cite>ht</cite>&gt; MSM reports Schema WG was not happy
+</p>
+
+<p class='irc'>
+&lt;<cite>ht</cite>&gt; HST hears DO saying that it doesn't actually answer the question, yet
+</p>
+
+<p class='irc'>
+&lt;<cite>Zakim</cite>&gt; ht, you wanted to volunteer to take this finding on, in a month or two
+</p>
+
+<p class='phone'>
+<cite>VQ:</cite> ok, so we are where we are.
+</p>
+
+<h3 id="item13">issue review: putMediaType-38</h3>
+<p class='phone'>
+<cite>DC:</cite> offshoot of issue 7
+</p>
+
+<p class='phone'>
+<cite>CL:</cite> there was some WEBDAV criticism in the discussion?
+</p>
+
+<p class='phone'>
+<cite>DC:</cite> yes, I think so
+</p>
+
+<p class='phone'>
+<cite>RF:</cite> perhaps it should be reassigned to me
+</p>
+
+<p class='phone'>
+<a href="http://www.w3.org/2001/tag/issues.html?view=normal&amp;closed=1#putMediaType-38">putMediaType-38</a>
+</p>
+
+<a name="action07"></a>
+<p class='irc'>
+&lt;<cite>Roy</cite>&gt; <strong>ACTION:</strong> Roy to prepare putMediaType-38 for further discussion [recorded in <a href="http://www.w3.org/2005/02/22-tagmem-minutes#action07">http://www.w3.org/2005/02/22-tagmem-minutes#action07</a>]
+</p>
+
+<h3 id="item14">issue review rdfURIMeaning-39</h3>
+<p class='phone'>
+<a href="http://lists.w3.org/Archives/Public/www-tag/2003Jul/0127.html">Re: New issue - Meaning of URIs in RDF documents</a>
+</p>
+
+<p class='irc'>
+&lt;<cite>Roy</cite>&gt; I am planning to work on URIGoodPractice-40 next week during TP when I can talk to DaveO
+</p>
+
+<p class='phone'>
+<cite>DanC:</cite> gee... can't remember the gist of this. let's wait 'till TimBL is around
+</p>
+
+<h3 id="item15">issue review URIGoodPractice-40</h3>
+<p class='phone'>
+<cite>RF:</cite> related to abstractComponentRefs-37 ...
+</p>
+
+<p class='phone'>
+<cite>DO:</cite> in discussion of XPointer () stuff, I recall some criticism from RF, which spawned this issue
+</p>
+
+<p class='phone'>
+<cite>VQ:</cite> ok, that's it for today
+</p>
+
+<p class='phone'>
+ADJOURN.
+</p>
+
+
+
+</div>
+<h2><a name="ActionSummary">Summary of Action Items</a></h2>
+<!-- Action Items -->
+<strong>[NEW]</strong> <strong>ACTION:</strong> HT to review " Storing Data in Documents ..." [recorded in <a href="http://www.w3.org/2005/02/22-tagmem-minutes#action05">http://www.w3.org/2005/02/22-tagmem-minutes#action05</a>] <br />
+<strong>[NEW]</strong> <strong>ACTION:</strong> NDW to announce TAG's acknolwedgement of issue nameSpaceState-NN [recorded in <a href="http://www.w3.org/2005/02/22-tagmem-minutes#action03">http://www.w3.org/2005/02/22-tagmem-minutes#action03</a>] <br />
+<strong>[NEW]</strong> <strong>ACTION:</strong> NDW to let himself know . ;-) [recorded in <a href="http://www.w3.org/2005/02/22-tagmem-minutes#action02">http://www.w3.org/2005/02/22-tagmem-minutes#action02</a>] <br />
+<strong>[NEW]</strong> <strong>ACTION:</strong> NDW to review " Storing Data in Documents ..." [recorded in <a href="http://www.w3.org/2005/02/22-tagmem-minutes#action06">http://www.w3.org/2005/02/22-tagmem-minutes#action06</a>] <br />
+<strong>[NEW]</strong> <strong>ACTION:</strong> NDW to work with HT, DO on namespaceState [recorded in <a href="http://www.w3.org/2005/02/22-tagmem-minutes#action04">http://www.w3.org/2005/02/22-tagmem-minutes#action04</a>] <br />
+<strong>[NEW]</strong> <strong>ACTION:</strong> Roy to prepare putMediaType-38 for further discussion [recorded in <a href="http://www.w3.org/2005/02/22-tagmem-minutes#action07">http://www.w3.org/2005/02/22-tagmem-minutes#action07</a>] <br />
+<strong>[NEW]</strong> <strong>ACTION:</strong> VQ to contact Coralie re 8-10 June meeting arrangements at INRIA. [recorded in <a href="http://www.w3.org/2005/02/22-tagmem-minutes#action01">http://www.w3.org/2005/02/22-tagmem-minutes#action01</a>] <br />
+&nbsp;<br />
+
+
+[End of minutes] <br>
+<hr>
+
+<address>
+  Minutes formatted by David Booth's 
+  <a href="http://dev.w3.org/cvsweb/~checkout~/2002/scribe/scribedoc.htm">scribe.perl</a> version 1.122 (<a href="http://dev.w3.org/cvsweb/2002/scribe/">CVS log</a>)<br>
+  $Date: 2008-01-23 05:23:48 $ 
+</address>
+<div class="diagnostics">
+<hr />
+<h2>Scribe.perl diagnostic output</h2>
+[Delete this section before finalizing the minutes.] <br>
+<pre>
+This is scribe.perl Revision: 1.122  of Date: 2005/03/31 04:43:41  
+Check for newer version at <a href="http://dev.w3.org/cvsweb/~checkout~/2002/scribe/">http://dev.w3.org/cvsweb/~checkout~/2002/scribe/</a>
+
+Guessing input format: RRSAgent_Text_Format (score 1.00)
+
+Succeeded: s/in Cambridge/in Boston/
+Found Scribe: DanC
+Inferring ScribeNick: DanC
+Default Present: Vincent, Ht, Norm, Roy, DanC, Chris, ed, DOrchard, PaulC
+Present: Vincent Ht Norm Roy DanC Chris ed DOrchard PaulC
+Regrets: TimBL Noah
+Agenda: <a href="http://www.w3.org/2001/tag/2005/02/22-agenda.html">http://www.w3.org/2001/tag/2005/02/22-agenda.html</a>
+Got date from IRC log name: 22 Feb 2005
+Guessing minutes URL: <a href="http://www.w3.org/2005/02/22-tagmem-minutes">http://www.w3.org/2005/02/22-tagmem-minutes</a>
+People with action items: ht ndw roy vq
+
+</pre>
+[End of <a href="http://dev.w3.org/cvsweb/~checkout~/2002/scribe/scribedoc.htm">scribe.perl</a> diagnostic output]
+
+</div>
+</body>
+</html>

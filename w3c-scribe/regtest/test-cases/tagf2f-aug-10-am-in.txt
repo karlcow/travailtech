@@ -1,0 +1,335 @@
+13:02:04 <Norm> Scribe: timbl
+13:02:04 <Norm> Chair: Stuart
+13:02:04 <Norm> Meeting: TAG f2f meeting, Ottawa
+13:02:04 <Norm> Date: 9 August 2004
+13:02:04 <Norm> Agenda: http://www.w3.org/2001/tag/2004/08/09-11-tag.html
+13:06:48 <RRSAgent> RRSAgent has joined #tagmem
+13:13:29 <DanC_jam> DanC_jam has joined #tagmem
+13:13:35 <Roy> Roy has joined #tagmem
+13:13:41 <skw-scribe> Present: RF, PC, DC,SW, TBL, NW(Chair)
+13:13:49 <DanC_jam> RRSAgent, pointer?
+13:13:49 <RRSAgent> See http://www.w3.org/2004/08/10-tagmem-irc#T13-13-49
+13:14:17 <timbl> -------------------------------------------------
+13:14:39 <skw-scribe> Issue diwg-1
+13:15:49 <skw-scribe> DC: requested discussion because we say nothing about URI with question marks in them.
+13:16:29 <skw-scribe> DC: May be a useful distinction between machine generated and human generated rather than statically/dynamically generated URI
+13:17:16 <skw-scribe> TBL: One of his notes is content-negotiated... example of a spanish user that wanted to read the english version
+13:17:24 <skw-scribe> CL arrives
+13:17:44 <skw-scribe> CL: User should be able to express a preference.
+13:18:47 <skw-scribe> RF: Customers like this when the 'system' makes a good initial default choice, but don't like an inability to easily change the 'default' if it is not a good choice.
+13:19:52 <skw-scribe> PC: Comment points at 3.6.2 URI Persistence and there are no examples in that section (at the time of the comment).
+13:20:36 <skw-scribe> PC: May be some examples by transcusion with link at the bottom...
+13:21:42 <skw-scribe> PC: ...eg when a mapping application makes up a URI for a map location.... those should be persistent and sharable.
+13:22:06 <skw-scribe> CL: Yes.... should be say session dependent or time dependent.
+13:22:50 <skw-scribe> PC: For some of the interaction with banks etc. the URI are not useful outside the given session
+13:23:02 <skw-scribe> CL: Would like to have 4 examples:
+13:23:22 <skw-scribe> 1: Map example with ?lat, ?long
+13:23:34 <skw-scribe> 2: Ditto plus sessionid
+13:23:34 <DanC_jam> I'd sure like to be able to bookmark links in my private banking data!
+13:23:57 <skw-scribe> 3: Private financial data where inappropriate to share data
+13:24:19 <skw-scribe> TBL: Still might want to share with other appropriate people...
+13:24:30 <skw-scribe> CL: Ok... maybe drop the 3rd example.
+13:24:45 <skw-scribe> DC: eg. myYahoo.com.
+13:25:31 <skw-scribe> 4: URI in the address bar remains the same despite navigation.
+13:25:53 <skw-scribe> NW: So would a proposal to include these examples address this comment.
+13:26:35 <DanC_jam> (discussing a spectrum, with examples and plusses and minuses starts to sound more like a finding than a section of the arch doc)
+13:27:12 <Roy> http://www.prescod.net/rest/mistakes/
+13:27:16 <skw-scribe> PC: I'm frusrtated when I'm forced to navigate from the top....
+13:27:47 <skw-scribe> RF: But it is not called URI persistence.
+13:28:30 <skw-scribe> RF: The examples being discussed are about bookmarkable/reusable URI.
+13:29:34 <skw-scribe> NW: Definitely a section under representation management... possibly a new subsection.
+13:30:35 <skw-scribe> NW: ....called "Supporting Navigation"
+13:31:09 <skw-scribe> NW: Further discussion....
+13:31:26 <skw-scribe> DC: .... new text needs four eyeballs IMO.
+13:31:34 <skw-scribe> Issue diwg-2
+13:32:08 <skw-scribe> DC: Overtaken by events....
+13:33:18 <skw-scribe> (diwg-2 don't communicate language info in URIs).
+13:33:43 <skw-scribe> DC: Do we cover this in the MetadataInURI finding?
+13:34:42 <skw-scribe> CL: If you have five languages you should have 6 URI, one for each specific URI and one content-neg'ed resource
+13:35:09 <skw-scribe> DC: There is no obligation to put the 'flag' in the URI.
+13:35:35 <skw-scribe> CL: Worthwhile example.... trivial to write.
+13:35:57 <skw-scribe> DC: Very relevant to metaDataInURI-31.
+13:36:21 <skw-scribe> NW: we only talk about content-neg wrt to frag ids.
+13:36:47 <Roy> re. prev topic title, "Shared URI space" is another possibility
+13:37:08 <skw-scribe> Action: CL to draft text on language negotiation for inclusion in webarch.,
+13:37:51 <skw-scribe> Action SW: Include example on lang info in URI to metadatainURI finding
+13:38:56 <DanC_jam> . http://www.w3.org/2001/tag/doc/metaDataInURI-31.html
+13:39:28 <Norm> Issues URI: http://www.w3.org/2001/tag/2003/lc1209/issues.html
+13:39:30 <skw-scribe> RF: When the resource is language specific, inclusion of a language tag in a URI is not identifying information and notg metadata... it's role has changed.
+13:40:27 <skw-scribe> NW: The word language does not appear in the draft finding....
+13:40:41 <DanC_jam> re lang info in URIs, I recommend borrowing from http://www.w3.org/DesignIssues/Generic
+13:41:04 <DanC_jam> e.g. remember to discuss http Vary: while you're at it
+13:41:22 <skw-scribe> Done with diwg-2
+13:41:26 <Chris> Chris has joined #tagmem
+13:41:45 <skw-scribe> Issue diwg-3 http://www.w3.org/2001/tag/2003/lc1209/issues.html#diwg3
+13:42:34 <skw-scribe> Resting discussion of accessing different (device specific) representations.
+13:43:08 <skw-scribe> CL: Seems to be about representations that are tailored for specific devices.
+13:43:33 <skw-scribe> DC: Is there anything that we can borrow/refer to from DI Principles
+13:44:21 <skw-scribe> DC: Excert and cite DI Principles....
+13:44:41 <skw-scribe> NW: Ok... yes... but what and where.
+13:44:56 <skw-scribe> CL: I think delivery context appear in our doc.
+13:45:03 <skw-scribe> NW: No... it doesn't
+13:45:29 <skw-scribe> RF: Section on interaction should have a section on gateways and transformations.
+13:45:58 <skw-scribe> CL: Ok... we should borrow text from DI principles.
+13:45:58 <Roy> eventually
+13:47:02 <skw-scribe> NW: Deep down in section 3.2.1 we added "...or transformed dynamically according to the ...." in response to a DIWG comment.
+13:47:28 <skw-scribe> CL: ref para after GPN in 4.3 (recombination stuff).
+13:48:07 <skw-scribe> CL: ...it's explaining what delivery context does rather than using the term delivery context.
+13:48:24 <skw-scribe> NW: So have we already addressed their comment?
+13:48:37 <skw-scribe> CL: No... we need to use this text....
+13:48:53 <skw-scribe> NW: So return to question of where in our doc it should go.
+13:49:14 <skw-scribe> CL: It is  to do with content/presentation....
+13:49:40 <Chris> 4.3. Separation of Content, Presentation, and Interaction
+13:49:52 <skw-scribe> NW: So work DI Section 2.2.3 into our Section 4.3 and add ref to DI princples.
+13:50:08 <skw-scribe> NW: ... and that should address their comment?
+13:50:15 <skw-scribe> general assent.
+13:50:21 <skw-scribe> Done diwg-3
+13:51:11 <skw-scribe> Issue manola-27 http://www.w3.org/2001/tag/2003/lc1209/issues.html#manola-27
+13:51:48 <skw-scribe> "Provide examples of mistaken attempts to restrict URI usage."
+13:54:42 <skw-scribe> PC: Seem offended by the 1st para in 3.6.3 in that it may be reasonable to hide the existence of the reource. ie. doesn like "... it is unreasonable to prohibit others from merely identifying the resource."
+13:55:28 <skw-scribe> TBL: But why shouldn't it get a URI.
+13:56:09 <skw-scribe> DC: 403/404 responses are orthogonal to whether it gets a URI or not.
+13:57:05 <skw-scribe> RF: What he's asking about is situations where the person is prevented from having a URI upon which to base an access.
+13:57:39 <skw-scribe> Action NW: Add to 3.6.2 "that doesnt
+13:58:52 <skw-scribe> NW: We wrote para from point of view of deep linking, he's read it from a security and access control POV.
+13:59:41 <skw-scribe> NW: ...no good example spring instantly to mind.
+14:00:42 <skw-scribe> NW: Propose that addressong manola-27 by adding security considerations text.
+14:02:13 <skw-scribe> RF: I think that he's also objecting to the last paragraph (which refers to Web Access control mechanisms).
+14:02:25 <DanC_jam> change "but it is unreasonable to prohibit others from merely identifying the resource" to "but merely identifying the resource is like referring to a book by title. Except when people have agreed to keep titles confidential, they are free to exchange them."
+14:02:26 <DanC_jam> e+
+14:02:28 <DanC_jam> q+
+14:03:11 <skw-scribe> TBL: Propose "For very high security applications you may want to suppress the difference between 403 and 404 response codes." [Tim did I get that right?]
+14:03:47 <Chris> +1 to suggested text
+14:04:31 <Chris> .... may want to return 404 when a 403 would be more correct but expose secutity information
+14:04:34 <DanC_jam> change "but it is unreasonable to prohibit others from merely identifying the resource" to "but merely identifying the resource is like referring to a book by title. Except when people have agreed to keep titles or URIs confidential, they are free to exchange them."
+14:05:59 <Chris> yes, that is good. at a different level of abstraction
+14:06:21 <skw-scribe> TBL: We have been a little obsure wrt to the legal case that motivated the text.
+14:06:41 <Roy> +1 too
+14:06:46 <skw-scribe> DC: I still think that the text I propose is reponsive to the comment.
+14:07:05 <Roy> +1 to Dan's text
+14:09:10 <skw-scribe> NW: I think we have agreement to Dan's text to address manola-27
+14:10:22 <skw-scribe> TBL: ... add wtoe that in some high security apps it may be desirable to suppress the distinction between access control failure and the non-existence of a resource.
+14:10:46 <Norm> i18nwg20
+14:11:50 <skw-scribe> Issue i18nwg-20 http://www.w3.org/2001/tag/2003/lc1209/issues.html#i18nwg-20
+14:12:54 <Chris> Propose to accept the changes for i18nwg20
+14:13:37 <skw-scribe> http://www.w3.org/2001/tag/webarch/#metadata-inconsistencies
+14:14:06 <paulc> paulc has joined #tagmem
+14:14:07 <Norm> http://www.w3.org/2001/tag/webarch/
+14:14:28 <skw-scribe> DC: We have an admonision against using text/* in 4.5.7
+14:14:48 <skw-scribe> DC: ie. we say pretty much what they ask in 4.5.7
+14:15:23 <timbl> s/At times, there may be/A problem has been/
+14:15:36 <skw-scribe> CL: Yes... but they point out that that is just a specific instance of a more general problem and they are asking us to address the more general problem
+14:16:09 <Chris> http://lists.w3.org/Archives/Public/public-webarch-comments/2004JanMar/1060.html
+14:16:31 <skw-scribe> CL: <quotes from original email>
+14:16:56 <skw-scribe> ... We are on comment 20 *NOT* comment 5.
+14:17:14 <Chris>     - Always make sure you know what the character encoding of a
+14:17:14 <Chris>         document or message is.
+14:17:14 <Chris>       - Make sure that it's easy for server managers and authors to configure
+14:17:14 <Chris>         and test metadata on the server, to make sure it's correct.
+14:17:14 <Chris>       - No arbitrary defaults for specs
+14:17:15 <Chris>       - No out-of-the-box with arbitrary settings
+14:19:20 <skw-scribe> CL: There is no standard for content authors to influence important bits of sever configuration.
+14:19:52 <skw-scribe> TBL: Maybe the GPN should be....
+14:20:23 <Chris> quotes from right section **20 ** of document
+14:20:24 <Chris>     - Always make sure you know what the character encoding of a
+14:20:24 <Chris>         document or message is.
+14:20:24 <Chris>       - Make sure that it's easy for server managers and authors to configure
+14:20:24 <Chris>         and test metadata on the server, to make sure it's correct.
+14:20:26 <Chris>       - No arbitrary defaults for specs
+14:20:28 <Chris>       - No out-of-the-box with arbitrary settings
+14:20:33 <skw-scribe> NW: reminds TBL of an action item to write text addressing the configuration information that should be available to content authors.
+14:20:37 <DanC_jam> somedaypile += standardized .htaccess files (in RDF?)
+14:20:48 <Chris> 'easy .... for authors' is not doable - no standard way for authoring toools to do this
+14:21:02 <skw-scribe> NW: proposes that we have made enough changes to suggest that we have tried to address this comment.
+14:21:22 <skw-scribe> NW: Anyone want to see more changes to address this?
+14:22:09 <skw-scribe> CL: The section doesn't really address what they are talking about.... 
+14:22:36 <skw-scribe> CL: We do say some things about character encoding wrt to XML.
+14:22:57 <skw-scribe> CL: There has been a recent thread on character encoding for CSS.
+14:23:42 <skw-scribe> CL: eg... a CSS stylesheet failed due to inclusion of a natural language comment.
+14:24:18 <skw-scribe> NW: I assert that I have already made a GPN out of the four i18nwg-20 bullets.
+14:24:21 <Chris> so, the fact that we restrict this to xml sort of implies that plain text. /css etc are not covered
+14:25:17 <skw-scribe> NW: Further discussion....?
+14:26:42 <skw-scribe> Issue rosenberg-5 http://www.w3.org/2001/tag/2003/lc1209/issues.html#rosenberg-5
+14:27:18 <skw-scribe> NW: Recaps previous telcon discussion that this originated with IAB.
+14:27:46 <skw-scribe> CL: Questions whether we have already closed rosenberg-4.
+14:28:38 <Chris> (once we are done with 5 .... please can we do 4 http://www.w3.org/2001/tag/2003/lc1209/issues.html#rosenberg4)
+14:29:31 <skw-scribe> DC: rosenberg-5 suggests referencing RFC3688. RFC3688 is directly counter to some priniples of Web Arch... towit: encourages the use of URI aliases.
+14:29:55 <skw-scribe> PC: Notes that it also invokes the IETF concensus process.
+14:31:05 <skw-scribe> RF: Would it be responsive to this comment by citing the document as an example of bad practice wrt URI aliasing.
+14:31:35 <skw-scribe> PC: Why we put this in Webarch rather than respond directly to the RFC.
+14:31:46 <skw-scribe> DC: I was suggesting doing both.
+14:32:00 <skw-scribe> PC: I think we only need do the one.
+14:32:31 <skw-scribe> NW: I think it would be good to make the comment back IAB 
+14:32:55 <skw-scribe> NW: Does anyone feel obliged to respond to the IETF/IAB.
+14:33:00 <skw-scribe> DC: yes I do...
+14:33:01 <Chris> for 4, s/RTSP [RFC2326])/SIP (RFC 3261)/
+14:33:16 <skw-scribe> NW: Dan... will you take that action?
+14:33:22 <skw-scribe> DC: yes.
+14:33:45 <skw-scribe> ACTION: DC respond to IETF/IAB wrt to rosenberg-5
+14:33:46 <Chris> and voice-over-IP (such as RTSP [RFC2326]).
+14:34:21 <skw-scribe> Issue rosenberg-4 http://www.w3.org/2001/tag/2003/lc1209/issues.html#rosenberg-4
+14:34:46 <skw-scribe> CL: Propose we simply accept the replacement reference they suggest.
+14:35:35 <skw-scribe> RF: Explains some of the details of RTSP, RTP, and SIP.
+14:36:27 <Chris> we could (optionally ) also say we do not deal with streaming command control like RTSP
+14:36:48 <skw-scribe> [lost discussion]
+14:37:32 <skw-scribe> DC: I think the intent of this section was to include analog channels.
+14:38:08 <Chris> the whole section? i think not
+14:38:27 <skw-scribe> RF: What are we trying to say here... why is this here... we're not going to talk about interactions between the Web and VoIP.
+14:39:06 <skw-scribe> DC: I believe it is relevant to this document as a future direction. I want to click on web links with telephone numbers.
+14:39:36 <skw-scribe> CL: But we don't care about all the 'little details' (flow control etc...).
+14:39:42 <skw-scribe> DC: I do....
+14:40:16 <skw-scribe> DC: Can you bookmark minutes 3-5 of a VoIP conversation.
+14:40:44 <skw-scribe> TBL: Propose VoIP ref SIP, streaming  media ref RTSP.
+14:41:23 <Chris> proprose t respond to them saying that 'such as' was an editorial error
+14:41:57 <skw-scribe> NW: Proposal to cite both RSTP and SIP for streaming media and VoIP respectively.
+14:42:14 <Chris> +1 to suggested text
+14:42:30 <skw-scribe> Assent.
+14:42:39 <skw-scribe> Break:
+14:45:13 <DanC_jam> RRSAgent, list actions
+14:45:13 <RRSAgent> I see 1 open action item:
+14:45:13 <RRSAgent> ACTION: DC respond to IETF/IAB wrt to rosenberg-5 [1]
+14:45:13 <RRSAgent>   recorded in http://www.w3.org/2004/08/10-tagmem-irc#T14-33-45
+14:46:45 <Norm> Diff: http://www.w3.org/2001/tag/webarch/July7-Aug10-diff.html
+14:49:33 <DanC_jam> the example in 2.3.2 under http://www.w3.org/2001/tag/webarch/#identifiers-comparison seems responsive to Renato's comment of 8 July http://lists.w3.org/Archives/Public/public-webarch-comments/2004JulSep/0001.html
+14:50:03 <DanC_jam> (sigh; much spam in http://lists.w3.org/Archives/Public/public-webarch-comments/ )
+14:54:28 <DanC_jam> I'm not inclined to put Renato's overloading comment on the critical path http://lists.w3.org/Archives/Public/public-webarch-comments/2004JulSep/0004.html
+15:00:31 <skw-scribe> I agree
+15:01:43 <DanC_jam> ugh; Hayes's comments didn't make it into the list. http://lists.w3.org/Archives/Public/public-webarch-comments/2004JanMar/1057.html
+15:03:10 <DanC_jam> and QA sent a request for teleconference, though I can't quite find their comments. http://lists.w3.org/Archives/Public/public-webarch-comments/2004JanMar/1056.html
+15:04:48 <Noah> Noah has joined #tagmem
+15:05:55 <Noah> At the end of yesterday's call, it was suggested that it might be helpful for some of us who are involved in Schema WG work on versioning to dial into your call now.  Would those of you on the Tag prefer that I do or don't join?  Either way is fine;  whatever's best for you.  Thank you.
+15:06:41 <paulc> Versioning discussion by XML Schema WG:
+15:06:48 <paulc> http://lists.w3.org/Archives/Member/w3c-xml-schema-wg/2004Aug/0006.html
+15:08:26 <Noah> You might also want to look at the analysis that I did for the schema WG.  This was sent in an email to the tag which can be found at http://lists.w3.org/Archives/Public/www-tag/2004Aug/0010.html.
+15:08:58 <Noah> The note which actually carries the analysis was an HTML attachment to that email and can be found at:  http://lists.w3.org/Archives/Public/www-tag/2004Aug/att-0010/NRMVersioningProposal.html
+15:09:42 <skw-scribe> David Orchard joins.
+15:10:08 <Noah> The note is roughly in two parts:  the first sets out some general goals and considerations that may be of interest for any analysis of versioning.  The later sections speculate on some particular mechanisms that we might use in XML schema to support versioning.
+15:10:29 <skw-scribe> NW: Invites David to intro topic....
+15:10:55 <skw-scribe> DO: Thanks... for appointment as finding editor.
+15:12:21 <skw-scribe> DO: Outlines work plan at http://lists.w3.org/Archives/Public/www-tag/2004Jul/0027.html
+15:13:22 <skw-scribe> DO: See's work as producing two documents, one generic and one applying those generic approaches to specific languages.
+15:14:58 <skw-scribe> DO: Another issue that's come up in REST/Web Services is protocol extensibility. Can think of a protocol as a language.
+15:16:04 <skw-scribe> DO: Notion of compatibility of groups of operations - an interface - cf Web Services/ATOM.
+15:16:23 <skw-scribe> These are things that haven't been explored very fully in the current finding.
+15:16:51 <DanC_jam> (bummer; pointers in 0027 got kinda broken in the archive)
+15:17:09 <skw-scribe> PC: The extensibility finding has never been finalised, but parts were abstracted into web arch. Do the changes you propose affect the webarch doc?
+15:17:21 <timbl> (eg to http://www.pacificspirit.com/blog/2004/05/26/substitution_rules_must_be_in_v10)
+15:18:16 <skw-scribe> DO: No... Webarch does habe some material on namespace management and some discussion of language exstensibility (subset/superset languages).
+15:19:46 <skw-scribe> PC: Anything that would affect a 2nd LC on webarch in september?
+15:21:44 <skw-scribe> DO: I want to change the examples to a much more common name example, first name/last name add middle name... plus other examples throughout.
+15:22:20 <skw-scribe> DO: In part 1 TAG finding there is very little discussion of diff between extensibility and versioning.
+15:22:43 <skw-scribe> DO: Versioning is when a namespace owner revises their language.
+15:23:16 <skw-scribe> DO: Extensibility is when someone else includes something else in you language.
+15:24:03 <skw-scribe> He doesn't appear to be.
+15:24:14 <Roy> Related work (30MB dissertation of Peyman Oreizy): http://www.ics.uci.edu/~peymano/papers/thesis.pdf
+15:25:47 <skw-scribe> DO: [going too fast for me to sumarise....]
+15:26:55 <Norm> Yes, thanks, Noah. I failed to plan this very well.
+15:27:16 <Noah> Sure no problem.
+15:28:26 <Chris> substitutability seemes cleaer to me, actually
+15:28:59 <timbl> q+ r esubstitutability - mapping from  new to old.
+15:29:12 <timbl> q+  to talk about substitutability - mapping from  new to old.
+15:31:12 <Chris> yes, svg does that
+15:31:13 <DanC_jam> (this summary confirms my intuition that this is a book-length topic)
+15:31:59 <skw-scribe> DO: Moves on to thoughts on how to apply these concepts to protocols.
+15:33:24 <skw-scribe> DO: Concluded that a MU flag is not of much use. Protocols take place over a different space/time context. Would prefe to know capabilities up front.
+15:34:01 <skw-scribe> DO: Processing of protocols maybe somewhat distributed.
+15:34:53 <skw-scribe> DO: Final topic to include is "service compatibility". By service I mean a collection of operations.
+15:35:12 <DanC_jam> stuart, I think it's sufficient to say:
+15:35:16 <skw-scribe> DO: What kind of changes in an interface preserve or break compatibilty
+15:35:26 <DanC_jam> DO summarizes plan in http://lists.w3.org/Archives/Public/www-tag/2004Jul/0027.html
+15:36:11 <skw-scribe> Ok... saves my fingers...
+15:37:26 <skw-scribe> q?
+15:38:37 <timbl> (A protocol A is a subprotocol of B if for every state transition arc in A there is an equivalanet transtion in B, and for that arc in A the message languge of the message sent in the transition in A is a sublanguage of the message for the equivalent arc in B.)
+15:38:40 <DanC_jam> ack danc
+15:39:16 <DanC_jam> I'm all for telling stories about how extensibility has happened.
+15:41:20 <Roy> related work: http://doi.acm.org/10.1145/288195.288269
+15:41:26 <skw-scribe> TBL: DO said lots about substitutability. We were thinking of lang for webarch for treating version X as version Y,  say ignoring bits you don't understand, but might be more acurate to think of sets of mappings between language versions.
+15:42:08 <skw-scribe> TBL: DO was looking for words and that concepts around this notion of mappings might yield usefula language.
+15:42:15 <skw-scribe> PC: Schedule?
+15:42:23 <timbl> (total mappings, tim rememebrs, from msm's comments yesterday)
+15:42:44 <Roy> http://www.webster-dictionary.org/definition/substitutability
+15:42:59 <skw-scribe> DO: Hmm.... most of topics have a URI for an assoicated blog URI.
+15:43:51 <skw-scribe> DO: Planing to continue working on the finding after addressing a few things in the work plan... maybe mid-September.
+15:44:51 <Roy> http://en.wikipedia.org/wiki/Liskov_substitution_principle
+15:44:52 <Chris> do the xsd schema techniques map to the rng ones? Are there additional techniques applicable to the extra functionality of rng?
+15:45:04 <skw-scribe> NW: My schedule should be more open mid-Sept onwards.
+15:45:48 <skw-scribe> NW: Ref some plans to do Ext/Vers with XML Schema... anythoughts on joint workplan?
+15:46:30 <skw-scribe> DO: Ok... come back to that once we've discussed 2nd (Schema specific) part of document.
+15:47:51 <Chris> wondering whether NRL has applicability here to extensibility
+15:48:51 <Chris> Namespace Routing Language
+15:49:00 <DanC_jam> Namespace Routing Language (NRL) http://www.thaiopensource.com/relaxng/nrl.html
+15:49:17 <Chris> http://www.thaiopensource.com/relaxng/nrl.html
+15:49:43 <Chris> Abstract
+15:49:43 <Chris> The XML Namespaces Recommendation allows an XML document to be composed of elements and attributes from multiple independent namespaces. Each of these namespaces may have its own schema; the schemas for different namespaces may be in different schema languages. The problem then arises of how the schemas can be composed in order to allow validation of the complete document. This document proposes the Namespace Routing Language (NRL) as a solution to this problem. NR
+15:50:26 <skw-scribe> DO: resumes review of plan for part 2 in http://lists.w3.org/Archives/Public/www-tag/2004Jul/0027.html
+15:52:05 <Chris> in particular I am thinking of
+15:52:07 <Chris> 10 Open schemas
+15:52:07 <Chris> Up to now, sections validated by one subschema have not participated in the validation of parent sections. Modern schema languages, such as W3C XML Schema and RELAX NG, can use wildcards to allow elements and attributes from any namespace in particular contexts. It is useful to take advantage of this in order to allow one subschema to constrain the contexts in which sections validated by other subschemas can occur.
+15:52:46 <Chris> and
+15:52:49 <Chris> 14 Transparent namespaces
+15:52:49 <Chris> Many schema languages can deal with the kind of extensibility that involves adding child elements or attributes from different namespaces. A more difficult kind of extensibility is where we need to be able to wrap an extension element around an existing non-extension element. This can arise with namespaces describing templating and versioning.
+15:53:34 <skw-scribe> q?
+15:55:08 <skw-scribe> CL: Refers DO to NRL.
+15:56:06 <skw-scribe> Discussion of compound documents.
+15:58:35 <skw-scribe> PC: One of my concerns would be addressed by knowing the title of the 2nd document. Propose "Best practice for versioning and extensibility with??????"
+15:59:30 <skw-scribe> NW: I think of it more as a set of case studies rather than best practices.
+16:00:31 <skw-scribe> DO: the problem I have with the term best practice or case studies... is that your making some particular choices [????]
+16:01:20 <Ralph> Ralph has joined #tagmem
+16:01:55 <skw-scribe> PC: Ok... I'll take another pass. XML Schema are going to be looking at versioning of Schema and want to make sure that we're not treading on WG toes. If this work is helping others recognise and wrok on problems this is a positive effect.
+16:02:25 <Ralph> Ralph has left #tagmem
+16:02:58 <skw-scribe> DO: I'd like to have some XML Schema 1.0 material. I'm very pleased that XML Schema WG is taking this work seriously.
+16:03:40 <skw-scribe> DO: They've encounter the same problems of subsumption that I did.
+16:04:05 <skw-scribe> DO: Subsumpsion realtionships between content models.
+16:04:58 <skw-scribe> NW: I want to put a stronger stake in the ground. The work DO/NW propose is broader than what we could reasonably expect the XML Schema WG to address.
+16:05:44 <skw-scribe> NW: I expect us to work together with other WGs  in those places interest coincide
+16:08:29 <skw-scribe> DO: I'm having some difficulty in understanding how to tie in some of Noah's material into the finding. There's probably not much that we can do in the finding right now wrt to how to do this with XML Schema 1.0
+16:09:22 <skw-scribe> PC: Reiterates that the public discussion of the topic has a positive effect and has engaged a number of interested parties
+16:10:24 <skw-scribe> PC: I think the TAG having opinions that has influence over things that WG's are doing is a goof thing.
+16:10:33 <skw-scribe> s/goof/good/
+16:11:11 <timbl> q+ to ask about whether RDF and OWL will be discussed
+16:11:24 <skw-scribe> PC: I'd like this document to highlight things that you can/can't do with say the current schema language.
+16:11:55 <skw-scribe> DO: Agree.
+16:12:24 <skw-scribe> DO: Would you, Paul, agree with adding this part 2 as a TAG deliverable.
+16:14:03 <skw-scribe> PC: I'd prioritise the webarch document. This (part 2) is a horizontal cut... and I think it is appropriate for the TAG to do this. If we can get something of part 2 in order for December we can take that for more focussed feedback from the AC in december.
+16:14:45 <skw-scribe> DC: I don't think its a case of permission or forgiveness, we stuck our toe in the water and people asked of more.
+16:15:27 <Chris> rrsagent, pointer?
+16:15:27 <RRSAgent> See http://www.w3.org/2004/08/10-tagmem-irc#T16-15-27
+16:16:47 <skw-scribe> DO: My personal read is that the public would like the TAG to be looking at more forward looking issues.
+16:17:49 <timbl> q?
+16:18:10 <skw-scribe> PC: I think that TAG can look back and say that we have done a good job with various things where folks have picked up theads from TAG discssion (eg. Binary XML, Xlink... etc).
+16:18:46 <skw-scribe> DO: So I'd like to know whether the TAG wants an official part 2 deliverable.
+16:19:42 <skw-scribe> TBL: Are RDF/OWL covered in part 2?
+16:20:22 <skw-scribe> DO: Yes... I'd expect to cover extensibility and versioning in RDF/OWL.
+16:20:48 <skw-scribe> DO: Top 3 languages that I encounter are XML Schema, Relax NG and RDF/OWL.
+16:21:17 <skw-scribe> NW: Does anybody think that we shouldn't be doing a part 2.
+16:21:25 <skw-scribe> No dissent.
+16:21:37 <skw-scribe> NW: I think we have assent to do this.
+16:21:49 <skw-scribe> DC: Schedule ag
+16:22:02 <skw-scribe> DC: Schedule question again?
+16:22:27 <skw-scribe> DO: I'd aim for mid-October for two revised findings on these topics.
+16:22:38 <Norm> I think mid-October is the right timeframe
+16:22:48 <skw-scribe> DO: This would dovetail with presentation to AC.
+16:25:33 <skw-scribe> DO: would an earlier revision be useful for the TAG's October F2F?
+16:25:42 <skw-scribe> NW: Too early to say.
+16:25:54 <Norm> PC: Middle October is safer
+16:27:13 <Norm> DO: I wanted to add that I think the Schema 1.1 work is really interesting and to the extent that the TAG has been able to influence that work, as a member of the communtiy, I've been veryp leased to see that interaction.
+16:27:42 <Norm> DO: I think that work on Schema 1.1 has a real opportunity to raise the bar. I think to the extent that the finding can influence that and there can be an ongoing dialogn, I thin kthat is all goodness.
+16:27:51 <Norm> DO: And other groups, too.
+16:28:13 <Norm> SW: Would the rdf/owl stuff be a topic for the RDF BPWG.
+16:28:25 <Norm> s/RDF BPWG/Semantic Web BPWG/
+16:28:47 <Norm> DO: Yes, I think so. I would expect that the same sorts of interaction soccur there.
+16:29:04 <Norm> timbl: Versioning of ontologies is a hot research topic and there's a lot of practical work being done on it as well.
+16:29:31 <Norm> timbl: There are people who's life's work is the evolution of ontologies so there should be something to connect tol.
+16:29:52 <Norm> DO: And I think the TAG can have a connection between that and the schema working group. That connection can be fairly close in both cases.
+16:30:15 <Norm> DO: One of the reasons we haven't had too much interaction so far is that we haven't had many direct examples. I think having concrete examples will help.
+16:31:02 <Norm> DO: One thing on the finding is that I feel comfortable working on the schema material, there's only so far that I'll be able to take the ball when it comes to RDF/OWL. I'll try to take the ball down the field aways, but I have no belief that I'll be able to make it into the end zone.
+16:31:14 <Norm> timbl: Maybe we can find some people to connect to on that topic.
+16:31:24 <timbl> Bijan
+16:31:37 <Norm> DO: I'm just pointing out the realities of my ability to learn the material.
+16:31:52 <Zakim> host going down shortly for ~15 mins, Zakim-bot and RRSAgent will go down
+16:31:58 <Norm> DO: Each question I ask about RDF/OWL takes longer to answer than I would have hoped because of differing world views.
+16:32:34 <Norm> DO: Open vs. closed world assumptions, data types, etc. There are things that are somewhat complicated in the view. There might come to a point where this will all work out, 
+16:32:44 <Norm> DO: Maybe we'll get concrete "do it this way or that way" results
+16:33:37 <Norm> PC: I will even speculate that I can't do as much of a review of the schema part as you can. So one of the thing's I'll encourage the TAG to do is make sure this document gets wider review. That's a tactic that will be useful in this area.
+16:34:21 <Norm> NW thanks DO for participating remotely from his vacation.
+16:34:29 <Norm> (on behalf of the tag)

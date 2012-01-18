@@ -1,0 +1,27 @@
+This is scribe.perl Revision: 1.122  of Date: 2005/03/31 04:43:41  
+Check for newer version at http://dev.w3.org/cvsweb/~checkout~/2002/scribe/
+
+Jabber_Saved_Format                      0.20
+RRSAgent_Visible_HTML_Text_Paste_Format  0.00
+RRSAgent_HTML_Format                     0.00
+Mirc_Text_Format                         0.00
+Yahoo_IM_Format                          0.00
+RRSAgent_Text_Format                     0.00
+Mirc_Timestamped_Log_Format              0.00
+Irssi_ISO8601_Log_Text_Format            1.00
+Plain_Text_Format                        0.00
+XChat_Timestamped_Log_Format             0.00
+Normalized_Format                        0.00
+Guessing input format: Irssi_ISO8601_Log_Text_Format (score 1.00)
+
+Succeeded: s/Jeff/Geoff/
+Succeeded: s/union/derived/
+Succeeded: s/JosD/JaceK/
+Found Scribe: EricP
+Inferring ScribeNick: ericP
+Default Present: Kevin, Yoshio, DanC, BryanT, AndyS, EricP, Kendall_Clark, PatH, JanneS
+Present: Kevin Yoshio DanC BryanT AndyS EricP Kendall_Clark PatH JanneS
+Regrets: DaveB SteveH JosD
+Got date from IRC log name: 29 Mar 2005
+Guessing minutes URL: http://www.w3.org/2005/03/29-dawg-minutes.html
+People with action items: afs andys danc daveb ep ericp kc kendall kendallc kevin path steveh

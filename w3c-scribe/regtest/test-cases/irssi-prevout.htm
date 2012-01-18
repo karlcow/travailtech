@@ -1,0 +1,806 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang='en'>
+<head>
+  <title>RDF Data Access Weekly Teleconference -- 29 Mar 2005</title>
+  <link type="text/css" rel="STYLESHEET" href="http://www.w3.org/StyleSheets/base.css">
+  <link type="text/css" rel="STYLESHEET" href="http://www.w3.org/StyleSheets/public.css">
+  <link type="text/css" rel="STYLESHEET" href="http://www.w3.org/2004/02/minutes-style.css">
+  <meta content="RDF Data Access Weekly Teleconference" name="Title">  
+  <meta content="text/html; charset=iso-8859-1" http-equiv="Content-Type">
+</head>
+
+<body>
+<p><a href="http://www.w3.org/"><img src="http://www.w3.org/Icons/w3c_home" alt="W3C" border="0"
+height="48" width="72"></a> 
+
+</p>
+
+<h1> - DRAFT - </h1>
+<h1>RDF Data Access Weekly Teleconference</h1>
+<h2>29 Mar 2005</h2>
+
+
+
+<p>See also: <a href="http://www.w3.org/2005/03/29-dawg-irc">IRC log</a></p>
+
+<h2><a name="attendees">Attendees</a></h2>
+
+<div class="intro">
+<dl>
+<dt>Present</dt>
+<dd>Kevin, Yoshio, DanC, BryanT, AndyS, EricP, Kendall_Clark, PatH, JanneS</dd>
+<dt>Regrets</dt>
+<dd>DaveB, SteveH, JosD</dd>
+<dt>Chair</dt>
+<dd>DanC </dd>
+<dt>Scribe</dt>
+<dd>EricP</dd>
+</dl>
+</div>
+
+<h2>Contents</h2>
+<ul>
+  <li><a href="#agenda">Topics</a>
+	<ol>
+	<li><a href="#item01">Convene, take roll, review records and agenda http://lists.w3.org/Archives/Public/public-rdf-dawg/2005JanMar/0510.html</a></li>
+<li><a href="#item02">Use Cases and Requirements publication</a></li>
+<li><a href="#item03">issue: sort</a></li>
+<li><a href="#item04">issue: valueTesting</a></li>
+<li><a href="#item05">SPARQL QL LC Candidate</a></li>
+<li><a href="#item06">privacy section for protocol spec</a></li>
+<li><a href="#item07">issue: wsdlAbstractProtocol, fromUnionQuery</a></li>
+<li><a href="#item08">issue: xmlAbstractSyntax</a></li>
+
+	</ol>
+  </li>
+  <li><a href="#ActionSummary">Summary of Action Items</a></li>
+</ul>
+<hr>
+<div class="meeting">
+
+<p class='irc'>
+&lt;<cite>AndyS</cite>&gt; Regrets for next week (April 5)
+</p>
+
+<p class='irc'>
+&lt;<cite>Yoshio</cite>&gt; Hello
+</p>
+
+<p class='phone'>
+EricP is scribe
+</p>
+
+<p class='irc'>
+&lt;<cite>DanC</cite>&gt; Scribe: EricP
+</p>
+
+<h3 id="item01">Convene, take roll, review records and agenda <a href="http://lists.w3.org/Archives/Public/public-rdf-dawg/2005JanMar/0510.html">http://lists.w3.org/Archives/Public/public-rdf-dawg/2005JanMar/0510.html</a></h3>
+<p class='irc'>
+&lt;<cite>JanneS</cite>&gt; I'm trying to call in - just a sec
+</p>
+
+<p class='irc'>
+&lt;<cite>DanC</cite>&gt; minutes from last week <a href="http://lists.w3.org/Archives/Public/public-rdf-dawg/2005JanMar/0472.html">http://lists.w3.org/Archives/Public/public-rdf-dawg/2005JanMar/0472.html</a> ... ammendment...
+</p>
+
+<p class='irc'>
+&lt;<cite>DanC</cite>&gt; ammendment... <a href="http://lists.w3.org/Archives/Public/public-rdf-dawg/2005JanMar/0520.html">http://lists.w3.org/Archives/Public/public-rdf-dawg/2005JanMar/0520.html</a>
+</p>
+
+<p class='phone'>
+<cite>PROPOSED:</cite> accept last weeks minutes as a true record --&gt; &lt;<a href="http://lists.w3.org/Archives/Public/public-rdf-dawg/2005JanMar/0472">http://lists.w3.org/Archives/Public/public-rdf-dawg/2005JanMar/0472</a>&gt;
+</p>
+
+<p class='phone'>
+RESOLVED
+</p>
+
+<a name="action01"></a>
+<p class='irc'>
+&lt;<cite>DanC</cite>&gt; <strong>ACTION:</strong> DaveB to consider use of xsi:dataType ala comment from Steer [recorded in <a href="http://www.w3.org/2005/03/29-dawg-minutes.html#action01">http://www.w3.org/2005/03/29-dawg-minutes.html#action01</a>]
+</p>
+
+<a name="action02"></a>
+<p class='irc'>
+&lt;<cite>scribe</cite>&gt; <strong>ACTION:</strong> DanC to follow up re optional test based on op:dateTime triple [recorded in <a href="http://www.w3.org/2005/03/29-dawg-minutes.html#action02">http://www.w3.org/2005/03/29-dawg-minutes.html#action02</a>]
+</p>
+
+<a name="action03"></a>
+<p class='irc'>
+&lt;<cite>scribe</cite>&gt; <strong>ACTION:</strong> EricP to pair with SteveH on making the HTML test results page [recorded in <a href="http://www.w3.org/2005/03/29-dawg-minutes.html#action03">http://www.w3.org/2005/03/29-dawg-minutes.html#action03</a>]
+</p>
+
+<a name="action04"></a>
+<p class='irc'>
+&lt;<cite>scribe</cite>&gt; <strong>ACTION:</strong> SteveH to to revise test manifest w.r.t. "background" and named graphs [recorded in <a href="http://www.w3.org/2005/03/29-dawg-minutes.html#action04">http://www.w3.org/2005/03/29-dawg-minutes.html#action04</a>]
+</p>
+
+<a name="action05"></a>
+<p class='irc'>
+&lt;<cite>scribe</cite>&gt; <strong>ACTION:</strong> DaveB to to propose source test to approve [recorded in <a href="http://www.w3.org/2005/03/29-dawg-minutes.html#action05">http://www.w3.org/2005/03/29-dawg-minutes.html#action05</a>]
+</p>
+
+<a name="action06"></a>
+<p class='irc'>
+&lt;<cite>scribe</cite>&gt; <strong>ACTION:</strong> AndyS to add the above graph test cases (analagous to valueTesting test cases) (don't expect quick delivery) [recorded in <a href="http://www.w3.org/2005/03/29-dawg-minutes.html#action06">http://www.w3.org/2005/03/29-dawg-minutes.html#action06</a>]
+</p>
+
+<a name="action07"></a>
+<p class='irc'>
+&lt;<cite>scribe</cite>&gt; <strong>ACTION:</strong> SteveH to prepare test cases for publication as WG Note (no deadline/urgency) [recorded in <a href="http://www.w3.org/2005/03/29-dawg-minutes.html#action07">http://www.w3.org/2005/03/29-dawg-minutes.html#action07</a>]
+</p>
+
+<p class='irc'>
+&lt;<cite>Yoshio</cite>&gt; I think there is considarable  concern on XML serialization of the resutl (&lt;mail&gt; vs. &lt;var name="mail"&gt; issue)
+</p>
+
+<p class='phone'>
+ALL CONTINUED without discussion
+</p>
+
+<p class='irc'>
+&lt;<cite>DanC</cite>&gt; next meeting: 5 Apr...
+</p>
+
+<p class='irc'>
+&lt;<cite>DanC</cite>&gt; regrets 5 Apr AndyS
+</p>
+
+<p class='irc'>
+&lt;<cite>DanC</cite>&gt; RESOVLED to cancel 5 Apr telcon, and meet 12 Apr.
+</p>
+
+<h3 id="item02">Use Cases and Requirements publication</h3>
+<a name="action08"></a>
+<p class='irc'>
+&lt;<cite>scribe</cite>&gt; <strong>ACTION:</strong> KC, AFS, EP to publish usecases 1.148 + revision to 2.18 by KC, reviewed by AFS, plus editorial fixups by KC, ok'd by EricP [recorded in <a href="http://www.w3.org/2005/03/29-dawg-minutes.html#action08">http://www.w3.org/2005/03/29-dawg-minutes.html#action08</a>]
+</p>
+
+<p class='irc'>
+&lt;<cite>scribe</cite>&gt; DONE: <a href="http://www.w3.org/TR/2005/WD-rdf-dawg-uc-20050325/">http://www.w3.org/TR/2005/WD-rdf-dawg-uc-20050325/</a> and <a href="http://www.w3.org/2001/sw/DataAccess/UseCases">http://www.w3.org/2001/sw/DataAccess/UseCases</a> is back to editor's draft status 1.158
+</p>
+
+<p class='irc'>
+&lt;<cite>DanC</cite>&gt; "We invite feedback on which features are required for a first version of SPARQL and which should be postponed in order to expedite deployment of others." -- <a href="http://www.w3.org/TR/2005/WD-rdf-dawg-uc-20050325/">http://www.w3.org/TR/2005/WD-rdf-dawg-uc-20050325/</a>
+</p>
+
+<h3 id="item03">issue: sort</h3>
+<a name="action09"></a>
+<p class='irc'>
+&lt;<cite>scribe</cite>&gt; <strong>ACTION:</strong> Kendall to To rewrite 2.18: change the title, don't motivate "update", spell "WSDL" correctly. :&gt; [recorded in <a href="http://www.w3.org/2005/03/29-dawg-minutes.html#action09">http://www.w3.org/2005/03/29-dawg-minutes.html#action09</a>]
+</p>
+
+<p class='irc'>
+&lt;<cite>scribe</cite>&gt; DONE: <a href="http://www.w3.org/2001/sw/DataAccess/UseCases">http://www.w3.org/2001/sw/DataAccess/UseCases</a> 1.149
+</p>
+
+<p class='irc'>
+&lt;<cite>DanC</cite>&gt; action -8
+</p>
+
+<a name="action10"></a>
+<p class='irc'>
+&lt;<cite>scribe</cite>&gt; <strong>ACTION:</strong> PatH to review sort design in 2 weeks [recorded in <a href="http://www.w3.org/2005/03/29-dawg-minutes.html#action10">http://www.w3.org/2005/03/29-dawg-minutes.html#action10</a>]
+</p>
+
+<p class='irc'>
+&lt;<cite>DanC</cite>&gt; 1.278 <a href="http://www.w3.org/2001/sw/DataAccess/rq23/">http://www.w3.org/2001/sw/DataAccess/rq23/</a>
+</p>
+
+<p class='phone'>
+andy believes he has reached a quiescient (SP?) state
+</p>
+
+<a name="action11"></a>
+<p class='irc'>
+&lt;<cite>scribe</cite>&gt; <strong>ACTION:</strong> Kevin to review sort design at earliest convenience [recorded in <a href="http://www.w3.org/2005/03/29-dawg-minutes.html#action11">http://www.w3.org/2005/03/29-dawg-minutes.html#action11</a>]
+</p>
+
+<p class='phone'>
+<a href="http://lists.w3.org/Archives/Public/public-rdf-dawg/2005JanMar/0483.html">http://lists.w3.org/Archives/Public/public-rdf-dawg/2005JanMar/0483.html</a>
+</p>
+
+<p class='irc'>
+&lt;<cite>Yoshio</cite>&gt; quiescent
+</p>
+
+<p class='irc'>
+&lt;<cite>AndyS</cite>&gt; Google :: define:quiescent =&gt; "refers to a state of resting, inactivity or latency"
+</p>
+
+<p class='irc'>
+&lt;<cite>AndyS</cite>&gt; Also "A volcano, which is not active, but is still registering seismic activity." :-)
+</p>
+
+<p class='irc'>
+&lt;<cite>thompsonbry</cite>&gt; How could we extend from lexical comparison to achieve value comparison in a subsequent design?
+</p>
+
+<p class='phone'>
+<cite>Kevin:</cite> I pointed out a few issues (consistency with distinct and a few others) <br>
+... Thought the interest was in ORDER BY and LIMIT, which is doable with LEXICAL sort
+</p>
+
+<p class='phone'>
+Andy, lexical ordering doesn't neccesarily give you total ordering
+</p>
+
+<p class='phone'>
+<cite>Kevin:</cite> we could have a future syntax for value ordering
+</p>
+
+<p class='irc'>
+&lt;<cite>Yoshio</cite>&gt; I think the problem is that data could be gathered from various sources, where the data type are different
+</p>
+
+<p class='phone'>
+<cite>Andy:</cite> my pref is to go with value ordering (what people expect) <br>
+... we can do lexical sort with str(?foo)
+</p>
+
+<h3 id="item04">issue: valueTesting</h3>
+<p class='irc'>
+&lt;<cite>thompsonbry</cite>&gt; Andy, how does typing interact with functions to specify how a value sort will be applied?
+</p>
+
+<p class='phone'>
+<cite>DanC:</cite> we can also postpoine... no takers.
+</p>
+
+<a name="action12"></a>
+<p class='irc'>
+&lt;<cite>scribe</cite>&gt; <strong>ACTION:</strong> EricP to propose to close valueTesting (bonus points for test cases, to EricP or others) [recorded in <a href="http://www.w3.org/2005/03/29-dawg-minutes.html#action12">http://www.w3.org/2005/03/29-dawg-minutes.html#action12</a>]
+</p>
+
+<p class='irc'>
+&lt;<cite>AndyS</cite>&gt; See doc : can write "ORDER BY x:func(?x)" as a (partial) ordering
+</p>
+
+<p class='irc'>
+&lt;<cite>scribe</cite>&gt; CONTINUED. expect to meet end of month deadline
+</p>
+
+<p class='phone'>
+action -10
+</p>
+
+<p class='irc'>
+&lt;<cite>Zakim</cite>&gt; AndyS, you wanted to ask about !=
+</p>
+
+<p class='irc'>
+&lt;<cite>DanC</cite>&gt; (I suspect "error" is misleading terminology... "unkown" might communicate the notion better)
+</p>
+
+<p class='phone'>
+<cite>EricP:</cite> how do people feel about requiring explicity casts where XQuery would not require them?
+</p>
+
+<p class='phone'>
+[ no probs with it ]
+</p>
+
+<p class='phone'>
+#invocation
+</p>
+
+<p class='phone'>
+#StandardOperations
+</p>
+
+<p class='irc'>
+&lt;<cite>Zakim</cite>&gt; Yoshio, you wanted to ask if this applies to cases where there is no data for deciding the equality
+</p>
+
+<p class='phone'>
+<cite>Yoshio:</cite> how about unknown equiv in sorting?
+</p>
+
+<p class='phone'>
+<cite>PatH:</cite> how about we don't define it so folks don't rely on it.
+</p>
+
+<p class='irc'>
+&lt;<cite>Yoshio</cite>&gt; me: even if they are of the same data type
+</p>
+
+<p class='phone'>
+tx
+</p>
+
+<p class='irc'>
+&lt;<cite>Zakim</cite>&gt; DanC, you wanted to ask if the "x"^^mytype != "y"^^mytpe test is in the test suite, and ask for a volunteer if not and to reiterate suggestion about compliance and unknown
+</p>
+
+<p class='phone'>
+<cite>AndyS:</cite> in SQL world, people do rely on the ordering and causes trouble
+</p>
+
+<a name="action13"></a>
+<p class='irc'>
+&lt;<cite>DanC</cite>&gt; <strong>ACTION:</strong> AndyS to propose a test re "x"^^mytype != "y"^^mytpe [recorded in <a href="http://www.w3.org/2005/03/29-dawg-minutes.html#action13">http://www.w3.org/2005/03/29-dawg-minutes.html#action13</a>]
+</p>
+
+<h3 id="item05">SPARQL QL LC Candidate</h3>
+<a name="action14"></a>
+<p class='irc'>
+&lt;<cite>scribe</cite>&gt; <strong>ACTION:</strong> AndyS to clarify 5.4 w/r/t closed world assumption [recorded in <a href="http://www.w3.org/2005/03/29-dawg-minutes.html#action14">http://www.w3.org/2005/03/29-dawg-minutes.html#action14</a>]
+</p>
+
+<p class='irc'>
+&lt;<cite>scribe</cite>&gt; CONTINUED <br>
+... pending discussion with Bob and Jess
+</p>
+
+<p class='phone'>
+Geoff
+</p>
+
+<p class='phone'>
+tx
+</p>
+
+<p class='irc'>
+&lt;<cite>Yoshio</cite>&gt; I'm for construct *
+</p>
+
+<a name="action15"></a>
+<p class='irc'>
+&lt;<cite>scribe</cite>&gt; <strong>ACTION:</strong> AndyS to explain how to get a whole graph with CONSTRUCT * and GRAPH. [recorded in <a href="http://www.w3.org/2005/03/29-dawg-minutes.html#action15">http://www.w3.org/2005/03/29-dawg-minutes.html#action15</a>]
+</p>
+
+<p class='irc'>
+&lt;<cite>kendall</cite>&gt; long conversation sorta put me off attending to it carefully, sorry :&gt;
+</p>
+
+<p class='irc'>
+&lt;<cite>AndyS</cite>&gt; It's not CONSTRUCT * but there is "Accessing Graphs in the RDF Dataset"
+</p>
+
+<p class='irc'>
+&lt;<cite>DanC</cite>&gt; "Accessing Graphs in the RDF Dataset" -- <a href="http://www.w3.org/2001/sw/DataAccess/rq23/#construct">http://www.w3.org/2001/sw/DataAccess/rq23/#construct</a>
+</p>
+
+<p class='irc'>
+&lt;<cite>scribe</cite>&gt; DONE , above pointer
+</p>
+
+<p class='phone'>
+action -14
+</p>
+
+<p class='irc'>
+&lt;<cite>kendall</cite>&gt; (hmm, another reason for a getGraph in the protocol is for implementations taht don't support construct at all.)
+</p>
+
+<a name="action16"></a>
+<p class='irc'>
+&lt;<cite>scribe</cite>&gt; <strong>ACTION:</strong> DaveB to consider dots in qnames, report on impact on turtle [recorded in <a href="http://www.w3.org/2005/03/29-dawg-minutes.html#action16">http://www.w3.org/2005/03/29-dawg-minutes.html#action16</a>]
+</p>
+
+<p class='phone'>
+<cite>AndyS:</cite> won't get rid of all the todos by thur. <br>
+... which way do you want it?
+</p>
+
+<p class='irc'>
+&lt;<cite>kendall</cite>&gt; it's by-invitation only, so Eric's trying to be respectful of that. :&gt;
+</p>
+
+<p class='irc'>
+&lt;<cite>kendall</cite>&gt; it was scheduled a long time ago, btw
+</p>
+
+<p class='irc'>
+&lt;<cite>thompsonbry</cite>&gt; Dan, since Andy will be pulling hair for the 31st, why don't we just back the candidate for review by another week - especially since we have one meeting canceled.
+</p>
+
+<p class='phone'>
+regrets 2 week hence: EricP, DaveB, SteveH
+</p>
+
+<p class='phone'>
+plus, AndyS, if i recall his vacation schedule
+</p>
+
+<a name="action17"></a>
+<p class='irc'>
+&lt;<cite>DanC</cite>&gt; <strong>ACTION:</strong> DanC to review editors draft (delivered 31 Mar) by 5 Mar [recorded in <a href="http://www.w3.org/2005/03/29-dawg-minutes.html#action17">http://www.w3.org/2005/03/29-dawg-minutes.html#action17</a>]
+</p>
+
+<p class='irc'>
+&lt;<cite>SimonR</cite>&gt; (5 Apr?)
+</p>
+
+<p class='irc'>
+&lt;<cite>Yoshio</cite>&gt; (time shift? : )
+</p>
+
+<p class='irc'>
+&lt;<cite>DanC</cite>&gt; ACTION 16= DanC: review editors draft (delivered 31 Mar) by 5 Apr
+</p>
+
+<p class='irc'>
+&lt;<cite>kendall</cite>&gt; Simon: hi! didin't realize you were here!
+</p>
+
+<p class='irc'>
+&lt;<cite>SimonR</cite>&gt; I'm sneaky.  ;)
+</p>
+
+<p class='irc'>
+&lt;<cite>DanC</cite>&gt; Kendall expects Bijan to review it
+</p>
+
+<a name="action18"></a>
+<p class='irc'>
+&lt;<cite>DanC</cite>&gt; <strong>ACTION:</strong> EricP to notify the WG of editors draft (or change of plans) by 31 Mar [recorded in <a href="http://www.w3.org/2005/03/29-dawg-minutes.html#action18">http://www.w3.org/2005/03/29-dawg-minutes.html#action18</a>]
+</p>
+
+<p class='phone'>
+<cite>DanC:</cite> Andy, anything test that does not have a clear outcome is critical path
+</p>
+
+<h3 id="item06">privacy section for protocol spec</h3>
+<a name="action19"></a>
+<p class='irc'>
+&lt;<cite>DanC</cite>&gt; <strong>ACTION:</strong> KendallC to incorporate EricP's privacy text, salting to taste [recorded in <a href="http://www.w3.org/2005/03/29-dawg-minutes.html#action19">http://www.w3.org/2005/03/29-dawg-minutes.html#action19</a>]
+</p>
+
+<a name="action20"></a>
+<p class='irc'>
+&lt;<cite>scribe</cite>&gt; <strong>ACTION:</strong> EricP to propose "privacy considerations" for SPARQL protocol [recorded in <a href="http://www.w3.org/2005/03/29-dawg-minutes.html#action20">http://www.w3.org/2005/03/29-dawg-minutes.html#action20</a>]
+</p>
+
+<p class='irc'>
+&lt;<cite>scribe</cite>&gt; DONE
+</p>
+
+<p class='phone'>
+action 19
+</p>
+
+<h3 id="item07">issue: wsdlAbstractProtocol, fromUnionQuery</h3>
+<p class='irc'>
+&lt;<cite>DanC</cite>&gt; <a href="http://www.w3.org/2001/sw/DataAccess/issues#wsdlAbstractProtocol">http://www.w3.org/2001/sw/DataAccess/issues#wsdlAbstractProtocol</a>
+</p>
+
+<p class='irc'>
+&lt;<cite>kendall</cite>&gt; "wsdl interfaces" better than "abstract protocol",  but -shrug-
+</p>
+
+<p class='phone'>
+<cite>KendallC:</cite> happy with the WSDL except some bits of WSDL 2.0 that I don't know how to spell <br>
+... have carefully tried to document a non-researchy interface
+</p>
+
+<p class='irc'>
+&lt;<cite>kendall</cite>&gt; don't know how to spell *yet* :&gt;
+</p>
+
+<p class='irc'>
+&lt;<cite>DanC</cite>&gt; "(SPARQLQuery and SPARQLDiscovery and SPARQLQueryAndDiscovery)"
+</p>
+
+<p class='irc'>
+&lt;<cite>DanC</cite>&gt; SPARQLQuery SPARQLSaddle SPARQLQS
+</p>
+
+<p class='irc'>
+&lt;<cite>kendall</cite>&gt; SPARQLQuery -&gt; SparqlQuery; SPARQLDiscovery -&gt; SparqlSaddle; SPARQLQueryAndDiscovery -&gt; SparqlQS
+</p>
+
+<p class='phone'>
+<cite>KendallC:</cite> total of 8 interfaces
+</p>
+
+<p class='irc'>
+&lt;<cite>DanC</cite>&gt; OPTIONS: all 5 primary (total 8), 3 SPARQLQuery SPARQLSaddle SPARQLQS, other (none, something else)
+</p>
+
+<p class='phone'>
+<cite>KendallC:</cite> 5 primative interfaces and 3 unions of them
+</p>
+
+<p class='irc'>
+&lt;<cite>kendall</cite>&gt; 5 primary, 4 "derived interfaces
+</p>
+
+<p class='irc'>
+&lt;<cite>DanC</cite>&gt; OPTIONS: all 5 primary (total 9), 3 SPARQLQuery SPARQLSaddle SPARQLQS, other (none, something else)
+</p>
+
+<p class='irc'>
+&lt;<cite>DanC</cite>&gt; Zakim who's on the phone?
+</p>
+
+<p class='irc'>
+&lt;<cite>thompsonbry</cite>&gt; Do we have a mapping of these interfaces onto the use cases?
+</p>
+
+<p class='phone'>
+<cite>AndyS:</cite> interested in 3. don't know how datasets work in this proposal
+</p>
+
+<p class='irc'>
+&lt;<cite>kendall</cite>&gt; ooh, yoshio makes a good point. thanks. have a mispelling.
+</p>
+
+<p class='phone'>
+<cite>Kevin:</cite> nothign to say, not at boston
+</p>
+
+<p class='phone'>
+<cite>Yoshio:</cite> nothing to say
+</p>
+
+<p class='phone'>
+<cite>DanC:</cite> in favor of 3
+</p>
+
+<p class='phone'>
+<cite>BryanT:</cite> want to interface to create and drop graphs
+</p>
+
+<p class='phone'>
+<cite>EricP:</cite> 3
+</p>
+
+<p class='phone'>
+<cite>KendallC:</cite> pass
+</p>
+
+<p class='phone'>
+<cite>PatH:</cite> pass
+</p>
+
+<p class='phone'>
+<cite>Janne:</cite> originally wanted lots of primitives. now want minimal set. 3.
+</p>
+
+<p class='phone'>
+<cite>KendallC:</cite> (unpassing) i remember 3 getting the most support in BOS. Graph retrieval has support to go to its own interface.
+</p>
+
+<p class='phone'>
+<cite>DanC:</cite> JaceK pointed out an existing interface and the room got quiet.
+</p>
+
+<p class='phone'>
+tx
+</p>
+
+<p class='phone'>
+<cite>KendallC:</cite> not making a pitch for the derived interfaces. just thought they were a nice organisational tool.
+</p>
+
+<p class='irc'>
+&lt;<cite>thompsonbry</cite>&gt; Own what issue?
+</p>
+
+<a name="action21"></a>
+<p class='irc'>
+&lt;<cite>scribe</cite>&gt; <strong>ACTION:</strong> KendallC to own WSDL interfaces. [recorded in <a href="http://www.w3.org/2005/03/29-dawg-minutes.html#action21">http://www.w3.org/2005/03/29-dawg-minutes.html#action21</a>]
+</p>
+
+<p class='phone'>
+action -20
+</p>
+
+<p class='irc'>
+&lt;<cite>JanneS</cite>&gt; (I have to run for tonight - cheers)
+</p>
+
+<a name="action22"></a>
+<p class='irc'>
+&lt;<cite>scribe</cite>&gt; <strong>ACTION:</strong> KendallC to add WSDL description of protocol to editor's draft, propose to WG. [recorded in <a href="http://www.w3.org/2005/03/29-dawg-minutes.html#action22">http://www.w3.org/2005/03/29-dawg-minutes.html#action22</a>]
+</p>
+
+<p class='irc'>
+&lt;<cite>DanC</cite>&gt; make sure it includes wsdlAbstractProtocol
+</p>
+
+<p class='phone'>
+action -21
+</p>
+
+<h3 id="item08">issue: xmlAbstractSyntax</h3>
+<a name="action23"></a>
+<p class='irc'>
+&lt;<cite>scribe</cite>&gt; <strong>ACTION:</strong> KendallC to tie WSDL description (wsdlAbstractProtocol) of protocol to editor's draft, propose to WG. [recorded in <a href="http://www.w3.org/2005/03/29-dawg-minutes.html#action23">http://www.w3.org/2005/03/29-dawg-minutes.html#action23</a>]
+</p>
+
+<p class='irc'>
+&lt;<cite>DanC</cite>&gt; <a href="http://www.w3.org/2001/sw/DataAccess/issues#xmlAbstractSyntax">http://www.w3.org/2001/sw/DataAccess/issues#xmlAbstractSyntax</a>
+</p>
+
+<p class='irc'>
+&lt;<cite>DanC</cite>&gt; <a href="http://www.w3.org/2001/sw/DataAccess/sparqlx.xsd">http://www.w3.org/2001/sw/DataAccess/sparqlx.xsd</a>
+</p>
+
+<p class='irc'>
+&lt;<cite>DanC</cite>&gt; <a href="http://www.w3.org/2001/sw/DataAccess/sparqlx.rnc">http://www.w3.org/2001/sw/DataAccess/sparqlx.rnc</a>
+</p>
+
+<p class='irc'>
+&lt;<cite>DanC</cite>&gt; <a href="http://www.w3.org/2001/sw/DataAccess/sparqlx.rng">http://www.w3.org/2001/sw/DataAccess/sparqlx.rng</a>
+</p>
+
+<p class='phone'>
+scribe is losing connectivity
+</p>
+
+<p class='phone'>
+notes at risk
+</p>
+
+<p class='irc'>
+&lt;<cite>DanC</cite>&gt; # SPARQL Abstract Syntax Seaborne, Andy (Monday, 21 March)  <a href="http://lists.w3.org/Archives/Public/public-rdf-dawg/2005JanMar/0393.html">http://lists.w3.org/Archives/Public/public-rdf-dawg/2005JanMar/0393.html</a>
+</p>
+
+<p class='irc'>
+&lt;<cite>DanC</cite>&gt; sparqlx.rnc 1.6 makes sense to me, i think
+</p>
+
+<p class='phone'>
+<cite>KendallC:</cite> wasn't going to invest much work if it was not likely to gain support
+</p>
+
+<p class='phone'>
+<cite>PatH:</cite> what are the design goals of the XML serialization?
+</p>
+
+<p class='phone'>
+<cite>DanC:</cite> making two contrete syntaxes makes the abstract syntax clear <br>
+... in web services, the input in defined by XS datatypes.
+</p>
+
+<p class='irc'>
+&lt;<cite>AndyS</cite>&gt; &lt;&gt; rdfs:seeAlso <a href="http://www.w3.org/TR/xqueryx/">http://www.w3.org/TR/xqueryx/</a>
+</p>
+
+<p class='phone'>
+[plus, i keep getting hints that my connectivity is at risk]
+</p>
+
+<p class='irc'>
+&lt;<cite>AndyS</cite>&gt; FWIW I didn't make the abstract syntax obvious because there was only one concrete syntax
+</p>
+
+<p class='phone'>
+<cite>BryanT:</cite> how coupled is the human syntax to the X-syntax
+</p>
+
+<p class='irc'>
+&lt;<cite>kendall</cite>&gt; oh, also, another design goal is to not worry overly about being able to roundtrip from surface syntax to xml and back -- hence, no PREFIX in the XML.
+</p>
+
+<p class='phone'>
+<cite>Andy:</cite> change from RDQL to N3 syntax did not impact the abstract syntax
+</p>
+
+<p class='phone'>
+[missing all voice now]
+</p>
+
+<p class='phone'>
+can i get a substitute scribe?
+</p>
+
+<a name="action24"></a>
+<p class='irc'>
+&lt;<cite>DanC</cite>&gt; <strong>ACTION:</strong> KendallC to work out remaining details in sparqlx.{rnc,xsd,rng}: expression syntax, order-by stuff [recorded in <a href="http://www.w3.org/2005/03/29-dawg-minutes.html#action24">http://www.w3.org/2005/03/29-dawg-minutes.html#action24</a>]
+</p>
+
+<p class='irc'>
+&lt;<cite>kendall</cite>&gt; gah! too many phones :&lt;
+</p>
+
+<p class='irc'>
+&lt;<cite>DanC</cite>&gt; then let's do meet 5 Apr, KC to scribe.
+</p>
+
+<p class='phone'>
+ADJOUNRED
+</p>
+
+<p class='irc'>
+&lt;<cite>DanC</cite>&gt; ericp, shall we get RRSAgent to make the minutes?
+</p>
+
+<p class='phone'>
+danc, please
+</p>
+
+<p class='phone'>
+i tried to be diligent about actions to that end
+</p>
+
+<p class='phone'>
+did you beat me to ,access, or did rrsagent do it?
+</p>
+
+<p class='irc'>
+&lt;<cite>DanC</cite>&gt; I did ,access
+</p>
+
+<p class='irc'>
+&lt;<cite>DanC</cite>&gt; sometimes rrsagent seems to, but I did it anyway
+</p>
+
+<p class='irc'>
+&lt;<cite>DanC</cite>&gt; hmm... better edit this out " RESOVLED to cancel 5 Apr telcon, and meet 12 Apr."
+</p>
+
+<p class='irc'>
+&lt;<cite>DanC</cite>&gt; tell you what, ericp, I'll take it from here.
+</p>
+
+
+
+</div>
+<h2><a name="ActionSummary">Summary of Action Items</a></h2>
+<!-- Action Items -->
+<strong>[NEW]</strong> <strong>ACTION:</strong> AndyS to add the above graph test cases (analagous to valueTesting test cases) (don't expect quick delivery) [recorded in <a href="http://www.w3.org/2005/03/29-dawg-minutes.html#action06">http://www.w3.org/2005/03/29-dawg-minutes.html#action06</a>] <br />
+<strong>[NEW]</strong> <strong>ACTION:</strong> AndyS to clarify 5.4 w/r/t closed world assumption [recorded in <a href="http://www.w3.org/2005/03/29-dawg-minutes.html#action14">http://www.w3.org/2005/03/29-dawg-minutes.html#action14</a>] <br />
+<strong>[NEW]</strong> <strong>ACTION:</strong> AndyS to explain how to get a whole graph with CONSTRUCT * and GRAPH. [recorded in <a href="http://www.w3.org/2005/03/29-dawg-minutes.html#action15">http://www.w3.org/2005/03/29-dawg-minutes.html#action15</a>] <br />
+<strong>[NEW]</strong> <strong>ACTION:</strong> AndyS to propose a test re "x"^^mytype != "y"^^mytpe [recorded in <a href="http://www.w3.org/2005/03/29-dawg-minutes.html#action13">http://www.w3.org/2005/03/29-dawg-minutes.html#action13</a>] <br />
+<strong>[NEW]</strong> <strong>ACTION:</strong> DanC to follow up re optional test based on op:dateTime triple [recorded in <a href="http://www.w3.org/2005/03/29-dawg-minutes.html#action02">http://www.w3.org/2005/03/29-dawg-minutes.html#action02</a>] <br />
+<strong>[NEW]</strong> <strong>ACTION:</strong> DanC to review editors draft (delivered 31 Mar) by 5 Mar [recorded in <a href="http://www.w3.org/2005/03/29-dawg-minutes.html#action17">http://www.w3.org/2005/03/29-dawg-minutes.html#action17</a>] <br />
+<strong>[NEW]</strong> <strong>ACTION:</strong> DaveB to consider dots in qnames, report on impact on turtle [recorded in <a href="http://www.w3.org/2005/03/29-dawg-minutes.html#action16">http://www.w3.org/2005/03/29-dawg-minutes.html#action16</a>] <br />
+<strong>[NEW]</strong> <strong>ACTION:</strong> DaveB to consider use of xsi:dataType ala comment from Steer [recorded in <a href="http://www.w3.org/2005/03/29-dawg-minutes.html#action01">http://www.w3.org/2005/03/29-dawg-minutes.html#action01</a>] <br />
+<strong>[NEW]</strong> <strong>ACTION:</strong> DaveB to to propose source test to approve [recorded in <a href="http://www.w3.org/2005/03/29-dawg-minutes.html#action05">http://www.w3.org/2005/03/29-dawg-minutes.html#action05</a>] <br />
+<strong>[NEW]</strong> <strong>ACTION:</strong> EricP to notify the WG of editors draft (or change of plans) by 31 Mar [recorded in <a href="http://www.w3.org/2005/03/29-dawg-minutes.html#action18">http://www.w3.org/2005/03/29-dawg-minutes.html#action18</a>] <br />
+<strong>[NEW]</strong> <strong>ACTION:</strong> EricP to pair with SteveH on making the HTML test results page [recorded in <a href="http://www.w3.org/2005/03/29-dawg-minutes.html#action03">http://www.w3.org/2005/03/29-dawg-minutes.html#action03</a>] <br />
+<strong>[NEW]</strong> <strong>ACTION:</strong> EricP to propose "privacy considerations" for SPARQL protocol [recorded in <a href="http://www.w3.org/2005/03/29-dawg-minutes.html#action20">http://www.w3.org/2005/03/29-dawg-minutes.html#action20</a>] <br />
+<strong>[NEW]</strong> <strong>ACTION:</strong> EricP to propose to close valueTesting (bonus points for test cases, to EricP or others) [recorded in <a href="http://www.w3.org/2005/03/29-dawg-minutes.html#action12">http://www.w3.org/2005/03/29-dawg-minutes.html#action12</a>] <br />
+<strong>[NEW]</strong> <strong>ACTION:</strong> KC, AFS, EP to publish usecases 1.148 + revision to 2.18 by KC, reviewed by AFS, plus editorial fixups by KC, ok'd by EricP [recorded in <a href="http://www.w3.org/2005/03/29-dawg-minutes.html#action08">http://www.w3.org/2005/03/29-dawg-minutes.html#action08</a>] <br />
+<strong>[NEW]</strong> <strong>ACTION:</strong> Kendall to To rewrite 2.18: change the title, don't motivate "update", spell "WSDL" correctly. :> [recorded in <a href="http://www.w3.org/2005/03/29-dawg-minutes.html#action09">http://www.w3.org/2005/03/29-dawg-minutes.html#action09</a>] <br />
+<strong>[NEW]</strong> <strong>ACTION:</strong> KendallC to add WSDL description of protocol to editor's draft, propose to WG. [recorded in <a href="http://www.w3.org/2005/03/29-dawg-minutes.html#action22">http://www.w3.org/2005/03/29-dawg-minutes.html#action22</a>] <br />
+<strong>[NEW]</strong> <strong>ACTION:</strong> KendallC to incorporate EricP's privacy text, salting to taste [recorded in <a href="http://www.w3.org/2005/03/29-dawg-minutes.html#action19">http://www.w3.org/2005/03/29-dawg-minutes.html#action19</a>] <br />
+<strong>[NEW]</strong> <strong>ACTION:</strong> KendallC to own WSDL interfaces. [recorded in <a href="http://www.w3.org/2005/03/29-dawg-minutes.html#action21">http://www.w3.org/2005/03/29-dawg-minutes.html#action21</a>] <br />
+<strong>[NEW]</strong> <strong>ACTION:</strong> KendallC to tie WSDL description (wsdlAbstractProtocol) of protocol to editor's draft, propose to WG. [recorded in <a href="http://www.w3.org/2005/03/29-dawg-minutes.html#action23">http://www.w3.org/2005/03/29-dawg-minutes.html#action23</a>] <br />
+<strong>[NEW]</strong> <strong>ACTION:</strong> KendallC to work out remaining details in sparqlx.{rnc,xsd,rng}: expression syntax, order-by stuff [recorded in <a href="http://www.w3.org/2005/03/29-dawg-minutes.html#action24">http://www.w3.org/2005/03/29-dawg-minutes.html#action24</a>] <br />
+<strong>[NEW]</strong> <strong>ACTION:</strong> Kevin to review sort design at earliest convenience [recorded in <a href="http://www.w3.org/2005/03/29-dawg-minutes.html#action11">http://www.w3.org/2005/03/29-dawg-minutes.html#action11</a>] <br />
+<strong>[NEW]</strong> <strong>ACTION:</strong> PatH to review sort design in 2 weeks [recorded in <a href="http://www.w3.org/2005/03/29-dawg-minutes.html#action10">http://www.w3.org/2005/03/29-dawg-minutes.html#action10</a>] <br />
+<strong>[NEW]</strong> <strong>ACTION:</strong> SteveH to prepare test cases for publication as WG Note (no deadline/urgency) [recorded in <a href="http://www.w3.org/2005/03/29-dawg-minutes.html#action07">http://www.w3.org/2005/03/29-dawg-minutes.html#action07</a>] <br />
+<strong>[NEW]</strong> <strong>ACTION:</strong> SteveH to to revise test manifest w.r.t. "background" and named graphs [recorded in <a href="http://www.w3.org/2005/03/29-dawg-minutes.html#action04">http://www.w3.org/2005/03/29-dawg-minutes.html#action04</a>] <br />
+&nbsp;<br />
+
+
+[End of minutes] <br>
+<hr>
+
+<address>
+  Minutes formatted by David Booth's 
+  <a href="http://dev.w3.org/cvsweb/~checkout~/2002/scribe/scribedoc.htm">scribe.perl</a> version 1.122 (<a href="http://dev.w3.org/cvsweb/2002/scribe/">CVS log</a>)<br>
+  $Date: 2008-01-23 05:23:52 $ 
+</address>
+<div class="diagnostics">
+<hr />
+<h2>Scribe.perl diagnostic output</h2>
+[Delete this section before finalizing the minutes.] <br>
+<pre>
+This is scribe.perl Revision: 1.122  of Date: 2005/03/31 04:43:41  
+Check for newer version at <a href="http://dev.w3.org/cvsweb/~checkout~/2002/scribe/">http://dev.w3.org/cvsweb/~checkout~/2002/scribe/</a>
+
+Guessing input format: Irssi_ISO8601_Log_Text_Format (score 1.00)
+
+Succeeded: s/Jeff/Geoff/
+Succeeded: s/union/derived/
+Succeeded: s/JosD/JaceK/
+Found Scribe: EricP
+Inferring ScribeNick: ericP
+Default Present: Kevin, Yoshio, DanC, BryanT, AndyS, EricP, Kendall_Clark, PatH, JanneS
+Present: Kevin Yoshio DanC BryanT AndyS EricP Kendall_Clark PatH JanneS
+Regrets: DaveB SteveH JosD
+Got date from IRC log name: 29 Mar 2005
+Guessing minutes URL: <a href="http://www.w3.org/2005/03/29-dawg-minutes.html">http://www.w3.org/2005/03/29-dawg-minutes.html</a>
+People with action items: afs andys danc daveb ep ericp kc kendall kendallc kevin path steveh
+
+</pre>
+[End of <a href="http://dev.w3.org/cvsweb/~checkout~/2002/scribe/scribedoc.htm">scribe.perl</a> diagnostic output]
+
+</div>
+</body>
+</html>

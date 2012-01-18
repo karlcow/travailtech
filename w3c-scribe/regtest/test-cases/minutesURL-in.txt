@@ -1,0 +1,44 @@
+14:54:34 <RRSAgent> RRSAgent has joined #swcg
+14:54:38 <em> agenda?
+14:55:03 <em> Chair: EricM
+14:55:08 <em> Scribe: JimH
+15:00:14 <Ralph> Meeting: SemWeb CG
+15:13:22 <Zakim> agendum 2. "Misc action item review" taken up [from em]
+15:13:32 <Ralph> ACTION Jim: followup on public-owl-dev announcement
+15:13:46 <Ralph> Jim: I've forgotten the CG's intention here
+15:15:21 <jh-scribe> CONTINUED
+15:16:02 <jh-scribe> ACTION Guus: brief CG on status of ODM draft
+15:16:07 <jh-scribe> CONTINUED
+15:16:02 <jh-scribe> ACTION: Guus2 to brief CG on status of ODM draft
+16:21:23 <jh-scribe> ... recorded in http://www.w3.org/2005/01/07-swcg-irc#T15-13-32
+15:16:07 <jh-scribe> CONTINUED
+15:16:58 <jh-scribe> ACTION DanC: think about possible speakers for an application vocab panel and investigate this for W3C track at WWW
+15:17:15 <jh-scribe> ACTION EricM: push Steven Pemberton to get HTML WG position on RDF/A on record
+15:17:19 <jh-scribe> CONT
+15:17:21 <jh-scribe> CONT
+16:14:52 <jh-scribe> em: so noted
+16:15:37 <Ralph> rrsagent, please draft minutes
+16:16:50 <Ralph> rrsagent, please make logs member
+16:18:11 <jh-scribe> ADJOURNED
+16:18:16 <Zakim> -DanC
+16:21:19 <RRSAgent> I'm logging.  Sorry, nothing found for 'actions'
+16:21:23 <Ralph> rrsagent, list actions
+16:21:23 <RRSAgent> I see 7 open action items:
+16:21:23 <RRSAgent> ACTION: Jim to followup on public-owl-dev announcement [1]
+16:21:23 <RRSAgent>   recorded in http://www.w3.org/2005/01/07-swcg-irc#T15-13-32
+16:21:23 <RRSAgent> ACTION: Guus to brief CG on status of ODM draft [2]
+16:21:23 <RRSAgent>   recorded in http://www.w3.org/2005/01/07-swcg-irc#T15-16-02
+16:21:23 <RRSAgent> ACTION: DanC to think about possible speakers for an application vocab panel and investigate this for W3C track at WWW [3]
+16:21:23 <RRSAgent>   recorded in http://www.w3.org/2005/01/07-swcg-irc#T15-16-58
+16:21:23 <RRSAgent> ACTION: EricM to push Steven Pemberton to get HTML WG position on RDF/A on record [4]
+16:21:23 <RRSAgent>   recorded in http://www.w3.org/2005/01/07-swcg-irc#T15-17-15
+16:21:23 <RRSAgent> ACTION: Ralph ask SWBPD to look at SOURCE and UNSAID issues and see if there is a need in short term and sufficient design experience at this point, especially interested in user feedback [5]
+16:21:23 <RRSAgent>   recorded in http://www.w3.org/2005/01/07-swcg-irc#T15-23-04
+16:21:23 <RRSAgent> ACTION: David to contact Susan Turnbull [6]
+16:21:23 <RRSAgent>   recorded in http://www.w3.org/2005/01/07-swcg-irc#T15-27-21
+16:21:23 <RRSAgent> ACTION: DanC to to find out who at MIT is primary contact [7]
+16:21:23 <RRSAgent>   recorded in http://www.w3.org/2005/01/07-swcg-irc#T16-10-54
+16:22:39 <Zakim> -JimH
+16:27:39 <Ralph> rrsagent, please draft minutes
+16:27:40 <RRSAgent> I have made the request to generate http://www.w3.org/2005/01/07-swcg-minutes dbooth
+16:28:37 <Ralph> rrsagent, bye

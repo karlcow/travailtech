@@ -1,0 +1,11 @@
+<dbooth> ACTION: do something
+<dbooth> NamedAnchorHere: hello
+<dbooth> HELLO!
+<dbooth> NamedAnchorHere: ignorable-duplicate
+<dbooth> NamedAnchorHere: ignorable-duplicate
+<dbooth> NamedAnchorHere: duplicate
+<dbooth> MIDDLE!
+<dbooth> NamedAnchorHere: duplicate
+<dbooth> BYE!
+<dbooth> ACTION: do something else
+<RRSAgent> I have made the request to generate http://www.w3.org/2005/02/14-arch-minutes dbooth

@@ -1,0 +1,20 @@
+19:28:54 <RRSAgent> RRSAgent has joined &mit
+19:28:54 <RRSAgent> logging to http://www.w3.org/2005/02/15-mit-irc
+19:28:56 <RalphS> Meeting: MIT Site
+19:29:01 <Zakim> Zakim has joined &mit
+19:29:05 <RalphS> zakim, this will be mit
+19:29:05 <Zakim> ok, RalphS; I see Team_MIT(site)2:30PM scheduled to start in 1 minute
+19:30:11 <Zakim> Team_MIT(site)2:30PM has now started
+19:33:08 <RalphS> Present: Alan, Ralph, DBooth, Sandro
+19:33:08 <RalphS> Regrets: EricM, Judy, Shawn, Sandro, Liam, Amy
+19:33:08 <RalphS> Chair: Alan
+19:33:08 <RalphS> Scribe: Alan
+19:33:08 <RalphS> ScribeOptions: -mit
+19:33:08 <RalphS> Topic: MIT Meeting Topic
+19:34:59 <gerald> whew!
+19:34:59 <gerald> dbooth: hello
+19:34:59 <gerald> ... and goodbye
+19:34:59 <Alan> whew!
+19:34:59 <Alan> dbooth: hello
+19:34:59 <Alan> ... and goodbye
+21:02:15 <dbooth> I have made the request to generate http://www.w3.org/2005/02/15-mit-minutes dbooth

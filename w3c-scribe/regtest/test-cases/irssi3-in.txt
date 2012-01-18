@@ -1,0 +1,19 @@
+2005-03-30T17:58:36Z -!- Irssi: Starting query in W3C with dbooth
+2005-03-30T17:58:36Z <dbooth> hey ericp, you there?
+2005-03-30T18:00:14Z <dbooth> I'm wondering if you  happen to know the name of that timestamp format.  An ISO standard perhaps?  oh 
+                     well, i'll google around.
+2005-03-30T21:00:48Z -!- dbooth [dbooth@128.30.52.30] has quit [Quit: Leaving]
+Day changed to 31 Mar 2005
+2005-03-31T14:04:05Z -!- Irssi: dbooth is now known as dbooth-home
+2005-03-31T15:12:41Z <ericP> \win go 20
+2005-03-31T15:54:45Z <dbooth-home> "<ericP> \win go 20"?
+2005-03-31T15:59:02Z <ericP> yeah, missed
+2005-03-31T15:59:23Z <ericP> glad i caught you.
+2005-03-31T15:59:25Z <dbooth-home> hey, i didn't see the geeky timestamps in the log you sent.
+2005-03-31T15:59:35Z <dbooth-home> only hh:mm timestamps.
+2005-03-31T15:59:49Z <ericP> eyah, they show up in my client but not in the logs.
+2005-03-31T16:00:01Z <dbooth-home> huh
+2005-03-31T16:00:03Z <ericP> i usually just paste from my client.
+2005-03-31T16:00:19Z <dbooth-home> oh, well, can you email me the paste then?
+2005-03-31T16:00:30Z <dbooth-home> i want to test it.  it should work now.
+2005-03-31T16:00:30Z <dbooth-home> s/dbooth-home/dbooth/G

@@ -1,0 +1,16 @@
+12:57:03 <RRSAgent> RRSAgent has joined &arch
+12:57:04 <RRSAgent> logging to http://www.w3.org/2005/02/15-arch-irc
+12:57:16 <MSM> MSM has changed the topic to: First Lenten meeting of W3C Architecture
+12:57:22 <plh> Meeting: Archirtecture Domain Meeting
+12:59:02 <caribou> s/Archirtecture/Architecture
+12:59:19 <caribou> caroom
+13:00:08 <plh> zakim, call plh-work
+13:00:08 <Zakim> ok, plh; the call is being made
+13:00:09 <Zakim> ARCH_Team()8:00AM has now started
+13:00:10 <Zakim> +Plh
+13:00:12 <plh> Topic: Oops!
+13:00:12 <plh> Chair: PLH
+13:00:12 <plh> Scribe: PLH
+13:00:12 <plh> Present: PLH dbooth MSM Carine
+13:00:12 <plh> oops
+13:00:12 <plh> dbooth: dboothoops

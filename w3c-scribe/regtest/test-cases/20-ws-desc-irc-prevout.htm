@@ -1,0 +1,1116 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang='en'>
+<head>
+  <title>SV_MEETING_TITLE -- 20 Jan 2005</title>
+  <link type="text/css" rel="STYLESHEET" href="http://www.w3.org/StyleSheets/base.css">
+  <link type="text/css" rel="STYLESHEET" href="http://www.w3.org/StyleSheets/public.css">
+  <link type="text/css" rel="STYLESHEET" href="http://www.w3.org/2004/02/minutes-style.css">
+  <meta content="SV_MEETING_TITLE" name="Title">  
+  <meta content="text/html; charset=iso-8859-1" http-equiv="Content-Type">
+</head>
+
+<body>
+<p><a href="http://www.w3.org/"><img src="http://www.w3.org/Icons/w3c_home" alt="W3C" border="0"
+height="48" width="72"></a> 
+
+</p>
+
+<h1> - DRAFT - </h1>
+<h1>SV_MEETING_TITLE</h1>
+<h2>20 Jan 2005</h2>
+
+
+
+<p>See also: <a href="http://www.w3.org/2005/01/20-ws-desc-irc">IRC log</a></p>
+
+<h2><a name="attendees">Attendees</a></h2>
+
+<div class="intro">
+<dl>
+<dt>Present</dt>
+<dd></dd>
+<dt>Regrets</dt>
+<dd></dd>
+<dt>Chair</dt>
+<dd>SV_MEETING_CHAIR </dd>
+<dt>Scribe</dt>
+<dd>arthur</dd>
+</dl>
+</div>
+
+<h2>Contents</h2>
+<ul>
+  <li><a href="#agenda">Topics</a>
+	<ol>
+	
+	</ol>
+  </li>
+  <li><a href="#ActionSummary">Summary of Action Items</a></li>
+</ul>
+<hr>
+<div class="meeting">
+
+<p class='irc'>
+&lt;<cite>pauld</cite>&gt; marsh: are you proposing a mapping from wsa:action into a wsdl 'op-code' ?
+</p>
+
+<p class='irc'>
+&lt;<cite>pauld</cite>&gt; hugo: i think this is more or less what we were talking about
+</p>
+
+<p class='irc'>
+&lt;<cite>pauld</cite>&gt; dbooth: this approach would solve what i was talking about
+</p>
+
+<p class='irc'>
+&lt;<cite>pauld</cite>&gt; paco: how would this help, unless action values are distinct
+</p>
+
+<p class='irc'>
+&lt;<cite>pauld</cite>&gt; hugo: possible to have multiple different messages with the same action going to the same operation, e.g. logging service
+</p>
+
+<p class='irc'>
+&lt;<cite>pauld</cite>&gt; discussion of uniqueness, GED and action may form a unique pair
+</p>
+
+<p class='irc'>
+&lt;<cite>Zakim</cite>&gt; dbooth, you wanted to explain motivation for uniqueness
+</p>
+
+<p class='irc'>
+&lt;<cite>pauld</cite>&gt; dbooth: operation mapping requirement tries to solve "what do you do with a message" problem
+</p>
+
+<p class='irc'>
+&lt;<cite>pauld</cite>&gt; glen: no, operations exist for a reason - i want to "do something". the operation is the verb, not just a bag
+</p>
+
+<p class='irc'>
+&lt;<cite>umit</cite>&gt; The reason that the default ACtion values solve the problem is that it uniquely identifies both the operation and the message. The moment one starts from deviating from assigning the default Action values, then uniqueness requirements must be met in order to identify the operation and the message.
+</p>
+
+<p class='irc'>
+&lt;<cite>pauld</cite>&gt; dbooth: well know. you might not necessarily want to think this way. WSDL describes the Web service (there may be zero, one or many WSDLs in play).
+</p>
+
+<p class='irc'>
+&lt;<cite>pauld</cite>&gt; ... what do i need to do with a message when it comes in
+</p>
+
+<p class='irc'>
+&lt;<cite>pauld</cite>&gt; ... maybe that a message may result in multiple 'actions'
+</p>
+
+<p class='irc'>
+&lt;<cite>pauld</cite>&gt; +1 to dbooth, with feeling
+</p>
+
+<p class='irc'>
+&lt;<cite>pauld</cite>&gt; glen: you need to know, somehow. which operation is in play
+</p>
+
+<p class='irc'>
+&lt;<cite>pauld</cite>&gt; marsh: what has this to do with unique actions
+</p>
+
+<p class='irc'>
+&lt;<cite>Zakim</cite>&gt; hugo, you wanted to say that he think that the (action, message) pair needs to be unique, not the action alone
+</p>
+
+<p class='irc'>
+&lt;<cite>pauld</cite>&gt; hugo: i think that the (action, message) pair needs to be unique, not the action alone. possible to have 2 op-codes for different messages.
+</p>
+
+<p class='irc'>
+&lt;<cite>pauld</cite>&gt; umit: action might not identify anything, you have other mechanisms. we might not be able to solve this problem, only make suggestions.
+</p>
+
+<p class='irc'>
+&lt;<cite>dbooth</cite>&gt; PaulD: "WSDL isn't the Web service. WSDL *describes* the Web service."
+</p>
+
+<p class='irc'>
+&lt;<cite>dbooth</cite>&gt; +1 to Paul's quote!
+</p>
+
+<p class='irc'>
+&lt;<cite>pauld</cite>&gt; discussion between dbooth and bijan about higher level actions, grouping operations into choreography. maybe extra information in the header to achieve this
+</p>
+
+<p class='irc'>
+&lt;<cite>pauld</cite>&gt; amy: there are lots of other mechanisms for determining the actual processing undertaken beyond 'action' encoded in the message
+</p>
+
+<p class='irc'>
+&lt;<cite>pauld</cite>&gt; tom: what can we do to go forward here. close with no action!
+</p>
+
+<p class='irc'>
+&lt;<cite>pauld</cite>&gt; paco: do we have to provide an actual mechanism? the default dispatching could be 'action'. current text allows you to do what you want.
+</p>
+
+<p class='irc'>
+&lt;<cite>pauld</cite>&gt; paco: action is just one of many possible mechanisms
+</p>
+
+<p class='irc'>
+&lt;<cite>pauld</cite>&gt; anish: action satisfies this requirement, action+GED satisfies this requirement. we're done
+</p>
+
+<p class='irc'>
+&lt;<cite>pauld</cite>&gt; marsh: should we require actions to be unique?
+</p>
+
+<p class='irc'>
+&lt;<cite>pauld</cite>&gt; anish: we already said (in ws-addr) no
+</p>
+
+<p class='irc'>
+&lt;<cite>pauld</cite>&gt; ... it's up to you if you want to use an extensibility mechanism
+</p>
+
+<p class='irc'>
+&lt;<cite>pauld</cite>&gt; marsh: maybe it's only action+GED that is unique, then you'd have an invalid WSDL. my service could still work with other magic dispatching mechanism
+</p>
+
+<p class='irc'>
+&lt;<cite>alewis</cite>&gt; why do you have to have something at some level to tell anyone else how you're doing this?
+</p>
+
+<p class='irc'>
+&lt;<cite>pauld</cite>&gt; paco: suspects there's a bug in the spec: why do we cite the interface as the place to describe the dispatching mechanism?
+</p>
+
+<p class='irc'>
+&lt;<cite>alewis</cite>&gt; this is the same silly argument as before!
+</p>
+
+<p class='irc'>
+&lt;<cite>pauld</cite>&gt; i'm coming round to amy's POV on this topic
+</p>
+
+<p class='irc'>
+&lt;<cite>pauld</cite>&gt; but have yet to convince folks back home
+</p>
+
+<p class='irc'>
+&lt;<cite>alewis</cite>&gt; if you're wearing a straitjacket, you don't *need* an overcoat.
+</p>
+
+<p class='irc'>
+&lt;<cite>pauld</cite>&gt; dbooth: you need an explicit way of describing the 'verb' at the abstact level. this is a foundation spec. once that is done we can drop the operation mapping requirement
+</p>
+
+<p class='irc'>
+&lt;<cite>pauld</cite>&gt; glen: then we can toss out operations
+</p>
+
+<p class='irc'>
+&lt;<cite>pauld</cite>&gt; paco: context may provide dispatching.
+</p>
+
+<p class='irc'>
+&lt;<cite>TomJ</cite>&gt; I am not willing to support any addition to the spec that introduces a 'verb' that replaces the operation.
+</p>
+
+<p class='irc'>
+&lt;<cite>pauld</cite>&gt; dbooth: operations are convinient metaphores. also there are protocols that do request-response
+</p>
+
+<p class='irc'>
+&lt;<cite>pauld</cite>&gt; marsh: i need some concrete proposals here
+</p>
+
+<p class='irc'>
+&lt;<cite>pauld</cite>&gt; dbooth: sanjiva was working towards one
+</p>
+
+<p class='irc'>
+&lt;<cite>pauld</cite>&gt; anish: we can take the last F2F discussion and form a proposal aligned to ws-addressing
+</p>
+
+<p class='irc'>
+&lt;<cite>pauld</cite>&gt; marsh: maybe we need to move sanjiva's proposal forward
+</p>
+
+<p class='irc'>
+&lt;<cite>kliu</cite>&gt; +1 to amy's why  statement - all we have to do is to provide a way so people can indicate what mechanism they use to distinct the message if they choose to do so, no MUST is necessary here
+</p>
+
+<p class='irc'>
+&lt;<cite>pauld</cite>&gt; tom: we spent a lot of time on this already. let's vote and move forward. i vote no
+</p>
+
+<p class='irc'>
+&lt;<cite>pauld</cite>&gt; prasad: it's a small change at the ws-addr level to require unique action uris for all input or output messages in an interface
+</p>
+
+<p class='irc'>
+&lt;<cite>pauld</cite>&gt; daveo: keen to vote, but interested in relationship between this and wsa:action.
+</p>
+
+<p class='irc'>
+&lt;<cite>pauld</cite>&gt; tom: yeah, it gives you the 'verb'
+</p>
+
+<p class='irc'>
+&lt;<cite>pauld</cite>&gt; daveo: people may or may not be using ws-addr
+</p>
+
+<p class='irc'>
+&lt;<cite>pauld</cite>&gt; paco: it's only on the server that an ambiguous WSDL is a problem. doesn't impact client interoperability
+</p>
+
+<p class='irc'>
+&lt;<cite>pauld</cite>&gt; anish: action values don't have to be unique
+</p>
+
+<p class='irc'>
+&lt;<cite>pauld</cite>&gt; daveo: nothing we can do here that makes wsdl 2.0 simpler here?
+</p>
+
+<p class='irc'>
+&lt;<cite>pauld</cite>&gt; ... i haven't heard anything that makes WSDL 2.0 simpler when ws-addr is engaged. lets close this issue.
+</p>
+
+<p class='irc'>
+&lt;<cite>prasad</cite>&gt; Anish: We can require them to be different (not unique) in an interface. I.e. distinct URI for each different message in an xface.
+</p>
+
+<p class='irc'>
+&lt;<cite>pauld</cite>&gt; anish: you can still have two 'in' messages for an operation which aren't unique
+</p>
+
+<p class='irc'>
+&lt;<cite>dbooth</cite>&gt; Anish is right.  The granularity of the op name mapping requirement is wrong.
+</p>
+
+<p class='irc'>
+&lt;<cite>umit</cite>&gt; We already agreed that there is a granularity issue, didn't we at the last f2f?
+</p>
+
+<p class='irc'>
+&lt;<cite>pauld</cite>&gt; marsh: what do we need to change to resolve paco's bug?
+</p>
+
+<p class='irc'>
+&lt;<cite>dbooth</cite>&gt; <a href="http://dev.w3.org/cvsweb/~checkout~/2002/ws/desc/wsdl20/wsdl20.html?content-type=text/html;%20charset=utf-8#Interface_OperationName">http://dev.w3.org/cvsweb/~checkout~/2002/ws/desc/wsdl20/wsdl20.html?content-type=text/html;%20charset=utf-8#Interface_OperationName</a>
+</p>
+
+<p class='irc'>
+&lt;<cite>pauld</cite>&gt; arthur: it's only the input GEDs that have to be unique - the service executes the operation based on the inputs, output is causality
+</p>
+
+<p class='irc'>
+&lt;<cite>pauld</cite>&gt; ... who cares if the outputs aren't unique
+</p>
+
+<p class='irc'>
+&lt;<cite>pauld</cite>&gt; marsh: in the case where there are two outputs.
+</p>
+
+<p class='irc'>
+&lt;<cite>pauld</cite>&gt; arthur: corollation of outputs back to the input is a different problem.
+</p>
+
+<p class='irc'>
+&lt;<cite>pauld</cite>&gt; ... back to LC82. text seems like overkill in the way it's written. it's lawyer-speak
+</p>
+
+<p class='irc'>
+&lt;<cite>prasad</cite>&gt; I agree :)
+</p>
+
+<p class='irc'>
+&lt;<cite>pauld</cite>&gt; marsh, tom: just the first message in a MEP has to be unique
+</p>
+
+<p class='irc'>
+&lt;<cite>prasad</cite>&gt; Text in the spec not the issue ..
+</p>
+
+<p class='irc'>
+&lt;<cite>pauld</cite>&gt; glen: yes, but also the first in the OUT as well
+</p>
+
+<p class='irc'>
+&lt;<cite>pauld</cite>&gt; discussion of 'client' and 'server' roles
+</p>
+
+<p class='irc'>
+&lt;<cite>pauld</cite>&gt; jeffm: forget client/server and think in terms of recipient. response doesn't have to have uniqueness
+</p>
+
+<p class='irc'>
+&lt;<cite>pauld</cite>&gt; marsh: we're getting close here. two buckets - in messages, out messages
+</p>
+
+<p class='irc'>
+&lt;<cite>pauld</cite>&gt; jeffm: it's the side that's doing dispatch that requires uniqueness
+</p>
+
+<p class='irc'>
+&lt;<cite>prasad</cite>&gt; If I redirect responses via replyTo, don't I have to worry about which operation and other such at the recipient end?
+</p>
+
+<p class='irc'>
+&lt;<cite>pauld</cite>&gt; rapid discussion of dispatch info required in respect to the MEP in play
+</p>
+
+<p class='irc'>
+&lt;<cite>pauld</cite>&gt; tom: i only need to understand which operation / MEP is in play. first message does that
+</p>
+
+<p class='irc'>
+&lt;<cite>pauld</cite>&gt; tony: need a new term e.g. "initiating message" or "unsolicited messgage" (brits giggle)
+</p>
+
+<p class='irc'>
+&lt;<cite>pauld</cite>&gt; ... problem is terminology is overloaded
+</p>
+
+<p class='irc'>
+&lt;<cite>pauld</cite>&gt; kevin: how does this work. are we requiring 'state' in an operation?
+</p>
+
+<p class='irc'>
+&lt;<cite>pauld</cite>&gt; tom: yup
+</p>
+
+<p class='irc'>
+&lt;<cite>umit</cite>&gt; ouch!
+</p>
+
+<p class='irc'>
+&lt;<cite>pauld</cite>&gt; ... that's the way it works
+</p>
+
+<p class='irc'>
+&lt;<cite>pauld</cite>&gt; tom and anish play dispatch tennis across the room ..
+</p>
+
+<p class='irc'>
+&lt;<cite>pauld</cite>&gt; anish: in the message, there is some kind of client identitiy? if that is the case, i could buy unique GED for first message argument
+</p>
+
+<p class='irc'>
+&lt;<cite>pauld</cite>&gt; tony: starting more than one MEP async without corollation mechansim isn't going to work
+</p>
+
+<p class='irc'>
+&lt;<cite>pauld</cite>&gt; paco: do we need to specify the corollation mechanism in play as well? a service doesn't want to divulge its implementation
+</p>
+
+<p class='irc'>
+&lt;<cite>pauld</cite>&gt; tom: a complex MEP requires a corollation mechanism
+</p>
+
+<p class='irc'>
+&lt;<cite>pauld</cite>&gt; kevin: could have two alternative ins, this would imply they would have to have a unique GED
+</p>
+
+<p class='irc'>
+&lt;<cite>umit</cite>&gt; Uniqueness is always defined with respect to a domain. What is the domain we are talking about here anyway? I made a posting to WS-Addressing for this issue: <a href="http://lists.w3.org/Archives/Public/public-ws-addressing/2005Jan/0035.html">http://lists.w3.org/Archives/Public/public-ws-addressing/2005Jan/0035.html</a>
+</p>
+
+<p class='irc'>
+&lt;<cite>pauld</cite>&gt; amy: i'm violently opposed to making this stricter. it's none of your buisiness how my messages are dispatched. other out of band dispatch mechanisms not described in WSDL may be in play.
+</p>
+
+<p class='irc'>
+&lt;<cite>pauld</cite>&gt; ... you're preoccupied to code-generation langauges. it isn't the web service generation language
+</p>
+
+<p class='irc'>
+&lt;<cite>pauld</cite>&gt; +1 to amy
+</p>
+
+<p class='irc'>
+&lt;<cite>dbooth</cite>&gt; +1 to amy also
+</p>
+
+<p class='irc'>
+&lt;<cite>TomJ</cite>&gt; But that doesn't invalidate the use case that code generation *is* important, and if a generation engine doesn't have enough info in the WSDL do the job, then perhaps the WSDL is not complete.
+</p>
+
+<p class='irc'>
+&lt;<cite>umit</cite>&gt; I disagree with Amy on one point. WSD is for clients to be able to communicate with the service. If the service requires a specific way of interacting with it from the client to aid in dispatching, then it must be explicit, either in the usage of WS-Addressing, marker,etc
+</p>
+
+<p class='irc'>
+&lt;<cite>alewis</cite>&gt; horsefeathers, tom!
+</p>
+
+<p class='irc'>
+&lt;<cite>pauld</cite>&gt; tony: corollation is the key here
+</p>
+
+<p class='irc'>
+&lt;<cite>dbooth</cite>&gt; WSDL is never a complete description of the service anyway.
+</p>
+
+<p class='irc'>
+&lt;<cite>alewis</cite>&gt; if you want a web services code generation language working group, petition the director!  i call scope creep!
+</p>
+
+<p class='irc'>
+&lt;<cite>TomJ</cite>&gt; Are you saying that my use case is not valid?
+</p>
+
+<p class='irc'>
+&lt;<cite>alewis</cite>&gt; yes, tom, code generation is out of scope for a description language.
+</p>
+
+<p class='irc'>
+&lt;<cite>Roberto</cite>&gt; I disagree with Amy too. If operations surface in the description, it should be possible to discriminate them. Otherwise you can define one operation per service and you're done.
+</p>
+
+<p class='irc'>
+&lt;<cite>alewis</cite>&gt; more to the point, my use cases (describing legacy services) conflicts with your use case (demanding explication of service internals)
+</p>
+
+<p class='phone'>
+sorry amy, but i disagree. we absolutely need wsdl to be complete enough for a client to access the service without the need for any additional out-of-band information
+</p>
+
+<p class='irc'>
+&lt;<cite>alewis</cite>&gt; irrelevant, arthur.
+</p>
+
+<p class='irc'>
+&lt;<cite>alewis</cite>&gt; not what the argument is about.
+</p>
+
+<p class='phone'>
+no it isn't
+</p>
+
+<p class='irc'>
+&lt;<cite>pauld</cite>&gt; marsh: need to wrap up. we're not going to get agreement here given it's a difference in architectural views
+</p>
+
+<p class='phone'>
+you are an in obvous minority here
+</p>
+
+<p class='irc'>
+&lt;<cite>umit</cite>&gt; Ah, that is a separate discussion Arthur. Is WSDL the complete and one-and-only contract?
+</p>
+
+<p class='irc'>
+&lt;<cite>alewis</cite>&gt; the client *has* the information: it can construct the message.
+</p>
+
+<p class='phone'>
+if it isn't even complete enough for a client to access the service, then it has failed to meet a significant requirement
+</p>
+
+<p class='irc'>
+&lt;<cite>alewis</cite>&gt; i repeat, there isn't a question of the client being unable to access the service.
+</p>
+
+<p class='irc'>
+&lt;<cite>alewis</cite>&gt; the use case presented, instead, is for generation of code to implement the service.
+</p>
+
+<p class='irc'>
+&lt;<cite>alewis</cite>&gt; i don't buy it.
+</p>
+
+<p class='irc'>
+&lt;<cite>pauld</cite>&gt; proposal #1: initiating message of an operation must be distinguishable
+</p>
+
+<p class='phone'>
+wsdl MUST support code generation
+</p>
+
+<p class='irc'>
+&lt;<cite>alewis</cite>&gt; horsefeathers, arthur.
+</p>
+
+<p class='irc'>
+&lt;<cite>pauld</cite>&gt; tom: this relaxes what we currently have
+</p>
+
+<p class='irc'>
+&lt;<cite>pauld</cite>&gt; ... this may make amy happier
+</p>
+
+<p class='irc'>
+&lt;<cite>pauld</cite>&gt; proposal #2: all messages in a given direction need to be distinguishable
+</p>
+
+<p class='phone'>
+call me Pegasus then
+</p>
+
+<p class='irc'>
+&lt;<cite>pauld</cite>&gt; ... within an interface
+</p>
+
+<p class='irc'>
+&lt;<cite>hugo</cite>&gt; proposal #2 for me
+</p>
+
+<p class='irc'>
+&lt;<cite>prasad</cite>&gt; Distinguishable based on what criteria? GED?
+</p>
+
+<p class='irc'>
+&lt;<cite>alewis</cite>&gt; return at +25 after next hour?
+</p>
+
+<p class='irc'>
+&lt;<cite>Marsh</cite>&gt; Yes.
+</p>
+
+<p class='irc'>
+&lt;<cite>pauld</cite>&gt; LUNCH, BACK at 13:30 local time
+</p>
+
+<p class='irc'>
+&lt;<cite>umit</cite>&gt; Ah, I may miss this fun
+</p>
+
+<p class='irc'>
+&lt;<cite>prasad</cite>&gt; Me too
+</p>
+
+<p class='irc'>
+&lt;<cite>alewis</cite>&gt; ugh.
+</p>
+
+<p class='irc'>
+&lt;<cite>alewis</cite>&gt; not there yet?
+</p>
+
+<p class='irc'>
+&lt;<cite>Marsh</cite>&gt; OK, we're about to start again.
+</p>
+
+<p class='irc'>
+&lt;<cite>alewis</cite>&gt; for i in $(cat issues.list | cut -f 1) ; do echo "Issue $i closed" ; done
+</p>
+
+<p class='irc'>
+&lt;<cite>Marsh</cite>&gt; resuming
+</p>
+
+<p class='irc'>
+&lt;<cite>scribe</cite>&gt; scribe: arthur
+</p>
+
+<p class='irc'>
+&lt;<cite>Marsh</cite>&gt; Scribes: Paul(done), Arthur, DaveO, Anish
+</p>
+
+<p class='phone'>
+taking a poll now
+</p>
+
+<p class='irc'>
+&lt;<cite>Marsh</cite>&gt; Proposal #1`: /initiating message of an operation must be distinguishable
+</p>
+
+<p class='irc'>
+&lt;<cite>Marsh</cite>&gt; proposal #2: all messages in a given direction need to be distinguishable
+</p>
+
+<p class='irc'>
+&lt;<cite>Marsh</cite>&gt; Proposal #3: All messages in the "in" direction need to be distinguishable.
+</p>
+
+<p class='irc'>
+&lt;<cite>alewis</cite>&gt; NOTA?
+</p>
+
+<p class='irc'>
+&lt;<cite>Marsh</cite>&gt; Status quo: All messages need to be distinguishable, right?
+</p>
+
+<p class='irc'>
+&lt;<cite>alewis</cite>&gt; could "none of the above" be added to that list, please?
+</p>
+
+<p class='irc'>
+&lt;<cite>Marsh</cite>&gt; Proposal #4: none.
+</p>
+
+<p class='irc'>
+&lt;<cite>Roberto</cite>&gt; 2
+</p>
+
+<p class='phone'>
+results of poll are #1 has 7, #2 has 5, #3 has 2, #4 has 2
+</p>
+
+<p class='phone'>
+now distinguish between #1 or #2
+</p>
+
+<p class='irc'>
+&lt;<cite>Marsh</cite>&gt; proposal #2: all messages in a given direction need to be distinguishable
+</p>
+
+<p class='irc'>
+&lt;<cite>scribe</cite>&gt; new results are #1 has 6, #2 has 10
+</p>
+
+<p class='phone'>
+<cite>Tom:</cite> this means if two operations return the same GED, e.g. PurchaseOrder, then they must be distinguished
+</p>
+
+<p class='irc'>
+&lt;<cite>pauld</cite>&gt; paul: this is reopening the discussion
+</p>
+
+<p class='phone'>
+<cite>Anish:</cite> yes, that's why we had 3 proposals
+</p>
+
+<p class='phone'>
+<cite>Glen:</cite> this does not allow the common case where the return message is distinguished by the content, e.g. the response if correlated to the request which is normally distinguished
+</p>
+
+<p class='phone'>
+<cite>Anish:</cite> the GED is not the only way to distinguish
+</p>
+
+<p class='phone'>
+<cite>Glen:</cite> does that mean the MEP can be used, e.g. if the outs are correlated to the in?
+</p>
+
+<p class='phone'>
+<cite>Mark:</cite> I'd like to see the proposals restated by how the messages are distinguished
+</p>
+
+<p class='phone'>
+<cite>Arthur:</cite> points out that the spec currently only discussed the GED as the way to distinguish operations
+</p>
+
+<p class='phone'>
+<cite>Jonathan:</cite> does anyone object to #2?
+</p>
+
+<p class='phone'>
+Arthur and Glen object
+</p>
+
+<p class='irc'>
+&lt;<cite>alewis</cite>&gt; we're forcing people to say things that they may not need to say.
+</p>
+
+<p class='irc'>
+&lt;<cite>Marsh</cite>&gt; Bijan: Are we allowing people to say things they wouldn't be able to say otherwise, or are we restricting them from something something they can't say now.
+</p>
+
+<p class='irc'>
+&lt;<cite>dorchard</cite>&gt; And DaveO objects without seeing the exact wording.  This feels like something is being slipped in.
+</p>
+
+<p class='irc'>
+&lt;<cite>dbooth</cite>&gt; Bijan: Would this be allowing people to say things that they wouldn't otherwise be able to say, or restricting them from saying bad things?
+</p>
+
+<p class='irc'>
+&lt;<cite>asir</cite>&gt; Arthur and Glen, what are your objections ??
+</p>
+
+<p class='irc'>
+&lt;<cite>pauld</cite>&gt; paul: went for #2 as a second best option. an operation is symetrical exchange of messages.
+</p>
+
+<p class='phone'>
+<cite>Arthur:</cite> WSDL 2.0 as currently spec'ed (2.2.1.1) makes many WSDL 1.1 operations illegal
+</p>
+
+<p class='phone'>
+<cite>Glen:</cite> request-response operations establish a correlation so #1 is less restrictive than #2
+</p>
+
+<p class='phone'>
+<cite>Tony:</cite> Is Anish's concern related to asynch?
+</p>
+
+<p class='phone'>
+<cite>Anish:</cite> I can buy the argument that we don't need this feature at all since its up to the designer of the service to route the inputs anyway it sees fit <br>
+... We are saying that the designer of the service must advertise to the world how operations with the same inputs are distinguished <br>
+... I can see the point that is being made by the people who filed the minority opinion, but why are we taking half measures?
+</p>
+
+<p class='phone'>
+<cite>Arthur:</cite> do we have to add information to the definition of MEPs to indicate that they have a way to distinguish operations, e.g. by correlating the request to the response?
+</p>
+
+<p class='phone'>
+<cite>Tony:</cite> discuss asynch versus synch
+</p>
+
+<p class='phone'>
+<cite>Paul:</cite> there are many ways to correlate messages, depending on the transport, etc.
+</p>
+
+<p class='irc'>
+&lt;<cite>pauld</cite>&gt; VOTE VOTE VOTE
+</p>
+
+<p class='irc'>
+&lt;<cite>Marsh</cite>&gt; dbooth, we're really deep into Arthur's issue #82.
+</p>
+
+<p class='irc'>
+&lt;<cite>dbooth</cite>&gt; Oh, we've passed my issues?
+</p>
+
+<p class='irc'>
+&lt;<cite>dbooth</cite>&gt; I guess we've  bumped back to Arthur's.
+</p>
+
+<p class='irc'>
+&lt;<cite>asir</cite>&gt; well they are interconnected
+</p>
+
+<p class='irc'>
+&lt;<cite>Marsh</cite>&gt; pretty much I think.  This poll doesn't seem to be a complete solution to yours as well, AFAICT
+</p>
+
+<p class='phone'>
+<cite>Arthur:</cite> maybe we need to have the MEP specify it's key which is a subset of the messages that are sufficient to identify the operation
+</p>
+
+<p class='phone'>
+<cite>Jonathan:</cite> how many people are in favour of removing the ONMR versus trying to fix the spec?
+</p>
+
+<p class='irc'>
+&lt;<cite>anish</cite>&gt; btw, the action attr does not help u, david, as it is not required to be unique
+</p>
+
+<p class='irc'>
+&lt;<cite>dbooth</cite>&gt; Anish, I don't think uniqueness is necessary.  If the action is the same, the semantics are the same.  That's fine.
+</p>
+
+<p class='phone'>
+<cite>Glen:</cite> i feel we need to capture something
+</p>
+
+<p class='irc'>
+&lt;<cite>pauld</cite>&gt; you're less likely to cut yourself with a sharp knife
+</p>
+
+<p class='phone'>
+<cite>Jonathan:</cite> yes, but is is practicle and testable? we can't prevent people from writing bad interfaces
+</p>
+
+<p class='irc'>
+&lt;<cite>anish</cite>&gt; david, then why are there two different operations/messages if the semantics are the same
+</p>
+
+<p class='irc'>
+&lt;<cite>dbooth</cite>&gt; anish, i dunno, i didn't write that WSDL document!
+</p>
+
+<p class='irc'>
+&lt;<cite>anish</cite>&gt; :-)
+</p>
+
+<p class='phone'>
+straw poll
+</p>
+
+<p class='phone'>
+Who is in favour of removing ONMR as a normative part of the spec
+</p>
+
+<p class='irc'>
+&lt;<cite>jjm</cite>&gt; abstain
+</p>
+
+<p class='irc'>
+&lt;<cite>Roberto</cite>&gt; opposed
+</p>
+
+<p class='irc'>
+&lt;<cite>anish</cite>&gt; opposed -- don't throw the baby out with the bathwater
+</p>
+
+<p class='phone'>
+14 in favour of dropping ONMR and 4 who want to keep it
+</p>
+
+<p class='phone'>
+Formal vote now.
+</p>
+
+<p class='irc'>
+&lt;<cite>dbooth</cite>&gt; +1 to best practice
+</p>
+
+<p class='phone'>
+Proposal on the table is to move ONMR to a Best Practice document.
+</p>
+
+<p class='irc'>
+&lt;<cite>asir</cite>&gt; +1 to best practice
+</p>
+
+<p class='irc'>
+&lt;<cite>jjm</cite>&gt; abstain
+</p>
+
+<p class='irc'>
+&lt;<cite>dbooth</cite>&gt; Non-normative note
+</p>
+
+<p class='phone'>
+<cite>Jeff:</cite> best practices have little practical impact
+</p>
+
+<p class='phone'>
+<cite>Jonathan:</cite> I recommend that we simply rename the current section to make it a Best Practice and not a Requirement
+</p>
+
+<p class='irc'>
+&lt;<cite>dbooth</cite>&gt; Damn, fire alarm at MIT again
+</p>
+
+<p class='irc'>
+&lt;<cite>Marsh</cite>&gt; qa+ mark
+</p>
+
+<p class='irc'>
+&lt;<cite>dbooth</cite>&gt; Hugo and i need to evacuate again
+</p>
+
+<p class='phone'>
+<cite>Amy:</cite> TIBCO would remove our formal objection if ONM is a Best Practice
+</p>
+
+<p class='phone'>
+<cite>Anish:</cite> Even if it is a Best Practice we need to resolve the issue. What do we recommend? #1 or #2.
+</p>
+
+<p class='phone'>
+<cite>Paco:</cite> We could clearly state the requirement instead of recommending the solution.
+</p>
+
+<p class='phone'>
+<cite>Mark:</cite> In RFC 2119, SHOULD is fairly strong, so not appropriate here
+</p>
+
+<p class='phone'>
+<cite>Arthur:</cite> this problem is wider than interface design since it is possible to have two services at the same endpoint, each with different interfaces, which may receive messages with the same GED. <br>
+... The Best Practice should not be confined to the interface design.
+</p>
+
+<p class='phone'>
+<cite>Tony:</cite> +1 to Paco - just document the problem
+</p>
+
+<p class='irc'>
+&lt;<cite>kliu</cite>&gt; VOTE, let's vote
+</p>
+
+<p class='phone'>
+<cite>Jonathan:</cite> In summary, we need to have a Best Practice and explain the problem and possible solutions.
+</p>
+
+<p class='irc'>
+&lt;<cite>alewis</cite>&gt; 30 mins?
+</p>
+
+<p class='phone'>
+<cite>Jonathan:</cite> go on break then take the formal vote
+</p>
+
+<p class='irc'>
+&lt;<cite>anish</cite>&gt; --- break ---
+</p>
+
+<p class='irc'>
+&lt;<cite>alewis</cite>&gt; x:40?
+</p>
+
+<p class='irc'>
+&lt;<cite>Roberto</cite>&gt; wasn't it 20 minutes?
+</p>
+
+<p class='irc'>
+&lt;<cite>alewis</cite>&gt; x:30, then?
+</p>
+
+<p class='irc'>
+&lt;<cite>Marsh</cite>&gt; No, 20 min
+</p>
+
+<p class='irc'>
+&lt;<cite>Marsh</cite>&gt; tes,
+</p>
+
+<p class='irc'>
+&lt;<cite>alewis</cite>&gt; 'kay
+</p>
+
+<p class='phone'>
+resume at 3:30pm Melbourne time
+</p>
+
+<p class='irc'>
+&lt;<cite>Roberto</cite>&gt; 'k
+</p>
+
+<p class='irc'>
+&lt;<cite>Marsh</cite>&gt; Will resume with a Vote on whether to convert the ONMR to a Best Practice section, carefully delineating the problems that might arise from not having an identifiable mechanism in the message to distinguish which operation the message belongs to.
+</p>
+
+<p class='irc'>
+&lt;<cite>Marsh</cite>&gt; Resuming now.
+</p>
+
+<p class='irc'>
+&lt;<cite>dbooth</cite>&gt; ONMR == Operation Name Mapping Requirement
+</p>
+
+<p class='phone'>
+Voting begins...
+</p>
+
+<p class='irc'>
+&lt;<cite>dorchard</cite>&gt; glenn, why did you abstain?
+</p>
+
+<p class='phone'>
+10 yes, 3 no, 3 abstain
+</p>
+
+<p class='phone'>
+<cite>Jonathan:</cite> Would any no voters file a formal objection?
+</p>
+
+<p class='phone'>
+<cite>Jeff:</cite> Very possibly.
+</p>
+
+<p class='irc'>
+&lt;<cite>Marsh</cite>&gt; Yes: W3C, BT, Canon, TIBCO, SAP, Microsoft, BEA CA, IBM, webMethods
+</p>
+
+<p class='irc'>
+&lt;<cite>Marsh</cite>&gt; No: Sun, Oracle, Macromedia
+</p>
+
+<p class='irc'>
+&lt;<cite>Marsh</cite>&gt; Abstain: Sonic, Education.au
+</p>
+
+<p class='irc'>
+&lt;<cite>asir</cite>&gt; did u miss SAP?
+</p>
+
+<p class='phone'>
+Jeff/Anish: express concers, BP carries little weight, still need to decide on the wording
+</p>
+
+<p class='irc'>
+&lt;<cite>asir</cite>&gt; all right, 1 of 3 down :-)
+</p>
+
+<p class='irc'>
+&lt;<cite>dbooth</cite>&gt; s/BadSubstitution/Something/
+</p>
+
+<p class='irc'>
+&lt;<cite>Roberto</cite>&gt; for the record, Sun will consider filing a formal objection too
+</p>
+
+<p class='phone'>
+Now discussing LC82
+</p>
+
+<p class='phone'>
+<cite>Jonathan:</cite> Can we ask editors for wording and then discuss it?
+</p>
+
+
+
+</div>
+<h2><a name="ActionSummary">Summary of Action Items</a></h2>
+<!-- Action Items -->
+
+
+[End of minutes] <br>
+<hr>
+
+<address>
+  Minutes formatted by David Booth's 
+  <a href="http://dev.w3.org/cvsweb/~checkout~/2002/scribe/scribedoc.htm">scribe.perl</a> version 1.122 (<a href="http://dev.w3.org/cvsweb/2002/scribe/">CVS log</a>)<br>
+  $Date: 2008-01-23 05:23:48 $ 
+</address>
+<div class="diagnostics">
+<hr />
+<h2>Scribe.perl diagnostic output</h2>
+[Delete this section before finalizing the minutes.] <br>
+<pre>
+This is scribe.perl Revision: 1.122  of Date: 2005/03/31 04:43:41  
+Check for newer version at <a href="http://dev.w3.org/cvsweb/~checkout~/2002/scribe/">http://dev.w3.org/cvsweb/~checkout~/2002/scribe/</a>
+
+Guessing input format: RRSAgent_Text_Format (score 1.00)
+
+Succeeded: s/uique/unique/
+Succeeded: s/action uris/action uris for all input or output messages in an interface/
+Succeeded: s/uique/unique/
+Succeeded: s/once the first/corollation is the key here/
+Succeeded: s/first GED in the initiatting message of a MEP has to be unique/initiating message of an operation must be distinguishable/
+Succeeded: s/will/may/
+Succeeded: s/AnishL/Anish:/
+Succeeded: s/ONMP/ONMR/
+Succeeded: s/ONMP/ONMR/g
+Succeeded: s/SOAP/SAP/
+Succeeded: s/YES: +SAP/.../
+Succeeded: s/...//
+FAILED: s/BadSubstitution/Something/
+Found Scribe: arthur
+Inferring ScribeNick: Arthur
+
+WARNING: No "Topic:" lines found.
+
+
+WARNING: No "Present: ... " found!
+Possibly Present: ALewis Anish Asir Bijan Bijan_Parsia Canon DavidB Dbooth GlenD Haas Hugo Jeff Jonathan Mark Melbourne Roberto Scribes Sun TomJ Umit_Yalcinalp amy arthur daveo dorchard glen jeffm jjm kevin kliu marsh michael mnot paco paul pauld prasad tom tony umit
+You can indicate people for the Present list like this:
+	&lt;dbooth&gt; Present: dbooth jonathan mary
+	&lt;dbooth&gt; Present+ amy
+
+
+WARNING: No meeting title found!
+You should specify the meeting title like this:
+&lt;dbooth&gt; Meeting: Weekly Baking Club Meeting
+
+
+WARNING: No meeting chair found!
+You should specify the meeting chair like this:
+&lt;dbooth&gt; Chair: dbooth
+
+Got date from IRC log name: 20 Jan 2005
+People with action items: 
+
+WARNING: Input appears to use implicit continuation lines.
+You may need the "-implicitContinuations" option.
+
+
+WARNING: No "Topic: ..." lines found!  
+Resulting HTML may have an empty (invalid) &lt;ol&gt;...&lt;/ol&gt;.
+
+Explanation: "Topic: ..." lines are used to indicate the start of 
+new discussion topics or agenda items, such as:
+&lt;dbooth&gt; Topic: Review of Amy's report
+
+
+</pre>
+[End of <a href="http://dev.w3.org/cvsweb/~checkout~/2002/scribe/scribedoc.htm">scribe.perl</a> diagnostic output]
+
+</div>
+</body>
+</html>

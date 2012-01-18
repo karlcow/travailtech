@@ -1,0 +1,238 @@
+14:54:34 <RRSAgent> RRSAgent has joined #swcg
+14:54:38 <em> agenda?
+14:54:58 <em> Chiar: EricM
+14:55:03 <em> Chair: EricM
+14:55:08 <em> Scribe: JimH
+14:57:57 <Ralph> Ralph has joined #swcg
+14:58:36 <DanC> DanC has joined #swcg
+15:00:14 <Ralph> Meeting: SemWeb CG
+15:00:14 <em> zakim, dial emiller-bos
+15:00:14 <Zakim> sorry, em, I don't know what conference this is
+15:00:25 <em> zakim, this is SW_CG
+15:00:25 <Zakim> em, I see SW_CG()10:00AM in the schedule but not yet started.  Perhaps you mean "this will be SW_CG".
+15:00:30 <em> zakim, this will be SW_CG
+15:00:30 <Zakim> ok, em; I see SW_CG()10:00AM scheduled to start now
+15:00:33 <em> zakim, dial emiller-bos
+15:00:33 <Zakim> ok, em; the call is being made
+15:00:34 <Zakim> SW_CG()10:00AM has now started
+15:00:36 <Zakim> +Emiller
+15:00:42 <Zakim> +Ralph
+15:02:55 <Zakim> +DanC
+15:04:06 <Zakim> +[UMD]
+15:04:20 <jhendler> jhendler has joined #swcg
+15:04:20 <Ralph> zakim, umd is JimH
+15:04:22 <Zakim> +JimH; got it
+15:04:45 <DanC> Zakim, take up item 1
+15:04:45 <Zakim> agendum 1. "Convene, take roll, review record" taken up [from em]
+15:05:26 <Ralph> Regrets: Ivan
+15:05:45 <jh-scribe> Regrets: danbri
+15:06:24 <DanC> some hesitation at accepting danbri's regrets...
+15:06:48 <DanC> http://lists.w3.org/Archives/Member/w3c-semweb-cg/2004Dec/0040.html
+15:07:06 <jh-scribe> em: proposal to accept  http://lists.w3.org/Archives/Member/w3c-semweb-cg/2004Dec/0040.html 
+15:07:24 <jh-scribe> APPROVED
+15:07:29 <jh-scribe> jh: scribe
+15:07:52 <jh-scribe> JimH: at risk for Jan 14
+15:07:55 <Ralph> Ralph slightly at risk for 14 Jan; may be a few minutes late
+15:08:01 <jh-scribe> em: next meeting, Jan 14
+15:08:17 <Ralph> q+ to talk about scribe list
+15:08:26 <DanC> scribe list from last minutes: David Guus Ivan Brian JimH DanC DanBri Ralph
+15:08:44 <DanC> if we put JimH at the end: David Guus Ivan Brian DanC DanBri Ralph JimH
+15:09:56 <jh-scribe> discussion of scribe list management
+15:11:14 <jh-scribe> next scribe: David
+15:11:24 <jh-scribe> (until we hear otherwise)
+15:12:02 <jh-scribe> em: any other agenda items?
+15:12:09 <DanC> agenda + calconnect
+15:12:33 <em> agenda+ CIO/CTO symposium
+15:13:22 <Ralph> zakim, next agendum
+15:13:22 <Zakim> agendum 2. "Misc action item review" taken up [from em]
+15:13:32 <Ralph> ACTION Jim: followup on public-owl-dev announcement
+15:13:46 <Ralph> Jim: I've forgotten the CG's intention here
+15:14:09 <Ralph> ... note that rdf-rules is very active at the moment with lots of mention of OWL
+15:14:39 <Ralph> ... are we trying to move all of rdf-rules discussion to owl-dev or to separate OWL from Rules discussion?
+15:14:58 <Ralph> EricM: the original request was to create a development list for OWL
+15:15:06 <jh-scribe> Jim: okay, I have it, leave this as CONT and I'll do it
+15:15:21 <DanC> (if the action is no longer clear, it should be withdrawn and an agendum should be added if we don't want to drop it. We're into the BulkActionReview antipattern)
+15:15:21 <jh-scribe> CONTINUED
+15:16:02 <jh-scribe> ACTION Guus: brief CG on status of ODM draft
+15:16:07 <jh-scribe> CONTINUED
+15:16:02 <jh-scribe> ACTION: Guus2 to brief CG on status of ODM draft
+15:16:07 <jh-scribe> CONTINUED
+15:16:58 <jh-scribe> ACTION DanC: think about possible speakers for an application vocab panel and investigate this for W3C track at WWW
+15:17:15 <jh-scribe> ACTION EricM: push Steven Pemberton to get HTML WG position on RDF/A on record
+15:17:19 <jh-scribe> CONT
+15:17:21 <jh-scribe> CONT
+15:17:37 <Ralph> zakim, next agendum
+15:17:37 <Zakim> agendum 3. "DAWG update" taken up [from em]
+15:17:38 <jh-scribe> next agendum
+15:18:06 <jh-scribe> em: congrats on working draft - (Dec 04)
+15:18:16 <jh-scribe> danc: thanks 
+15:18:17 <DanC> http://www.w3.org/2001/sw/DataAccess/ftf4.html
+15:18:33 <jh-scribe> danc: working on a meeting page for next f2f
+15:18:33 <DanC> http://www.w3.org/2002/09/wbs/35463/issues-ftf4/
+15:18:59 <jh-scribe> danc: looking at a poll on open issues
+15:19:19 <jh-scribe> danc: I'd like CG to put some time pressure on us  (not the exact wording)
+15:20:03 <jh-scribe> ralph: are you asking for CG to look at your issues list?
+15:20:06 <DanC> http://www.w3.org/2001/sw/DataAccess/issues#SOURCE
+15:20:12 <Ralph> s/CG/SWBPD/
+15:20:15 <DanC> http://www.w3.org/2001/sw/DataAccess/issues#unsaid
+15:20:56 <jh-scribe> danc: there's a couple that go together (uris in log) - it may be that CG wants to see if they think this is critical short term standardization
+15:21:21 <jh-scribe> em: do the use cases require this?
+15:21:33 <jh-scribe> danc: objectives definitely include these 
+15:22:09 <Ralph> DanC: if SWBPD has any opinion on whether SOURCE or unsaid involve premature standardization, that would help the DAWG Chair
+15:22:15 <jh-scribe> danc: might be good if SWBPD takes a look at this and says how much need there is for this short term
+15:23:04 <jh-scribe> ACTION Ralph: ask SWBPD to look at SOURCE and UNSAID issues and see if there is a need in short term
+15:23:47 <jh-scribe> danc: not just need, but also whether there is enough design experience on this?
+15:24:53 <jh-scribe> danc: there's some schedule risk w/DAWG - we're behind the original sched
+15:25:48 <jh-scribe> em: is the issue of how to implement a CR issue?
+15:26:10 <jh-scribe> danc: the real question is should we be doing real standardization on this, or can we leave it a POSTPONED issue
+15:26:32 <Ralph> action 5=Ralph ask SWBPD to look at SOURCE and UNSAID issues and see if there is a need in short term and sufficient design experience at this point, especially interested in user feedback
+15:26:46 <jh-scribe> danc: if SPARQL is useless without source, for example, then we need it, but if most apps don't need it, we could move faster without
+15:26:53 <jh-scribe> zakim, next agendum
+15:26:53 <Zakim> agendum 4. "IG update" taken up [from em]
+15:27:21 <jh-scribe> ACTION David: contact Susan Turnbull
+15:27:22 <jh-scribe> DONE
+15:29:36 <jh-scribe> ralph: brief update of WG status.  Am expecting formal liaison letter from ISO topic maps - this is FYI for CG, doesn't require action at this time
+15:30:11 <jh-scribe> ralph: Steve Pepper is convener of ISO WG and also coordinator of our TF
+15:32:57 <DanC> (formally, changing his affiliation requires that he resign and be reappointed. Just not noticing that he's no longer employed, since they're paid thru March, seems easier)
+15:33:18 <DanC> (his does not refer to Steve)
+15:34:42 <jh-scribe> em: next f2f for BP is at Tech Plenary?  ralph: yes.
+15:35:17 <jh-scribe> em: I've been hearing some requests for Skos stuff to move forward (jh +1) 
+15:35:28 <em> ack ralph
+15:35:28 <Zakim> Ralph, you wanted to talk about scribe list
+15:35:32 <em> ack danc
+15:35:32 <Zakim> DanC, you wanted to ask how to prioritize my own RDF/XHTML work, to note XTech GRDDL thingy, and to ask about w3t @ SWBP-at-TP
+15:35:36 <jh-scribe> ralph: I will pass this back to the EG
+15:35:50 <Ralph> s/EG/TF/
+15:36:17 <jh-scribe> danc: if you want me (re: RDF/XHTML) at TP, I need some feedback soon
+15:36:49 <jh-scribe> ralph: we haven't done the agenda-ing yet, but we need to get the grddl stuff moving
+15:36:52 <em> q+
+15:37:36 <jh-scribe> danc: Dom is preparing an abstract for a grddl thing at Xtech (nee. XML Europe) in May
+15:37:49 <em> -> http://www.xtech-conference.org/
+15:38:01 <em> may 25-28, 2005
+15:38:41 <Ralph> in Amsterdam
+15:38:43 <DanC> (I've been working on some GRDDL schema annotation slides)
+15:39:10 <jh-scribe> em: seeing some GRDDL stuff move forward, and esp. schema annotation, is critical stuff (esp. to Creative Commons)
+15:43:31 <jh-scribe> em: various real world groups need the GRDDL stuff - we do want to see that move forward
+15:44:23 <jh-scribe> zakim, next agendum
+15:44:23 <Zakim> agendum 5. "Dynamic Properties Framework (DPF) and RDF" taken up [from em]
+15:44:35 <DanC> (saved my GRDDL XML Schema annotation slide outline http://www.w3.org/2003/g/talk2/grddl-xsch.html )
+15:45:34 <jh-scribe> em: (we're skipping the IG agendum, but note that danbri's action is continued)
+15:45:38 <Ralph> zakim, postpone agendum 4
+15:45:38 <Zakim> I don't understand 'postpone agendum 4', Ralph
+15:46:02 <jh-scribe> em: on DPF - let's put on agenda for later
+15:46:36 <Ralph> I appreciated DanBri's heads-up on DPF, though didn't get to read it over the holidays
+15:46:39 <jh-scribe> em: might be bridge Sem Web to MMI activity - not clear if we are there yet - thanks danbri for heads up
+15:46:51 <jh-scribe> zakim, next agendum
+15:46:51 <Zakim> agendum 6. "WWW 2005 Dev Day update" taken up [from em]
+15:48:15 <Ralph> Jim: currently thinking that there won't be a single track called "Semantic Web"
+15:48:18 <DanC> yes, time for devday semweb track to undergo mitosis
+15:48:31 <Ralph> ... instead several tracks on different aspects of SemWeb
+15:48:57 <Ralph> ... one such subtrack proposal is "Implemented Semantic Web Services"
+15:49:31 <jh-scribe> em: I've been organizing DD track for Sem Web since WWW 7
+15:49:57 <jh-scribe> em: the SW theme on Dev Day has matured to where breaking it up seems to make sense 
+15:50:29 <jh-scribe> em: so from Dev Day side of this, we have been successful and the breakup seems like a good way to show this
+15:50:31 <em> ack em
+15:51:32 <Ralph> Jim: I'd like to see a multimedia track rather than [the more specific] photo track
+15:51:32 <jh-scribe> danc: multimedia metadata is certainly one we're seeing more interest in these days
+15:52:07 <Ralph> Jim: there is, however, a specific WWW Photo project and they may make a specific track proposal
+15:52:43 <Ralph> EricM: will tracks be half-day?
+15:53:18 <Ralph> Jim: thought is to follow the 2004 New York schedule with keynote but then working lunch so net loss of track time is only 1 hr
+15:53:33 <jh-scribe> s/1 hr/ half hour
+15:54:24 <Ralph> Jim: start beating the bushes to encourage track proposals
+15:54:39 <DanC> ack danc
+15:54:39 <Zakim> DanC, you wanted to suggest photo sharing metadata, or multimedia metadata, as a theme
+15:54:40 <em> ack danc
+15:54:47 <em> ack ralph
+15:54:47 <Zakim> Ralph, you wanted to support multiple focussed tracks
+15:55:38 <jh-scribe> ralph: if we see things that would have gone into the old Dev Day track, we should now be thinking about a "business applications track" or whatever
+15:55:42 <jh-scribe> jh: +1
+15:55:46 <jh-scribe> zakim, next agendum
+15:55:46 <Zakim> agendum 7. "Calendar" taken up [from em]
+15:56:10 <jh-scribe> zakim, next agendum
+15:56:10 <Zakim> agendum 7 was just opened, jh-scribe
+15:56:14 <Ralph> zakim, agenda order 8,9
+15:56:14 <Zakim> ok, Ralph
+15:56:20 <Ralph> zakim, take up agendum 8
+15:56:20 <Zakim> agendum 8. "calconnect" taken up [from DanC]
+15:57:05 <DanC> http://lists.w3.org/Archives/Member/w3c-semweb-cg/2005Jan/att-0007/calcon.html__charset_us-ascii
+15:57:57 <jh-scribe> danc: so this is based on "when will all this stuff be standardized" email
+15:58:51 <jh-scribe> danc: seems like CalConnect is for real - tight time lines and a number of significant players
+15:58:56 <jh-scribe> danc: they're meeting next week
+15:59:06 <jh-scribe> danc: but I cannot go
+16:00:07 <jh-scribe> danc: I may be able to go to the Minnesota meeting (March)
+16:00:12 <DanC> "62nd IETF 6-11 Mar 2005 Minneapolis, MN"
+16:01:12 <jh-scribe> danc: seems to be some standardization happening here, but under a different name - given IPR issues, W3C could point out oppty to do as W3C issue
+16:01:20 <jh-scribe> danc: seems like W3C shoudl join
+16:01:38 <jh-scribe> ralph: definite W3C interest in calendaring stuff
+16:01:51 <jh-scribe> q+ to mention PAW connection
+16:02:15 <jh-scribe> em: anyone from RDF calendar group going?  danc: no, I don't think so
+16:02:39 <jh-scribe> danc: no one on mailing list seems to have said "yes I am going"
+16:06:11 <jh-scribe> discussion of the relationship between Cal consortium and W3C re: cal stuff
+16:08:39 <jh-scribe> q
+16:08:39 <DanC> DanC thanks the CG for the feedback and brainstorming
+16:08:47 <Ralph> -> http://lists.w3.org/Archives/Public/www-rdf-calendar/2004Dec/0000.html Call for Participantion -- Second Calconnect Interop - 11-12 January 2005 - Seattle, Washington
+16:08:57 <em> q?
+16:08:58 <Ralph> From: David C. Thewlis <Dave.Thewlis@calconnect.org> 
+16:09:01 <em> ack jh-scribe
+16:09:01 <Zakim> jh-scribe, you wanted to mention PAW connection
+16:09:19 <Ralph> [[
+16:09:19 <Ralph> Dave Thewlis
+16:09:19 <Ralph> Executive Director
+16:09:19 <Ralph> The Calendaring and Scheduling Consortium
+16:09:19 <Ralph> 1550 Dena Drive
+16:09:20 <Ralph> McKinleyville CA 95519-4146
+16:09:22 <Ralph> ]]
+16:10:22 <Ralph> JimH: MIT is a member of Calconnect
+16:10:50 <Ralph> EricM: do we know the individual who is involved?
+16:10:54 <jh-scribe> ACTION DanC: to find out who at MIT is primary contact
+16:11:41 <jh-scribe> zakim, next agendum
+16:11:41 <Zakim> agendum 9. "CIO/CTO symposium" taken up [from em]
+16:11:56 <jh-scribe> em: heads up to CG - have started some conversations about putting this into place
+16:12:15 <jh-scribe> em: various rules workshop stuff put that on hold for a bit
+16:12:32 <jh-scribe> em: but my interaction w/folks from industry has been positive
+16:12:57 <jh-scribe> em: I have reorg'ed the futures calendar to move this to - in SIlicon valley in mid-end of June
+16:13:12 <DanC> my June travel plan is TAG in Cannes, FYI
+16:13:50 <jh-scribe> jimh: it's in the calendar (I can see it)
+16:14:46 <jh-scribe> jimh: suggests rules wkshop become agenda item for future weeks
+16:14:52 <jh-scribe> em: so noted
+16:15:37 <Ralph> rrsagent, please draft minutes
+16:16:50 <Ralph> rrsagent, please make logs member
+16:18:11 <jh-scribe> ADJOURNED
+16:18:16 <Zakim> -DanC
+16:21:07 <Ralph> rrsgent, actions?
+16:21:19 <Ralph> rrsagent, actions?
+16:21:19 <RRSAgent> I'm logging.  Sorry, nothing found for 'actions'
+16:21:23 <Ralph> rrsagent, list actions
+16:21:23 <RRSAgent> I see 7 open action items:
+16:21:23 <RRSAgent> ACTION: Jim to followup on public-owl-dev announcement [1]
+16:21:23 <RRSAgent>   recorded in http://www.w3.org/2005/01/07-swcg-irc#T15-13-32
+16:21:23 <RRSAgent> ACTION: Guus to brief CG on status of ODM draft [2]
+16:21:23 <RRSAgent>   recorded in http://www.w3.org/2005/01/07-swcg-irc#T15-16-02
+16:21:23 <RRSAgent> ACTION: DanC to think about possible speakers for an application vocab panel and investigate this for W3C track at WWW [3]
+16:21:23 <RRSAgent>   recorded in http://www.w3.org/2005/01/07-swcg-irc#T15-16-58
+16:21:23 <RRSAgent> ACTION: EricM to push Steven Pemberton to get HTML WG position on RDF/A on record [4]
+16:21:23 <RRSAgent>   recorded in http://www.w3.org/2005/01/07-swcg-irc#T15-17-15
+16:21:23 <RRSAgent> ACTION: Ralph ask SWBPD to look at SOURCE and UNSAID issues and see if there is a need in short term and sufficient design experience at this point, especially interested in user feedback [5]
+16:21:23 <RRSAgent>   recorded in http://www.w3.org/2005/01/07-swcg-irc#T15-23-04
+16:21:23 <RRSAgent> ACTION: David to contact Susan Turnbull [6]
+16:21:23 <RRSAgent>   recorded in http://www.w3.org/2005/01/07-swcg-irc#T15-27-21
+16:21:23 <RRSAgent> ACTION: DanC to to find out who at MIT is primary contact [7]
+16:21:23 <RRSAgent>   recorded in http://www.w3.org/2005/01/07-swcg-irc#T16-10-54
+16:22:39 <Zakim> -JimH
+16:27:39 <Ralph> rrsagent, please draft minutes
+16:28:37 <Ralph> rrsagent, bye
+16:28:37 <RRSAgent> I see 7 open action items:
+16:28:37 <RRSAgent> ACTION: Jim to followup on public-owl-dev announcement [1]
+16:28:37 <RRSAgent>   recorded in http://www.w3.org/2005/01/07-swcg-irc#T15-13-32
+16:28:37 <RRSAgent> ACTION: Guus to brief CG on status of ODM draft [2]
+16:28:37 <RRSAgent>   recorded in http://www.w3.org/2005/01/07-swcg-irc#T15-16-02
+16:28:37 <RRSAgent> ACTION: DanC to think about possible speakers for an application vocab panel and investigate this for W3C track at WWW [3]
+16:28:37 <RRSAgent>   recorded in http://www.w3.org/2005/01/07-swcg-irc#T15-16-58
+16:28:37 <RRSAgent> ACTION: EricM to push Steven Pemberton to get HTML WG position on RDF/A on record [4]
+16:28:37 <RRSAgent>   recorded in http://www.w3.org/2005/01/07-swcg-irc#T15-17-15
+16:28:37 <RRSAgent> ACTION: Ralph ask SWBPD to look at SOURCE and UNSAID issues and see if there is a need in short term and sufficient design experience at this point, especially interested in user feedback [5]
+16:28:37 <RRSAgent>   recorded in http://www.w3.org/2005/01/07-swcg-irc#T15-23-04
+16:28:37 <RRSAgent> ACTION: David to contact Susan Turnbull [6]
+16:28:37 <RRSAgent>   recorded in http://www.w3.org/2005/01/07-swcg-irc#T15-27-21
+16:28:37 <RRSAgent> ACTION: DanC to to find out who at MIT is primary contact [7]
+16:28:37 <RRSAgent>   recorded in http://www.w3.org/2005/01/07-swcg-irc#T16-10-54
